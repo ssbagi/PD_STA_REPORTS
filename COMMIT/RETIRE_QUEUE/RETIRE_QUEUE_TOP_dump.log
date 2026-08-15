@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  RETIRE_QUEUE_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\COMMIT\RETIRE_QUEUE
+  Design          : RETIRE_QUEUE_TOP
+  Parsed At       : 2026-08-15T18:25:16
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.153
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.083     0.000     0.099  MET
+  ff_1p16v_1p16v_n40c                               1     1.145     0.000     0.063  MET
+  ss_0p63v_0p63v_125c                               1     1.085     0.000     0.088  MET
+  ss_0p72v_0p72v_125c                               2     1.117     0.000     0.061  MET
+  ss_0p72v_0p72v_n40c                               1     1.153     0.000     0.105  MET
+  tt_0p90v_0p90v_25c                                4     1.080     0.000     0.087  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.083     0.000     0.063  MET
+  setup                                             7     1.080     0.000     0.061  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.137 ns   TNS :   +0.000 ns   WHS :   +0.112 ns
+  Slack    :   +1.137 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2733 / 1498
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:49         Memory : 2.674 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.145 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
+  Slack    :   +1.145 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2039 / 897
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:16         Memory : 2.382 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.128 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
+  Slack    :   +1.128 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2584 / 1993
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:22         Memory : 3.735 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.086 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3941 / 2160
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:45         Memory : 3.341 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.153 ns   TNS :   +0.000 ns   WHS :   +0.105 ns
+  Slack    :   +1.153 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3919 / 1219
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:31         Memory : 1.643 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1947 / 2006
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:39         Memory : 2.605 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.088 ns
+  Slack    :   +1.085 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1618 / 3116
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:54         Memory : 4.036 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2330 / 1732
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:51         Memory : 2.425 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.117 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.117 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5928 / 3459
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:19         Memory : 3.305 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_RETIRE_QUEUE_TOP.rpt
+  Design   : RETIRE_QUEUE_TOP      Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.080 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.080 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2726 / 1486
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:44         Memory : 1.457 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : RETIRE_QUEUE_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

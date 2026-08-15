@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : DEBUG_UNIT_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : ss_0p72v_0p72v_n40c
+Note   : Cold Setup      — Slow corner, cold temp
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_dbg_jtag/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_DEBUG)
+  Endpoint   : u_dbg_trig/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_DEBUG)
+  Path Group : CLK_DEBUG
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_DEBUG (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.136      0.136
+  u_dbg_jtag/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.136 r
+  u_dbg_jtag/din_reg[0]/Q  (DFFARX1_RVT)                        0.122       0.258 r
+  u_dbg_jtag/U12/Y (INVX2_RVT)                                  0.054       0.312 f
+  u_dbg_jtag/U34/Y (NAND2X1_RVT)                                0.088       0.4 r
+  u_dbg_tap/U07/Y (AOI22X1_RVT)                                0.092       0.492 f
+  u_dbg_tap/U19/Y (OAI21X1_RVT)                                0.109       0.601 r
+  u_dbg_bp/U03/Y (MUX21X1_RVT)                                0.095       0.696 r
+  u_dbg_bp/U11/Y (AND2X1_RVT)                                 0.047       0.743 f
+  u_dbg_bp/U22/Y (NOR2X1_RVT)                                 0.062       0.805 r
+  u_dbg_trig/U05/Y (BUFX4_RVT)                                  0.079       0.884 r
+  u_dbg_trig/dout_reg[0]/D (DFFARX1_RVT)                        0.054      0.938 f
+  data arrival time                                                    0.938
+
+  clock CLK_DEBUG (rise edge)                                  5     5
+  clock network delay (propagated)                        0.136      5.136
+  clock uncertainty                                      -0.05   5.086
+  u_dbg_trig/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       5.086 r
+  library setup time                                     -0.083   5.003
+  data required time                                                   5.003
+  -------------------------------------------------------------------------
+  data required time                                                   5.003
+  data arrival time                                                   -0.938
+  -------------------------------------------------------------------------
+  slack (MET)   4.065
+
+
+=========================================================================
+                   DEBUG_UNIT_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : DEBUG_UNIT_TOP
+  Corner       : ss_0p72v_0p72v_n40c
+  Check        : max  (Cold Setup      — Slow corner, cold temp)
+  Clock        : CLK_DEBUG  Period = 5 ns  (200 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_dbg_jtag          4.065       0        0      0.065        0     │
+  │ u_dbg_tap          0.195       0        0      0.123        0     │
+  │ u_dbg_bp          0.059       0        0      0.122        0     │
+  │ u_dbg_trig          0.192       0        0      0.116        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ DEBUG_UNIT_TOP  4.065       0        0      0.065        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_dbg_jtag/*] -to [get_cells u_dbg_trig/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_dbg_jtag/*] -to [get_cells u_dbg_trig/*]
+  set_input_delay  0.400 -clock CLK_DEBUG -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_DEBUG -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_DEBUG
+  Period   : 5 ns
+  Waveform : {0.000 2.5}
+  Skew     : 0.024 ns  (max across DEBUG_UNIT_TOP)
+  Latency  : 0.136 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3297
+  Constrained endpoints      : 3516
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/UNCORE/DEBUG_UNIT/run_ss_0p72v_0p72v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/DEBUG_UNIT_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/DEBUG_UNIT_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/DEBUG_UNIT_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_n40c.db
+  Elapsed Time : 00:06:52
+  Peak Memory  : 2.808 GB
+
+=========================================================================
+End of Report
+=========================================================================

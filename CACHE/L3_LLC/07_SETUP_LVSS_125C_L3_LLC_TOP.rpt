@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : L3_LLC_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : ss_0p63v_0p63v_125c
+Note   : Low-Vdd Setup   — Ultra-low voltage corner
+****************************************
+
+Operating Conditions : ss_0p63v_0p63v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_l3_tag/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_UNCORE)
+  Endpoint   : u_l3_lru/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_UNCORE)
+  Path Group : CLK_UNCORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_UNCORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.13      0.13
+  u_l3_tag/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.13 r
+  u_l3_tag/din_reg[0]/Q  (DFFARX1_RVT)                        0.112       0.242 r
+  u_l3_tag/U12/Y (INVX2_RVT)                                  0.062       0.304 f
+  u_l3_tag/U34/Y (NAND2X1_RVT)                                0.072       0.376 r
+  u_l3_data/U07/Y (AOI22X1_RVT)                                0.105       0.481 f
+  u_l3_data/U19/Y (OAI21X1_RVT)                                0.108       0.589 r
+  u_l3_ctrl/U03/Y (MUX21X1_RVT)                                0.089       0.678 r
+  u_l3_ctrl/U11/Y (AND2X1_RVT)                                 0.047       0.725 f
+  u_l3_ctrl/U22/Y (NOR2X1_RVT)                                 0.07       0.795 r
+  u_l3_lru/U05/Y (BUFX4_RVT)                                  0.068       0.863 r
+  u_l3_lru/dout_reg[0]/D (DFFARX1_RVT)                        0.075      0.938 f
+  data arrival time                                                    0.938
+
+  clock CLK_UNCORE (rise edge)                                  3.333     3.333
+  clock network delay (propagated)                        0.13      3.463
+  clock uncertainty                                      -0.05   3.413
+  u_l3_lru/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       3.413 r
+  library setup time                                     -0.068   3.345
+  data required time                                                   3.345
+  -------------------------------------------------------------------------
+  data required time                                                   3.345
+  data arrival time                                                   -0.938
+  -------------------------------------------------------------------------
+  slack (MET)   2.407
+
+
+=========================================================================
+                   L3_LLC_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : L3_LLC_TOP
+  Corner       : ss_0p63v_0p63v_125c
+  Check        : max  (Low-Vdd Setup   — Ultra-low voltage corner)
+  Clock        : CLK_UNCORE  Period = 3.333 ns  (300 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_l3_tag          2.407       0        0      0.069        0     │
+  │ u_l3_data          0.157       0        0      0.065        0     │
+  │ u_l3_ctrl          0.113       0        0      0.061        0     │
+  │ u_l3_lru          0.188       0        0      0.06        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ L3_LLC_TOP  2.407       0        0      0.069        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_l3_tag/*] -to [get_cells u_l3_lru/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_l3_tag/*] -to [get_cells u_l3_lru/*]
+  set_input_delay  0.400 -clock CLK_UNCORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_UNCORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_UNCORE
+  Period   : 3.333 ns
+  Waveform : {0.000 1.666}
+  Skew     : 0.017 ns  (max across L3_LLC_TOP)
+  Latency  : 0.13 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3560
+  Constrained endpoints      : 2538
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/CACHE/L3_LLC/run_ss_0p63v_0p63v_125c
+  SDC File     : /proj/cpu_rtl/constraints/L3_LLC_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p63v_0p63v_125c.db
+  Elapsed Time : 00:07:24
+  Peak Memory  : 3.972 GB
+
+=========================================================================
+End of Report
+=========================================================================

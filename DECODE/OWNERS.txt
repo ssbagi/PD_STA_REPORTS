@@ -1,0 +1,36 @@
+################################################################################
+#  DECODE STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User2
+  Email              : mto2@company.com
+  Employee ID        : EMP-1002
+
+[RTL TEAM LEAD]
+  Name               : TeamLead2
+  Email              : teamlead2@company.com
+
+[PD ENGINEER]
+  Name               : PDEng2
+  Email              : pdeng2@company.com
+
+[STA ENGINEER]
+  Name               : STAEng2
+  Email              : staeng2@company.com
+
+[BLOCKS IN THIS STAGE]
+  DECODE\DECODE_QUEUE                        BTO = User8       <user8@company.com>  EMP-2008
+  DECODE\INSTRUCTION_DECODER                 BTO = User9       <user9@company.com>  EMP-2009
+  DECODE\INSTRUCTION_LENGTH_DECODER          BTO = User10      <user10@company.com>  EMP-2010
+  DECODE\MICRO_OP_SPLITTER                   BTO = User11      <user11@company.com>  EMP-2011
+  DECODE\PRE_DECODE                          BTO = User12      <user12@company.com>  EMP-2012
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User2 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

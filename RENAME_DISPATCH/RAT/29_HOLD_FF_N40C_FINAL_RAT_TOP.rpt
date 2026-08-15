@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : RAT_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : ff_1p16v_1p16v_n40c
+Note   : Final tapeout sign-off hold — Fast cold
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_rat_rd/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_rat_chkpt/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.134      0.134
+  u_rat_rd/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.134 r
+  u_rat_rd/din_reg[0]/Q  (DFFARX1_RVT)                        0.137         0.271 r
+  u_rat_rd/U12/Y (INVX2_RVT)                                  0.065         0.336 f
+  u_rat_rd/U34/Y (NAND2X1_RVT)                                0.059         0.395 r
+  u_rat_wr/U07/Y (AOI22X1_RVT)                                0.092         0.487 f
+  u_rat_wr/U19/Y (OAI21X1_RVT)                                0.093         0.58 r
+  u_rat_map/U03/Y (MUX21X1_RVT)                                0.076         0.656 r
+  u_rat_map/U11/Y (AND2X1_RVT)                                 0.054         0.71 f
+  u_rat_map/U22/Y (NOR2X1_RVT)                                 0.064         0.774 r
+  u_rat_chkpt/U05/Y (BUFX4_RVT)                                  0.07         0.844 r
+  u_rat_chkpt/dout_reg[0]/D (DFFARX1_RVT)                        0.075        0.919 f
+  data arrival time                                                    0.919
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.134      2.134
+  clock uncertainty                                      -0.05   2.084
+  u_rat_chkpt/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.084 r
+  library setup time                                     -0.067   2.017
+  data required time                                                   2.017
+  -------------------------------------------------------------------------
+  data required time                                                   2.017
+  data arrival time                                                   -0.919
+  -------------------------------------------------------------------------
+  slack (MET)      1.098
+
+
+=========================================================================
+                   RAT_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : RAT_TOP
+  Corner       : ff_1p16v_1p16v_n40c
+  Check        : min  (Final tapeout sign-off hold — Fast cold)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_rat_rd          1.098       0.000       0      0.057        0     |
+  | u_rat_wr          0.214       0.000       0      0.121        0     |
+  | u_rat_map          0.129       0.000       0      0.053        0     |
+  | u_rat_chkpt          0.209       0.000       0      0.109        0     |
+  +------------------------------------------------------------------+
+  | RAT_TOP   1.098       0.000       0      0.057        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_rat_rd/*] -to [get_cells u_rat_chkpt/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_rat_rd/*] -to [get_cells u_rat_chkpt/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.019 ns  (max across RAT_TOP)
+  Latency  : 0.134 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3056
+  Constrained endpoints      : 4281
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/RENAME_DISPATCH/RAT/run_ff_1p16v_1p16v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/RAT_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/RAT_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/RAT_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time : 00:08:37
+  Peak Memory  : 4.797 GB
+
+=========================================================================
+End of Report
+=========================================================================

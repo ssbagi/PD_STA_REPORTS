@@ -1,0 +1,37 @@
+################################################################################
+#  MEMORY STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User6
+  Email              : mto6@company.com
+  Employee ID        : EMP-1006
+
+[RTL TEAM LEAD]
+  Name               : TeamLead6
+  Email              : teamlead6@company.com
+
+[PD ENGINEER]
+  Name               : PDEng6
+  Email              : pdeng6@company.com
+
+[STA ENGINEER]
+  Name               : STAEng6
+  Email              : staeng6@company.com
+
+[BLOCKS IN THIS STAGE]
+  MEMORY\DCACHE                              BTO = User34      <user34@company.com>  EMP-2034
+  MEMORY\DTLB                                BTO = User35      <user35@company.com>  EMP-2035
+  MEMORY\LDQ                                 BTO = User36      <user36@company.com>  EMP-2036
+  MEMORY\MOB                                 BTO = User37      <user37@company.com>  EMP-2037
+  MEMORY\MSHR                                BTO = User38      <user38@company.com>  EMP-2038
+  MEMORY\STQ                                 BTO = User39      <user39@company.com>  EMP-2039
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User6 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

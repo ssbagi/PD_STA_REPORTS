@@ -1,0 +1,35 @@
+################################################################################
+#  RENAME_DISPATCH STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User3
+  Email              : mto3@company.com
+  Employee ID        : EMP-1003
+
+[RTL TEAM LEAD]
+  Name               : TeamLead3
+  Email              : teamlead3@company.com
+
+[PD ENGINEER]
+  Name               : PDEng3
+  Email              : pdeng3@company.com
+
+[STA ENGINEER]
+  Name               : STAEng3
+  Email              : staeng3@company.com
+
+[BLOCKS IN THIS STAGE]
+  RENAME_DISPATCH\DISPATCH_QUEUE             BTO = User13      <user13@company.com>  EMP-2013
+  RENAME_DISPATCH\FREE_LIST                  BTO = User14      <user14@company.com>  EMP-2014
+  RENAME_DISPATCH\RAT                        BTO = User15      <user15@company.com>  EMP-2015
+  RENAME_DISPATCH\ROB                        BTO = User16      <user16@company.com>  EMP-2016
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User3 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

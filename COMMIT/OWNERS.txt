@@ -1,0 +1,35 @@
+################################################################################
+#  COMMIT STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User8
+  Email              : mto8@company.com
+  Employee ID        : EMP-1008
+
+[RTL TEAM LEAD]
+  Name               : TeamLead8
+  Email              : teamlead8@company.com
+
+[PD ENGINEER]
+  Name               : PDEng8
+  Email              : pdeng8@company.com
+
+[STA ENGINEER]
+  Name               : STAEng8
+  Email              : staeng8@company.com
+
+[BLOCKS IN THIS STAGE]
+  COMMIT\ARF                                 BTO = User43      <user43@company.com>  EMP-2043
+  COMMIT\EXCEPTION_HANDLER                   BTO = User44      <user44@company.com>  EMP-2044
+  COMMIT\RETIRE_QUEUE                        BTO = User45      <user45@company.com>  EMP-2045
+  COMMIT\ROB_COMMIT                          BTO = User46      <user46@company.com>  EMP-2046
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User8 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : ARF_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : ss_0p72v_0p72v_125c
+Note   : Worst-case Setup — Slow corner, high temp
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_arf_rd/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_arf_rst/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.157      0.157
+  u_arf_rd/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.157 r
+  u_arf_rd/din_reg[0]/Q  (DFFARX1_RVT)                        0.11       0.267 r
+  u_arf_rd/U12/Y (INVX2_RVT)                                  0.039       0.306 f
+  u_arf_rd/U34/Y (NAND2X1_RVT)                                0.065       0.371 r
+  u_arf_wr/U07/Y (AOI22X1_RVT)                                0.081       0.452 f
+  u_arf_wr/U19/Y (OAI21X1_RVT)                                0.097       0.549 r
+  u_arf_chkpt/U03/Y (MUX21X1_RVT)                                0.072       0.621 r
+  u_arf_chkpt/U11/Y (AND2X1_RVT)                                 0.049       0.67 f
+  u_arf_chkpt/U22/Y (NOR2X1_RVT)                                 0.071       0.741 r
+  u_arf_rst/U05/Y (BUFX4_RVT)                                  0.068       0.809 r
+  u_arf_rst/dout_reg[0]/D (DFFARX1_RVT)                        0.053      0.862 f
+  data arrival time                                                    0.862
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.157      2.157
+  clock uncertainty                                      -0.05   2.107
+  u_arf_rst/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.107 r
+  library setup time                                     -0.066   2.041
+  data required time                                                   2.041
+  -------------------------------------------------------------------------
+  data required time                                                   2.041
+  data arrival time                                                   -0.862
+  -------------------------------------------------------------------------
+  slack (MET)   1.179
+
+
+=========================================================================
+                   ARF_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : ARF_TOP
+  Corner       : ss_0p72v_0p72v_125c
+  Check        : max  (Worst-case Setup — Slow corner, high temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_arf_rd          1.179       0        0      0.082        0     │
+  │ u_arf_wr          0.159       0        0      0.093        0     │
+  │ u_arf_chkpt          0.157       0        0      0.066        0     │
+  │ u_arf_rst          0.078       0        0      0.111        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ ARF_TOP  1.179       0        0      0.082        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_arf_rd/*] -to [get_cells u_arf_rst/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_arf_rd/*] -to [get_cells u_arf_rst/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across ARF_TOP)
+  Latency  : 0.157 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 4598
+  Constrained endpoints      : 2912
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_125c
+  SDC File     : /proj/cpu_rtl/constraints/ARF_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/ARF_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/ARF_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_125c.db
+  Elapsed Time : 00:04:46
+  Peak Memory  : 3.992 GB
+
+=========================================================================
+End of Report
+=========================================================================

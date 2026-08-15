@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  MUL_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\MUL
+  Design          : MUL_TOP
+  Parsed At       : 2026-08-15T18:25:17
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.172
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.058     0.000     0.103  MET
+  ff_1p16v_1p16v_n40c                               1     1.071     0.000     0.101  MET
+  ss_0p63v_0p63v_125c                               1     1.118     0.000     0.063  MET
+  ss_0p72v_0p72v_125c                               2     1.097     0.000     0.068  MET
+  ss_0p72v_0p72v_n40c                               1     1.098     0.000     0.071  MET
+  tt_0p90v_0p90v_25c                                4     1.051     0.000     0.061  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.058     0.000     0.061  MET
+  setup                                             7     1.051     0.000     0.063  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.121 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
+  Slack    :   +1.121 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4660 / 2982
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:10         Memory : 2.158 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.071 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.071 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5831 / 3499
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:44         Memory : 3.185 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.051 ns   TNS :   +0.000 ns   WHS :   +0.086 ns
+  Slack    :   +1.051 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5409 / 3690
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:27         Memory : 3.702 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1856 / 2505
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:41         Memory : 4.694 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1988 / 3004
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:20         Memory : 4.739 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.058 ns   TNS :   +0.000 ns   WHS :   +0.103 ns
+  Slack    :   +1.058 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4422 / 4396
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:27         Memory : 1.316 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
+  Slack    :   +1.118 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1035 / 5265
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:40         Memory : 2.895 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.172 ns   TNS :   +0.000 ns   WHS :   +0.065 ns
+  Slack    :   +1.172 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4973 / 1426
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:58         Memory : 3.614 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.068 ns
+  Slack    :   +1.097 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2544 / 5456
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:27         Memory : 2.155 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_MUL_TOP.rpt
+  Design   : MUL_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.051 ns   TNS :   +0.000 ns   WHS :   +0.079 ns
+  Slack    :   +1.051 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2082 / 2094
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:32         Memory : 1.752 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/MUL/run_tt_0p90v_0p90v_25c
+
+  File     : MUL_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

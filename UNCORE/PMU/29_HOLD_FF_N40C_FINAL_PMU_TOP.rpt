@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : PMU_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : ff_1p16v_1p16v_n40c
+Note   : Final tapeout sign-off hold — Fast cold
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_pmu_cnt/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_pmu_snap/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.133      0.133
+  u_pmu_cnt/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.133 r
+  u_pmu_cnt/din_reg[0]/Q  (DFFARX1_RVT)                        0.119         0.252 r
+  u_pmu_cnt/U12/Y (INVX2_RVT)                                  0.038         0.29 f
+  u_pmu_cnt/U34/Y (NAND2X1_RVT)                                0.094         0.384 r
+  u_pmu_thr/U07/Y (AOI22X1_RVT)                                0.077         0.461 f
+  u_pmu_thr/U19/Y (OAI21X1_RVT)                                0.092         0.553 r
+  u_pmu_irq/U03/Y (MUX21X1_RVT)                                0.079         0.632 r
+  u_pmu_irq/U11/Y (AND2X1_RVT)                                 0.054         0.686 f
+  u_pmu_irq/U22/Y (NOR2X1_RVT)                                 0.066         0.752 r
+  u_pmu_snap/U05/Y (BUFX4_RVT)                                  0.056         0.808 r
+  u_pmu_snap/dout_reg[0]/D (DFFARX1_RVT)                        0.08        0.888 f
+  data arrival time                                                    0.888
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.133      2.133
+  clock uncertainty                                      -0.05   2.083
+  u_pmu_snap/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.083 r
+  library setup time                                     -0.07   2.013
+  data required time                                                   2.013
+  -------------------------------------------------------------------------
+  data required time                                                   2.013
+  data arrival time                                                   -0.888
+  -------------------------------------------------------------------------
+  slack (MET)      1.125
+
+
+=========================================================================
+                   PMU_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : PMU_TOP
+  Corner       : ff_1p16v_1p16v_n40c
+  Check        : min  (Final tapeout sign-off hold — Fast cold)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_pmu_cnt          1.125       0.000       0      0.07        0     |
+  | u_pmu_thr          0.069       0.000       0      0.112        0     |
+  | u_pmu_irq          0.156       0.000       0      0.096        0     |
+  | u_pmu_snap          0.148       0.000       0      0.075        0     |
+  +------------------------------------------------------------------+
+  | PMU_TOP   1.125       0.000       0      0.07        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_pmu_cnt/*] -to [get_cells u_pmu_snap/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_pmu_cnt/*] -to [get_cells u_pmu_snap/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.028 ns  (max across PMU_TOP)
+  Latency  : 0.133 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1715
+  Constrained endpoints      : 6291
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/UNCORE/PMU/run_ff_1p16v_1p16v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/PMU_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/PMU_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/PMU_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time : 00:02:16
+  Peak Memory  : 2.699 GB
+
+=========================================================================
+End of Report
+=========================================================================

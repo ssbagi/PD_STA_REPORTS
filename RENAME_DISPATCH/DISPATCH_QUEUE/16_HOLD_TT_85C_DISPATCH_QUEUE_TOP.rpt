@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : DISPATCH_QUEUE_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : tt_0p90v_0p90v_85c
+Note   : Hold check — Typical corner, 85 deg C
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_85c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_dpq_ctrl/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_dpq_val/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.153      0.153
+  u_dpq_ctrl/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.153 r
+  u_dpq_ctrl/din_reg[0]/Q  (DFFARX1_RVT)                        0.118         0.271 r
+  u_dpq_ctrl/U12/Y (INVX2_RVT)                                  0.041         0.312 f
+  u_dpq_ctrl/U34/Y (NAND2X1_RVT)                                0.092         0.404 r
+  u_dpq_buf/U07/Y (AOI22X1_RVT)                                0.077         0.481 f
+  u_dpq_buf/U19/Y (OAI21X1_RVT)                                0.109         0.59 r
+  u_dpq_ptr/U03/Y (MUX21X1_RVT)                                0.06         0.65 r
+  u_dpq_ptr/U11/Y (AND2X1_RVT)                                 0.083         0.733 f
+  u_dpq_ptr/U22/Y (NOR2X1_RVT)                                 0.066         0.799 r
+  u_dpq_val/U05/Y (BUFX4_RVT)                                  0.087         0.886 r
+  u_dpq_val/dout_reg[0]/D (DFFARX1_RVT)                        0.068        0.954 f
+  data arrival time                                                    0.954
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.153      2.153
+  clock uncertainty                                      -0.05   2.103
+  u_dpq_val/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.103 r
+  library setup time                                     -0.071   2.032
+  data required time                                                   2.032
+  -------------------------------------------------------------------------
+  data required time                                                   2.032
+  data arrival time                                                   -0.954
+  -------------------------------------------------------------------------
+  slack (MET)      1.078
+
+
+=========================================================================
+                   DISPATCH_QUEUE_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : DISPATCH_QUEUE_TOP
+  Corner       : tt_0p90v_0p90v_85c
+  Check        : min  (Hold check — Typical corner, 85 deg C)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_dpq_ctrl          1.078       0.000       0      0.088        0     |
+  | u_dpq_buf          0.23       0.000       0      0.049        0     |
+  | u_dpq_ptr          0.1       0.000       0      0.125        0     |
+  | u_dpq_val          0.092       0.000       0      0.128        0     |
+  +------------------------------------------------------------------+
+  | DISPATCH_QUEUE_TOP   1.078       0.000       0      0.088        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_dpq_ctrl/*] -to [get_cells u_dpq_val/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_dpq_ctrl/*] -to [get_cells u_dpq_val/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.02 ns  (max across DISPATCH_QUEUE_TOP)
+  Latency  : 0.153 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 2979
+  Constrained endpoints      : 2993
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_85c
+  SDC File     : /proj/cpu_rtl/constraints/DISPATCH_QUEUE_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/DISPATCH_QUEUE_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/DISPATCH_QUEUE_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_85c.db
+  Elapsed Time : 00:03:21
+  Peak Memory  : 2.04 GB
+
+=========================================================================
+End of Report
+=========================================================================

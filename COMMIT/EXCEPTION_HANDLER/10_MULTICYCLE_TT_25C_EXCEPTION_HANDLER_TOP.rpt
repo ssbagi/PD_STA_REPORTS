@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : EXCEPTION_HANDLER_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Multicycle Path Check — 2-cycle paths
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_exc_det/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_exc_flush/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.158      0.158
+  u_exc_det/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.158 r
+  u_exc_det/din_reg[0]/Q  (DFFARX1_RVT)                        0.116       0.274 r
+  u_exc_det/U12/Y (INVX2_RVT)                                  0.063       0.337 f
+  u_exc_det/U34/Y (NAND2X1_RVT)                                0.058       0.395 r
+  u_exc_pri/U07/Y (AOI22X1_RVT)                                0.091       0.486 f
+  u_exc_pri/U19/Y (OAI21X1_RVT)                                0.102       0.588 r
+  u_exc_vec/U03/Y (MUX21X1_RVT)                                0.062       0.65 r
+  u_exc_vec/U11/Y (AND2X1_RVT)                                 0.082       0.732 f
+  u_exc_vec/U22/Y (NOR2X1_RVT)                                 0.051       0.783 r
+  u_exc_flush/U05/Y (BUFX4_RVT)                                  0.065       0.848 r
+  u_exc_flush/dout_reg[0]/D (DFFARX1_RVT)                        0.076      0.924 f
+  data arrival time                                                    0.924
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.158      2.158
+  clock uncertainty                                      -0.05   2.108
+  u_exc_flush/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.108 r
+  library setup time                                     -0.067   2.041
+  data required time                                                   2.041
+  -------------------------------------------------------------------------
+  data required time                                                   2.041
+  data arrival time                                                   -0.924
+  -------------------------------------------------------------------------
+  slack (MET)   1.117
+
+
+=========================================================================
+                   EXCEPTION_HANDLER_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : EXCEPTION_HANDLER_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Multicycle Path Check — 2-cycle paths)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_exc_det          1.117       0        0      0.069        0     │
+  │ u_exc_pri          0.106       0        0      0.057        0     │
+  │ u_exc_vec          0.144       0        0      0.083        0     │
+  │ u_exc_flush          0.088       0        0      0.13        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ EXCEPTION_HANDLER_TOP  1.117       0        0      0.069        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_exc_det/*] -to [get_cells u_exc_flush/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_exc_det/*] -to [get_cells u_exc_flush/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across EXCEPTION_HANDLER_TOP)
+  Latency  : 0.158 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1917
+  Constrained endpoints      : 5721
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:01:27
+  Peak Memory  : 4.142 GB
+
+=========================================================================
+End of Report
+=========================================================================

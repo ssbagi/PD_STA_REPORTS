@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : DTLB_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Setup post-ECO sign-off — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_dtlb_tag/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_dtlb_lru/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.157      0.157
+  u_dtlb_tag/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.157 r
+  u_dtlb_tag/din_reg[0]/Q  (DFFARX1_RVT)                        0.144         0.301 r
+  u_dtlb_tag/U12/Y (INVX2_RVT)                                  0.039         0.34 f
+  u_dtlb_tag/U34/Y (NAND2X1_RVT)                                0.092         0.432 r
+  u_dtlb_data/U07/Y (AOI22X1_RVT)                                0.109         0.541 f
+  u_dtlb_data/U19/Y (OAI21X1_RVT)                                0.091         0.632 r
+  u_dtlb_ctrl/U03/Y (MUX21X1_RVT)                                0.064         0.696 r
+  u_dtlb_ctrl/U11/Y (AND2X1_RVT)                                 0.06         0.756 f
+  u_dtlb_ctrl/U22/Y (NOR2X1_RVT)                                 0.065         0.821 r
+  u_dtlb_lru/U05/Y (BUFX4_RVT)                                  0.086         0.907 r
+  u_dtlb_lru/dout_reg[0]/D (DFFARX1_RVT)                        0.053        0.96 f
+  data arrival time                                                    0.96
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.157      2.157
+  clock uncertainty                                      -0.05   2.107
+  u_dtlb_lru/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.107 r
+  library setup time                                     -0.072   2.035
+  data required time                                                   2.035
+  -------------------------------------------------------------------------
+  data required time                                                   2.035
+  data arrival time                                                   -0.96
+  -------------------------------------------------------------------------
+  slack (MET)      1.075
+
+
+=========================================================================
+                   DTLB_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : DTLB_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Setup post-ECO sign-off — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_dtlb_tag          1.075       0.000       0      0.116        0     |
+  | u_dtlb_data          0.241       0.000       0      0.068        0     |
+  | u_dtlb_ctrl          0.144       0.000       0      0.088        0     |
+  | u_dtlb_lru          0.242       0.000       0      0.105        0     |
+  +------------------------------------------------------------------+
+  | DTLB_TOP   1.075       0.000       0      0.116        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_dtlb_tag/*] -to [get_cells u_dtlb_lru/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_dtlb_tag/*] -to [get_cells u_dtlb_lru/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.024 ns  (max across DTLB_TOP)
+  Latency  : 0.157 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3056
+  Constrained endpoints      : 2984
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/DTLB_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/DTLB_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/DTLB_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:02:40
+  Peak Memory  : 3.966 GB
+
+=========================================================================
+End of Report
+=========================================================================

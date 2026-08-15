@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  ALU0_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\ALU\ALU0
+  Design          : ALU0_TOP
+  Parsed At       : 2026-08-15T18:25:16
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.143
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.131     0.000     0.111  MET
+  ff_1p16v_1p16v_n40c                               1     1.072     0.000     0.067  MET
+  ss_0p63v_0p63v_125c                               1     1.141     0.000     0.107  MET
+  ss_0p72v_0p72v_125c                               2     1.115     0.000     0.075  MET
+  ss_0p72v_0p72v_n40c                               1     1.143     0.000     0.069  MET
+  tt_0p90v_0p90v_25c                                4     1.078     0.000     0.063  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.072     0.000     0.067  MET
+  setup                                             7     1.091     0.000     0.063  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.115 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.115 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2351 / 2455
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:37         Memory : 3.174 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.072 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
+  Slack    :   +1.072 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5532 / 5830
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:45         Memory : 2.647 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.107 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.107 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2575 / 4942
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:25         Memory : 3.02 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.102 ns
+  Slack    :   +1.078 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4278 / 1539
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:12         Memory : 4.099 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3070 / 2957
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:32         Memory : 4.289 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
+  Slack    :   +1.131 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2460 / 1520
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:51         Memory : 1.831 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.141 ns   TNS :   +0.000 ns   WHS :   +0.107 ns
+  Slack    :   +1.141 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3976 / 2691
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:34         Memory : 2.846 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.091 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
+  Slack    :   +1.091 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4830 / 1196
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:28         Memory : 4.444 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.133 ns   TNS :   +0.000 ns   WHS :   +0.075 ns
+  Slack    :   +1.133 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1707 / 2597
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:25         Memory : 2.392 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_ALU0_TOP.rpt
+  Design   : ALU0_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4260 / 4907
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:54         Memory : 3.695 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_tt_0p90v_0p90v_25c
+
+  File     : ALU0_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

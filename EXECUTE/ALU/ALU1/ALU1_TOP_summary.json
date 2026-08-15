@@ -1,0 +1,733 @@
+{
+  "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1",
+  "design": "ALU1_TOP",
+  "total_reports": 11,
+  "parsed_at": "2026-08-15T18:25:16",
+  "worst_wns_ns": 0.0,
+  "worst_tns_ns": 0.0,
+  "worst_whs_ns": 0.0,
+  "best_wns_ns": 1.148,
+  "total_violations": 0,
+  "overall_status": "MET",
+  "by_corner": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_125c": {
+      "name": "ff_1p16v_1p16v_125c",
+      "count": 1,
+      "wns_ns": 1.049,
+      "tns_ns": 0.0,
+      "whs_ns": 0.098,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_n40c": {
+      "name": "ff_1p16v_1p16v_n40c",
+      "count": 1,
+      "wns_ns": 1.145,
+      "tns_ns": 0.0,
+      "whs_ns": 0.106,
+      "status": "MET"
+    },
+    "ss_0p63v_0p63v_125c": {
+      "name": "ss_0p63v_0p63v_125c",
+      "count": 1,
+      "wns_ns": 1.12,
+      "tns_ns": 0.0,
+      "whs_ns": 0.111,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_125c": {
+      "name": "ss_0p72v_0p72v_125c",
+      "count": 2,
+      "wns_ns": 1.07,
+      "tns_ns": 0.0,
+      "whs_ns": 0.094,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_n40c": {
+      "name": "ss_0p72v_0p72v_n40c",
+      "count": 1,
+      "wns_ns": 1.091,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "status": "MET"
+    },
+    "tt_0p90v_0p90v_25c": {
+      "name": "tt_0p90v_0p90v_25c",
+      "count": 4,
+      "wns_ns": 1.079,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "status": "MET"
+    }
+  },
+  "by_check": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "hold": {
+      "name": "hold",
+      "count": 3,
+      "wns_ns": 1.049,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "status": "MET"
+    },
+    "setup": {
+      "name": "setup",
+      "count": 7,
+      "wns_ns": 1.07,
+      "tns_ns": 0.0,
+      "whs_ns": 0.076,
+      "status": "MET"
+    }
+  },
+  "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\01_SETUP_SS_125C_ALU1_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.095,
+      "wns_ns": 1.095,
+      "tns_ns": 0.0,
+      "whs_ns": 0.094,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.095,
+          "tns_ns": 0.0,
+          "whs_ns": 0.094
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.102,
+          "tns_ns": 0.0,
+          "whs_ns": 0.08
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.089,
+          "tns_ns": 0.0,
+          "whs_ns": 0.099
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.077,
+          "tns_ns": 0.0,
+          "whs_ns": 0.092
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2510,
+      "constrained_endpoints": 4691,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:05:13",
+      "peak_mem": "3.111 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\02_HOLD_FF_N40C_ALU1_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.145,
+      "wns_ns": 1.145,
+      "tns_ns": 0.0,
+      "whs_ns": 0.106,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.145,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.191,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.174,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.057,
+          "tns_ns": 0.0,
+          "whs_ns": 0.12
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4811,
+      "constrained_endpoints": 5552,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:04:51",
+      "peak_mem": "2.637 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\03_SETUP_TT_25C_ALU1_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.093,
+      "wns_ns": 1.093,
+      "tns_ns": 0.0,
+      "whs_ns": 0.076,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.093,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.154,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.056,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.059,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1378,
+      "constrained_endpoints": 3504,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:03:57",
+      "peak_mem": "3.134 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\04_HOLD_TT_25C_ALU1_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.079,
+      "wns_ns": 1.079,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.079,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.081,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.066,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.147,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2930,
+      "constrained_endpoints": 3216,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:05:30",
+      "peak_mem": "4.238 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\05_SETUP_SS_M40C_ALU1_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.091,
+      "wns_ns": 1.091,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.091,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.161,
+          "tns_ns": 0.0,
+          "whs_ns": 0.073
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.066,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.121,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5102,
+      "constrained_endpoints": 4367,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:08:44",
+      "peak_mem": "3.355 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\06_HOLD_FF_125C_ALU1_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.049,
+      "wns_ns": 1.049,
+      "tns_ns": 0.0,
+      "whs_ns": 0.098,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.049,
+          "tns_ns": 0.0,
+          "whs_ns": 0.098
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.1,
+          "tns_ns": 0.0,
+          "whs_ns": 0.088
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.098,
+          "tns_ns": 0.0,
+          "whs_ns": 0.098
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.189,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2754,
+      "constrained_endpoints": 3717,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:01:36",
+      "peak_mem": "1.802 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\07_SETUP_LVSS_125C_ALU1_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.12,
+      "wns_ns": 1.12,
+      "tns_ns": 0.0,
+      "whs_ns": 0.111,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.12,
+          "tns_ns": 0.0,
+          "whs_ns": 0.111
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.068,
+          "tns_ns": 0.0,
+          "whs_ns": 0.124
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.052,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.07,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5966,
+      "constrained_endpoints": 4087,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:03:10",
+      "peak_mem": "3.086 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\08_CG_CHECK_TT_25C_ALU1_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.123,
+      "wns_ns": 1.123,
+      "tns_ns": 0.0,
+      "whs_ns": 0.084,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.123,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.1,
+          "tns_ns": 0.0,
+          "whs_ns": 0.126
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.119,
+          "tns_ns": 0.0,
+          "whs_ns": 0.112
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1986,
+      "constrained_endpoints": 5338,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:18",
+      "peak_mem": "1.428 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\09_RECOVERY_SS_125C_ALU1_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.07,
+      "wns_ns": 1.07,
+      "tns_ns": 0.0,
+      "whs_ns": 0.12,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.07,
+          "tns_ns": 0.0,
+          "whs_ns": 0.12
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.084,
+          "tns_ns": 0.0,
+          "whs_ns": 0.109
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.112,
+          "tns_ns": 0.0,
+          "whs_ns": 0.097
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.085,
+          "tns_ns": 0.0,
+          "whs_ns": 0.107
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2791,
+      "constrained_endpoints": 4736,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:32",
+      "peak_mem": "2.05 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\10_MULTICYCLE_TT_25C_ALU1_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_ALU1_TOP.rpt",
+      "design": "ALU1_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_alu1_add/din_reg[0]",
+      "endpoint": "u_alu1_cmp/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.148,
+      "wns_ns": 1.148,
+      "tns_ns": 0.0,
+      "whs_ns": 0.085,
+      "sub_units": [
+        {
+          "unit": "u_alu1_add",
+          "wns_ns": 1.148,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        },
+        {
+          "unit": "u_alu1_log",
+          "wns_ns": 0.166,
+          "tns_ns": 0.0,
+          "whs_ns": 0.055
+        },
+        {
+          "unit": "u_alu1_shf",
+          "wns_ns": 0.074,
+          "tns_ns": 0.0,
+          "whs_ns": 0.12
+        },
+        {
+          "unit": "u_alu1_cmp",
+          "wns_ns": 0.127,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2708,
+      "constrained_endpoints": 3982,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ALU1_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ALU1_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ALU1_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:16",
+      "peak_mem": "3.672 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU1\\ALU1_TIMING.rpt",
+      "file_name": "ALU1_TIMING.rpt",
+      "design": "N/A",
+      "version": "N/A",
+      "run_date": "N/A",
+      "corner": "N/A",
+      "note": "N/A",
+      "delay_type": "N/A",
+      "check": "N/A",
+      "clock": "N/A",
+      "period_ns": 0.0,
+      "freq_mhz": 0.0,
+      "startpoint": "N/A",
+      "endpoint": "N/A",
+      "slack_status": "UNKNOWN",
+      "slack_ns": 0.0,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "sub_units": [],
+      "status": "N/A",
+      "coverage_pct": 0.0,
+      "total_endpoints": 0,
+      "constrained_endpoints": 0,
+      "tool": "N/A",
+      "run_host": "N/A",
+      "run_dir": "N/A",
+      "sdc_file": "N/A",
+      "netlist": "N/A",
+      "spef_file": "N/A",
+      "liberty": "N/A",
+      "elapsed": "N/A",
+      "peak_mem": "N/A"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+################################################################################
+#  UNCORE STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User10
+  Email              : mto10@company.com
+  Employee ID        : EMP-1010
+
+[RTL TEAM LEAD]
+  Name               : TeamLead10
+  Email              : teamlead10@company.com
+
+[PD ENGINEER]
+  Name               : PDEng10
+  Email              : pdeng10@company.com
+
+[STA ENGINEER]
+  Name               : STAEng10
+  Email              : staeng10@company.com
+
+[BLOCKS IN THIS STAGE]
+  UNCORE\BIU                                 BTO = User52      <user52@company.com>  EMP-2052
+  UNCORE\CLOCK_DOMAIN                        BTO = User53      <user53@company.com>  EMP-2053
+  UNCORE\DEBUG_UNIT                          BTO = User54      <user54@company.com>  EMP-2054
+  UNCORE\INTERRUPT_CONTROLLER                BTO = User55      <user55@company.com>  EMP-2055
+  UNCORE\MEMORY_CONTROLLER                   BTO = User56      <user56@company.com>  EMP-2056
+  UNCORE\PMU                                 BTO = User57      <user57@company.com>  EMP-2057
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User10 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

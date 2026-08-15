@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : LDQ_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Setup post-ECO sign-off — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_ldq_wr/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_ldq_tl/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.136      0.136
+  u_ldq_wr/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.136 r
+  u_ldq_wr/din_reg[0]/Q  (DFFARX1_RVT)                        0.12         0.256 r
+  u_ldq_wr/U12/Y (INVX2_RVT)                                  0.035         0.291 f
+  u_ldq_wr/U34/Y (NAND2X1_RVT)                                0.083         0.374 r
+  u_ldq_rd/U07/Y (AOI22X1_RVT)                                0.102         0.476 f
+  u_ldq_rd/U19/Y (OAI21X1_RVT)                                0.117         0.593 r
+  u_ldq_hd/U03/Y (MUX21X1_RVT)                                0.087         0.68 r
+  u_ldq_hd/U11/Y (AND2X1_RVT)                                 0.074         0.754 f
+  u_ldq_hd/U22/Y (NOR2X1_RVT)                                 0.059         0.813 r
+  u_ldq_tl/U05/Y (BUFX4_RVT)                                  0.089         0.902 r
+  u_ldq_tl/dout_reg[0]/D (DFFARX1_RVT)                        0.07        0.972 f
+  data arrival time                                                    0.972
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.136      2.136
+  clock uncertainty                                      -0.05   2.086
+  u_ldq_tl/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.086 r
+  library setup time                                     -0.07   2.016
+  data required time                                                   2.016
+  -------------------------------------------------------------------------
+  data required time                                                   2.016
+  data arrival time                                                   -0.972
+  -------------------------------------------------------------------------
+  slack (MET)      1.044
+
+
+=========================================================================
+                   LDQ_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : LDQ_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Setup post-ECO sign-off — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_ldq_wr          1.044       0.000       0      0.057        0     |
+  | u_ldq_rd          0.169       0.000       0      0.114        0     |
+  | u_ldq_hd          0.065       0.000       0      0.087        0     |
+  | u_ldq_tl          0.044       0.000       0      0.082        0     |
+  +------------------------------------------------------------------+
+  | LDQ_TOP   1.044       0.000       0      0.057        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_ldq_wr/*] -to [get_cells u_ldq_tl/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_ldq_wr/*] -to [get_cells u_ldq_tl/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.024 ns  (max across LDQ_TOP)
+  Latency  : 0.136 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1291
+  Constrained endpoints      : 5418
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/MEMORY/LDQ/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/LDQ_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/LDQ_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/LDQ_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:05:46
+  Peak Memory  : 2.082 GB
+
+=========================================================================
+End of Report
+=========================================================================

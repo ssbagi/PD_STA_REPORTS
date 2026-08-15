@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  IQ_INT_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\ISSUE\IQ_INT
+  Design          : IQ_INT_TOP
+  Parsed At       : 2026-08-15T18:25:17
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.157
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.098     0.000     0.099  MET
+  ff_1p16v_1p16v_n40c                               1     1.115     0.000     0.104  MET
+  ss_0p63v_0p63v_125c                               1     1.051     0.000     0.092  MET
+  ss_0p72v_0p72v_125c                               2     1.072     0.000     0.093  MET
+  ss_0p72v_0p72v_n40c                               1     1.157     0.000     0.088  MET
+  tt_0p90v_0p90v_25c                                4     1.052     0.000     0.101  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.052     0.000     0.099  MET
+  setup                                             7     1.051     0.000     0.088  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.072 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
+  Slack    :   +1.072 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4448 / 2416
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:17         Memory : 1.204 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.115 ns   TNS :   +0.000 ns   WHS :   +0.104 ns
+  Slack    :   +1.115 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 944 / 1597
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:39         Memory : 1.339 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
+  Slack    :   +1.077 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2192 / 1280
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:11         Memory : 2.418 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.052 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5121 / 4093
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:40         Memory : 1.646 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.157 ns   TNS :   +0.000 ns   WHS :   +0.088 ns
+  Slack    :   +1.157 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1339 / 3029
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:32         Memory : 1.79 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5330 / 5255
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:46         Memory : 3.535 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.051 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.051 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3020 / 2333
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:18         Memory : 1.473 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4659 / 2134
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:42         Memory : 1.886 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.093 ns
+  Slack    :   +1.097 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3974 / 5735
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:46         Memory : 2.161 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_IQ_INT_TOP.rpt
+  Design   : IQ_INT_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.063 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
+  Slack    :   +1.063 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3263 / 4168
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:28         Memory : 4.753 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_tt_0p90v_0p90v_25c
+
+  File     : IQ_INT_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

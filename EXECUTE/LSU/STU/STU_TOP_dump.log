@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  STU_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\LSU\STU
+  Design          : STU_TOP
+  Parsed At       : 2026-08-15T18:25:17
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.147
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.054     0.000     0.095  MET
+  ff_1p16v_1p16v_n40c                               1     1.105     0.000     0.077  MET
+  ss_0p63v_0p63v_125c                               1     1.109     0.000     0.061  MET
+  ss_0p72v_0p72v_125c                               2     1.088     0.000     0.084  MET
+  ss_0p72v_0p72v_n40c                               1     1.127     0.000     0.118  MET
+  tt_0p90v_0p90v_25c                                4     1.116     0.000     0.065  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.054     0.000     0.077  MET
+  setup                                             7     1.088     0.000     0.061  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
+  Slack    :   +1.097 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1609 / 2648
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:40         Memory : 4.192 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
+  Slack    :   +1.105 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1044 / 3185
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:37         Memory : 4.474 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.116 ns   TNS :   +0.000 ns   WHS :   +0.065 ns
+  Slack    :   +1.116 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2314 / 5200
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:29         Memory : 3.26 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.095 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1053 / 4964
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:26         Memory : 2.193 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5059 / 3813
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:17         Memory : 4.123 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.054 ns   TNS :   +0.000 ns   WHS :   +0.095 ns
+  Slack    :   +1.054 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3356 / 1006
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:37         Memory : 4.592 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.109 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5156 / 3902
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:58         Memory : 3.489 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.147 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1524 / 5734
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:20         Memory : 1.982 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.114 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 947 / 1889
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:27         Memory : 2.716 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_STU_TOP.rpt
+  Design   : STU_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.080 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1942 / 5454
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:15         Memory : 3.686 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_tt_0p90v_0p90v_25c
+
+  File     : STU_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

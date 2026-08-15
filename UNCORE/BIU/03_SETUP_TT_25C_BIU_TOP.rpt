@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : BIU_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Typical Setup   — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_biu_req/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_UNCORE)
+  Endpoint   : u_biu_buf/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_UNCORE)
+  Path Group : CLK_UNCORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_UNCORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.135      0.135
+  u_biu_req/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.135 r
+  u_biu_req/din_reg[0]/Q  (DFFARX1_RVT)                        0.128       0.263 r
+  u_biu_req/U12/Y (INVX2_RVT)                                  0.034       0.297 f
+  u_biu_req/U34/Y (NAND2X1_RVT)                                0.072       0.369 r
+  u_biu_rsp/U07/Y (AOI22X1_RVT)                                0.109       0.478 f
+  u_biu_rsp/U19/Y (OAI21X1_RVT)                                0.109       0.587 r
+  u_biu_arb/U03/Y (MUX21X1_RVT)                                0.074       0.661 r
+  u_biu_arb/U11/Y (AND2X1_RVT)                                 0.052       0.713 f
+  u_biu_arb/U22/Y (NOR2X1_RVT)                                 0.066       0.779 r
+  u_biu_buf/U05/Y (BUFX4_RVT)                                  0.077       0.856 r
+  u_biu_buf/dout_reg[0]/D (DFFARX1_RVT)                        0.073      0.929 f
+  data arrival time                                                    0.929
+
+  clock CLK_UNCORE (rise edge)                                  3.333     3.333
+  clock network delay (propagated)                        0.135      3.468
+  clock uncertainty                                      -0.05   3.418
+  u_biu_buf/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       3.418 r
+  library setup time                                     -0.078   3.34
+  data required time                                                   3.34
+  -------------------------------------------------------------------------
+  data required time                                                   3.34
+  data arrival time                                                   -0.929
+  -------------------------------------------------------------------------
+  slack (MET)   2.411
+
+
+=========================================================================
+                   BIU_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : BIU_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Typical Setup   — Nominal corner)
+  Clock        : CLK_UNCORE  Period = 3.333 ns  (300 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_biu_req          2.411       0        0      0.119        0     │
+  │ u_biu_rsp          0.06       0        0      0.106        0     │
+  │ u_biu_arb          0.139       0        0      0.06        0     │
+  │ u_biu_buf          0.095       0        0      0.091        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ BIU_TOP  2.411       0        0      0.119        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_biu_req/*] -to [get_cells u_biu_buf/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_biu_req/*] -to [get_cells u_biu_buf/*]
+  set_input_delay  0.400 -clock CLK_UNCORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_UNCORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_UNCORE
+  Period   : 3.333 ns
+  Waveform : {0.000 1.666}
+  Skew     : 0.017 ns  (max across BIU_TOP)
+  Latency  : 0.135 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 2997
+  Constrained endpoints      : 1227
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/UNCORE/BIU/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/BIU_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/BIU_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/BIU_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:06:54
+  Peak Memory  : 1.988 GB
+
+=========================================================================
+End of Report
+=========================================================================

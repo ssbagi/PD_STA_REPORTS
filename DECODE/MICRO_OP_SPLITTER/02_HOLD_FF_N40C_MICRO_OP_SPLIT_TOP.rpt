@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : MICRO_OP_SPLIT_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ff_1p16v_1p16v_n40c
+Note   : Worst-case Hold  — Fast corner, cold temp
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_ms_fsm/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_ms_out/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.15      0.15
+  u_ms_fsm/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.15 r
+  u_ms_fsm/din_reg[0]/Q  (DFFARX1_RVT)                        0.12       0.27 r
+  u_ms_fsm/U12/Y (INVX2_RVT)                                  0.051       0.321 f
+  u_ms_fsm/U34/Y (NAND2X1_RVT)                                0.094       0.415 r
+  u_ms_lut/U07/Y (AOI22X1_RVT)                                0.092       0.507 f
+  u_ms_lut/U19/Y (OAI21X1_RVT)                                0.091       0.598 r
+  u_ms_cnt/U03/Y (MUX21X1_RVT)                                0.083       0.681 r
+  u_ms_cnt/U11/Y (AND2X1_RVT)                                 0.064       0.745 f
+  u_ms_cnt/U22/Y (NOR2X1_RVT)                                 0.06       0.805 r
+  u_ms_out/U05/Y (BUFX4_RVT)                                  0.062       0.867 r
+  u_ms_out/dout_reg[0]/D (DFFARX1_RVT)                        0.074      0.941 f
+  data arrival time                                                    0.941
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.15      2.15
+  clock uncertainty                                      -0.05   2.1
+  u_ms_out/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.1 r
+  library setup time                                     -0.075   2.025
+  data required time                                                   2.025
+  -------------------------------------------------------------------------
+  data required time                                                   2.025
+  data arrival time                                                   -0.941
+  -------------------------------------------------------------------------
+  slack (MET)   1.084
+
+
+=========================================================================
+                   MICRO_OP_SPLIT_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : MICRO_OP_SPLIT_TOP
+  Corner       : ff_1p16v_1p16v_n40c
+  Check        : min  (Worst-case Hold  — Fast corner, cold temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_ms_fsm          1.084       0        0      0.114        0     │
+  │ u_ms_lut          0.171       0        0      0.065        0     │
+  │ u_ms_cnt          0.166       0        0      0.069        0     │
+  │ u_ms_out          0.086       0        0      0.111        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ MICRO_OP_SPLIT_TOP  1.084       0        0      0.114        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_ms_fsm/*] -to [get_cells u_ms_out/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_ms_fsm/*] -to [get_cells u_ms_out/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.016 ns  (max across MICRO_OP_SPLIT_TOP)
+  Latency  : 0.15 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3359
+  Constrained endpoints      : 1454
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ff_1p16v_1p16v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/MICRO_OP_SPLIT_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/MICRO_OP_SPLIT_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/MICRO_OP_SPLIT_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time : 00:06:29
+  Peak Memory  : 2.141 GB
+
+=========================================================================
+End of Report
+=========================================================================

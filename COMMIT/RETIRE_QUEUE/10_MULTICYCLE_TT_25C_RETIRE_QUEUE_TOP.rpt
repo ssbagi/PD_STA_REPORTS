@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : RETIRE_QUEUE_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:54 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Multicycle Path Check — 2-cycle paths
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_retq_ctrl/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_retq_val/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.145      0.145
+  u_retq_ctrl/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.145 r
+  u_retq_ctrl/din_reg[0]/Q  (DFFARX1_RVT)                        0.142       0.287 r
+  u_retq_ctrl/U12/Y (INVX2_RVT)                                  0.049       0.336 f
+  u_retq_ctrl/U34/Y (NAND2X1_RVT)                                0.065       0.401 r
+  u_retq_buf/U07/Y (AOI22X1_RVT)                                0.104       0.505 f
+  u_retq_buf/U19/Y (OAI21X1_RVT)                                0.101       0.606 r
+  u_retq_ptr/U03/Y (MUX21X1_RVT)                                0.061       0.667 r
+  u_retq_ptr/U11/Y (AND2X1_RVT)                                 0.084       0.751 f
+  u_retq_ptr/U22/Y (NOR2X1_RVT)                                 0.055       0.806 r
+  u_retq_val/U05/Y (BUFX4_RVT)                                  0.066       0.872 r
+  u_retq_val/dout_reg[0]/D (DFFARX1_RVT)                        0.066      0.938 f
+  data arrival time                                                    0.938
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.145      2.145
+  clock uncertainty                                      -0.05   2.095
+  u_retq_val/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.095 r
+  library setup time                                     -0.077   2.018
+  data required time                                                   2.018
+  -------------------------------------------------------------------------
+  data required time                                                   2.018
+  data arrival time                                                   -0.938
+  -------------------------------------------------------------------------
+  slack (MET)   1.08
+
+
+=========================================================================
+                   RETIRE_QUEUE_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : RETIRE_QUEUE_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Multicycle Path Check — 2-cycle paths)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_retq_ctrl          1.08       0        0      0.087        0     │
+  │ u_retq_buf          0.122       0        0      0.07        0     │
+  │ u_retq_ptr          0.073       0        0      0.059        0     │
+  │ u_retq_val          0.087       0        0      0.107        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ RETIRE_QUEUE_TOP  1.08       0        0      0.087        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_retq_ctrl/*] -to [get_cells u_retq_val/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_retq_ctrl/*] -to [get_cells u_retq_val/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across RETIRE_QUEUE_TOP)
+  Latency  : 0.145 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1486
+  Constrained endpoints      : 2726
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/COMMIT/RETIRE_QUEUE/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/RETIRE_QUEUE_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/RETIRE_QUEUE_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/RETIRE_QUEUE_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:02:44
+  Peak Memory  : 1.457 GB
+
+=========================================================================
+End of Report
+=========================================================================

@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : LDQ_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ss_0p72v_0p72v_125c
+Note   : Worst-case Setup — Slow corner, high temp
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_ldq_wr/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_ldq_tl/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.139      0.139
+  u_ldq_wr/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.139 r
+  u_ldq_wr/din_reg[0]/Q  (DFFARX1_RVT)                        0.112       0.251 r
+  u_ldq_wr/U12/Y (INVX2_RVT)                                  0.05       0.301 f
+  u_ldq_wr/U34/Y (NAND2X1_RVT)                                0.064       0.365 r
+  u_ldq_rd/U07/Y (AOI22X1_RVT)                                0.073       0.438 f
+  u_ldq_rd/U19/Y (OAI21X1_RVT)                                0.099       0.537 r
+  u_ldq_hd/U03/Y (MUX21X1_RVT)                                0.074       0.611 r
+  u_ldq_hd/U11/Y (AND2X1_RVT)                                 0.067       0.678 f
+  u_ldq_hd/U22/Y (NOR2X1_RVT)                                 0.043       0.721 r
+  u_ldq_tl/U05/Y (BUFX4_RVT)                                  0.07       0.791 r
+  u_ldq_tl/dout_reg[0]/D (DFFARX1_RVT)                        0.069      0.86 f
+  data arrival time                                                    0.86
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.139      2.139
+  clock uncertainty                                      -0.05   2.089
+  u_ldq_tl/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.089 r
+  library setup time                                     -0.072   2.017
+  data required time                                                   2.017
+  -------------------------------------------------------------------------
+  data required time                                                   2.017
+  data arrival time                                                   -0.86
+  -------------------------------------------------------------------------
+  slack (MET)   1.157
+
+
+=========================================================================
+                   LDQ_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : LDQ_TOP
+  Corner       : ss_0p72v_0p72v_125c
+  Check        : max  (Worst-case Setup — Slow corner, high temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_ldq_wr          1.157       0        0      0.112        0     │
+  │ u_ldq_rd          0.188       0        0      0.074        0     │
+  │ u_ldq_hd          0.199       0        0      0.059        0     │
+  │ u_ldq_tl          0.081       0        0      0.118        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ LDQ_TOP  1.157       0        0      0.112        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_ldq_wr/*] -to [get_cells u_ldq_tl/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_ldq_wr/*] -to [get_cells u_ldq_tl/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.026 ns  (max across LDQ_TOP)
+  Latency  : 0.139 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1807
+  Constrained endpoints      : 5637
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/MEMORY/LDQ/run_ss_0p72v_0p72v_125c
+  SDC File     : /proj/cpu_rtl/constraints/LDQ_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/LDQ_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/LDQ_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_125c.db
+  Elapsed Time : 00:04:23
+  Peak Memory  : 3.24 GB
+
+=========================================================================
+End of Report
+=========================================================================

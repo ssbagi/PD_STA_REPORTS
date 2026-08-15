@@ -1,0 +1,36 @@
+################################################################################
+#  CACHE STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User9
+  Email              : mto9@company.com
+  Employee ID        : EMP-1009
+
+[RTL TEAM LEAD]
+  Name               : TeamLead9
+  Email              : teamlead9@company.com
+
+[PD ENGINEER]
+  Name               : PDEng9
+  Email              : pdeng9@company.com
+
+[STA ENGINEER]
+  Name               : STAEng9
+  Email              : staeng9@company.com
+
+[BLOCKS IN THIS STAGE]
+  CACHE\CACHE_CONTROLLER                     BTO = User47      <user47@company.com>  EMP-2047
+  CACHE\L1D                                  BTO = User48      <user48@company.com>  EMP-2048
+  CACHE\L1I                                  BTO = User49      <user49@company.com>  EMP-2049
+  CACHE\L2                                   BTO = User50      <user50@company.com>  EMP-2050
+  CACHE\L3_LLC                               BTO = User51      <user51@company.com>  EMP-2051
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User9 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

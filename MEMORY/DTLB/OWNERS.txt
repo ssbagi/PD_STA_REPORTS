@@ -1,0 +1,59 @@
+################################################################################
+#  BLOCK OWNERSHIP -- MEMORY\DTLB
+#  Block   : DTLB
+#  Stage   : MEMORY
+#  Updated : 2026-08-15
+################################################################################
+
+[BLOCK TIMING OWNER (BTO)]
+  Name               : User35
+  Email              : user35@company.com
+  Employee ID        : EMP-2035
+
+[TEAM LEAD (MTO)]
+  Name               : MTO_User6
+  Email              : mto6@company.com
+  Employee ID        : EMP-1006
+
+[RTL TEAM LEAD]
+  Name               : TeamLead6
+  Email              : teamlead6@company.com
+
+[PD ENGINEER]
+  Name               : PDEng6
+  Email              : pdeng6@company.com
+
+[STA ENGINEER]
+  Name               : STAEng6
+  Email              : staeng6@company.com
+
+[CHIP STA LEAD]
+  Name               : STALead1
+  Email              : stalead1@company.com
+  Employee ID        : EMP-0004
+
+[SIGN-OFF CRITERIA]
+  Setup WNS          : >= 0.0 ns  (all corners)
+  Hold  WNS          : >= 0.0 ns  (all corners)
+  TNS                : = 0.0 ns
+  Violations         : 0
+
+[REPORT CORNERS]
+  01  SETUP  SS  125C   ss_0p72v_0p72v_125c
+  02  HOLD   FF  -40C   ff_1p16v_1p16v_n40c
+  03  SETUP  TT   25C   tt_0p90v_0p90v_25c
+  04  HOLD   TT   25C   tt_0p90v_0p90v_25c
+  05  SETUP  SS  -40C   ss_0p72v_0p72v_n40c
+  06  HOLD   FF  125C   ff_1p16v_1p16v_125c
+  07  SETUP LVSS 125C   ss_0p63v_0p63v_125c
+  08  CG_CHECK TT 25C   tt_0p90v_0p90v_25c
+  09  RECOVERY SS 125C  ss_0p72v_0p72v_125c
+  10  MULTICYCLE TT 25C tt_0p90v_0p90v_25c
+
+[ESCALATION PATH]
+  L1 : User35 (BTO)
+  L2 : MTO_User6 (MTO / Team Lead)
+  L3 : STALead1 (STA Lead)
+  L4 : ChipTimingOwner1 (CTO)
+
+################################################################################

@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  SIMD_VEC_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\SIMD_VEC
+  Design          : SIMD_VEC_TOP
+  Parsed At       : 2026-08-15T18:25:17
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.143
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.065     0.000     0.077  MET
+  ff_1p16v_1p16v_n40c                               1     1.138     0.000     0.103  MET
+  ss_0p63v_0p63v_125c                               1     1.098     0.000     0.108  MET
+  ss_0p72v_0p72v_125c                               2     1.094     0.000     0.096  MET
+  ss_0p72v_0p72v_n40c                               1     1.110     0.000     0.093  MET
+  tt_0p90v_0p90v_25c                                4     1.060     0.000     0.075  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.065     0.000     0.077  MET
+  setup                                             7     1.060     0.000     0.075  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.113 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2460 / 2751
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:38         Memory : 3.463 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.138 ns   TNS :   +0.000 ns   WHS :   +0.103 ns
+  Slack    :   +1.138 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4701 / 4597
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:56         Memory : 1.929 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
+  Slack    :   +1.118 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5935 / 1283
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:36         Memory : 3.134 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4820 / 1167
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:18         Memory : 2.518 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.093 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2911 / 4476
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:14         Memory : 4.164 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.065 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
+  Slack    :   +1.065 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1322 / 2438
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:25         Memory : 4.123 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1924 / 4368
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:40         Memory : 2.671 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.060 ns   TNS :   +0.000 ns   WHS :   +0.075 ns
+  Slack    :   +1.060 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4407 / 4943
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:55         Memory : 3.063 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.094 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
+  Slack    :   +1.094 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2683 / 3945
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:24         Memory : 1.747 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_SIMD_VEC_TOP.rpt
+  Design   : SIMD_VEC_TOP          Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.137 ns   TNS :   +0.000 ns   WHS :   +0.113 ns
+  Slack    :   +1.137 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2372 / 3668
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:11         Memory : 1.625 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c
+
+  File     : SIMD_VEC_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

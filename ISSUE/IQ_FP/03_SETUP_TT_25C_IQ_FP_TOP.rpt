@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : IQ_FP_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Typical Setup   — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_iqf_ent/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_iqf_age/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.151      0.151
+  u_iqf_ent/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.151 r
+  u_iqf_ent/din_reg[0]/Q  (DFFARX1_RVT)                        0.124       0.275 r
+  u_iqf_ent/U12/Y (INVX2_RVT)                                  0.053       0.328 f
+  u_iqf_ent/U34/Y (NAND2X1_RVT)                                0.057       0.385 r
+  u_iqf_wkup/U07/Y (AOI22X1_RVT)                                0.103       0.488 f
+  u_iqf_wkup/U19/Y (OAI21X1_RVT)                                0.092       0.58 r
+  u_iqf_sel/U03/Y (MUX21X1_RVT)                                0.069       0.649 r
+  u_iqf_sel/U11/Y (AND2X1_RVT)                                 0.072       0.721 f
+  u_iqf_sel/U22/Y (NOR2X1_RVT)                                 0.075       0.796 r
+  u_iqf_age/U05/Y (BUFX4_RVT)                                  0.089       0.885 r
+  u_iqf_age/dout_reg[0]/D (DFFARX1_RVT)                        0.08      0.965 f
+  data arrival time                                                    0.965
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.151      2.151
+  clock uncertainty                                      -0.05   2.101
+  u_iqf_age/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.101 r
+  library setup time                                     -0.072   2.029
+  data required time                                                   2.029
+  -------------------------------------------------------------------------
+  data required time                                                   2.029
+  data arrival time                                                   -0.965
+  -------------------------------------------------------------------------
+  slack (MET)   1.064
+
+
+=========================================================================
+                   IQ_FP_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : IQ_FP_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Typical Setup   — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_iqf_ent          1.064       0        0      0.081        0     │
+  │ u_iqf_wkup          0.181       0        0      0.058        0     │
+  │ u_iqf_sel          0.185       0        0      0.107        0     │
+  │ u_iqf_age          0.09       0        0      0.065        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ IQ_FP_TOP  1.064       0        0      0.081        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_iqf_ent/*] -to [get_cells u_iqf_age/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_iqf_ent/*] -to [get_cells u_iqf_age/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.016 ns  (max across IQ_FP_TOP)
+  Latency  : 0.151 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 4762
+  Constrained endpoints      : 2038
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/IQ_FP_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/IQ_FP_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/IQ_FP_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:02:35
+  Peak Memory  : 2.707 GB
+
+=========================================================================
+End of Report
+=========================================================================

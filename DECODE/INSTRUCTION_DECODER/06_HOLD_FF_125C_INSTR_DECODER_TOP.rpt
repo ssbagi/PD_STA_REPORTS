@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : INSTR_DECODER_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ff_1p16v_1p16v_125c
+Note   : Hot Hold        — Fast corner, high temp
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_id_opmap/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_id_uop/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.159      0.159
+  u_id_opmap/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.159 r
+  u_id_opmap/din_reg[0]/Q  (DFFARX1_RVT)                        0.131       0.29 r
+  u_id_opmap/U12/Y (INVX2_RVT)                                  0.055       0.345 f
+  u_id_opmap/U34/Y (NAND2X1_RVT)                                0.095       0.44 r
+  u_id_imm/U07/Y (AOI22X1_RVT)                                0.109       0.549 f
+  u_id_imm/U19/Y (OAI21X1_RVT)                                0.088       0.637 r
+  u_id_ctrl/U03/Y (MUX21X1_RVT)                                0.079       0.716 r
+  u_id_ctrl/U11/Y (AND2X1_RVT)                                 0.083       0.799 f
+  u_id_ctrl/U22/Y (NOR2X1_RVT)                                 0.064       0.863 r
+  u_id_uop/U05/Y (BUFX4_RVT)                                  0.061       0.924 r
+  u_id_uop/dout_reg[0]/D (DFFARX1_RVT)                        0.08      1.004 f
+  data arrival time                                                    1.004
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.159      2.159
+  clock uncertainty                                      -0.05   2.109
+  u_id_uop/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.109 r
+  library setup time                                     -0.07   2.039
+  data required time                                                   2.039
+  -------------------------------------------------------------------------
+  data required time                                                   2.039
+  data arrival time                                                   -1.004
+  -------------------------------------------------------------------------
+  slack (MET)   1.035
+
+
+=========================================================================
+                   INSTR_DECODER_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : INSTR_DECODER_TOP
+  Corner       : ff_1p16v_1p16v_125c
+  Check        : min  (Hot Hold        — Fast corner, high temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_id_opmap          1.035       0        0      0.104        0     │
+  │ u_id_imm          0.164       0        0      0.089        0     │
+  │ u_id_ctrl          0.088       0        0      0.093        0     │
+  │ u_id_uop          0.137       0        0      0.07        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ INSTR_DECODER_TOP  1.035       0        0      0.104        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_id_opmap/*] -to [get_cells u_id_uop/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_id_opmap/*] -to [get_cells u_id_uop/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across INSTR_DECODER_TOP)
+  Latency  : 0.159 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1551
+  Constrained endpoints      : 3495
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_125c
+  SDC File     : /proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_125c.db
+  Elapsed Time : 00:02:32
+  Peak Memory  : 1.805 GB
+
+=========================================================================
+End of Report
+=========================================================================

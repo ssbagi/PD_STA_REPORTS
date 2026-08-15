@@ -1,0 +1,35 @@
+################################################################################
+#  ISSUE STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User4
+  Email              : mto4@company.com
+  Employee ID        : EMP-1004
+
+[RTL TEAM LEAD]
+  Name               : TeamLead4
+  Email              : teamlead4@company.com
+
+[PD ENGINEER]
+  Name               : PDEng4
+  Email              : pdeng4@company.com
+
+[STA ENGINEER]
+  Name               : STAEng4
+  Email              : staeng4@company.com
+
+[BLOCKS IN THIS STAGE]
+  ISSUE\IQ_FP                                BTO = User17      <user17@company.com>  EMP-2017
+  ISSUE\IQ_INT                               BTO = User18      <user18@company.com>  EMP-2018
+  ISSUE\IQ_LSU                               BTO = User19      <user19@company.com>  EMP-2019
+  ISSUE\WAKEUP_SELECT                        BTO = User20      <user20@company.com>  EMP-2020
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User4 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################
