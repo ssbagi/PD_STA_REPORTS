@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU0",
   "design": "ALU0_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T19:15:02",
-  "worst_wns_ns": 0.0,
-  "worst_tns_ns": 0.0,
+  "parsed_at": "2026-08-15T22:10:32",
+  "worst_wns_ns": -0.112,
+  "worst_tns_ns": -1.094,
   "worst_whs_ns": 0.0,
   "best_wns_ns": 1.143,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -45,10 +45,10 @@
     "ss_0p72v_0p72v_125c": {
       "name": "ss_0p72v_0p72v_125c",
       "count": 2,
-      "wns_ns": 1.115,
-      "tns_ns": 0.0,
+      "wns_ns": -0.112,
+      "tns_ns": -1.094,
       "whs_ns": 0.075,
-      "status": "MET"
+      "status": "VIOLATED"
     },
     "ss_0p72v_0p72v_n40c": {
       "name": "ss_0p72v_0p72v_n40c",
@@ -87,10 +87,10 @@
     "setup": {
       "name": "setup",
       "count": 7,
-      "wns_ns": 1.091,
-      "tns_ns": 0.0,
+      "wns_ns": -0.112,
+      "tns_ns": -1.094,
       "whs_ns": 0.063,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "reports": [
@@ -107,43 +107,43 @@
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_alu0_add/din_reg[0]",
-      "endpoint": "u_alu0_cmp/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.115,
-      "wns_ns": 1.115,
-      "tns_ns": 0.0,
-      "whs_ns": 0.083,
+      "startpoint": "u_alu0_add/sum_reg[7]",
+      "endpoint": "u_alu0_add/cout_reg",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.112,
+      "wns_ns": -0.112,
+      "tns_ns": -1.094,
+      "whs_ns": 0.093,
       "sub_units": [
         {
           "unit": "u_alu0_add",
-          "wns_ns": 1.115,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
+          "wns_ns": -0.112,
+          "tns_ns": -0.874,
+          "whs_ns": 0.093
         },
         {
-          "unit": "u_alu0_log",
-          "wns_ns": 0.055,
+          "unit": "u_alu0_shift",
+          "wns_ns": 0.037,
           "tns_ns": 0.0,
-          "whs_ns": 0.126
+          "whs_ns": 0.081
         },
         {
-          "unit": "u_alu0_shf",
-          "wns_ns": 0.162,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
+          "unit": "u_alu0_logic",
+          "wns_ns": -0.055,
+          "tns_ns": -0.22,
+          "whs_ns": 0.074
         },
         {
-          "unit": "u_alu0_cmp",
-          "wns_ns": 0.179,
+          "unit": "u_alu0_mux",
+          "wns_ns": 0.019,
           "tns_ns": 0.0,
-          "whs_ns": 0.083
+          "whs_ns": 0.067
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Setup violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 2455,
-      "constrained_endpoints": 2351,
+      "total_endpoints": 3142,
+      "constrained_endpoints": 3142,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p72v_0p72v_125c",
@@ -151,8 +151,8 @@
       "netlist": "/proj/cpu_rtl/netlist/ALU0_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/ALU0_TOP.spef.gz",
       "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:05:37",
-      "peak_mem": "3.174 GB"
+      "elapsed": "00:03:18",
+      "peak_mem": "3.847 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\ALU\\ALU0\\02_HOLD_FF_N40C_ALU0_TOP.rpt",

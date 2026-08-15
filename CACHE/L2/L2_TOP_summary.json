@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L2",
   "design": "L2_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T19:15:03",
-  "worst_wns_ns": 0.0,
-  "worst_tns_ns": 0.0,
+  "parsed_at": "2026-08-15T22:10:32",
+  "worst_wns_ns": -0.145,
+  "worst_tns_ns": -3.34,
   "worst_whs_ns": 0.0,
   "best_wns_ns": 1.638,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -45,10 +45,10 @@
     "ss_0p72v_0p72v_125c": {
       "name": "ss_0p72v_0p72v_125c",
       "count": 2,
-      "wns_ns": 1.562,
-      "tns_ns": 0.0,
-      "whs_ns": 0.085,
-      "status": "MET"
+      "wns_ns": -0.145,
+      "tns_ns": -3.34,
+      "whs_ns": 0.088,
+      "status": "VIOLATED"
     },
     "ss_0p72v_0p72v_n40c": {
       "name": "ss_0p72v_0p72v_n40c",
@@ -87,10 +87,10 @@
     "setup": {
       "name": "setup",
       "count": 7,
-      "wns_ns": 1.562,
-      "tns_ns": 0.0,
+      "wns_ns": -0.145,
+      "tns_ns": -3.34,
       "whs_ns": 0.074,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "reports": [
@@ -99,51 +99,51 @@
       "file_name": "01_SETUP_SS_125C_L2_TOP.rpt",
       "design": "L2_TOP",
       "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:54 2026",
+      "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "ss_0p72v_0p72v_125c",
       "note": "Worst-case Setup — Slow corner, high temp",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
-      "period_ns": 2.5,
-      "freq_mhz": 400.0,
-      "startpoint": "u_l2_tag/din_reg[0]",
-      "endpoint": "u_l2_lru/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.562,
-      "wns_ns": 1.562,
-      "tns_ns": 0.0,
-      "whs_ns": 0.085,
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_l2_tag/tag_reg[31]",
+      "endpoint": "u_l2_data/data_reg[31]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.145,
+      "wns_ns": -0.145,
+      "tns_ns": -3.34,
+      "whs_ns": 0.088,
       "sub_units": [
         {
           "unit": "u_l2_tag",
-          "wns_ns": 1.562,
-          "tns_ns": 0.0,
-          "whs_ns": 0.085
+          "wns_ns": -0.145,
+          "tns_ns": -2.32,
+          "whs_ns": 0.088
         },
         {
           "unit": "u_l2_data",
-          "wns_ns": 0.105,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
-        },
-        {
-          "unit": "u_l2_ctrl",
-          "wns_ns": 0.146,
-          "tns_ns": 0.0,
-          "whs_ns": 0.104
+          "wns_ns": -0.077,
+          "tns_ns": -0.924,
+          "whs_ns": 0.062
         },
         {
           "unit": "u_l2_lru",
-          "wns_ns": 0.088,
+          "wns_ns": 0.031,
           "tns_ns": 0.0,
-          "whs_ns": 0.126
+          "whs_ns": 0.054
+        },
+        {
+          "unit": "u_l2_ctrl",
+          "wns_ns": -0.024,
+          "tns_ns": -0.096,
+          "whs_ns": 0.043
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Setup violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 2293,
-      "constrained_endpoints": 883,
+      "total_endpoints": 9207,
+      "constrained_endpoints": 9207,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/CACHE/L2/run_ss_0p72v_0p72v_125c",
@@ -151,8 +151,8 @@
       "netlist": "/proj/cpu_rtl/netlist/L2_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/L2_TOP.spef.gz",
       "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:01:14",
-      "peak_mem": "2.124 GB"
+      "elapsed": "00:09:37",
+      "peak_mem": "8.874 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L2\\02_HOLD_FF_N40C_L2_TOP.rpt",

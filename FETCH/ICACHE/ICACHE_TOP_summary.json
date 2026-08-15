@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\ICACHE",
   "design": "ICACHE_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T19:14:51",
-  "worst_wns_ns": 0.0,
-  "worst_tns_ns": 0.0,
+  "parsed_at": "2026-08-15T22:10:33",
+  "worst_wns_ns": -0.048,
+  "worst_tns_ns": -0.468,
   "worst_whs_ns": 0.0,
-  "best_wns_ns": 1.168,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "best_wns_ns": 1.155,
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -61,10 +61,10 @@
     "tt_0p90v_0p90v_25c": {
       "name": "tt_0p90v_0p90v_25c",
       "count": 4,
-      "wns_ns": 1.102,
-      "tns_ns": 0.0,
+      "wns_ns": -0.048,
+      "tns_ns": -0.468,
       "whs_ns": 0.086,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "by_check": {
@@ -87,10 +87,10 @@
     "setup": {
       "name": "setup",
       "count": 7,
-      "wns_ns": 1.077,
-      "tns_ns": 0.0,
+      "wns_ns": -0.048,
+      "tns_ns": -0.468,
       "whs_ns": 0.082,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "reports": [
@@ -527,43 +527,43 @@
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_ic_tag/din_reg[0]",
-      "endpoint": "u_ic_lru/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.168,
-      "wns_ns": 1.168,
-      "tns_ns": 0.0,
-      "whs_ns": 0.113,
+      "startpoint": "u_icache_tag/cg_en_reg",
+      "endpoint": "u_icache_fill/fill_state_reg[2]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.048,
+      "wns_ns": -0.048,
+      "tns_ns": -0.468,
+      "whs_ns": 0.091,
       "sub_units": [
         {
-          "unit": "u_ic_tag",
-          "wns_ns": 1.168,
-          "tns_ns": 0.0,
-          "whs_ns": 0.113
+          "unit": "u_icache_tag",
+          "wns_ns": -0.048,
+          "tns_ns": -0.384,
+          "whs_ns": 0.091
         },
         {
-          "unit": "u_ic_data",
-          "wns_ns": 0.138,
+          "unit": "u_icache_data",
+          "wns_ns": 0.027,
           "tns_ns": 0.0,
-          "whs_ns": 0.065
+          "whs_ns": 0.082
         },
         {
-          "unit": "u_ic_ctrl",
-          "wns_ns": 0.192,
-          "tns_ns": 0.0,
-          "whs_ns": 0.125
+          "unit": "u_icache_fill",
+          "wns_ns": -0.021,
+          "tns_ns": -0.084,
+          "whs_ns": 0.073
         },
         {
-          "unit": "u_ic_lru",
-          "wns_ns": 0.098,
+          "unit": "u_icache_ctrl",
+          "wns_ns": 0.033,
           "tns_ns": 0.0,
-          "whs_ns": 0.059
+          "whs_ns": 0.064
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Clock gating setup violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 2879,
-      "constrained_endpoints": 3479,
+      "total_endpoints": 6231,
+      "constrained_endpoints": 6231,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/FETCH/ICACHE/run_tt_0p90v_0p90v_25c",
@@ -571,8 +571,8 @@
       "netlist": "/proj/cpu_rtl/netlist/ICACHE_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/ICACHE_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:05:23",
-      "peak_mem": "4.417 GB"
+      "elapsed": "00:04:55",
+      "peak_mem": "5.014 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\ICACHE\\09_RECOVERY_SS_125C_ICACHE_TOP.rpt",

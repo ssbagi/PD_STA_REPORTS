@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\WRITEBACK\\PRF\\INT_RF",
   "design": "INT_RF_TOP",
   "total_reports": 31,
-  "parsed_at": "2026-08-15T19:15:05",
-  "worst_wns_ns": 0.0,
-  "worst_tns_ns": 0.0,
+  "parsed_at": "2026-08-15T22:10:33",
+  "worst_wns_ns": -0.231,
+  "worst_tns_ns": -6.788,
   "worst_whs_ns": 0.0,
   "best_wns_ns": 1.18,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -42,13 +42,13 @@
       "whs_ns": 0.0,
       "status": "MET"
     },
-    "ss_0p63v_0p63v_125c": {
-      "name": "ss_0p63v_0p63v_125c",
+    "lvss_0p63v_0p63v_125c": {
+      "name": "lvss_0p63v_0p63v_125c",
       "count": 1,
-      "wns_ns": 1.065,
-      "tns_ns": 0.0,
-      "whs_ns": 0.102,
-      "status": "MET"
+      "wns_ns": -0.231,
+      "tns_ns": -6.788,
+      "whs_ns": 0.076,
+      "status": "VIOLATED"
     },
     "ss_0p63v_0p63v_n40c": {
       "name": "ss_0p63v_0p63v_n40c",
@@ -111,10 +111,10 @@
     "setup": {
       "name": "setup",
       "count": 19,
-      "wns_ns": 1.033,
-      "tns_ns": 0.0,
+      "wns_ns": -0.231,
+      "tns_ns": -6.788,
       "whs_ns": 0.0,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "reports": [
@@ -483,60 +483,60 @@
       "file_name": "07_SETUP_LVSS_125C_INT_RF_TOP.rpt",
       "design": "INT_RF_TOP",
       "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:54 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "lvss_0p63v_0p63v_125c",
+      "note": "Low-Voltage Slow Setup — LVSS corner, high temp",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_irf_rd0/din_reg[0]",
-      "endpoint": "u_irf_byp/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.065,
-      "wns_ns": 1.065,
-      "tns_ns": 0.0,
-      "whs_ns": 0.102,
+      "startpoint": "u_intrf_rd0/rdata_reg[7]",
+      "endpoint": "u_intrf_rd1/rdata_reg[7]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.231,
+      "wns_ns": -0.231,
+      "tns_ns": -6.788,
+      "whs_ns": 0.076,
       "sub_units": [
         {
-          "unit": "u_irf_rd0",
-          "wns_ns": 1.065,
-          "tns_ns": 0.0,
-          "whs_ns": 0.102
+          "unit": "u_intrf_rd0",
+          "wns_ns": -0.231,
+          "tns_ns": -3.696,
+          "whs_ns": 0.076
         },
         {
-          "unit": "u_irf_rd1",
-          "wns_ns": 0.153,
-          "tns_ns": 0.0,
-          "whs_ns": 0.081
+          "unit": "u_intrf_rd1",
+          "wns_ns": -0.189,
+          "tns_ns": -2.268,
+          "whs_ns": 0.068
         },
         {
-          "unit": "u_irf_wr",
-          "wns_ns": 0.087,
-          "tns_ns": 0.0,
-          "whs_ns": 0.128
+          "unit": "u_intrf_wr",
+          "wns_ns": -0.103,
+          "tns_ns": -0.824,
+          "whs_ns": 0.055
         },
         {
-          "unit": "u_irf_byp",
-          "wns_ns": 0.112,
+          "unit": "u_intrf_byp",
+          "wns_ns": 0.024,
           "tns_ns": 0.0,
-          "whs_ns": 0.106
+          "whs_ns": 0.039
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Setup violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 3428,
-      "constrained_endpoints": 5576,
+      "total_endpoints": 7684,
+      "constrained_endpoints": 7684,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p63v_0p63v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_lvss_0p63v_0p63v_125c",
       "sdc_file": "/proj/cpu_rtl/constraints/INT_RF_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/INT_RF_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/INT_RF_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:06:50",
-      "peak_mem": "4.047 GB"
+      "liberty": "saed32nm_rvt_lvss_0p63v_0p63v_125c.db",
+      "elapsed": "00:08:14",
+      "peak_mem": "7.234 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\WRITEBACK\\PRF\\INT_RF\\08_CG_CHECK_TT_25C_INT_RF_TOP.rpt",

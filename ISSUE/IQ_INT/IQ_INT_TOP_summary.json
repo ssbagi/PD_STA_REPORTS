@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_INT",
   "design": "IQ_INT_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T19:15:04",
+  "parsed_at": "2026-08-15T22:10:33",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
-  "worst_whs_ns": 0.0,
+  "worst_whs_ns": -0.041,
   "best_wns_ns": 1.157,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -21,10 +21,10 @@
     "ff_1p16v_1p16v_125c": {
       "name": "ff_1p16v_1p16v_125c",
       "count": 1,
-      "wns_ns": 1.098,
+      "wns_ns": 0.018,
       "tns_ns": 0.0,
-      "whs_ns": 0.099,
-      "status": "MET"
+      "whs_ns": -0.041,
+      "status": "VIOLATED"
     },
     "ff_1p16v_1p16v_n40c": {
       "name": "ff_1p16v_1p16v_n40c",
@@ -79,10 +79,10 @@
     "hold": {
       "name": "hold",
       "count": 3,
-      "wns_ns": 1.052,
+      "wns_ns": 0.018,
       "tns_ns": 0.0,
-      "whs_ns": 0.099,
-      "status": "MET"
+      "whs_ns": -0.041,
+      "status": "VIOLATED"
     },
     "setup": {
       "name": "setup",
@@ -401,49 +401,49 @@
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
+      "note": "Worst-case Hold — Fast corner, high temp",
       "delay_type": "min",
       "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_iq_ent/din_reg[0]",
-      "endpoint": "u_iq_age/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.098,
-      "wns_ns": 1.098,
+      "startpoint": "u_iq_int_arr/entry_reg[11]",
+      "endpoint": "u_iq_int_rdy/rdy_reg[11]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.041,
+      "wns_ns": 0.018,
       "tns_ns": 0.0,
-      "whs_ns": 0.099,
+      "whs_ns": -0.041,
       "sub_units": [
         {
-          "unit": "u_iq_ent",
-          "wns_ns": 1.098,
+          "unit": "u_iq_int_arr",
+          "wns_ns": 0.044,
           "tns_ns": 0.0,
-          "whs_ns": 0.099
+          "whs_ns": -0.041
         },
         {
-          "unit": "u_iq_wkup",
-          "wns_ns": 0.077,
+          "unit": "u_iq_int_sel",
+          "wns_ns": 0.018,
           "tns_ns": 0.0,
-          "whs_ns": 0.096
+          "whs_ns": 0.023
         },
         {
-          "unit": "u_iq_sel",
-          "wns_ns": 0.1,
+          "unit": "u_iq_int_rdy",
+          "wns_ns": 0.057,
           "tns_ns": 0.0,
-          "whs_ns": 0.113
+          "whs_ns": -0.017
         },
         {
-          "unit": "u_iq_age",
-          "wns_ns": 0.164,
+          "unit": "u_iq_int_ctrl",
+          "wns_ns": 0.029,
           "tns_ns": 0.0,
-          "whs_ns": 0.075
+          "whs_ns": 0.011
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Hold violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 5255,
-      "constrained_endpoints": 5330,
+      "total_endpoints": 5132,
+      "constrained_endpoints": 5132,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ff_1p16v_1p16v_125c",
@@ -451,8 +451,8 @@
       "netlist": "/proj/cpu_rtl/netlist/IQ_INT_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/IQ_INT_TOP.spef.gz",
       "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:07:46",
-      "peak_mem": "3.535 GB"
+      "elapsed": "00:05:53",
+      "peak_mem": "4.921 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_INT\\07_SETUP_LVSS_125C_IQ_INT_TOP.rpt",

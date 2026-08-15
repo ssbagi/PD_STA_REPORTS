@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\DECODE\INSTRUCTION_DECODER
   Design          : INSTR_DECODER_TOP
-  Parsed At       : 2026-08-15T19:15:02
+  Parsed At       : 2026-08-15T22:10:32
   Total Reports   : 11
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
-  Worst WNS  (ns)  : 0.000
-  Worst TNS  (ns)  : 0.000
+  Overall Status   : VIOLATED
+  Worst WNS  (ns)  : -0.089
+  Worst TNS  (ns)  : -0.876
   Worst WHS  (ns)  : 0.000
   Best  WNS  (ns)  : 1.137
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -34,7 +34,7 @@ BY CORNER
   ff_1p16v_1p16v_125c                               1     1.035     0.000     0.104  MET
   ff_1p16v_1p16v_n40c                               1     1.137     0.000     0.114  MET
   ss_0p63v_0p63v_125c                               1     1.104     0.000     0.106  MET
-  ss_0p72v_0p72v_125c                               2     1.021     0.000     0.085  MET
+  ss_0p72v_0p72v_125c                               2    -0.089    -0.876     0.087  VIOLATED
   ss_0p72v_0p72v_n40c                               1     1.093     0.000     0.064  MET
   tt_0p90v_0p90v_25c                                4     1.060     0.000     0.062  MET
 
@@ -44,19 +44,19 @@ BY CHECK TYPE
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   hold                                              3     1.035     0.000     0.082  MET
-  setup                                             7     1.021     0.000     0.062  MET
+  setup                                             7    -0.089    -0.876     0.062  VIOLATED
 
 PER-REPORT DETAIL
 ----------------------------------------
   File     : 01_SETUP_SS_125C_INSTR_DECODER_TOP.rpt
   Design   : INSTR_DECODER_TOP     Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.021 ns   TNS :   +0.000 ns   WHS :   +0.085 ns
-  Slack    :   +1.021 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1038 / 3774
+  WNS      :   -0.089 ns   TNS :   -0.876 ns   WHS :   +0.087 ns
+  Slack    :   -0.089 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Setup violations detected
+  Coverage : 100.0%   Endpoints : 4876 / 4876
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:26         Memory : 3.942 GB
+  Runtime  : 00:04:33         Memory : 4.317 GB
   Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p72v_0p72v_125c
 
   File     : 02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\RENAME_DISPATCH\ROB
   Design          : ROB_TOP
-  Parsed At       : 2026-08-15T19:15:04
+  Parsed At       : 2026-08-15T22:10:33
   Total Reports   : 31
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
+  Overall Status   : VIOLATED
   Worst WNS  (ns)  : 0.000
   Worst TNS  (ns)  : 0.000
-  Worst WHS  (ns)  : 0.000
+  Worst WHS  (ns)  : -0.033
   Best  WNS  (ns)  : 1.199
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -32,7 +32,7 @@ BY CORNER
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   ff_1p16v_1p16v_125c                               2     1.087     0.000     0.000  MET
-  ff_1p16v_1p16v_n40c                               5     1.075     0.000     0.000  MET
+  ff_1p16v_1p16v_n40c                               5     0.031     0.000    -0.033  VIOLATED
   ff_1p32v_1p32v_n40c                               1     1.095     0.000     0.000  MET
   ss_0p63v_0p63v_125c                               1     1.095     0.000     0.088  MET
   ss_0p63v_0p63v_n40c                               1     1.156     0.000     0.000  MET
@@ -46,7 +46,7 @@ BY CHECK TYPE
   Name                                              #       WNS       TNS       WHS  STATUS
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
-  hold                                             11     1.027     0.000     0.000  MET
+  hold                                             11     0.031     0.000    -0.033  VIOLATED
   setup                                            19     1.055     0.000     0.000  MET
 
 PER-REPORT DETAIL
@@ -65,12 +65,12 @@ PER-REPORT DETAIL
   File     : 02_HOLD_FF_N40C_ROB_TOP.rpt
   Design   : ROB_TOP               Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.084 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
-  Slack    :   +1.084 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3994 / 1853
+  WNS      :   +0.031 ns   TNS :   +0.000 ns   WHS :   -0.033 ns
+  Slack    :   -0.033 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Hold violations detected
+  Coverage : 100.0%   Endpoints : 6784 / 6784
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:46         Memory : 2.57 GB
+  Runtime  : 00:07:02         Memory : 6.531 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/ROB/run_ff_1p16v_1p16v_n40c
 
   File     : 03_SETUP_TT_25C_ROB_TOP.rpt

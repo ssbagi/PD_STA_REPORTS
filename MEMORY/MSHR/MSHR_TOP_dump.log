@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\MSHR
   Design          : MSHR_TOP
-  Parsed At       : 2026-08-15T19:15:03
+  Parsed At       : 2026-08-15T22:10:33
   Total Reports   : 31
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
-  Worst WNS  (ns)  : 0.000
-  Worst TNS  (ns)  : 0.000
+  Overall Status   : VIOLATED
+  Worst WNS  (ns)  : -0.063
+  Worst TNS  (ns)  : -0.628
   Worst WHS  (ns)  : 0.000
   Best  WNS  (ns)  : 1.183
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -38,7 +38,7 @@ BY CORNER
   ss_0p63v_0p63v_n40c                               1     1.077     0.000     0.000  MET
   ss_0p72v_0p72v_125c                               9     1.049     0.000     0.000  MET
   ss_0p72v_0p72v_n40c                               1     1.056     0.000     0.084  MET
-  tt_0p90v_0p90v_25c                                8     1.092     0.000     0.000  MET
+  tt_0p90v_0p90v_25c                                8    -0.063    -0.628     0.000  VIOLATED
   tt_0p90v_0p90v_85c                                2     1.088     0.000     0.000  MET
 
 BY CHECK TYPE
@@ -47,7 +47,7 @@ BY CHECK TYPE
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   hold                                             11     1.025     0.000     0.000  MET
-  setup                                            19     1.049     0.000     0.000  MET
+  setup                                            19    -0.063    -0.628     0.000  VIOLATED
 
 PER-REPORT DETAIL
 ----------------------------------------
@@ -76,12 +76,12 @@ PER-REPORT DETAIL
   File     : 03_SETUP_TT_25C_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.139 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
-  Slack    :   +1.139 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1829 / 4453
+  WNS      :   -0.063 ns   TNS :   -0.628 ns   WHS :   +0.082 ns
+  Slack    :   -0.063 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Setup violations detected
+  Coverage : 100.0%   Endpoints : 4418 / 4418
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:14         Memory : 2.037 GB
+  Runtime  : 00:04:11         Memory : 4.102 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
   File     : 04_HOLD_TT_25C_MSHR_TOP.rpt

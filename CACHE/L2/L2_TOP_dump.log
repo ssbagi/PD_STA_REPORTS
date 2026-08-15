@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\CACHE\L2
   Design          : L2_TOP
-  Parsed At       : 2026-08-15T19:15:03
+  Parsed At       : 2026-08-15T22:10:32
   Total Reports   : 11
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
-  Worst WNS  (ns)  : 0.000
-  Worst TNS  (ns)  : 0.000
+  Overall Status   : VIOLATED
+  Worst WNS  (ns)  : -0.145
+  Worst TNS  (ns)  : -3.340
   Worst WHS  (ns)  : 0.000
   Best  WNS  (ns)  : 1.638
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -34,7 +34,7 @@ BY CORNER
   ff_1p16v_1p16v_125c                               1     1.577     0.000     0.088  MET
   ff_1p16v_1p16v_n40c                               1     1.613     0.000     0.082  MET
   ss_0p63v_0p63v_125c                               1     1.614     0.000     0.099  MET
-  ss_0p72v_0p72v_125c                               2     1.562     0.000     0.085  MET
+  ss_0p72v_0p72v_125c                               2    -0.145    -3.340     0.088  VIOLATED
   ss_0p72v_0p72v_n40c                               1     1.610     0.000     0.097  MET
   tt_0p90v_0p90v_25c                                4     1.579     0.000     0.074  MET
 
@@ -44,19 +44,19 @@ BY CHECK TYPE
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   hold                                              3     1.577     0.000     0.082  MET
-  setup                                             7     1.562     0.000     0.074  MET
+  setup                                             7    -0.145    -3.340     0.074  VIOLATED
 
 PER-REPORT DETAIL
 ----------------------------------------
   File     : 01_SETUP_SS_125C_L2_TOP.rpt
   Design   : L2_TOP                Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.5 ns  (400.0 MHz)
-  WNS      :   +1.562 ns   TNS :   +0.000 ns   WHS :   +0.085 ns
-  Slack    :   +1.562 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 883 / 2293
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   -0.145 ns   TNS :   -3.340 ns   WHS :   +0.088 ns
+  Slack    :   -0.145 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Setup violations detected
+  Coverage : 100.0%   Endpoints : 9207 / 9207
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:14         Memory : 2.124 GB
+  Runtime  : 00:09:37         Memory : 8.874 GB
   Run Dir  : /proj/cpu_rtl/sta/CACHE/L2/run_ss_0p72v_0p72v_125c
 
   File     : 02_HOLD_FF_N40C_L2_TOP.rpt

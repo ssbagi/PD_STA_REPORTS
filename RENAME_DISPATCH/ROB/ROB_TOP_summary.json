@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\RENAME_DISPATCH\\ROB",
   "design": "ROB_TOP",
   "total_reports": 31,
-  "parsed_at": "2026-08-15T19:15:04",
+  "parsed_at": "2026-08-15T22:10:33",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
-  "worst_whs_ns": 0.0,
+  "worst_whs_ns": -0.033,
   "best_wns_ns": 1.199,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -29,10 +29,10 @@
     "ff_1p16v_1p16v_n40c": {
       "name": "ff_1p16v_1p16v_n40c",
       "count": 5,
-      "wns_ns": 1.075,
+      "wns_ns": 0.031,
       "tns_ns": 0.0,
-      "whs_ns": 0.0,
-      "status": "MET"
+      "whs_ns": -0.033,
+      "status": "VIOLATED"
     },
     "ff_1p32v_1p32v_n40c": {
       "name": "ff_1p32v_1p32v_n40c",
@@ -103,10 +103,10 @@
     "hold": {
       "name": "hold",
       "count": 11,
-      "wns_ns": 1.027,
+      "wns_ns": 0.031,
       "tns_ns": 0.0,
-      "whs_ns": 0.0,
-      "status": "MET"
+      "whs_ns": -0.033,
+      "status": "VIOLATED"
     },
     "setup": {
       "name": "setup",
@@ -185,49 +185,49 @@
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "note": "Worst-case Hold — Fast corner, cold temp",
       "delay_type": "min",
       "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_rob_wr/din_reg[0]",
-      "endpoint": "u_rob_tl/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.084,
-      "wns_ns": 1.084,
+      "startpoint": "u_rob_head/state_reg[3]",
+      "endpoint": "u_rob_alloc/ptr_reg[3]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.033,
+      "wns_ns": 0.031,
       "tns_ns": 0.0,
-      "whs_ns": 0.118,
+      "whs_ns": -0.033,
       "sub_units": [
         {
-          "unit": "u_rob_wr",
-          "wns_ns": 1.084,
+          "unit": "u_rob_head",
+          "wns_ns": 0.062,
           "tns_ns": 0.0,
-          "whs_ns": 0.118
+          "whs_ns": -0.033
         },
         {
-          "unit": "u_rob_rd",
-          "wns_ns": 0.181,
+          "unit": "u_rob_tail",
+          "wns_ns": 0.047,
           "tns_ns": 0.0,
-          "whs_ns": 0.065
+          "whs_ns": 0.018
         },
         {
-          "unit": "u_rob_hd",
-          "wns_ns": 0.104,
+          "unit": "u_rob_alloc",
+          "wns_ns": 0.031,
           "tns_ns": 0.0,
-          "whs_ns": 0.064
+          "whs_ns": -0.019
         },
         {
-          "unit": "u_rob_tl",
-          "wns_ns": 0.096,
+          "unit": "u_rob_commit",
+          "wns_ns": 0.083,
           "tns_ns": 0.0,
-          "whs_ns": 0.087
+          "whs_ns": 0.027
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Hold violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 1853,
-      "constrained_endpoints": 3994,
+      "total_endpoints": 6784,
+      "constrained_endpoints": 6784,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/RENAME_DISPATCH/ROB/run_ff_1p16v_1p16v_n40c",
@@ -235,8 +235,8 @@
       "netlist": "/proj/cpu_rtl/netlist/ROB_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/ROB_TOP.spef.gz",
       "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:03:46",
-      "peak_mem": "2.57 GB"
+      "elapsed": "00:07:02",
+      "peak_mem": "6.531 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\RENAME_DISPATCH\\ROB\\03_SETUP_TT_25C_ROB_TOP.rpt",

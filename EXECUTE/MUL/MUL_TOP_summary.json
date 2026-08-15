@@ -2,13 +2,13 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\MUL",
   "design": "MUL_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T19:15:03",
-  "worst_wns_ns": 0.0,
-  "worst_tns_ns": 0.0,
+  "parsed_at": "2026-08-15T22:10:33",
+  "worst_wns_ns": -0.198,
+  "worst_tns_ns": -3.76,
   "worst_whs_ns": 0.0,
   "best_wns_ns": 1.172,
-  "total_violations": 0,
-  "overall_status": "MET",
+  "total_violations": 1,
+  "overall_status": "VIOLATED",
   "by_corner": {
     "N/A": {
       "name": "N/A",
@@ -50,13 +50,13 @@
       "whs_ns": 0.068,
       "status": "MET"
     },
-    "ss_0p72v_0p72v_n40c": {
-      "name": "ss_0p72v_0p72v_n40c",
+    "ss_0p72v_0p72v_m40c": {
+      "name": "ss_0p72v_0p72v_m40c",
       "count": 1,
-      "wns_ns": 1.098,
-      "tns_ns": 0.0,
+      "wns_ns": -0.198,
+      "tns_ns": -3.76,
       "whs_ns": 0.071,
-      "status": "MET"
+      "status": "VIOLATED"
     },
     "tt_0p90v_0p90v_25c": {
       "name": "tt_0p90v_0p90v_25c",
@@ -87,10 +87,10 @@
     "setup": {
       "name": "setup",
       "count": 7,
-      "wns_ns": 1.051,
-      "tns_ns": 0.0,
+      "wns_ns": -0.198,
+      "tns_ns": -3.76,
       "whs_ns": 0.063,
-      "status": "MET"
+      "status": "VIOLATED"
     }
   },
   "reports": [
@@ -340,59 +340,59 @@
       "design": "MUL_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_n40c",
-      "note": "Cold Setup      — Slow corner, cold temp",
+      "corner": "ss_0p72v_0p72v_m40c",
+      "note": "Worst-case Setup — Slow corner, cold temp",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
-      "startpoint": "u_mul_pp/din_reg[0]",
-      "endpoint": "u_mul_out/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.098,
-      "wns_ns": 1.098,
-      "tns_ns": 0.0,
+      "startpoint": "u_mul_pp_gen/pp_reg[15]",
+      "endpoint": "u_mul_csa/s_reg[15]",
+      "slack_status": "VIOLATED",
+      "slack_ns": -0.198,
+      "wns_ns": -0.198,
+      "tns_ns": -3.76,
       "whs_ns": 0.071,
       "sub_units": [
         {
-          "unit": "u_mul_pp",
-          "wns_ns": 1.098,
-          "tns_ns": 0.0,
+          "unit": "u_mul_pp_gen",
+          "wns_ns": -0.198,
+          "tns_ns": -3.168,
           "whs_ns": 0.071
         },
         {
           "unit": "u_mul_csa",
-          "wns_ns": 0.172,
-          "tns_ns": 0.0,
-          "whs_ns": 0.057
+          "wns_ns": -0.074,
+          "tns_ns": -0.592,
+          "whs_ns": 0.064
         },
         {
-          "unit": "u_mul_add",
-          "wns_ns": 0.179,
+          "unit": "u_mul_final",
+          "wns_ns": 0.043,
           "tns_ns": 0.0,
-          "whs_ns": 0.056
+          "whs_ns": 0.055
         },
         {
-          "unit": "u_mul_out",
-          "wns_ns": 0.163,
+          "unit": "u_mul_ctrl",
+          "wns_ns": 0.011,
           "tns_ns": 0.0,
-          "whs_ns": 0.129
+          "whs_ns": 0.048
         }
       ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "status": "TIMING VIOLATED — Setup violations detected",
       "coverage_pct": 100.0,
-      "total_endpoints": 3004,
-      "constrained_endpoints": 1988,
+      "total_endpoints": 5820,
+      "constrained_endpoints": 5820,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p72v_0p72v_n40c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/MUL/run_ss_0p72v_0p72v_m40c",
       "sdc_file": "/proj/cpu_rtl/constraints/MUL_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/MUL_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/MUL_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
-      "elapsed": "00:05:20",
-      "peak_mem": "4.739 GB"
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_m40c.db",
+      "elapsed": "00:05:44",
+      "peak_mem": "5.213 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\MUL\\06_HOLD_FF_125C_MUL_TOP.rpt",

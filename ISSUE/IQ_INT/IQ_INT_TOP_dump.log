@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\ISSUE\IQ_INT
   Design          : IQ_INT_TOP
-  Parsed At       : 2026-08-15T19:15:04
+  Parsed At       : 2026-08-15T22:10:33
   Total Reports   : 11
 
 
@@ -19,19 +19,19 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
+  Overall Status   : VIOLATED
   Worst WNS  (ns)  : 0.000
   Worst TNS  (ns)  : 0.000
-  Worst WHS  (ns)  : 0.000
+  Worst WHS  (ns)  : -0.041
   Best  WNS  (ns)  : 1.157
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
   Name                                              #       WNS       TNS       WHS  STATUS
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
-  ff_1p16v_1p16v_125c                               1     1.098     0.000     0.099  MET
+  ff_1p16v_1p16v_125c                               1     0.018     0.000    -0.041  VIOLATED
   ff_1p16v_1p16v_n40c                               1     1.115     0.000     0.104  MET
   ss_0p63v_0p63v_125c                               1     1.051     0.000     0.092  MET
   ss_0p72v_0p72v_125c                               2     1.072     0.000     0.093  MET
@@ -43,7 +43,7 @@ BY CHECK TYPE
   Name                                              #       WNS       TNS       WHS  STATUS
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
-  hold                                              3     1.052     0.000     0.099  MET
+  hold                                              3     0.018     0.000    -0.041  VIOLATED
   setup                                             7     1.051     0.000     0.088  MET
 
 PER-REPORT DETAIL
@@ -106,12 +106,12 @@ PER-REPORT DETAIL
   File     : 06_HOLD_FF_125C_IQ_INT_TOP.rpt
   Design   : IQ_INT_TOP            Corner : ff_1p16v_1p16v_125c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
-  Slack    :   +1.098 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5330 / 5255
+  WNS      :   +0.018 ns   TNS :   +0.000 ns   WHS :   -0.041 ns
+  Slack    :   -0.041 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Hold violations detected
+  Coverage : 100.0%   Endpoints : 5132 / 5132
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:46         Memory : 3.535 GB
+  Runtime  : 00:05:53         Memory : 4.921 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_INT/run_ff_1p16v_1p16v_125c
 
   File     : 07_SETUP_LVSS_125C_IQ_INT_TOP.rpt

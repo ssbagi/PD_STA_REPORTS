@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\FETCH\ICACHE
   Design          : ICACHE_TOP
-  Parsed At       : 2026-08-15T19:14:51
+  Parsed At       : 2026-08-15T22:10:33
   Total Reports   : 11
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
-  Worst WNS  (ns)  : 0.000
-  Worst TNS  (ns)  : 0.000
+  Overall Status   : VIOLATED
+  Worst WNS  (ns)  : -0.048
+  Worst TNS  (ns)  : -0.468
   Worst WHS  (ns)  : 0.000
-  Best  WNS  (ns)  : 1.168
-  Total Violations : 0
+  Best  WNS  (ns)  : 1.155
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -36,7 +36,7 @@ BY CORNER
   ss_0p63v_0p63v_125c                               1     1.132     0.000     0.111  MET
   ss_0p72v_0p72v_125c                               2     1.077     0.000     0.082  MET
   ss_0p72v_0p72v_n40c                               1     1.145     0.000     0.111  MET
-  tt_0p90v_0p90v_25c                                4     1.102     0.000     0.086  MET
+  tt_0p90v_0p90v_25c                                4    -0.048    -0.468     0.086  VIOLATED
 
 BY CHECK TYPE
 ----------------------------------------
@@ -44,7 +44,7 @@ BY CHECK TYPE
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   hold                                              3     1.089     0.000     0.063  MET
-  setup                                             7     1.077     0.000     0.082  MET
+  setup                                             7    -0.048    -0.468     0.082  VIOLATED
 
 PER-REPORT DETAIL
 ----------------------------------------
@@ -128,12 +128,12 @@ PER-REPORT DETAIL
   File     : 08_CG_CHECK_TT_25C_ICACHE_TOP.rpt
   Design   : ICACHE_TOP            Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.168 ns   TNS :   +0.000 ns   WHS :   +0.113 ns
-  Slack    :   +1.168 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3479 / 2879
+  WNS      :   -0.048 ns   TNS :   -0.468 ns   WHS :   +0.091 ns
+  Slack    :   -0.048 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Clock gating setup violations detected
+  Coverage : 100.0%   Endpoints : 6231 / 6231
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:23         Memory : 4.417 GB
+  Runtime  : 00:04:55         Memory : 5.014 GB
   Run Dir  : /proj/cpu_rtl/sta/FETCH/ICACHE/run_tt_0p90v_0p90v_25c
 
   File     : 09_RECOVERY_SS_125C_ICACHE_TOP.rpt

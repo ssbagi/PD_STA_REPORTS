@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\ALU\ALU0
   Design          : ALU0_TOP
-  Parsed At       : 2026-08-15T19:15:02
+  Parsed At       : 2026-08-15T22:10:32
   Total Reports   : 11
 
 
@@ -19,12 +19,12 @@ OWNERSHIP
 
 AGGREGATE SUMMARY
 ----------------------------------------
-  Overall Status   : MET
-  Worst WNS  (ns)  : 0.000
-  Worst TNS  (ns)  : 0.000
+  Overall Status   : VIOLATED
+  Worst WNS  (ns)  : -0.112
+  Worst TNS  (ns)  : -1.094
   Worst WHS  (ns)  : 0.000
   Best  WNS  (ns)  : 1.143
-  Total Violations : 0
+  Total Violations : 1
 
 BY CORNER
 ----------------------------------------
@@ -34,7 +34,7 @@ BY CORNER
   ff_1p16v_1p16v_125c                               1     1.131     0.000     0.111  MET
   ff_1p16v_1p16v_n40c                               1     1.072     0.000     0.067  MET
   ss_0p63v_0p63v_125c                               1     1.141     0.000     0.107  MET
-  ss_0p72v_0p72v_125c                               2     1.115     0.000     0.075  MET
+  ss_0p72v_0p72v_125c                               2    -0.112    -1.094     0.075  VIOLATED
   ss_0p72v_0p72v_n40c                               1     1.143     0.000     0.069  MET
   tt_0p90v_0p90v_25c                                4     1.078     0.000     0.063  MET
 
@@ -44,19 +44,19 @@ BY CHECK TYPE
   ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
   N/A                                               1     0.000     0.000     0.000  MET
   hold                                              3     1.072     0.000     0.067  MET
-  setup                                             7     1.091     0.000     0.063  MET
+  setup                                             7    -0.112    -1.094     0.063  VIOLATED
 
 PER-REPORT DETAIL
 ----------------------------------------
   File     : 01_SETUP_SS_125C_ALU0_TOP.rpt
   Design   : ALU0_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.115 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
-  Slack    :   +1.115 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2351 / 2455
+  WNS      :   -0.112 ns   TNS :   -1.094 ns   WHS :   +0.093 ns
+  Slack    :   -0.112 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Setup violations detected
+  Coverage : 100.0%   Endpoints : 3142 / 3142
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:37         Memory : 3.174 GB
+  Runtime  : 00:03:18         Memory : 3.847 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU0/run_ss_0p72v_0p72v_125c
 
   File     : 02_HOLD_FF_N40C_ALU0_TOP.rpt
