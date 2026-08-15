@@ -1,0 +1,228 @@
+
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : FETCH_TOP
+Version: PrimeTime 2023.06
+Date   : Mon Jan 13 14:22:35 2025
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : BPU/BTB/u_btb_ram/Q_reg[47]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : FETCH_QUEUE/u_fq_ctrl/instr_valid_reg[3]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max (Setup)
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                              0.000       0.000
+  clock network delay (propagated)                        0.143       0.143
+  BPU/BTB/u_btb_ram/Q_reg[47]/CK (DFFARX1_RVT)           0.000       0.143 r
+  BPU/BTB/u_btb_ram/Q_reg[47]/Q (DFFARX1_RVT)            0.127       0.270 f
+  BPU/BTB/u_btb_decode/U42/Y (INVX2_RVT)                 0.038       0.308 r
+  BPU/BTB/u_btb_decode/U91/Y (OA21X1_RVT)                0.072       0.380 r
+  BPU/BTB/u_btb_decode/U103/Y (NAND2X1_RVT)              0.031       0.411 f
+  BPU/BTB/u_btb_mux/U14/Y (MUX21X1_RVT)                  0.065       0.476 f
+  BPU/u_bpu_top/U55/Y (AOI22X1_RVT)                      0.058       0.534 r
+  BPU/u_bpu_top/U61/Y (NAND3X1_RVT)                      0.043       0.577 f
+  PC/u_pc_mux/U8/Y  (MUX41X1_RVT)                        0.082       0.659 f
+  PC/u_pc_adder/U3/CO (ADDFHX1_RVT)                      0.109       0.768 r
+  PC/u_pc_adder/U4/CO (ADDFHX1_RVT)                      0.097       0.865 r
+  PC/u_pc_adder/U5/CO (ADDFHX1_RVT)                      0.095       0.960 r
+  PC/u_pc_adder/U6/CO (ADDFHX1_RVT)                      0.094       1.054 r
+  PC/u_pc_adder/U7/S  (ADDFHX1_RVT)                      0.076       1.130 f
+  PC/u_pc_reg/U11/Y  (BUFX4_RVT)                         0.041       1.171 f
+  ITLB/u_itlb_tag/U23/Y (XNOR2X1_RVT)                   0.085       1.256 r
+  ITLB/u_itlb_tag/U44/Y (NOR2X1_RVT)                     0.054       1.310 f
+  ITLB/u_itlb_ctrl/U7/Y  (OAI21X1_RVT)                  0.067       1.377 r
+  ICACHE/u_ic_tag/U18/Y  (AND2X1_RVT)                    0.072       1.449 r
+  ICACHE/u_ic_tag/U35/Y  (NAND2X1_RVT)                   0.029       1.478 f
+  ICACHE/u_ic_data/U102/Y (MUX21X1_RVT)                  0.063       1.541 f
+  ICACHE/u_ic_data/U118/Y (BUFX8_RVT)                    0.032       1.573 f
+  FETCH_QUEUE/u_fq_ctrl/U9/Y (NAND2X1_RVT)               0.038       1.611 r
+  FETCH_QUEUE/u_fq_ctrl/U17/Y (OAI22X1_RVT)              0.054       1.665 f
+  FETCH_QUEUE/u_fq_ctrl/instr_valid_reg[3]/D (DFFARX1_RVT) 0.000     1.665 f
+  data arrival time                                                    1.665
+
+  clock CLK_CORE (rise edge)                              2.000       2.000
+  clock network delay (propagated)                        0.138       2.138
+  clock uncertainty                                      -0.050       2.088
+  FETCH_QUEUE/u_fq_ctrl/instr_valid_reg[3]/CK (DFFARX1_RVT) 0.000   2.088 r
+  library setup time                                     -0.072       2.016
+  data required time                                                   2.016
+  -------------------------------------------------------------------------
+  data required time                                                   2.016
+  data arrival time                                                   -1.665
+  -------------------------------------------------------------------------
+  slack (MET)                                                          0.351
+
+
+=========================================================================
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 5
+        -sort_by slack
+Design : FETCH_TOP
+        (Hold Check)
+=========================================================================
+
+  Startpoint : ITLB/u_itlb_data/tlb_ppn_reg[11]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : ICACHE/u_ic_tag/tag_cmp_reg[11]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min (Hold)
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                              0.000       0.000
+  clock network delay (propagated)                        0.141       0.141
+  ITLB/u_itlb_data/tlb_ppn_reg[11]/CK (DFFARX1_RVT)     0.000       0.141 r
+  ITLB/u_itlb_data/tlb_ppn_reg[11]/Q (DFFARX1_RVT)      0.119       0.260 r
+  ICACHE/u_ic_tag/U5/Y (BUFX2_RVT)                       0.039       0.299 r
+  ICACHE/u_ic_tag/tag_cmp_reg[11]/D (DFFARX1_RVT)        0.000       0.299 r
+  data arrival time                                                    0.299
+
+  clock CLK_CORE (rise edge)                              0.000       0.000
+  clock network delay (propagated)                        0.138       0.138
+  clock uncertainty                                       0.050       0.188
+  ICACHE/u_ic_tag/tag_cmp_reg[11]/CK (DFFARX1_RVT)       0.000       0.188 r
+  library hold time                                       0.023       0.211
+  data required time                                                   0.211
+  -------------------------------------------------------------------------
+  data required time                                                   0.211
+  data arrival time                                                   -0.299
+  -------------------------------------------------------------------------
+  slack (MET)                                                          0.088
+
+
+=========================================================================
+Report : timing  (Clock Gating Check)
+        -gating
+        -max_paths 3
+Design : FETCH_TOP
+=========================================================================
+
+  Startpoint : CLK_GATE_FETCH/u_icg_fetch/EN_reg
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : CLK_GATE_FETCH/u_icg_fetch/ENCLK
+               (rising edge-triggered clock gating cell)
+  Path Group : CLK_CORE
+  Path Type  : max (Setup)
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                              0.000       0.000
+  clock network delay (propagated)                        0.140       0.140
+  CLK_GATE_FETCH/u_icg_fetch/EN_reg/CK (DFFARX1_RVT)     0.000       0.140 r
+  CLK_GATE_FETCH/u_icg_fetch/EN_reg/Q (DFFARX1_RVT)      0.125       0.265 r
+  CLK_GATE_FETCH/u_icg_fetch/U3/Y (BUFX2_RVT)            0.037       0.302 r
+  CLK_GATE_FETCH/u_icg_fetch/ENCLK (ICGX1_RVT)           0.000       0.302 r
+  data arrival time                                                    0.302
+
+  clock CLK_CORE (rise edge)                              1.000       1.000
+  clock network delay (propagated)                        0.140       1.140
+  clock gating setup time                                -0.200       0.940
+  data required time                                                   0.940
+  -------------------------------------------------------------------------
+  slack (MET)                                                          0.638
+
+
+=========================================================================
+                   FETCH BLOCK — SUMMARY TABLE
+=========================================================================
+
+Block        : FETCH_TOP
+Corner       : ss_0p72v_0p72v_125c  (Worst Corner — Setup)
+Clock Period : 2.000 ns  (500 MHz)
+Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────────┐
+  │ Sub-Block          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────────┤
+  │ PC                  0.351     0.000       0      0.088      0     │
+  │ ICACHE              0.273     0.000       0      0.112      0     │
+  │ BPU/BTB             0.418     0.000       0      0.095      0     │
+  │ BPU/PHT             0.389     0.000       0      0.103      0     │
+  │ BPU/RAS             0.442     0.000       0      0.091      0     │
+  │ ITLB                0.301     0.000       0      0.088      0     │
+  │ FETCH_QUEUE         0.265     0.000       0      0.074      0     │
+  ├────────────────────────────────────────────────────────────────────┤
+  │ FETCH_TOP (total)   0.265     0.000       0      0.074      0     │
+  └────────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  # False Paths
+  set_false_path -from [get_ports SCAN_EN] -to [all_registers]
+  set_false_path -from [get_cells BPU/u_bpu_top/flush_q_reg] \
+                 -to   [get_cells FETCH_QUEUE/u_fq_ctrl/*_reg*]
+
+  # Multicycle Paths
+  set_multicycle_path 2 -setup \
+      -from [get_cells ITLB/u_itlb_data/tlb_ppn_reg*] \
+      -to   [get_cells ICACHE/u_ic_tag/tag_cmp_reg*]
+  set_multicycle_path 1 -hold  \
+      -from [get_cells ITLB/u_itlb_data/tlb_ppn_reg*] \
+      -to   [get_cells ICACHE/u_ic_tag/tag_cmp_reg*]
+
+  # Input/Output Delays
+  set_input_delay  0.400 -clock CLK_CORE -max [get_ports FETCH_REQ_*]
+  set_output_delay 0.350 -clock CLK_CORE -max [get_ports FETCH_DATA_*]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock     : CLK_CORE
+  Period    : 2.000 ns
+  Waveform  : {0.000 1.000}
+  Sources   : [get_ports CLK_CORE]
+  Skew      : 0.021 ns  (max across FETCH_TOP)
+  Latency   : 0.143 ns  (max)  /  0.136 ns  (min)
+
+  No CDC paths detected within FETCH_TOP boundary.
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   :   4827
+  Constrained endpoints      :   4827
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool            : Synopsys PrimeTime 2023.06-SP3
+  Run Host        : sta-server-01
+  Run Directory   : /proj/cpu_rtl/sta/FETCH/run_ss_125c
+  SDC File        : /proj/cpu_rtl/constraints/FETCH_TOP.sdc  (v2.1)
+  Netlist         : /proj/cpu_rtl/netlist/FETCH_TOP.v.gz     (post-route)
+  SPEF File       : /proj/cpu_rtl/spef/FETCH_TOP.spef.gz     (StarRC 2023.06)
+  Liberty Files   : saed32nm_rvt_ss_0p72v_0p72v_125c.db
+                    saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time    : 00:04:37
+  Peak Memory     : 3.21 GB
+
+=========================================================================
+End of Report
+=========================================================================
