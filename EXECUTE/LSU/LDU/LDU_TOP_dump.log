@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\LSU\LDU
   Design          : LDU_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,6 +48,17 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
+  File     : 07_SETUP_LVSS_125C_LDU_TOP.rpt
+  Design   : LDU_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.146 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.146 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2778 / 877
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:13         Memory : 2.224 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p63v_0p63v_125c
+
   File     : 01_SETUP_SS_125C_LDU_TOP.rpt
   Design   : LDU_TOP               Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -59,37 +70,15 @@ PER-REPORT DETAIL
   Runtime  : 00:06:28         Memory : 1.517 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p72v_0p72v_125c
 
-  File     : 02_HOLD_FF_N40C_LDU_TOP.rpt
-  Design   : LDU_TOP               Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.111 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
-  Slack    :   +1.111 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3138 / 2283
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:46         Memory : 4.625 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_n40c
-
-  File     : 03_SETUP_TT_25C_LDU_TOP.rpt
+  File     : 10_MULTICYCLE_TT_25C_LDU_TOP.rpt
   Design   : LDU_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
-  Slack    :   +1.098 ns   Status : MET
+  WNS      :   +1.106 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
+  Slack    :   +1.106 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5472 / 5781
+  Coverage : 100.0%   Endpoints : 5628 / 4906
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:57         Memory : 3.291 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_LDU_TOP.rpt
-  Design   : LDU_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.114 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
-  Slack    :   +1.114 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1510 / 5311
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:48         Memory : 3.899 GB
+  Runtime  : 00:06:38         Memory : 1.514 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c
 
   File     : 05_SETUP_SS_M40C_LDU_TOP.rpt
@@ -103,37 +92,15 @@ PER-REPORT DETAIL
   Runtime  : 00:02:32         Memory : 4.382 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_LDU_TOP.rpt
-  Design   : LDU_TOP               Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.119 ns
-  Slack    :   +1.126 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2012 / 4659
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:31         Memory : 3.536 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_LDU_TOP.rpt
-  Design   : LDU_TOP               Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.146 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
-  Slack    :   +1.146 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2778 / 877
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:13         Memory : 2.224 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_LDU_TOP.rpt
+  File     : 03_SETUP_TT_25C_LDU_TOP.rpt
   Design   : LDU_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
-  Slack    :   +1.078 ns   Status : MET
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.098 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1673 / 2588
+  Coverage : 100.0%   Endpoints : 5472 / 5781
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:41         Memory : 4.21 GB
+  Runtime  : 00:02:57         Memory : 3.291 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c
 
   File     : 09_RECOVERY_SS_125C_LDU_TOP.rpt
@@ -147,15 +114,48 @@ PER-REPORT DETAIL
   Runtime  : 00:03:45         Memory : 2.904 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p72v_0p72v_125c
 
-  File     : 10_MULTICYCLE_TT_25C_LDU_TOP.rpt
+  File     : 08_CG_CHECK_TT_25C_LDU_TOP.rpt
   Design   : LDU_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.106 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
-  Slack    :   +1.106 ns   Status : MET
+  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
+  Slack    :   +1.078 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5628 / 4906
+  Coverage : 100.0%   Endpoints : 1673 / 2588
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:38         Memory : 1.514 GB
+  Runtime  : 00:06:41         Memory : 4.21 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_LDU_TOP.rpt
+  Design   : LDU_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.119 ns
+  Slack    :   +1.126 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2012 / 4659
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:31         Memory : 3.536 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_LDU_TOP.rpt
+  Design   : LDU_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.111 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
+  Slack    :   +1.111 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3138 / 2283
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:46         Memory : 4.625 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_n40c
+
+  File     : 04_HOLD_TT_25C_LDU_TOP.rpt
+  Design   : LDU_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.114 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.114 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1510 / 5311
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:48         Memory : 3.899 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c
 
   File     : LDU_TIMING.rpt

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\DECODE\MICRO_OP_SPLITTER
   Design          : MICRO_OP_SPLIT_TOP
-  Parsed At       : 2026-08-15T22:10:32
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,28 +48,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.102 ns
-  Slack    :   +1.064 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5732 / 2482
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:15         Memory : 1.804 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.084 ns   TNS :   +0.000 ns   WHS :   +0.114 ns
-  Slack    :   +1.084 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1454 / 3359
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:29         Memory : 2.141 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ff_1p16v_1p16v_n40c
-
   File     : 03_SETUP_TT_25C_MICRO_OP_SPLIT_TOP.rpt
   Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -79,61 +57,6 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 5195 / 4842
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:03:21         Memory : 2.403 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.185 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
-  Slack    :   +1.185 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4771 / 2659
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:26         Memory : 1.782 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.093 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
-  Slack    :   +1.093 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1171 / 5970
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:39         Memory : 3.701 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.157 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
-  Slack    :   +1.157 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1513 / 5988
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:19         Memory : 1.753 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.078 ns
-  Slack    :   +1.113 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2515 / 2884
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:21         Memory : 2.521 GB
-  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_MICRO_OP_SPLIT_TOP.rpt
-  Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
-  Slack    :   +1.085 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3251 / 3116
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:56         Memory : 4.547 GB
   Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
 
   File     : 09_RECOVERY_SS_125C_MICRO_OP_SPLIT_TOP.rpt
@@ -147,6 +70,17 @@ PER-REPORT DETAIL
   Runtime  : 00:02:12         Memory : 4.607 GB
   Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p72v_0p72v_125c
 
+  File     : 07_SETUP_LVSS_125C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.078 ns
+  Slack    :   +1.113 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2515 / 2884
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:21         Memory : 2.521 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p63v_0p63v_125c
+
   File     : 10_MULTICYCLE_TT_25C_MICRO_OP_SPLIT_TOP.rpt
   Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -156,6 +90,72 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 4384 / 1929
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:04:56         Memory : 4.569 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.093 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.093 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1171 / 5970
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:39         Memory : 3.701 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p72v_0p72v_n40c
+
+  File     : 08_CG_CHECK_TT_25C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
+  Slack    :   +1.085 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3251 / 3116
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:56         Memory : 4.547 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
+
+  File     : 01_SETUP_SS_125C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.102 ns
+  Slack    :   +1.064 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5732 / 2482
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:15         Memory : 1.804 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ss_0p72v_0p72v_125c
+
+  File     : 06_HOLD_FF_125C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.157 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
+  Slack    :   +1.157 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1513 / 5988
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:19         Memory : 1.753 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.084 ns   TNS :   +0.000 ns   WHS :   +0.114 ns
+  Slack    :   +1.084 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1454 / 3359
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:29         Memory : 2.141 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_ff_1p16v_1p16v_n40c
+
+  File     : 04_HOLD_TT_25C_MICRO_OP_SPLIT_TOP.rpt
+  Design   : MICRO_OP_SPLIT_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.185 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.185 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4771 / 2659
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:26         Memory : 1.782 GB
   Run Dir  : /proj/cpu_rtl/sta/DECODE/MICRO_OP_SPLITTER/run_tt_0p90v_0p90v_25c
 
   File     : MICRO_OP_SPLIT_TIMING.rpt

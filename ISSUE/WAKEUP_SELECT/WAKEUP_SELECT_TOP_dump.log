@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\ISSUE\WAKEUP_SELECT
   Design          : WAKEUP_SELECT_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 11
 
 
@@ -59,16 +59,38 @@ PER-REPORT DETAIL
   Runtime  : 00:07:38         Memory : 4.181 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p72v_0p72v_125c
 
-  File     : 02_HOLD_FF_N40C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.059 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
-  Slack    :   +1.059 ns   Status : MET
+  File     : 09_RECOVERY_SS_125C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.117 ns   TNS :   +0.000 ns   WHS :   +0.095 ns
+  Slack    :   +1.117 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3397 / 3938
+  Coverage : 100.0%   Endpoints : 5101 / 2745
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:13         Memory : 1.216 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:05:19         Memory : 3.214 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p72v_0p72v_125c
+
+  File     : 07_SETUP_LVSS_125C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5065 / 3718
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:26         Memory : 1.527 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p63v_0p63v_125c
+
+  File     : 05_SETUP_SS_M40C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.090 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3258 / 5241
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:35         Memory : 4.532 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p72v_0p72v_n40c
 
   File     : 03_SETUP_TT_25C_WAKEUP_SELECT_TOP.rpt
   Design   : WAKEUP_SELECT_TOP     Corner : tt_0p90v_0p90v_25c
@@ -79,6 +101,28 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 1294 / 1795
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:02:35         Memory : 2.69 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
+
+  File     : 10_MULTICYCLE_TT_25C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.066 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3068 / 2375
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:52         Memory : 3.888 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
+
+  File     : 08_CG_CHECK_TT_25C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.048 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
+  Slack    :   +1.048 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2429 / 1141
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:53         Memory : 4.064 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
 
   File     : 04_HOLD_TT_25C_WAKEUP_SELECT_TOP.rpt
@@ -92,17 +136,6 @@ PER-REPORT DETAIL
   Runtime  : 00:02:17         Memory : 3.418 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
 
-  File     : 05_SETUP_SS_M40C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.090 ns
-  Slack    :   +1.098 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3258 / 5241
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:35         Memory : 4.532 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p72v_0p72v_n40c
-
   File     : 06_HOLD_FF_125C_WAKEUP_SELECT_TOP.rpt
   Design   : WAKEUP_SELECT_TOP     Corner : ff_1p16v_1p16v_125c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -114,49 +147,16 @@ PER-REPORT DETAIL
   Runtime  : 00:07:44         Memory : 2.572 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ff_1p16v_1p16v_125c
 
-  File     : 07_SETUP_LVSS_125C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
-  Slack    :   +1.104 ns   Status : MET
+  File     : 02_HOLD_FF_N40C_WAKEUP_SELECT_TOP.rpt
+  Design   : WAKEUP_SELECT_TOP     Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.059 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
+  Slack    :   +1.059 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5065 / 3718
+  Coverage : 100.0%   Endpoints : 3397 / 3938
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:26         Memory : 1.527 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.048 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
-  Slack    :   +1.048 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2429 / 1141
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:53         Memory : 4.064 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
-
-  File     : 09_RECOVERY_SS_125C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.117 ns   TNS :   +0.000 ns   WHS :   +0.095 ns
-  Slack    :   +1.117 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5101 / 2745
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:19         Memory : 3.214 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ss_0p72v_0p72v_125c
-
-  File     : 10_MULTICYCLE_TT_25C_WAKEUP_SELECT_TOP.rpt
-  Design   : WAKEUP_SELECT_TOP     Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
-  Slack    :   +1.066 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3068 / 2375
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:52         Memory : 3.888 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_tt_0p90v_0p90v_25c
+  Runtime  : 00:03:13         Memory : 1.216 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/WAKEUP_SELECT/run_ff_1p16v_1p16v_n40c
 
   File     : WAKEUP_SELECT_TIMING.rpt
   Design   : N/A                   Corner : N/A

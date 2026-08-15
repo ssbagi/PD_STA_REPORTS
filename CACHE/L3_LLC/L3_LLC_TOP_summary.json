@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC",
   "design": "L3_LLC_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -155,66 +155,6 @@
       "peak_mem": "3.348 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\02_HOLD_FF_N40C_L3_LLC_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_L3_LLC_TOP.rpt",
-      "design": "L3_LLC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:54 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_UNCORE",
-      "period_ns": 3.333,
-      "freq_mhz": 300.0,
-      "startpoint": "u_l3_tag/din_reg[0]",
-      "endpoint": "u_l3_lru/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 2.426,
-      "wns_ns": 2.426,
-      "tns_ns": 0.0,
-      "whs_ns": 0.105,
-      "sub_units": [
-        {
-          "unit": "u_l3_tag",
-          "wns_ns": 2.426,
-          "tns_ns": 0.0,
-          "whs_ns": 0.105
-        },
-        {
-          "unit": "u_l3_data",
-          "wns_ns": 0.121,
-          "tns_ns": 0.0,
-          "whs_ns": 0.126
-        },
-        {
-          "unit": "u_l3_ctrl",
-          "wns_ns": 0.119,
-          "tns_ns": 0.0,
-          "whs_ns": 0.098
-        },
-        {
-          "unit": "u_l3_lru",
-          "wns_ns": 0.162,
-          "tns_ns": 0.0,
-          "whs_ns": 0.115
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4415,
-      "constrained_endpoints": 1285,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:01:57",
-      "peak_mem": "2.79 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\03_SETUP_TT_25C_L3_LLC_TOP.rpt",
       "file_name": "03_SETUP_TT_25C_L3_LLC_TOP.rpt",
       "design": "L3_LLC_TOP",
@@ -273,66 +213,6 @@
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
       "elapsed": "00:06:11",
       "peak_mem": "4.329 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\04_HOLD_TT_25C_L3_LLC_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_L3_LLC_TOP.rpt",
-      "design": "L3_LLC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:54 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_UNCORE",
-      "period_ns": 3.333,
-      "freq_mhz": 300.0,
-      "startpoint": "u_l3_tag/din_reg[0]",
-      "endpoint": "u_l3_lru/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 2.475,
-      "wns_ns": 2.475,
-      "tns_ns": 0.0,
-      "whs_ns": 0.101,
-      "sub_units": [
-        {
-          "unit": "u_l3_tag",
-          "wns_ns": 2.475,
-          "tns_ns": 0.0,
-          "whs_ns": 0.101
-        },
-        {
-          "unit": "u_l3_data",
-          "wns_ns": 0.13,
-          "tns_ns": 0.0,
-          "whs_ns": 0.065
-        },
-        {
-          "unit": "u_l3_ctrl",
-          "wns_ns": 0.088,
-          "tns_ns": 0.0,
-          "whs_ns": 0.089
-        },
-        {
-          "unit": "u_l3_lru",
-          "wns_ns": 0.183,
-          "tns_ns": 0.0,
-          "whs_ns": 0.1
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5122,
-      "constrained_endpoints": 2603,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:04:31",
-      "peak_mem": "3.327 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\05_SETUP_SS_M40C_L3_LLC_TOP.rpt",
@@ -395,66 +275,6 @@
       "peak_mem": "4.793 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\06_HOLD_FF_125C_L3_LLC_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_L3_LLC_TOP.rpt",
-      "design": "L3_LLC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:54 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_UNCORE",
-      "period_ns": 3.333,
-      "freq_mhz": 300.0,
-      "startpoint": "u_l3_tag/din_reg[0]",
-      "endpoint": "u_l3_lru/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 2.429,
-      "wns_ns": 2.429,
-      "tns_ns": 0.0,
-      "whs_ns": 0.096,
-      "sub_units": [
-        {
-          "unit": "u_l3_tag",
-          "wns_ns": 2.429,
-          "tns_ns": 0.0,
-          "whs_ns": 0.096
-        },
-        {
-          "unit": "u_l3_data",
-          "wns_ns": 0.147,
-          "tns_ns": 0.0,
-          "whs_ns": 0.06
-        },
-        {
-          "unit": "u_l3_ctrl",
-          "wns_ns": 0.185,
-          "tns_ns": 0.0,
-          "whs_ns": 0.06
-        },
-        {
-          "unit": "u_l3_lru",
-          "wns_ns": 0.083,
-          "tns_ns": 0.0,
-          "whs_ns": 0.087
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2292,
-      "constrained_endpoints": 2965,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:08:48",
-      "peak_mem": "4.082 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\07_SETUP_LVSS_125C_L3_LLC_TOP.rpt",
       "file_name": "07_SETUP_LVSS_125C_L3_LLC_TOP.rpt",
       "design": "L3_LLC_TOP",
@@ -513,6 +333,66 @@
       "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
       "elapsed": "00:07:24",
       "peak_mem": "3.972 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\10_MULTICYCLE_TT_25C_L3_LLC_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_L3_LLC_TOP.rpt",
+      "design": "L3_LLC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_UNCORE",
+      "period_ns": 3.333,
+      "freq_mhz": 300.0,
+      "startpoint": "u_l3_tag/din_reg[0]",
+      "endpoint": "u_l3_lru/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 2.403,
+      "wns_ns": 2.403,
+      "tns_ns": 0.0,
+      "whs_ns": 0.098,
+      "sub_units": [
+        {
+          "unit": "u_l3_tag",
+          "wns_ns": 2.403,
+          "tns_ns": 0.0,
+          "whs_ns": 0.098
+        },
+        {
+          "unit": "u_l3_data",
+          "wns_ns": 0.189,
+          "tns_ns": 0.0,
+          "whs_ns": 0.079
+        },
+        {
+          "unit": "u_l3_ctrl",
+          "wns_ns": 0.136,
+          "tns_ns": 0.0,
+          "whs_ns": 0.077
+        },
+        {
+          "unit": "u_l3_lru",
+          "wns_ns": 0.135,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1793,
+      "constrained_endpoints": 5468,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:04:33",
+      "peak_mem": "1.241 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\08_CG_CHECK_TT_25C_L3_LLC_TOP.rpt",
@@ -635,55 +515,115 @@
       "peak_mem": "2.444 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\10_MULTICYCLE_TT_25C_L3_LLC_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_L3_LLC_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\02_HOLD_FF_N40C_L3_LLC_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_L3_LLC_TOP.rpt",
       "design": "L3_LLC_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:54 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
-      "delay_type": "max",
-      "check": "setup",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_UNCORE",
       "period_ns": 3.333,
       "freq_mhz": 300.0,
       "startpoint": "u_l3_tag/din_reg[0]",
       "endpoint": "u_l3_lru/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 2.403,
-      "wns_ns": 2.403,
+      "slack_ns": 2.426,
+      "wns_ns": 2.426,
       "tns_ns": 0.0,
-      "whs_ns": 0.098,
+      "whs_ns": 0.105,
       "sub_units": [
         {
           "unit": "u_l3_tag",
-          "wns_ns": 2.403,
+          "wns_ns": 2.426,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        },
+        {
+          "unit": "u_l3_data",
+          "wns_ns": 0.121,
+          "tns_ns": 0.0,
+          "whs_ns": 0.126
+        },
+        {
+          "unit": "u_l3_ctrl",
+          "wns_ns": 0.119,
           "tns_ns": 0.0,
           "whs_ns": 0.098
         },
         {
-          "unit": "u_l3_data",
-          "wns_ns": 0.189,
-          "tns_ns": 0.0,
-          "whs_ns": 0.079
-        },
-        {
-          "unit": "u_l3_ctrl",
-          "wns_ns": 0.136,
-          "tns_ns": 0.0,
-          "whs_ns": 0.077
-        },
-        {
           "unit": "u_l3_lru",
-          "wns_ns": 0.135,
+          "wns_ns": 0.162,
           "tns_ns": 0.0,
-          "whs_ns": 0.083
+          "whs_ns": 0.115
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 1793,
-      "constrained_endpoints": 5468,
+      "total_endpoints": 4415,
+      "constrained_endpoints": 1285,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:01:57",
+      "peak_mem": "2.79 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\04_HOLD_TT_25C_L3_LLC_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_L3_LLC_TOP.rpt",
+      "design": "L3_LLC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_UNCORE",
+      "period_ns": 3.333,
+      "freq_mhz": 300.0,
+      "startpoint": "u_l3_tag/din_reg[0]",
+      "endpoint": "u_l3_lru/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 2.475,
+      "wns_ns": 2.475,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_l3_tag",
+          "wns_ns": 2.475,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_l3_data",
+          "wns_ns": 0.13,
+          "tns_ns": 0.0,
+          "whs_ns": 0.065
+        },
+        {
+          "unit": "u_l3_ctrl",
+          "wns_ns": 0.088,
+          "tns_ns": 0.0,
+          "whs_ns": 0.089
+        },
+        {
+          "unit": "u_l3_lru",
+          "wns_ns": 0.183,
+          "tns_ns": 0.0,
+          "whs_ns": 0.1
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5122,
+      "constrained_endpoints": 2603,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_tt_0p90v_0p90v_25c",
@@ -691,8 +631,68 @@
       "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:04:33",
-      "peak_mem": "1.241 GB"
+      "elapsed": "00:04:31",
+      "peak_mem": "3.327 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\06_HOLD_FF_125C_L3_LLC_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_L3_LLC_TOP.rpt",
+      "design": "L3_LLC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_UNCORE",
+      "period_ns": 3.333,
+      "freq_mhz": 300.0,
+      "startpoint": "u_l3_tag/din_reg[0]",
+      "endpoint": "u_l3_lru/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 2.429,
+      "wns_ns": 2.429,
+      "tns_ns": 0.0,
+      "whs_ns": 0.096,
+      "sub_units": [
+        {
+          "unit": "u_l3_tag",
+          "wns_ns": 2.429,
+          "tns_ns": 0.0,
+          "whs_ns": 0.096
+        },
+        {
+          "unit": "u_l3_data",
+          "wns_ns": 0.147,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_l3_ctrl",
+          "wns_ns": 0.185,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_l3_lru",
+          "wns_ns": 0.083,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2292,
+      "constrained_endpoints": 2965,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/CACHE/L3_LLC/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/L3_LLC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/L3_LLC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/L3_LLC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:08:48",
+      "peak_mem": "4.082 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\CACHE\\L3_LLC\\L3_LLC_TIMING.rpt",

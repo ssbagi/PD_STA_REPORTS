@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU",
   "design": "BRU_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,13 +95,13 @@
   },
   "reports": [
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\01_SETUP_SS_125C_BRU_TOP.rpt",
-      "file_name": "01_SETUP_SS_125C_BRU_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\07_SETUP_LVSS_125C_BRU_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_BRU_TOP.rpt",
       "design": "BRU_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Worst-case Setup — Slow corner, high temp",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -110,229 +110,49 @@
       "startpoint": "u_bru_cond/din_reg[0]",
       "endpoint": "u_bru_mis/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.11,
-      "wns_ns": 1.11,
+      "slack_ns": 1.138,
+      "wns_ns": 1.138,
       "tns_ns": 0.0,
-      "whs_ns": 0.064,
+      "whs_ns": 0.102,
       "sub_units": [
         {
           "unit": "u_bru_cond",
-          "wns_ns": 1.11,
+          "wns_ns": 1.138,
           "tns_ns": 0.0,
-          "whs_ns": 0.064
+          "whs_ns": 0.102
         },
         {
           "unit": "u_bru_tgt",
-          "wns_ns": 0.112,
+          "wns_ns": 0.054,
           "tns_ns": 0.0,
-          "whs_ns": 0.11
+          "whs_ns": 0.067
         },
         {
           "unit": "u_bru_upd",
-          "wns_ns": 0.112,
+          "wns_ns": 0.083,
           "tns_ns": 0.0,
-          "whs_ns": 0.084
+          "whs_ns": 0.065
         },
         {
           "unit": "u_bru_mis",
-          "wns_ns": 0.133,
+          "wns_ns": 0.161,
           "tns_ns": 0.0,
-          "whs_ns": 0.094
+          "whs_ns": 0.109
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 2932,
-      "constrained_endpoints": 1433,
+      "total_endpoints": 2201,
+      "constrained_endpoints": 807,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ss_0p72v_0p72v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ss_0p63v_0p63v_125c",
       "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:03:10",
-      "peak_mem": "3.028 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\02_HOLD_FF_N40C_BRU_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_BRU_TOP.rpt",
-      "design": "BRU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_bru_cond/din_reg[0]",
-      "endpoint": "u_bru_mis/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.135,
-      "wns_ns": 1.135,
-      "tns_ns": 0.0,
-      "whs_ns": 0.085,
-      "sub_units": [
-        {
-          "unit": "u_bru_cond",
-          "wns_ns": 1.135,
-          "tns_ns": 0.0,
-          "whs_ns": 0.085
-        },
-        {
-          "unit": "u_bru_tgt",
-          "wns_ns": 0.186,
-          "tns_ns": 0.0,
-          "whs_ns": 0.123
-        },
-        {
-          "unit": "u_bru_upd",
-          "wns_ns": 0.129,
-          "tns_ns": 0.0,
-          "whs_ns": 0.055
-        },
-        {
-          "unit": "u_bru_mis",
-          "wns_ns": 0.114,
-          "tns_ns": 0.0,
-          "whs_ns": 0.13
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2114,
-      "constrained_endpoints": 3293,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:02:58",
-      "peak_mem": "1.648 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\03_SETUP_TT_25C_BRU_TOP.rpt",
-      "file_name": "03_SETUP_TT_25C_BRU_TOP.rpt",
-      "design": "BRU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Setup   — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_bru_cond/din_reg[0]",
-      "endpoint": "u_bru_mis/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.112,
-      "wns_ns": 1.112,
-      "tns_ns": 0.0,
-      "whs_ns": 0.107,
-      "sub_units": [
-        {
-          "unit": "u_bru_cond",
-          "wns_ns": 1.112,
-          "tns_ns": 0.0,
-          "whs_ns": 0.107
-        },
-        {
-          "unit": "u_bru_tgt",
-          "wns_ns": 0.147,
-          "tns_ns": 0.0,
-          "whs_ns": 0.092
-        },
-        {
-          "unit": "u_bru_upd",
-          "wns_ns": 0.139,
-          "tns_ns": 0.0,
-          "whs_ns": 0.112
-        },
-        {
-          "unit": "u_bru_mis",
-          "wns_ns": 0.143,
-          "tns_ns": 0.0,
-          "whs_ns": 0.086
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4065,
-      "constrained_endpoints": 1181,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:01:21",
-      "peak_mem": "1.44 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\04_HOLD_TT_25C_BRU_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_BRU_TOP.rpt",
-      "design": "BRU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_bru_cond/din_reg[0]",
-      "endpoint": "u_bru_mis/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.076,
-      "wns_ns": 1.076,
-      "tns_ns": 0.0,
-      "whs_ns": 0.106,
-      "sub_units": [
-        {
-          "unit": "u_bru_cond",
-          "wns_ns": 1.076,
-          "tns_ns": 0.0,
-          "whs_ns": 0.106
-        },
-        {
-          "unit": "u_bru_tgt",
-          "wns_ns": 0.13,
-          "tns_ns": 0.0,
-          "whs_ns": 0.075
-        },
-        {
-          "unit": "u_bru_upd",
-          "wns_ns": 0.145,
-          "tns_ns": 0.0,
-          "whs_ns": 0.079
-        },
-        {
-          "unit": "u_bru_mis",
-          "wns_ns": 0.097,
-          "tns_ns": 0.0,
-          "whs_ns": 0.072
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4763,
-      "constrained_endpoints": 3312,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:04:21",
-      "peak_mem": "4.349 GB"
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:02:28",
+      "peak_mem": "2.18 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\05_SETUP_SS_M40C_BRU_TOP.rpt",
@@ -395,73 +215,13 @@
       "peak_mem": "1.701 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\06_HOLD_FF_125C_BRU_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_BRU_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\03_SETUP_TT_25C_BRU_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_BRU_TOP.rpt",
       "design": "BRU_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_bru_cond/din_reg[0]",
-      "endpoint": "u_bru_mis/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.092,
-      "wns_ns": 1.092,
-      "tns_ns": 0.0,
-      "whs_ns": 0.061,
-      "sub_units": [
-        {
-          "unit": "u_bru_cond",
-          "wns_ns": 1.092,
-          "tns_ns": 0.0,
-          "whs_ns": 0.061
-        },
-        {
-          "unit": "u_bru_tgt",
-          "wns_ns": 0.061,
-          "tns_ns": 0.0,
-          "whs_ns": 0.084
-        },
-        {
-          "unit": "u_bru_upd",
-          "wns_ns": 0.082,
-          "tns_ns": 0.0,
-          "whs_ns": 0.063
-        },
-        {
-          "unit": "u_bru_mis",
-          "wns_ns": 0.077,
-          "tns_ns": 0.0,
-          "whs_ns": 0.079
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1963,
-      "constrained_endpoints": 3871,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:01:18",
-      "peak_mem": "4.644 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\07_SETUP_LVSS_125C_BRU_TOP.rpt",
-      "file_name": "07_SETUP_LVSS_125C_BRU_TOP.rpt",
-      "design": "BRU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -470,49 +230,109 @@
       "startpoint": "u_bru_cond/din_reg[0]",
       "endpoint": "u_bru_mis/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.138,
-      "wns_ns": 1.138,
+      "slack_ns": 1.112,
+      "wns_ns": 1.112,
       "tns_ns": 0.0,
-      "whs_ns": 0.102,
+      "whs_ns": 0.107,
       "sub_units": [
         {
           "unit": "u_bru_cond",
-          "wns_ns": 1.138,
+          "wns_ns": 1.112,
           "tns_ns": 0.0,
-          "whs_ns": 0.102
+          "whs_ns": 0.107
         },
         {
           "unit": "u_bru_tgt",
-          "wns_ns": 0.054,
+          "wns_ns": 0.147,
           "tns_ns": 0.0,
-          "whs_ns": 0.067
+          "whs_ns": 0.092
         },
         {
           "unit": "u_bru_upd",
-          "wns_ns": 0.083,
+          "wns_ns": 0.139,
           "tns_ns": 0.0,
-          "whs_ns": 0.065
+          "whs_ns": 0.112
         },
         {
           "unit": "u_bru_mis",
-          "wns_ns": 0.161,
+          "wns_ns": 0.143,
           "tns_ns": 0.0,
-          "whs_ns": 0.109
+          "whs_ns": 0.086
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 2201,
-      "constrained_endpoints": 807,
+      "total_endpoints": 4065,
+      "constrained_endpoints": 1181,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ss_0p63v_0p63v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_tt_0p90v_0p90v_25c",
       "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:02:28",
-      "peak_mem": "2.18 GB"
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:21",
+      "peak_mem": "1.44 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\01_SETUP_SS_125C_BRU_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_BRU_TOP.rpt",
+      "design": "BRU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_bru_cond/din_reg[0]",
+      "endpoint": "u_bru_mis/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.11,
+      "wns_ns": 1.11,
+      "tns_ns": 0.0,
+      "whs_ns": 0.064,
+      "sub_units": [
+        {
+          "unit": "u_bru_cond",
+          "wns_ns": 1.11,
+          "tns_ns": 0.0,
+          "whs_ns": 0.064
+        },
+        {
+          "unit": "u_bru_tgt",
+          "wns_ns": 0.112,
+          "tns_ns": 0.0,
+          "whs_ns": 0.11
+        },
+        {
+          "unit": "u_bru_upd",
+          "wns_ns": 0.112,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        },
+        {
+          "unit": "u_bru_mis",
+          "wns_ns": 0.133,
+          "tns_ns": 0.0,
+          "whs_ns": 0.094
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2932,
+      "constrained_endpoints": 1433,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:03:10",
+      "peak_mem": "3.028 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\08_CG_CHECK_TT_25C_BRU_TOP.rpt",
@@ -693,6 +513,186 @@
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
       "elapsed": "00:07:38",
       "peak_mem": "4.736 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\04_HOLD_TT_25C_BRU_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_BRU_TOP.rpt",
+      "design": "BRU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_bru_cond/din_reg[0]",
+      "endpoint": "u_bru_mis/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.076,
+      "wns_ns": 1.076,
+      "tns_ns": 0.0,
+      "whs_ns": 0.106,
+      "sub_units": [
+        {
+          "unit": "u_bru_cond",
+          "wns_ns": 1.076,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        },
+        {
+          "unit": "u_bru_tgt",
+          "wns_ns": 0.13,
+          "tns_ns": 0.0,
+          "whs_ns": 0.075
+        },
+        {
+          "unit": "u_bru_upd",
+          "wns_ns": 0.145,
+          "tns_ns": 0.0,
+          "whs_ns": 0.079
+        },
+        {
+          "unit": "u_bru_mis",
+          "wns_ns": 0.097,
+          "tns_ns": 0.0,
+          "whs_ns": 0.072
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4763,
+      "constrained_endpoints": 3312,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:04:21",
+      "peak_mem": "4.349 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\02_HOLD_FF_N40C_BRU_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_BRU_TOP.rpt",
+      "design": "BRU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_bru_cond/din_reg[0]",
+      "endpoint": "u_bru_mis/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.135,
+      "wns_ns": 1.135,
+      "tns_ns": 0.0,
+      "whs_ns": 0.085,
+      "sub_units": [
+        {
+          "unit": "u_bru_cond",
+          "wns_ns": 1.135,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        },
+        {
+          "unit": "u_bru_tgt",
+          "wns_ns": 0.186,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        },
+        {
+          "unit": "u_bru_upd",
+          "wns_ns": 0.129,
+          "tns_ns": 0.0,
+          "whs_ns": 0.055
+        },
+        {
+          "unit": "u_bru_mis",
+          "wns_ns": 0.114,
+          "tns_ns": 0.0,
+          "whs_ns": 0.13
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2114,
+      "constrained_endpoints": 3293,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:02:58",
+      "peak_mem": "1.648 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\06_HOLD_FF_125C_BRU_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_BRU_TOP.rpt",
+      "design": "BRU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_bru_cond/din_reg[0]",
+      "endpoint": "u_bru_mis/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.092,
+      "wns_ns": 1.092,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "sub_units": [
+        {
+          "unit": "u_bru_cond",
+          "wns_ns": 1.092,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_bru_tgt",
+          "wns_ns": 0.061,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        },
+        {
+          "unit": "u_bru_upd",
+          "wns_ns": 0.082,
+          "tns_ns": 0.0,
+          "whs_ns": 0.063
+        },
+        {
+          "unit": "u_bru_mis",
+          "wns_ns": 0.077,
+          "tns_ns": 0.0,
+          "whs_ns": 0.079
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1963,
+      "constrained_endpoints": 3871,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/BRU/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/BRU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/BRU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/BRU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:01:18",
+      "peak_mem": "4.644 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\BRU\\BRU_TIMING.rpt",

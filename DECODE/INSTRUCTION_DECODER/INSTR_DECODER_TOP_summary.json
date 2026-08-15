@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER",
   "design": "INSTR_DECODER_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": -0.089,
   "worst_tns_ns": -0.876,
   "worst_whs_ns": 0.0,
@@ -155,64 +155,64 @@
       "peak_mem": "4.317 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\10_MULTICYCLE_TT_25C_INSTR_DECODER_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_INSTR_DECODER_TOP.rpt",
       "design": "INSTR_DECODER_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_id_opmap/din_reg[0]",
       "endpoint": "u_id_uop/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.137,
-      "wns_ns": 1.137,
+      "slack_ns": 1.128,
+      "wns_ns": 1.128,
       "tns_ns": 0.0,
-      "whs_ns": 0.114,
+      "whs_ns": 0.076,
       "sub_units": [
         {
           "unit": "u_id_opmap",
-          "wns_ns": 1.137,
+          "wns_ns": 1.128,
           "tns_ns": 0.0,
-          "whs_ns": 0.114
+          "whs_ns": 0.076
         },
         {
           "unit": "u_id_imm",
-          "wns_ns": 0.107,
+          "wns_ns": 0.194,
           "tns_ns": 0.0,
-          "whs_ns": 0.088
+          "whs_ns": 0.107
         },
         {
           "unit": "u_id_ctrl",
-          "wns_ns": 0.148,
+          "wns_ns": 0.188,
           "tns_ns": 0.0,
-          "whs_ns": 0.084
+          "whs_ns": 0.126
         },
         {
           "unit": "u_id_uop",
-          "wns_ns": 0.082,
+          "wns_ns": 0.12,
           "tns_ns": 0.0,
-          "whs_ns": 0.102
+          "whs_ns": 0.081
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 1277,
-      "constrained_endpoints": 1728,
+      "total_endpoints": 2092,
+      "constrained_endpoints": 4257,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_n40c",
+      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c",
       "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:04:24",
-      "peak_mem": "2.096 GB"
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:03:41",
+      "peak_mem": "3.353 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\03_SETUP_TT_25C_INSTR_DECODER_TOP.rpt",
@@ -275,64 +275,64 @@
       "peak_mem": "4.285 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\04_HOLD_TT_25C_INSTR_DECODER_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_INSTR_DECODER_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\07_SETUP_LVSS_125C_INSTR_DECODER_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_INSTR_DECODER_TOP.rpt",
       "design": "INSTR_DECODER_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_id_opmap/din_reg[0]",
       "endpoint": "u_id_uop/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.06,
-      "wns_ns": 1.06,
+      "slack_ns": 1.104,
+      "wns_ns": 1.104,
       "tns_ns": 0.0,
-      "whs_ns": 0.082,
+      "whs_ns": 0.106,
       "sub_units": [
         {
           "unit": "u_id_opmap",
-          "wns_ns": 1.06,
+          "wns_ns": 1.104,
           "tns_ns": 0.0,
-          "whs_ns": 0.082
+          "whs_ns": 0.106
         },
         {
           "unit": "u_id_imm",
-          "wns_ns": 0.157,
+          "wns_ns": 0.142,
           "tns_ns": 0.0,
-          "whs_ns": 0.119
+          "whs_ns": 0.103
         },
         {
           "unit": "u_id_ctrl",
-          "wns_ns": 0.117,
+          "wns_ns": 0.171,
           "tns_ns": 0.0,
-          "whs_ns": 0.114
+          "whs_ns": 0.083
         },
         {
           "unit": "u_id_uop",
-          "wns_ns": 0.104,
+          "wns_ns": 0.09,
           "tns_ns": 0.0,
-          "whs_ns": 0.062
+          "whs_ns": 0.107
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 3764,
-      "constrained_endpoints": 1482,
+      "total_endpoints": 2023,
+      "constrained_endpoints": 4816,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c",
+      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p63v_0p63v_125c",
       "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:02:42",
-      "peak_mem": "3.506 GB"
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:06:14",
+      "peak_mem": "2.143 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\05_SETUP_SS_M40C_INSTR_DECODER_TOP.rpt",
@@ -393,126 +393,6 @@
       "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
       "elapsed": "00:05:25",
       "peak_mem": "3.855 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\06_HOLD_FF_125C_INSTR_DECODER_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_INSTR_DECODER_TOP.rpt",
-      "design": "INSTR_DECODER_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_id_opmap/din_reg[0]",
-      "endpoint": "u_id_uop/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.035,
-      "wns_ns": 1.035,
-      "tns_ns": 0.0,
-      "whs_ns": 0.104,
-      "sub_units": [
-        {
-          "unit": "u_id_opmap",
-          "wns_ns": 1.035,
-          "tns_ns": 0.0,
-          "whs_ns": 0.104
-        },
-        {
-          "unit": "u_id_imm",
-          "wns_ns": 0.164,
-          "tns_ns": 0.0,
-          "whs_ns": 0.089
-        },
-        {
-          "unit": "u_id_ctrl",
-          "wns_ns": 0.088,
-          "tns_ns": 0.0,
-          "whs_ns": 0.093
-        },
-        {
-          "unit": "u_id_uop",
-          "wns_ns": 0.137,
-          "tns_ns": 0.0,
-          "whs_ns": 0.07
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1551,
-      "constrained_endpoints": 3495,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:02:32",
-      "peak_mem": "1.805 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\07_SETUP_LVSS_125C_INSTR_DECODER_TOP.rpt",
-      "file_name": "07_SETUP_LVSS_125C_INSTR_DECODER_TOP.rpt",
-      "design": "INSTR_DECODER_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_id_opmap/din_reg[0]",
-      "endpoint": "u_id_uop/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.104,
-      "wns_ns": 1.104,
-      "tns_ns": 0.0,
-      "whs_ns": 0.106,
-      "sub_units": [
-        {
-          "unit": "u_id_opmap",
-          "wns_ns": 1.104,
-          "tns_ns": 0.0,
-          "whs_ns": 0.106
-        },
-        {
-          "unit": "u_id_imm",
-          "wns_ns": 0.142,
-          "tns_ns": 0.0,
-          "whs_ns": 0.103
-        },
-        {
-          "unit": "u_id_ctrl",
-          "wns_ns": 0.171,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
-        },
-        {
-          "unit": "u_id_uop",
-          "wns_ns": 0.09,
-          "tns_ns": 0.0,
-          "whs_ns": 0.107
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2023,
-      "constrained_endpoints": 4816,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p63v_0p63v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:06:14",
-      "peak_mem": "2.143 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\08_CG_CHECK_TT_25C_INSTR_DECODER_TOP.rpt",
@@ -635,55 +515,175 @@
       "peak_mem": "4.003 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\10_MULTICYCLE_TT_25C_INSTR_DECODER_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_INSTR_DECODER_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt",
       "design": "INSTR_DECODER_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
-      "delay_type": "max",
-      "check": "setup",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_id_opmap/din_reg[0]",
       "endpoint": "u_id_uop/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.128,
-      "wns_ns": 1.128,
+      "slack_ns": 1.137,
+      "wns_ns": 1.137,
       "tns_ns": 0.0,
-      "whs_ns": 0.076,
+      "whs_ns": 0.114,
       "sub_units": [
         {
           "unit": "u_id_opmap",
-          "wns_ns": 1.128,
+          "wns_ns": 1.137,
           "tns_ns": 0.0,
-          "whs_ns": 0.076
+          "whs_ns": 0.114
         },
         {
           "unit": "u_id_imm",
-          "wns_ns": 0.194,
+          "wns_ns": 0.107,
           "tns_ns": 0.0,
-          "whs_ns": 0.107
+          "whs_ns": 0.088
         },
         {
           "unit": "u_id_ctrl",
-          "wns_ns": 0.188,
+          "wns_ns": 0.148,
           "tns_ns": 0.0,
-          "whs_ns": 0.126
+          "whs_ns": 0.084
         },
         {
           "unit": "u_id_uop",
-          "wns_ns": 0.12,
+          "wns_ns": 0.082,
           "tns_ns": 0.0,
-          "whs_ns": 0.081
+          "whs_ns": 0.102
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 2092,
-      "constrained_endpoints": 4257,
+      "total_endpoints": 1277,
+      "constrained_endpoints": 1728,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:04:24",
+      "peak_mem": "2.096 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\06_HOLD_FF_125C_INSTR_DECODER_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_INSTR_DECODER_TOP.rpt",
+      "design": "INSTR_DECODER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_id_opmap/din_reg[0]",
+      "endpoint": "u_id_uop/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.035,
+      "wns_ns": 1.035,
+      "tns_ns": 0.0,
+      "whs_ns": 0.104,
+      "sub_units": [
+        {
+          "unit": "u_id_opmap",
+          "wns_ns": 1.035,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_id_imm",
+          "wns_ns": 0.164,
+          "tns_ns": 0.0,
+          "whs_ns": 0.089
+        },
+        {
+          "unit": "u_id_ctrl",
+          "wns_ns": 0.088,
+          "tns_ns": 0.0,
+          "whs_ns": 0.093
+        },
+        {
+          "unit": "u_id_uop",
+          "wns_ns": 0.137,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1551,
+      "constrained_endpoints": 3495,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/INSTR_DECODER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:02:32",
+      "peak_mem": "1.805 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\04_HOLD_TT_25C_INSTR_DECODER_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_INSTR_DECODER_TOP.rpt",
+      "design": "INSTR_DECODER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_id_opmap/din_reg[0]",
+      "endpoint": "u_id_uop/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.06,
+      "wns_ns": 1.06,
+      "tns_ns": 0.0,
+      "whs_ns": 0.082,
+      "sub_units": [
+        {
+          "unit": "u_id_opmap",
+          "wns_ns": 1.06,
+          "tns_ns": 0.0,
+          "whs_ns": 0.082
+        },
+        {
+          "unit": "u_id_imm",
+          "wns_ns": 0.157,
+          "tns_ns": 0.0,
+          "whs_ns": 0.119
+        },
+        {
+          "unit": "u_id_ctrl",
+          "wns_ns": 0.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.114
+        },
+        {
+          "unit": "u_id_uop",
+          "wns_ns": 0.104,
+          "tns_ns": 0.0,
+          "whs_ns": 0.062
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3764,
+      "constrained_endpoints": 1482,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c",
@@ -691,8 +691,8 @@
       "netlist": "/proj/cpu_rtl/netlist/INSTR_DECODER_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/INSTR_DECODER_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:03:41",
-      "peak_mem": "3.353 GB"
+      "elapsed": "00:02:42",
+      "peak_mem": "3.506 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER\\INSTR_DECODER_TIMING.rpt",

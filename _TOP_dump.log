@@ -3,7 +3,7 @@
 ================================================================================
 
   Root Directory   : D:\Certificates\PD_STA_REPORTS
-  Parsed At        : 2026-08-15T22:10:33
+  Parsed At        : 2026-08-15T22:16:48
   Total Blocks     : 57
   Total Reports    : 1007
 
@@ -60,21 +60,27 @@ PER-BLOCK SUMMARY
 ----------------------------------------
   Block                                          Design                  Rpts       WNS       TNS       WHS  STATUS      Owner
   ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────  ────────────
+  WRITEBACK\PRF\INT_RF                           INT_RF_TOP                31    -0.231    -6.788     0.000  VIOLATED    User41
+  EXECUTE\MUL                                    MUL_TOP                   11    -0.198    -3.760     0.000  VIOLATED    User32
+  CACHE\L2                                       L2_TOP                    11    -0.145    -3.340     0.000  VIOLATED    User50
+  EXECUTE\ALU\ALU0                               ALU0_TOP                  11    -0.112    -1.094     0.000  VIOLATED    User21
+  DECODE\INSTRUCTION_DECODER                     INSTR_DECODER_TOP         11    -0.089    -0.876     0.000  VIOLATED    User9
+  MEMORY\MSHR                                    MSHR_TOP                  31    -0.063    -0.628     0.000  VIOLATED    User38
+  FETCH\ICACHE                                   ICACHE_TOP                11    -0.048    -0.468     0.000  VIOLATED    User2
+  ISSUE\IQ_INT                                   IQ_INT_TOP                11     0.000     0.000    -0.041  VIOLATED    User18
+  RENAME_DISPATCH\ROB                            ROB_TOP                   31     0.000     0.000    -0.033  VIOLATED    User16
   CACHE\CACHE_CONTROLLER                         CACHE_CTRL_TOP            11     0.000     0.000     0.000  MET         User47
   CACHE\L1D                                      L1D_TOP                   11     0.000     0.000     0.000  MET         User48
   CACHE\L1I                                      L1I_TOP                   11     0.000     0.000     0.000  MET         User49
-  CACHE\L2                                       L2_TOP                    11    -0.145    -3.340     0.000  VIOLATED    User50
   CACHE\L3_LLC                                   L3_LLC_TOP                11     0.000     0.000     0.000  MET         User51
   COMMIT\ARF                                     ARF_TOP                   11     0.000     0.000     0.000  MET         User43
   COMMIT\EXCEPTION_HANDLER                       EXCEPTION_HANDLER_TOP     11     0.000     0.000     0.000  MET         User44
   COMMIT\RETIRE_QUEUE                            RETIRE_QUEUE_TOP          11     0.000     0.000     0.000  MET         User45
   COMMIT\ROB_COMMIT                              ROB_COMMIT_TOP            11     0.000     0.000     0.000  MET         User46
   DECODE\DECODE_QUEUE                            DECODE_QUEUE_TOP          11     0.000     0.000     0.000  MET         User8
-  DECODE\INSTRUCTION_DECODER                     INSTR_DECODER_TOP         11    -0.089    -0.876     0.000  VIOLATED    User9
   DECODE\INSTRUCTION_LENGTH_DECODER              ILD_TOP                   11     0.000     0.000     0.000  MET         User10
   DECODE\MICRO_OP_SPLITTER                       MICRO_OP_SPLIT_TOP        11     0.000     0.000     0.000  MET         User11
   DECODE\PRE_DECODE                              PRE_DECODE_TOP            11     0.000     0.000     0.000  MET         User12
-  EXECUTE\ALU\ALU0                               ALU0_TOP                  11    -0.112    -1.094     0.000  VIOLATED    User21
   EXECUTE\ALU\ALU1                               ALU1_TOP                  11     0.000     0.000     0.000  MET         User22
   EXECUTE\BRU                                    BRU_TOP                   11     0.000     0.000     0.000  MET         User23
   EXECUTE\DIV                                    DIV_TOP                   11     0.000     0.000     0.000  MET         User24
@@ -85,29 +91,24 @@ PER-BLOCK SUMMARY
   EXECUTE\LSU\LDU                                LDU_TOP                   11     0.000     0.000     0.000  MET         User29
   EXECUTE\LSU\STL_FORWARD                        STL_FORWARD_TOP           11     0.000     0.000     0.000  MET         User30
   EXECUTE\LSU\STU                                STU_TOP                   11     0.000     0.000     0.000  MET         User31
-  EXECUTE\MUL                                    MUL_TOP                   11    -0.198    -3.760     0.000  VIOLATED    User32
   EXECUTE\SIMD_VEC                               SIMD_VEC_TOP              11     0.000     0.000     0.000  MET         User33
   FETCH\BPU\BTB                                  BTB_TOP                   11     0.000     0.000     0.000  MET         User5
   FETCH\BPU\PHT                                  PHT_TOP                   11     0.000     0.000     0.000  MET         User6
   FETCH\BPU\RAS                                  RAS_TOP                   11     0.000     0.000     0.000  MET         User7
   FETCH\FETCH_QUEUE                              FETCH_QUEUE_TOP           11     0.000     0.000     0.000  MET         User4
-  FETCH\ICACHE                                   ICACHE_TOP                11    -0.048    -0.468     0.000  VIOLATED    User2
   FETCH\ITLB                                     ITLB_TOP                  11     0.000     0.000     0.000  MET         User3
   FETCH\PC                                       PC_TOP                    11     0.000     0.000     0.000  MET         User1
   ISSUE\IQ_FP                                    IQ_FP_TOP                 11     0.000     0.000     0.000  MET         User17
-  ISSUE\IQ_INT                                   IQ_INT_TOP                11     0.000     0.000    -0.041  VIOLATED    User18
   ISSUE\IQ_LSU                                   IQ_LSU_TOP                11     0.000     0.000     0.000  MET         User19
   ISSUE\WAKEUP_SELECT                            WAKEUP_SELECT_TOP         11     0.000     0.000     0.000  MET         User20
   MEMORY\DCACHE                                  DCACHE_TOP                31     0.000     0.000     0.000  MET         User34
   MEMORY\DTLB                                    DTLB_TOP                  31     0.000     0.000     0.000  MET         User35
   MEMORY\LDQ                                     LDQ_TOP                   31     0.000     0.000     0.000  MET         User36
   MEMORY\MOB                                     MOB_TOP                   31     0.000     0.000     0.000  MET         User37
-  MEMORY\MSHR                                    MSHR_TOP                  31    -0.063    -0.628     0.000  VIOLATED    User38
   MEMORY\STQ                                     STQ_TOP                   31     0.000     0.000     0.000  MET         User39
   RENAME_DISPATCH\DISPATCH_QUEUE                 DISPATCH_QUEUE_TOP        31     0.000     0.000     0.000  MET         User13
   RENAME_DISPATCH\FREE_LIST                      FREE_LIST_TOP             31     0.000     0.000     0.000  MET         User14
   RENAME_DISPATCH\RAT                            RAT_TOP                   31     0.000     0.000     0.000  MET         User15
-  RENAME_DISPATCH\ROB                            ROB_TOP                   31     0.000     0.000    -0.033  VIOLATED    User16
   UNCORE\BIU                                     BIU_TOP                   31     0.000     0.000     0.000  MET         User52
   UNCORE\CLOCK_DOMAIN                            CLOCK_DOMAIN_TOP          31     0.000     0.000     0.000  MET         User53
   UNCORE\DEBUG_UNIT                              DEBUG_UNIT_TOP            31     0.000     0.000     0.000  MET         User54
@@ -115,7 +116,6 @@ PER-BLOCK SUMMARY
   UNCORE\MEMORY_CONTROLLER                       MC_TOP                    31     0.000     0.000     0.000  MET         User56
   UNCORE\PMU                                     PMU_TOP                   31     0.000     0.000     0.000  MET         User57
   WRITEBACK\PRF\FP_RF                            FP_RF_TOP                 31     0.000     0.000     0.000  MET         User40
-  WRITEBACK\PRF\INT_RF                           INT_RF_TOP                31    -0.231    -6.788     0.000  VIOLATED    User41
   WRITEBACK\RESULT_BROADCAST_BUS                 RESULT_BUS_TOP            31     0.000     0.000     0.000  MET         User42
 
 ================================================================================

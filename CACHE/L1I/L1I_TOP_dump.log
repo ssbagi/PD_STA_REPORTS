@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\CACHE\L1I
   Design          : L1I_TOP
-  Parsed At       : 2026-08-15T22:10:32
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,28 +48,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.078 ns
-  Slack    :   +1.088 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2155 / 1135
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:21         Memory : 2.881 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.058 ns   TNS :   +0.000 ns   WHS :   +0.068 ns
-  Slack    :   +1.058 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2902 / 5350
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:58         Memory : 4.344 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ff_1p16v_1p16v_n40c
-
   File     : 03_SETUP_TT_25C_L1I_TOP.rpt
   Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -79,61 +57,6 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 3627 / 3251
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:03:32         Memory : 2.803 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
-  Slack    :   +1.101 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3757 / 3331
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:40         Memory : 4.383 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
-  Slack    :   +1.085 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1562 / 3490
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:43         Memory : 2.037 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.105 ns
-  Slack    :   +1.130 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3105 / 5072
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:21         Memory : 2.874 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
-  Slack    :   +1.104 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1370 / 3553
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:12         Memory : 2.506 GB
-  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_L1I_TOP.rpt
-  Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.065 ns
-  Slack    :   +1.083 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4015 / 1594
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:44         Memory : 3.378 GB
   Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
 
   File     : 09_RECOVERY_SS_125C_L1I_TOP.rpt
@@ -147,6 +70,50 @@ PER-REPORT DETAIL
   Runtime  : 00:07:25         Memory : 1.222 GB
   Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p72v_0p72v_125c
 
+  File     : 07_SETUP_LVSS_125C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1370 / 3553
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:12         Memory : 2.506 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p63v_0p63v_125c
+
+  File     : 01_SETUP_SS_125C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.078 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2155 / 1135
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:21         Memory : 2.881 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p72v_0p72v_125c
+
+  File     : 05_SETUP_SS_M40C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
+  Slack    :   +1.085 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1562 / 3490
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:43         Memory : 2.037 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ss_0p72v_0p72v_n40c
+
+  File     : 08_CG_CHECK_TT_25C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.065 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4015 / 1594
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:44         Memory : 3.378 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
+
   File     : 10_MULTICYCLE_TT_25C_L1I_TOP.rpt
   Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -157,6 +124,39 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:04:46         Memory : 1.923 GB
   Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
+  Slack    :   +1.101 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3757 / 3331
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:40         Memory : 4.383 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.105 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3105 / 5072
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:21         Memory : 2.874 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_L1I_TOP.rpt
+  Design   : L1I_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.058 ns   TNS :   +0.000 ns   WHS :   +0.068 ns
+  Slack    :   +1.058 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2902 / 5350
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:58         Memory : 4.344 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/L1I/run_ff_1p16v_1p16v_n40c
 
   File     : L1I_TIMING.rpt
   Design   : N/A                   Corner : N/A

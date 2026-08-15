@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD",
   "design": "FADD_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,6 +95,126 @@
   },
   "reports": [
     {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\07_SETUP_LVSS_125C_FADD_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_FADD_TOP.rpt",
+      "design": "FADD_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fadd_exp/din_reg[0]",
+      "endpoint": "u_fadd_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.18,
+      "wns_ns": 1.18,
+      "tns_ns": 0.0,
+      "whs_ns": 0.082,
+      "sub_units": [
+        {
+          "unit": "u_fadd_exp",
+          "wns_ns": 1.18,
+          "tns_ns": 0.0,
+          "whs_ns": 0.082
+        },
+        {
+          "unit": "u_fadd_sig",
+          "wns_ns": 0.101,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        },
+        {
+          "unit": "u_fadd_norm",
+          "wns_ns": 0.096,
+          "tns_ns": 0.0,
+          "whs_ns": 0.13
+        },
+        {
+          "unit": "u_fadd_rnd",
+          "wns_ns": 0.168,
+          "tns_ns": 0.0,
+          "whs_ns": 0.097
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1577,
+      "constrained_endpoints": 1773,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:07:45",
+      "peak_mem": "1.707 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\10_MULTICYCLE_TT_25C_FADD_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_FADD_TOP.rpt",
+      "design": "FADD_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fadd_exp/din_reg[0]",
+      "endpoint": "u_fadd_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.137,
+      "wns_ns": 1.137,
+      "tns_ns": 0.0,
+      "whs_ns": 0.104,
+      "sub_units": [
+        {
+          "unit": "u_fadd_exp",
+          "wns_ns": 1.137,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_fadd_sig",
+          "wns_ns": 0.168,
+          "tns_ns": 0.0,
+          "whs_ns": 0.075
+        },
+        {
+          "unit": "u_fadd_norm",
+          "wns_ns": 0.068,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        },
+        {
+          "unit": "u_fadd_rnd",
+          "wns_ns": 0.057,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4594,
+      "constrained_endpoints": 5213,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:05:52",
+      "peak_mem": "2.42 GB"
+    },
+    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\01_SETUP_SS_125C_FADD_TOP.rpt",
       "file_name": "01_SETUP_SS_125C_FADD_TOP.rpt",
       "design": "FADD_TOP",
@@ -153,186 +273,6 @@
       "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
       "elapsed": "00:06:15",
       "peak_mem": "2.075 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\02_HOLD_FF_N40C_FADD_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_FADD_TOP.rpt",
-      "design": "FADD_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fadd_exp/din_reg[0]",
-      "endpoint": "u_fadd_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.064,
-      "wns_ns": 1.064,
-      "tns_ns": 0.0,
-      "whs_ns": 0.079,
-      "sub_units": [
-        {
-          "unit": "u_fadd_exp",
-          "wns_ns": 1.064,
-          "tns_ns": 0.0,
-          "whs_ns": 0.079
-        },
-        {
-          "unit": "u_fadd_sig",
-          "wns_ns": 0.1,
-          "tns_ns": 0.0,
-          "whs_ns": 0.069
-        },
-        {
-          "unit": "u_fadd_norm",
-          "wns_ns": 0.176,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
-        },
-        {
-          "unit": "u_fadd_rnd",
-          "wns_ns": 0.178,
-          "tns_ns": 0.0,
-          "whs_ns": 0.086
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4057,
-      "constrained_endpoints": 1866,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:01:58",
-      "peak_mem": "2.075 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\03_SETUP_TT_25C_FADD_TOP.rpt",
-      "file_name": "03_SETUP_TT_25C_FADD_TOP.rpt",
-      "design": "FADD_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Setup   — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fadd_exp/din_reg[0]",
-      "endpoint": "u_fadd_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.089,
-      "wns_ns": 1.089,
-      "tns_ns": 0.0,
-      "whs_ns": 0.085,
-      "sub_units": [
-        {
-          "unit": "u_fadd_exp",
-          "wns_ns": 1.089,
-          "tns_ns": 0.0,
-          "whs_ns": 0.085
-        },
-        {
-          "unit": "u_fadd_sig",
-          "wns_ns": 0.117,
-          "tns_ns": 0.0,
-          "whs_ns": 0.101
-        },
-        {
-          "unit": "u_fadd_norm",
-          "wns_ns": 0.082,
-          "tns_ns": 0.0,
-          "whs_ns": 0.073
-        },
-        {
-          "unit": "u_fadd_rnd",
-          "wns_ns": 0.135,
-          "tns_ns": 0.0,
-          "whs_ns": 0.063
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5781,
-      "constrained_endpoints": 2989,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:01:40",
-      "peak_mem": "2.378 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\04_HOLD_TT_25C_FADD_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_FADD_TOP.rpt",
-      "design": "FADD_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fadd_exp/din_reg[0]",
-      "endpoint": "u_fadd_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.11,
-      "wns_ns": 1.11,
-      "tns_ns": 0.0,
-      "whs_ns": 0.106,
-      "sub_units": [
-        {
-          "unit": "u_fadd_exp",
-          "wns_ns": 1.11,
-          "tns_ns": 0.0,
-          "whs_ns": 0.106
-        },
-        {
-          "unit": "u_fadd_sig",
-          "wns_ns": 0.106,
-          "tns_ns": 0.0,
-          "whs_ns": 0.071
-        },
-        {
-          "unit": "u_fadd_norm",
-          "wns_ns": 0.064,
-          "tns_ns": 0.0,
-          "whs_ns": 0.082
-        },
-        {
-          "unit": "u_fadd_rnd",
-          "wns_ns": 0.14,
-          "tns_ns": 0.0,
-          "whs_ns": 0.088
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4996,
-      "constrained_endpoints": 5796,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:06:44",
-      "peak_mem": "2.788 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\05_SETUP_SS_M40C_FADD_TOP.rpt",
@@ -395,15 +335,15 @@
       "peak_mem": "2.192 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\06_HOLD_FF_125C_FADD_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_FADD_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\03_SETUP_TT_25C_FADD_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_FADD_TOP.rpt",
       "design": "FADD_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
@@ -413,106 +353,46 @@
       "slack_ns": 1.089,
       "wns_ns": 1.089,
       "tns_ns": 0.0,
-      "whs_ns": 0.084,
+      "whs_ns": 0.085,
       "sub_units": [
         {
           "unit": "u_fadd_exp",
           "wns_ns": 1.089,
           "tns_ns": 0.0,
-          "whs_ns": 0.084
+          "whs_ns": 0.085
         },
         {
           "unit": "u_fadd_sig",
-          "wns_ns": 0.06,
+          "wns_ns": 0.117,
           "tns_ns": 0.0,
-          "whs_ns": 0.113
+          "whs_ns": 0.101
         },
         {
           "unit": "u_fadd_norm",
-          "wns_ns": 0.169,
+          "wns_ns": 0.082,
           "tns_ns": 0.0,
-          "whs_ns": 0.068
+          "whs_ns": 0.073
         },
         {
           "unit": "u_fadd_rnd",
-          "wns_ns": 0.05,
+          "wns_ns": 0.135,
           "tns_ns": 0.0,
-          "whs_ns": 0.067
+          "whs_ns": 0.063
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 5015,
-      "constrained_endpoints": 4455,
+      "total_endpoints": 5781,
+      "constrained_endpoints": 2989,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ff_1p16v_1p16v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_tt_0p90v_0p90v_25c",
       "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:03:12",
-      "peak_mem": "3.833 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\07_SETUP_LVSS_125C_FADD_TOP.rpt",
-      "file_name": "07_SETUP_LVSS_125C_FADD_TOP.rpt",
-      "design": "FADD_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fadd_exp/din_reg[0]",
-      "endpoint": "u_fadd_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.18,
-      "wns_ns": 1.18,
-      "tns_ns": 0.0,
-      "whs_ns": 0.082,
-      "sub_units": [
-        {
-          "unit": "u_fadd_exp",
-          "wns_ns": 1.18,
-          "tns_ns": 0.0,
-          "whs_ns": 0.082
-        },
-        {
-          "unit": "u_fadd_sig",
-          "wns_ns": 0.101,
-          "tns_ns": 0.0,
-          "whs_ns": 0.123
-        },
-        {
-          "unit": "u_fadd_norm",
-          "wns_ns": 0.096,
-          "tns_ns": 0.0,
-          "whs_ns": 0.13
-        },
-        {
-          "unit": "u_fadd_rnd",
-          "wns_ns": 0.168,
-          "tns_ns": 0.0,
-          "whs_ns": 0.097
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1577,
-      "constrained_endpoints": 1773,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ss_0p63v_0p63v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:07:45",
-      "peak_mem": "1.707 GB"
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:40",
+      "peak_mem": "2.378 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\08_CG_CHECK_TT_25C_FADD_TOP.rpt",
@@ -635,55 +515,55 @@
       "peak_mem": "4.066 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\10_MULTICYCLE_TT_25C_FADD_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_FADD_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\04_HOLD_TT_25C_FADD_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_FADD_TOP.rpt",
       "design": "FADD_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
-      "delay_type": "max",
-      "check": "setup",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_fadd_exp/din_reg[0]",
       "endpoint": "u_fadd_rnd/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.137,
-      "wns_ns": 1.137,
+      "slack_ns": 1.11,
+      "wns_ns": 1.11,
       "tns_ns": 0.0,
-      "whs_ns": 0.104,
+      "whs_ns": 0.106,
       "sub_units": [
         {
           "unit": "u_fadd_exp",
-          "wns_ns": 1.137,
+          "wns_ns": 1.11,
           "tns_ns": 0.0,
-          "whs_ns": 0.104
+          "whs_ns": 0.106
         },
         {
           "unit": "u_fadd_sig",
-          "wns_ns": 0.168,
+          "wns_ns": 0.106,
           "tns_ns": 0.0,
-          "whs_ns": 0.075
+          "whs_ns": 0.071
         },
         {
           "unit": "u_fadd_norm",
-          "wns_ns": 0.068,
+          "wns_ns": 0.064,
           "tns_ns": 0.0,
-          "whs_ns": 0.076
+          "whs_ns": 0.082
         },
         {
           "unit": "u_fadd_rnd",
-          "wns_ns": 0.057,
+          "wns_ns": 0.14,
           "tns_ns": 0.0,
-          "whs_ns": 0.106
+          "whs_ns": 0.088
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 4594,
-      "constrained_endpoints": 5213,
+      "total_endpoints": 4996,
+      "constrained_endpoints": 5796,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_tt_0p90v_0p90v_25c",
@@ -691,8 +571,128 @@
       "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:05:52",
-      "peak_mem": "2.42 GB"
+      "elapsed": "00:06:44",
+      "peak_mem": "2.788 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\06_HOLD_FF_125C_FADD_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_FADD_TOP.rpt",
+      "design": "FADD_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fadd_exp/din_reg[0]",
+      "endpoint": "u_fadd_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.089,
+      "wns_ns": 1.089,
+      "tns_ns": 0.0,
+      "whs_ns": 0.084,
+      "sub_units": [
+        {
+          "unit": "u_fadd_exp",
+          "wns_ns": 1.089,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        },
+        {
+          "unit": "u_fadd_sig",
+          "wns_ns": 0.06,
+          "tns_ns": 0.0,
+          "whs_ns": 0.113
+        },
+        {
+          "unit": "u_fadd_norm",
+          "wns_ns": 0.169,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        },
+        {
+          "unit": "u_fadd_rnd",
+          "wns_ns": 0.05,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5015,
+      "constrained_endpoints": 4455,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:03:12",
+      "peak_mem": "3.833 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\02_HOLD_FF_N40C_FADD_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_FADD_TOP.rpt",
+      "design": "FADD_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fadd_exp/din_reg[0]",
+      "endpoint": "u_fadd_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.064,
+      "wns_ns": 1.064,
+      "tns_ns": 0.0,
+      "whs_ns": 0.079,
+      "sub_units": [
+        {
+          "unit": "u_fadd_exp",
+          "wns_ns": 1.064,
+          "tns_ns": 0.0,
+          "whs_ns": 0.079
+        },
+        {
+          "unit": "u_fadd_sig",
+          "wns_ns": 0.1,
+          "tns_ns": 0.0,
+          "whs_ns": 0.069
+        },
+        {
+          "unit": "u_fadd_norm",
+          "wns_ns": 0.176,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_fadd_rnd",
+          "wns_ns": 0.178,
+          "tns_ns": 0.0,
+          "whs_ns": 0.086
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4057,
+      "constrained_endpoints": 1866,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FADD/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FADD_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FADD_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FADD_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:01:58",
+      "peak_mem": "2.075 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FADD\\FADD_TIMING.rpt",

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\LSU\STL_FORWARD
   Design          : STL_FORWARD_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,27 +48,16 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_125c
+  File     : 10_MULTICYCLE_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
-  Slack    :   +1.131 ns   Status : MET
+  WNS      :   +1.162 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
+  Slack    :   +1.162 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 867 / 3539
+  Coverage : 100.0%   Endpoints : 2980 / 4801
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:51         Memory : 4.654 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.108 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
-  Slack    :   +1.108 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1081 / 4404
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:45         Memory : 2.423 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:04:47         Memory : 4.794 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
 
   File     : 03_SETUP_TT_25C_STL_FORWARD_TOP.rpt
   Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
@@ -81,38 +70,16 @@ PER-REPORT DETAIL
   Runtime  : 00:01:27         Memory : 2.094 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
 
-  File     : 04_HOLD_TT_25C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.091 ns
-  Slack    :   +1.110 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3034 / 1189
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:36         Memory : 1.606 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_n40c
+  File     : 01_SETUP_SS_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.074 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
-  Slack    :   +1.074 ns   Status : MET
+  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.131 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1565 / 4357
+  Coverage : 100.0%   Endpoints : 867 / 3539
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:10         Memory : 2.204 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
-  Slack    :   +1.066 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 848 / 5804
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:49         Memory : 4.167 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_125c
+  Runtime  : 00:08:51         Memory : 4.654 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_125c
 
   File     : 07_SETUP_LVSS_125C_STL_FORWARD_TOP.rpt
   Design   : STL_FORWARD_TOP       Corner : ss_0p63v_0p63v_125c
@@ -147,16 +114,49 @@ PER-REPORT DETAIL
   Runtime  : 00:02:13         Memory : 3.438 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_125c
 
-  File     : 10_MULTICYCLE_TT_25C_STL_FORWARD_TOP.rpt
-  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  File     : 05_SETUP_SS_M40C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_n40c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.162 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
-  Slack    :   +1.162 ns   Status : MET
+  WNS      :   +1.074 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.074 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2980 / 4801
+  Coverage : 100.0%   Endpoints : 1565 / 4357
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:47         Memory : 4.794 GB
+  Runtime  : 00:04:10         Memory : 2.204 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_n40c
+
+  File     : 04_HOLD_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.091 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3034 / 1189
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:36         Memory : 1.606 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.066 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 848 / 5804
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:49         Memory : 4.167 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.108 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.108 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1081 / 4404
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:45         Memory : 2.423 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_n40c
 
   File     : STL_FORWARD_TIMING.rpt
   Design   : N/A                   Corner : N/A

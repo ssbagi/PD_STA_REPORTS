@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\WRITEBACK\PRF\INT_RF
   Design          : INT_RF_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 31
 
 
@@ -51,49 +51,115 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_INT_RF_TOP.rpt
+  File     : 07_SETUP_LVSS_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : lvss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   -0.231 ns   TNS :   -6.788 ns   WHS :   +0.076 ns
+  Slack    :   -0.231 ns   Status : VIOLATED
+  Status   : TIMING VIOLATED — Setup violations detected
+  Coverage : 100.0%   Endpoints : 7684 / 7684
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:14         Memory : 7.234 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_lvss_0p63v_0p63v_125c
+
+  File     : 19_SETUP_LVSS_N40C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p63v_0p63v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.180 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.180 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1250 / 1642
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:11         Memory : 1.825 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p63v_0p63v_n40c
+
+  File     : 30_SETUP_TT_25C_FINAL_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.174 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.174 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4905 / 5522
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:36         Memory : 2.252 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 15_SETUP_TT_85C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.158 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.158 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6826 / 4293
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:15         Memory : 3.79 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_85c
+
+  File     : 22_RECOVERY_TT_25C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.149 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.149 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5910 / 2306
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:14         Memory : 2.075 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 17_SETUP_FF_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1528 / 5519
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:38         Memory : 2.194 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_125c
+
+  File     : 08_CG_CHECK_TT_25C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.140 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
+  Slack    :   +1.140 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3671 / 5529
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:39         Memory : 4.771 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 26_SETUP_SS_125C_SI_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.112 ns
-  Slack    :   +1.088 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2063 / 5796
+  WNS      :   +1.134 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.134 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1394 / 6165
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:24         Memory : 2.777 GB
+  Runtime  : 00:06:27         Memory : 1.556 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
 
-  File     : 02_HOLD_FF_N40C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.074 ns
-  Slack    :   +1.052 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1347 / 3362
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:39         Memory : 3.863 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
-
-  File     : 03_SETUP_TT_25C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  File     : 13_SETUP_SS_125C_POCV_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.102 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
-  Slack    :   +1.102 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 801 / 1438
+  WNS      :   +1.111 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.111 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5885 / 4312
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:38         Memory : 2.424 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+  Runtime  : 00:05:10         Memory : 4.555 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
 
-  File     : 04_HOLD_TT_25C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.124 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
-  Slack    :   +1.124 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4326 / 2814
+  File     : 11_SETUP_SS_125C_OCV_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.107 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.107 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1572 / 2717
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:17         Memory : 3.359 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+  Runtime  : 00:03:36         Memory : 4.626 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
 
   File     : 05_SETUP_SS_M40C_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_n40c
@@ -106,38 +172,71 @@ PER-REPORT DETAIL
   Runtime  : 00:04:36         Memory : 3.436 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.080 ns
-  Slack    :   +1.109 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1592 / 2475
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:56         Memory : 2.078 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : lvss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   -0.231 ns   TNS :   -6.788 ns   WHS :   +0.076 ns
-  Slack    :   -0.231 ns   Status : VIOLATED
-  Status   : TIMING VIOLATED — Setup violations detected
-  Coverage : 100.0%   Endpoints : 7684 / 7684
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:14         Memory : 7.234 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_lvss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_INT_RF_TOP.rpt
+  File     : 24_SETUP_TT_25C_ECO_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.140 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
-  Slack    :   +1.140 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3671 / 5529
+  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.105 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3115 / 4715
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:39         Memory : 4.771 GB
+  Runtime  : 00:06:44         Memory : 4.305 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 03_SETUP_TT_25C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.102 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
+  Slack    :   +1.102 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 801 / 1438
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:38         Memory : 2.424 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 28_SETUP_SS_125C_FINAL_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.102 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.102 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1865 / 2808
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:30         Memory : 1.158 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
+
+  File     : 01_SETUP_SS_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.112 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2063 / 5796
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:24         Memory : 2.777 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
+
+  File     : 23_MULTICYCLE_SS_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.087 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6102 / 3654
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:36         Memory : 2.336 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
+
+  File     : 21_CG_CHECK_SS_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.077 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3849 / 5176
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:56         Memory : 4.965 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
 
   File     : 09_RECOVERY_SS_125C_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
@@ -161,16 +260,38 @@ PER-REPORT DETAIL
   Runtime  : 00:02:20         Memory : 4.088 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
 
-  File     : 11_SETUP_SS_125C_OCV_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.107 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.107 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1572 / 2717
+  File     : 04_HOLD_TT_25C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.124 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
+  Slack    :   +1.124 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4326 / 2814
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:36         Memory : 4.626 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
+  Runtime  : 00:04:17         Memory : 3.359 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.080 ns
+  Slack    :   +1.109 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1592 / 2475
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:56         Memory : 2.078 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_INT_RF_TOP.rpt
+  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.074 ns
+  Slack    :   +1.052 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1347 / 3362
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:39         Memory : 3.863 GB
+  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
 
   File     : 12_HOLD_FF_N40C_OCV_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
@@ -183,17 +304,6 @@ PER-REPORT DETAIL
   Runtime  : 00:05:48         Memory : 2.953 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
 
-  File     : 13_SETUP_SS_125C_POCV_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.111 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.111 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5885 / 4312
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:10         Memory : 4.555 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
-
   File     : 14_HOLD_FF_N40C_POCV_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -204,17 +314,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:07:30         Memory : 2.197 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
-
-  File     : 15_SETUP_TT_85C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_85c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.158 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.158 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6826 / 4293
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:15         Memory : 3.79 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_85c
 
   File     : 16_HOLD_TT_85C_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_85c
@@ -227,17 +326,6 @@ PER-REPORT DETAIL
   Runtime  : 00:05:18         Memory : 5.116 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_85c
 
-  File     : 17_SETUP_FF_125C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.143 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1528 / 5519
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:38         Memory : 2.194 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_125c
-
   File     : 18_HOLD_SS_125C_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -248,17 +336,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:01:44         Memory : 4.43 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
-
-  File     : 19_SETUP_LVSS_N40C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p63v_0p63v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.180 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.180 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1250 / 1642
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:11         Memory : 1.825 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p63v_0p63v_n40c
 
   File     : 20_HOLD_LVFF_N40C_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ff_1p32v_1p32v_n40c
@@ -271,50 +348,6 @@ PER-REPORT DETAIL
   Runtime  : 00:05:37         Memory : 3.682 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p32v_1p32v_n40c
 
-  File     : 21_CG_CHECK_SS_125C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.077 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3849 / 5176
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:56         Memory : 4.965 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
-
-  File     : 22_RECOVERY_TT_25C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.149 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.149 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5910 / 2306
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:14         Memory : 2.075 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
-
-  File     : 23_MULTICYCLE_SS_125C_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.087 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6102 / 3654
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:36         Memory : 2.336 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
-
-  File     : 24_SETUP_TT_25C_ECO_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.105 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3115 / 4715
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:44         Memory : 4.305 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
-
   File     : 25_HOLD_TT_25C_ECO_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -325,17 +358,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:07:54         Memory : 4.432 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
-
-  File     : 26_SETUP_SS_125C_SI_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.134 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.134 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1394 / 6165
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:27         Memory : 1.556 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
 
   File     : 27_HOLD_FF_N40C_SI_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
@@ -348,17 +370,6 @@ PER-REPORT DETAIL
   Runtime  : 00:05:24         Memory : 3.38 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
 
-  File     : 28_SETUP_SS_125C_FINAL_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.102 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.102 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1865 / 2808
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:30         Memory : 1.158 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p72v_0p72v_125c
-
   File     : 29_HOLD_FF_N40C_FINAL_INT_RF_TOP.rpt
   Design   : INT_RF_TOP            Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -369,17 +380,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:08:50         Memory : 3.313 GB
   Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ff_1p16v_1p16v_n40c
-
-  File     : 30_SETUP_TT_25C_FINAL_INT_RF_TOP.rpt
-  Design   : INT_RF_TOP            Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.174 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.174 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4905 / 5522
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:36         Memory : 2.252 GB
-  Run Dir  : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_tt_0p90v_0p90v_25c
 
   File     : INT_RF_TIMING.rpt
   Design   : N/A                   Corner : N/A

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\ISSUE\IQ_FP
   Design          : IQ_FP_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 11
 
 
@@ -48,6 +48,39 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
+  File     : 07_SETUP_LVSS_125C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.085 ns
+  Slack    :   +1.131 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5326 / 3302
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:41         Memory : 4.323 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p63v_0p63v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.079 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2437 / 1781
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:13         Memory : 1.923 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
+
+  File     : 08_CG_CHECK_TT_25C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.121 ns   TNS :   +0.000 ns   WHS :   +0.086 ns
+  Slack    :   +1.121 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4957 / 1448
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:55         Memory : 1.826 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
+
   File     : 01_SETUP_SS_125C_IQ_FP_TOP.rpt
   Design   : IQ_FP_TOP             Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -59,16 +92,27 @@ PER-REPORT DETAIL
   Runtime  : 00:01:30         Memory : 2.334 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p72v_0p72v_125c
 
-  File     : 02_HOLD_FF_N40C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.093 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
-  Slack    :   +1.093 ns   Status : MET
+  File     : 09_RECOVERY_SS_125C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.099 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
+  Slack    :   +1.099 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 873 / 5669
+  Coverage : 100.0%   Endpoints : 2861 / 1734
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:17         Memory : 4.577 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:02:13         Memory : 2.28 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p72v_0p72v_125c
+
+  File     : 05_SETUP_SS_M40C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.090 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1460 / 1141
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:10         Memory : 4.182 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p72v_0p72v_n40c
 
   File     : 03_SETUP_TT_25C_IQ_FP_TOP.rpt
   Design   : IQ_FP_TOP             Corner : tt_0p90v_0p90v_25c
@@ -92,16 +136,16 @@ PER-REPORT DETAIL
   Runtime  : 00:02:44         Memory : 1.995 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
 
-  File     : 05_SETUP_SS_M40C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
-  Slack    :   +1.090 ns   Status : MET
+  File     : 02_HOLD_FF_N40C_IQ_FP_TOP.rpt
+  Design   : IQ_FP_TOP             Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.093 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
+  Slack    :   +1.093 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1460 / 1141
+  Coverage : 100.0%   Endpoints : 873 / 5669
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:10         Memory : 4.182 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p72v_0p72v_n40c
+  Runtime  : 00:02:17         Memory : 4.577 GB
+  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ff_1p16v_1p16v_n40c
 
   File     : 06_HOLD_FF_125C_IQ_FP_TOP.rpt
   Design   : IQ_FP_TOP             Corner : ff_1p16v_1p16v_125c
@@ -113,50 +157,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:05:56         Memory : 1.911 GB
   Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.085 ns
-  Slack    :   +1.131 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5326 / 3302
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:41         Memory : 4.323 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.121 ns   TNS :   +0.000 ns   WHS :   +0.086 ns
-  Slack    :   +1.121 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4957 / 1448
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:55         Memory : 1.826 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
-
-  File     : 09_RECOVERY_SS_125C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.099 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
-  Slack    :   +1.099 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2861 / 1734
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:13         Memory : 2.28 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_ss_0p72v_0p72v_125c
-
-  File     : 10_MULTICYCLE_TT_25C_IQ_FP_TOP.rpt
-  Design   : IQ_FP_TOP             Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.079 ns
-  Slack    :   +1.127 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2437 / 1781
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:13         Memory : 1.923 GB
-  Run Dir  : /proj/cpu_rtl/sta/ISSUE/IQ_FP/run_tt_0p90v_0p90v_25c
 
   File     : IQ_FP_TIMING.rpt
   Design   : N/A                   Corner : N/A

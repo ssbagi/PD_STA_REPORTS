@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\FETCH\BPU\RAS
   Design          : RAS_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 11
 
 
@@ -48,50 +48,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_RAS_TOP.rpt
-  Design   : RAS_TOP               Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.168 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
-  Slack    :   +1.168 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1207 / 975
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:14         Memory : 4.638 GB
-  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_RAS_TOP.rpt
-  Design   : RAS_TOP               Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.046 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
-  Slack    :   +1.046 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1744 / 5384
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:28         Memory : 3.294 GB
-  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ff_1p16v_1p16v_n40c
-
-  File     : 03_SETUP_TT_25C_RAS_TOP.rpt
-  Design   : RAS_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.098 ns
-  Slack    :   +1.129 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4933 / 4474
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:33         Memory : 4.49 GB
-  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_RAS_TOP.rpt
-  Design   : RAS_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.124 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
-  Slack    :   +1.124 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5255 / 4846
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:53         Memory : 4.147 GB
-  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
-
   File     : 05_SETUP_SS_M40C_RAS_TOP.rpt
   Design   : RAS_TOP               Corner : ss_0p72v_0p72v_n40c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -103,16 +59,38 @@ PER-REPORT DETAIL
   Runtime  : 00:01:51         Memory : 1.854 GB
   Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_RAS_TOP.rpt
-  Design   : RAS_TOP               Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
-  Slack    :   +1.098 ns   Status : MET
+  File     : 01_SETUP_SS_125C_RAS_TOP.rpt
+  Design   : RAS_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.168 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
+  Slack    :   +1.168 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1843 / 4479
+  Coverage : 100.0%   Endpoints : 1207 / 975
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:53         Memory : 3.5 GB
-  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ff_1p16v_1p16v_125c
+  Runtime  : 00:03:14         Memory : 4.638 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_RAS_TOP.rpt
+  Design   : RAS_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.133 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
+  Slack    :   +1.133 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2076 / 2170
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:22         Memory : 1.718 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
+
+  File     : 03_SETUP_TT_25C_RAS_TOP.rpt
+  Design   : RAS_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.098 ns
+  Slack    :   +1.129 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4933 / 4474
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:33         Memory : 4.49 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
 
   File     : 07_SETUP_LVSS_125C_RAS_TOP.rpt
   Design   : RAS_TOP               Corner : ss_0p63v_0p63v_125c
@@ -147,16 +125,38 @@ PER-REPORT DETAIL
   Runtime  : 00:04:50         Memory : 3.6 GB
   Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ss_0p72v_0p72v_125c
 
-  File     : 10_MULTICYCLE_TT_25C_RAS_TOP.rpt
+  File     : 04_HOLD_TT_25C_RAS_TOP.rpt
   Design   : RAS_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.133 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
-  Slack    :   +1.133 ns   Status : MET
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.124 ns   TNS :   +0.000 ns   WHS :   +0.089 ns
+  Slack    :   +1.124 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2076 / 2170
+  Coverage : 100.0%   Endpoints : 5255 / 4846
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:22         Memory : 1.718 GB
+  Runtime  : 00:08:53         Memory : 4.147 GB
   Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
+
+  File     : 02_HOLD_FF_N40C_RAS_TOP.rpt
+  Design   : RAS_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.046 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.046 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1744 / 5384
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:28         Memory : 3.294 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ff_1p16v_1p16v_n40c
+
+  File     : 06_HOLD_FF_125C_RAS_TOP.rpt
+  Design   : RAS_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1843 / 4479
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:53         Memory : 3.5 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_ff_1p16v_1p16v_125c
 
   File     : RAS_TIMING.rpt
   Design   : N/A                   Corner : N/A

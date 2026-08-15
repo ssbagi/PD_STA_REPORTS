@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU",
   "design": "LDU_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:33",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,6 +95,66 @@
   },
   "reports": [
     {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\07_SETUP_LVSS_125C_LDU_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_LDU_TOP.rpt",
+      "design": "LDU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_ldu_agen/din_reg[0]",
+      "endpoint": "u_ldu_align/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.146,
+      "wns_ns": 1.146,
+      "tns_ns": 0.0,
+      "whs_ns": 0.096,
+      "sub_units": [
+        {
+          "unit": "u_ldu_agen",
+          "wns_ns": 1.146,
+          "tns_ns": 0.0,
+          "whs_ns": 0.096
+        },
+        {
+          "unit": "u_ldu_tlb",
+          "wns_ns": 0.139,
+          "tns_ns": 0.0,
+          "whs_ns": 0.062
+        },
+        {
+          "unit": "u_ldu_dc",
+          "wns_ns": 0.152,
+          "tns_ns": 0.0,
+          "whs_ns": 0.127
+        },
+        {
+          "unit": "u_ldu_align",
+          "wns_ns": 0.141,
+          "tns_ns": 0.0,
+          "whs_ns": 0.065
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 877,
+      "constrained_endpoints": 2778,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:01:13",
+      "peak_mem": "2.224 GB"
+    },
+    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\01_SETUP_SS_125C_LDU_TOP.rpt",
       "file_name": "01_SETUP_SS_125C_LDU_TOP.rpt",
       "design": "LDU_TOP",
@@ -155,73 +215,13 @@
       "peak_mem": "1.517 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\02_HOLD_FF_N40C_LDU_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_LDU_TOP.rpt",
-      "design": "LDU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_ldu_agen/din_reg[0]",
-      "endpoint": "u_ldu_align/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.111,
-      "wns_ns": 1.111,
-      "tns_ns": 0.0,
-      "whs_ns": 0.094,
-      "sub_units": [
-        {
-          "unit": "u_ldu_agen",
-          "wns_ns": 1.111,
-          "tns_ns": 0.0,
-          "whs_ns": 0.094
-        },
-        {
-          "unit": "u_ldu_tlb",
-          "wns_ns": 0.082,
-          "tns_ns": 0.0,
-          "whs_ns": 0.109
-        },
-        {
-          "unit": "u_ldu_dc",
-          "wns_ns": 0.08,
-          "tns_ns": 0.0,
-          "whs_ns": 0.085
-        },
-        {
-          "unit": "u_ldu_align",
-          "wns_ns": 0.133,
-          "tns_ns": 0.0,
-          "whs_ns": 0.118
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2283,
-      "constrained_endpoints": 3138,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:08:46",
-      "peak_mem": "4.625 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\03_SETUP_TT_25C_LDU_TOP.rpt",
-      "file_name": "03_SETUP_TT_25C_LDU_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\10_MULTICYCLE_TT_25C_LDU_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_LDU_TOP.rpt",
       "design": "LDU_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Setup   — Nominal corner",
+      "note": "Multicycle Path Check — 2-cycle paths",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -230,100 +230,40 @@
       "startpoint": "u_ldu_agen/din_reg[0]",
       "endpoint": "u_ldu_align/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.098,
-      "wns_ns": 1.098,
+      "slack_ns": 1.106,
+      "wns_ns": 1.106,
       "tns_ns": 0.0,
-      "whs_ns": 0.108,
+      "whs_ns": 0.081,
       "sub_units": [
         {
           "unit": "u_ldu_agen",
-          "wns_ns": 1.098,
+          "wns_ns": 1.106,
           "tns_ns": 0.0,
-          "whs_ns": 0.108
+          "whs_ns": 0.081
         },
         {
           "unit": "u_ldu_tlb",
-          "wns_ns": 0.067,
+          "wns_ns": 0.169,
           "tns_ns": 0.0,
-          "whs_ns": 0.063
+          "whs_ns": 0.094
         },
         {
           "unit": "u_ldu_dc",
-          "wns_ns": 0.061,
-          "tns_ns": 0.0,
-          "whs_ns": 0.063
-        },
-        {
-          "unit": "u_ldu_align",
-          "wns_ns": 0.089,
-          "tns_ns": 0.0,
-          "whs_ns": 0.129
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5781,
-      "constrained_endpoints": 5472,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:02:57",
-      "peak_mem": "3.291 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\04_HOLD_TT_25C_LDU_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_LDU_TOP.rpt",
-      "design": "LDU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_ldu_agen/din_reg[0]",
-      "endpoint": "u_ldu_align/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.114,
-      "wns_ns": 1.114,
-      "tns_ns": 0.0,
-      "whs_ns": 0.083,
-      "sub_units": [
-        {
-          "unit": "u_ldu_agen",
-          "wns_ns": 1.114,
-          "tns_ns": 0.0,
-          "whs_ns": 0.083
-        },
-        {
-          "unit": "u_ldu_tlb",
-          "wns_ns": 0.145,
-          "tns_ns": 0.0,
-          "whs_ns": 0.058
-        },
-        {
-          "unit": "u_ldu_dc",
-          "wns_ns": 0.108,
+          "wns_ns": 0.055,
           "tns_ns": 0.0,
           "whs_ns": 0.064
         },
         {
           "unit": "u_ldu_align",
-          "wns_ns": 0.071,
+          "wns_ns": 0.061,
           "tns_ns": 0.0,
-          "whs_ns": 0.127
+          "whs_ns": 0.109
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 5311,
-      "constrained_endpoints": 1510,
+      "total_endpoints": 4906,
+      "constrained_endpoints": 5628,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c",
@@ -331,8 +271,8 @@
       "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:08:48",
-      "peak_mem": "3.899 GB"
+      "elapsed": "00:06:38",
+      "peak_mem": "1.514 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\05_SETUP_SS_M40C_LDU_TOP.rpt",
@@ -395,133 +335,13 @@
       "peak_mem": "4.382 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\06_HOLD_FF_125C_LDU_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_LDU_TOP.rpt",
-      "design": "LDU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_ldu_agen/din_reg[0]",
-      "endpoint": "u_ldu_align/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.126,
-      "wns_ns": 1.126,
-      "tns_ns": 0.0,
-      "whs_ns": 0.119,
-      "sub_units": [
-        {
-          "unit": "u_ldu_agen",
-          "wns_ns": 1.126,
-          "tns_ns": 0.0,
-          "whs_ns": 0.119
-        },
-        {
-          "unit": "u_ldu_tlb",
-          "wns_ns": 0.111,
-          "tns_ns": 0.0,
-          "whs_ns": 0.126
-        },
-        {
-          "unit": "u_ldu_dc",
-          "wns_ns": 0.107,
-          "tns_ns": 0.0,
-          "whs_ns": 0.061
-        },
-        {
-          "unit": "u_ldu_align",
-          "wns_ns": 0.133,
-          "tns_ns": 0.0,
-          "whs_ns": 0.096
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4659,
-      "constrained_endpoints": 2012,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:01:31",
-      "peak_mem": "3.536 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\07_SETUP_LVSS_125C_LDU_TOP.rpt",
-      "file_name": "07_SETUP_LVSS_125C_LDU_TOP.rpt",
-      "design": "LDU_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_ldu_agen/din_reg[0]",
-      "endpoint": "u_ldu_align/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.146,
-      "wns_ns": 1.146,
-      "tns_ns": 0.0,
-      "whs_ns": 0.096,
-      "sub_units": [
-        {
-          "unit": "u_ldu_agen",
-          "wns_ns": 1.146,
-          "tns_ns": 0.0,
-          "whs_ns": 0.096
-        },
-        {
-          "unit": "u_ldu_tlb",
-          "wns_ns": 0.139,
-          "tns_ns": 0.0,
-          "whs_ns": 0.062
-        },
-        {
-          "unit": "u_ldu_dc",
-          "wns_ns": 0.152,
-          "tns_ns": 0.0,
-          "whs_ns": 0.127
-        },
-        {
-          "unit": "u_ldu_align",
-          "wns_ns": 0.141,
-          "tns_ns": 0.0,
-          "whs_ns": 0.065
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 877,
-      "constrained_endpoints": 2778,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ss_0p63v_0p63v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:01:13",
-      "peak_mem": "2.224 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\08_CG_CHECK_TT_25C_LDU_TOP.rpt",
-      "file_name": "08_CG_CHECK_TT_25C_LDU_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\03_SETUP_TT_25C_LDU_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_LDU_TOP.rpt",
       "design": "LDU_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Clock Gating Check — Nominal corner",
+      "note": "Typical Setup   — Nominal corner",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -530,40 +350,40 @@
       "startpoint": "u_ldu_agen/din_reg[0]",
       "endpoint": "u_ldu_align/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.078,
-      "wns_ns": 1.078,
+      "slack_ns": 1.098,
+      "wns_ns": 1.098,
       "tns_ns": 0.0,
-      "whs_ns": 0.11,
+      "whs_ns": 0.108,
       "sub_units": [
         {
           "unit": "u_ldu_agen",
-          "wns_ns": 1.078,
+          "wns_ns": 1.098,
           "tns_ns": 0.0,
-          "whs_ns": 0.11
+          "whs_ns": 0.108
         },
         {
           "unit": "u_ldu_tlb",
-          "wns_ns": 0.089,
+          "wns_ns": 0.067,
           "tns_ns": 0.0,
-          "whs_ns": 0.076
+          "whs_ns": 0.063
         },
         {
           "unit": "u_ldu_dc",
-          "wns_ns": 0.07,
+          "wns_ns": 0.061,
           "tns_ns": 0.0,
-          "whs_ns": 0.062
+          "whs_ns": 0.063
         },
         {
           "unit": "u_ldu_align",
-          "wns_ns": 0.192,
+          "wns_ns": 0.089,
           "tns_ns": 0.0,
-          "whs_ns": 0.1
+          "whs_ns": 0.129
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 2588,
-      "constrained_endpoints": 1673,
+      "total_endpoints": 5781,
+      "constrained_endpoints": 5472,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c",
@@ -571,8 +391,8 @@
       "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:06:41",
-      "peak_mem": "4.21 GB"
+      "elapsed": "00:02:57",
+      "peak_mem": "3.291 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\09_RECOVERY_SS_125C_LDU_TOP.rpt",
@@ -635,13 +455,13 @@
       "peak_mem": "2.904 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\10_MULTICYCLE_TT_25C_LDU_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_LDU_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\08_CG_CHECK_TT_25C_LDU_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_LDU_TOP.rpt",
       "design": "LDU_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
+      "note": "Clock Gating Check — Nominal corner",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -650,40 +470,40 @@
       "startpoint": "u_ldu_agen/din_reg[0]",
       "endpoint": "u_ldu_align/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.106,
-      "wns_ns": 1.106,
+      "slack_ns": 1.078,
+      "wns_ns": 1.078,
       "tns_ns": 0.0,
-      "whs_ns": 0.081,
+      "whs_ns": 0.11,
       "sub_units": [
         {
           "unit": "u_ldu_agen",
-          "wns_ns": 1.106,
+          "wns_ns": 1.078,
           "tns_ns": 0.0,
-          "whs_ns": 0.081
+          "whs_ns": 0.11
         },
         {
           "unit": "u_ldu_tlb",
-          "wns_ns": 0.169,
+          "wns_ns": 0.089,
           "tns_ns": 0.0,
-          "whs_ns": 0.094
+          "whs_ns": 0.076
         },
         {
           "unit": "u_ldu_dc",
-          "wns_ns": 0.055,
+          "wns_ns": 0.07,
           "tns_ns": 0.0,
-          "whs_ns": 0.064
+          "whs_ns": 0.062
         },
         {
           "unit": "u_ldu_align",
-          "wns_ns": 0.061,
+          "wns_ns": 0.192,
           "tns_ns": 0.0,
-          "whs_ns": 0.109
+          "whs_ns": 0.1
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 4906,
-      "constrained_endpoints": 5628,
+      "total_endpoints": 2588,
+      "constrained_endpoints": 1673,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c",
@@ -691,8 +511,188 @@
       "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:06:38",
-      "peak_mem": "1.514 GB"
+      "elapsed": "00:06:41",
+      "peak_mem": "4.21 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\06_HOLD_FF_125C_LDU_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_LDU_TOP.rpt",
+      "design": "LDU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_ldu_agen/din_reg[0]",
+      "endpoint": "u_ldu_align/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.126,
+      "wns_ns": 1.126,
+      "tns_ns": 0.0,
+      "whs_ns": 0.119,
+      "sub_units": [
+        {
+          "unit": "u_ldu_agen",
+          "wns_ns": 1.126,
+          "tns_ns": 0.0,
+          "whs_ns": 0.119
+        },
+        {
+          "unit": "u_ldu_tlb",
+          "wns_ns": 0.111,
+          "tns_ns": 0.0,
+          "whs_ns": 0.126
+        },
+        {
+          "unit": "u_ldu_dc",
+          "wns_ns": 0.107,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_ldu_align",
+          "wns_ns": 0.133,
+          "tns_ns": 0.0,
+          "whs_ns": 0.096
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4659,
+      "constrained_endpoints": 2012,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:01:31",
+      "peak_mem": "3.536 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\02_HOLD_FF_N40C_LDU_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_LDU_TOP.rpt",
+      "design": "LDU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_ldu_agen/din_reg[0]",
+      "endpoint": "u_ldu_align/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.111,
+      "wns_ns": 1.111,
+      "tns_ns": 0.0,
+      "whs_ns": 0.094,
+      "sub_units": [
+        {
+          "unit": "u_ldu_agen",
+          "wns_ns": 1.111,
+          "tns_ns": 0.0,
+          "whs_ns": 0.094
+        },
+        {
+          "unit": "u_ldu_tlb",
+          "wns_ns": 0.082,
+          "tns_ns": 0.0,
+          "whs_ns": 0.109
+        },
+        {
+          "unit": "u_ldu_dc",
+          "wns_ns": 0.08,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        },
+        {
+          "unit": "u_ldu_align",
+          "wns_ns": 0.133,
+          "tns_ns": 0.0,
+          "whs_ns": 0.118
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2283,
+      "constrained_endpoints": 3138,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:08:46",
+      "peak_mem": "4.625 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\04_HOLD_TT_25C_LDU_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_LDU_TOP.rpt",
+      "design": "LDU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_ldu_agen/din_reg[0]",
+      "endpoint": "u_ldu_align/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.114,
+      "wns_ns": 1.114,
+      "tns_ns": 0.0,
+      "whs_ns": 0.083,
+      "sub_units": [
+        {
+          "unit": "u_ldu_agen",
+          "wns_ns": 1.114,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_ldu_tlb",
+          "wns_ns": 0.145,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        },
+        {
+          "unit": "u_ldu_dc",
+          "wns_ns": 0.108,
+          "tns_ns": 0.0,
+          "whs_ns": 0.064
+        },
+        {
+          "unit": "u_ldu_align",
+          "wns_ns": 0.071,
+          "tns_ns": 0.0,
+          "whs_ns": 0.127
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5311,
+      "constrained_endpoints": 1510,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/LSU/LDU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/LDU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/LDU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/LDU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:08:48",
+      "peak_mem": "3.899 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\LSU\\LDU\\LDU_TIMING.rpt",

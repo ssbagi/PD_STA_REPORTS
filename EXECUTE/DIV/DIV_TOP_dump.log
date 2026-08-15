@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\DIV
   Design          : DIV_TOP
-  Parsed At       : 2026-08-15T22:10:32
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,28 +48,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_DIV_TOP.rpt
-  Design   : DIV_TOP               Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
-  Slack    :   +1.101 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5218 / 1273
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:20         Memory : 1.411 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_DIV_TOP.rpt
-  Design   : DIV_TOP               Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.071 ns   TNS :   +0.000 ns   WHS :   +0.068 ns
-  Slack    :   +1.071 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3291 / 3998
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:30         Memory : 1.24 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ff_1p16v_1p16v_n40c
-
   File     : 03_SETUP_TT_25C_DIV_TOP.rpt
   Design   : DIV_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -79,17 +57,6 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 4977 / 2081
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:02:14         Memory : 4.203 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_DIV_TOP.rpt
-  Design   : DIV_TOP               Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
-  Slack    :   +1.127 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4076 / 5781
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:48         Memory : 3.541 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_tt_0p90v_0p90v_25c
 
   File     : 05_SETUP_SS_M40C_DIV_TOP.rpt
@@ -103,27 +70,16 @@ PER-REPORT DETAIL
   Runtime  : 00:04:28         Memory : 4.03 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_DIV_TOP.rpt
-  Design   : DIV_TOP               Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
-  Slack    :   +1.143 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1820 / 1285
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:18         Memory : 2.632 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_DIV_TOP.rpt
-  Design   : DIV_TOP               Corner : ss_0p63v_0p63v_125c
+  File     : 01_SETUP_SS_125C_DIV_TOP.rpt
+  Design   : DIV_TOP               Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.063 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
-  Slack    :   +1.063 ns   Status : MET
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.101 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2914 / 3255
+  Coverage : 100.0%   Endpoints : 5218 / 1273
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:15         Memory : 3.738 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p63v_0p63v_125c
+  Runtime  : 00:04:20         Memory : 1.411 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p72v_0p72v_125c
 
   File     : 08_CG_CHECK_TT_25C_DIV_TOP.rpt
   Design   : DIV_TOP               Corner : tt_0p90v_0p90v_25c
@@ -147,6 +103,17 @@ PER-REPORT DETAIL
   Runtime  : 00:08:44         Memory : 3.336 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p72v_0p72v_125c
 
+  File     : 07_SETUP_LVSS_125C_DIV_TOP.rpt
+  Design   : DIV_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.063 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
+  Slack    :   +1.063 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2914 / 3255
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:15         Memory : 3.738 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ss_0p63v_0p63v_125c
+
   File     : 10_MULTICYCLE_TT_25C_DIV_TOP.rpt
   Design   : DIV_TOP               Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -157,6 +124,39 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:08:33         Memory : 1.935 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_DIV_TOP.rpt
+  Design   : DIV_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1820 / 1285
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:18         Memory : 2.632 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ff_1p16v_1p16v_125c
+
+  File     : 04_HOLD_TT_25C_DIV_TOP.rpt
+  Design   : DIV_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4076 / 5781
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:48         Memory : 3.541 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_tt_0p90v_0p90v_25c
+
+  File     : 02_HOLD_FF_N40C_DIV_TOP.rpt
+  Design   : DIV_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.071 ns   TNS :   +0.000 ns   WHS :   +0.068 ns
+  Slack    :   +1.071 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3291 / 3998
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:30         Memory : 1.24 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/DIV/run_ff_1p16v_1p16v_n40c
 
   File     : DIV_TIMING.rpt
   Design   : N/A                   Corner : N/A

@@ -44,6 +44,32 @@ h2{font-size:1.0rem;font-weight:600;margin:28px 0 10px;color:#3b82d4;
 .meta{font-size:0.8rem;color:#57606a;margin-bottom:20px}
 .meta code{background:#eef0f3;padding:1px 5px;border-radius:3px;font-size:0.78rem}
 
+/* ── section-separator rows inside tables ── */
+.sep-setup td{background:#fff1f2;color:#991b1b;font-weight:700;font-size:0.75rem;
+              text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;
+              border-top:2px solid #fca5a5;border-bottom:1px solid #fca5a5}
+.sep-hold  td{background:#fff7ed;color:#92400e;font-weight:700;font-size:0.75rem;
+              text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;
+              border-top:2px solid #fdba74;border-bottom:1px solid #fdba74}
+.sep-pass  td{background:#f0fdf4;color:#166534;font-weight:700;font-size:0.75rem;
+              text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;
+              border-top:2px solid #86efac;border-bottom:1px solid #86efac}
+
+/* ── collapsible violation path panel ── */
+.path-row td{padding:0!important;border-bottom:none}
+.path-panel{display:none;background:#fffbf0;border-top:1px solid #fde68a;
+            padding:10px 16px;font-size:0.78rem}
+.path-panel.open{display:block}
+.path-panel table{border:none;background:transparent;font-size:0.78rem}
+.path-panel th{background:#fef3c7;font-size:0.72rem;padding:5px 8px;
+               border-bottom:1px solid #fde68a;cursor:default}
+.path-panel td{padding:4px 8px;border-bottom:1px solid #fef9c3;background:transparent}
+.path-panel .phead{font-weight:700;color:#92400e;margin-bottom:6px}
+.expand-btn{cursor:pointer;user-select:none;color:#3b82d4;font-size:0.8rem;
+            padding:1px 6px;border:1px solid #bfdbfe;border-radius:4px;
+            background:#eff6ff;white-space:nowrap}
+.expand-btn:hover{background:#dbeafe}
+
 /* ── banner ── */
 .banner{padding:12px 18px;border-radius:6px;margin-bottom:24px;
         font-weight:600;font-size:0.95rem}
@@ -253,12 +279,98 @@ def _corner_table(groups: dict, caption: str) -> str:
     )
 
 
+def _path_panel(r: ReportRecord, pid: str) -> str:
+    """Collapsible detail panel: critical path + sub-unit table, sorted by WNS."""
+    # sub-units sorted: violated (wns asc), then passing (wns desc)
+    sub = sorted(r.sub_units,
+                 key=lambda s: (0 if s.wns_ns < 0 else 1, s.wns_ns))
+
+    def _sub_row(s) -> str:
+        wn = "viol-val" if s.wns_ns < 0 else "ok-val"
+        wh = "viol-val" if s.whs_ns < 0 else ""
+        return (
+            f"<tr>"
+            f"<td>{s.unit}</td>"
+            f"<td class='num {wn}'>{s.wns_ns:.3f}</td>"
+            f"<td class='num'>{s.tns_ns:.3f}</td>"
+            f"<td class='num {wh}'>{s.whs_ns:.3f}</td>"
+            f"</tr>"
+        )
+
+    sub_rows = (
+        "".join(_sub_row(s) for s in sub)
+        if sub else
+        "<tr><td colspan='4' style='color:#aaa'>No sub-unit data</td></tr>"
+    )
+
+    viol_type = "Setup" if r.is_setup else "Hold"
+    slack_cls = "viol-val" if r.slack_ns < 0 else "ok-val"
+    panel = (
+        f"<div class='path-panel' id='{pid}'>"
+        f"<div class='phead'>▸ Critical Path &nbsp;({viol_type})</div>"
+        f"<table style='margin-bottom:8px'>"
+        f"<thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>"
+        f"<tr><td>Startpoint</td><td class='mono'>{r.startpoint}</td></tr>"
+        f"<tr><td>Endpoint</td><td class='mono'>{r.endpoint}</td></tr>"
+        f"<tr><td>Corner</td><td class='mono'>{r.corner}</td></tr>"
+        f"<tr><td>Clock / Period</td><td class='mono'>{r.clock} &nbsp; {r.period_ns} ns ({r.freq_mhz} MHz)</td></tr>"
+        f"<tr><td>Slack</td><td class='mono {slack_cls}'><strong>{r.slack_ns:+.3f} ns ({r.slack_status})</strong></td></tr>"
+        f"<tr><td>WNS / TNS</td><td class='mono'>{r.wns_ns:.3f} ns &nbsp;/&nbsp; {r.tns_ns:.3f} ns</td></tr>"
+        f"<tr><td>WHS</td><td class='mono'>{r.whs_ns:.3f} ns</td></tr>"
+        f"</tbody></table>"
+        f"<div class='phead'>▸ Sub-Unit Breakdown &nbsp;(sorted by WNS)</div>"
+        f"<table><thead><tr>"
+        f"<th>Sub-Unit</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th>"
+        f"</tr></thead><tbody>{sub_rows}</tbody></table>"
+        f"</div>"
+    )
+    return panel
+
+
+def _sep_row(label: str, css: str, ncols: int) -> str:
+    return f"<tr class='{css}'><td colspan='{ncols}'>{label}</td></tr>\n"
+
+
 def _report_table(reports: list[ReportRecord]) -> str:
+    NCOLS = 13   # number of <td> columns (including the expand button column)
     rows = ""
-    for r in reports:
+    prev_group = None   # track section changes: "setup_viol" | "hold_viol" | "pass"
+
+    for idx, r in enumerate(reports):
+        # ── determine which section this row belongs to ──────────────────────
+        if r.is_violated and r.is_setup:
+            group = "setup_viol"
+        elif r.is_violated and r.is_hold:
+            group = "hold_viol"
+        else:
+            group = "pass"
+
+        # ── inject section-separator row on group change ─────────────────────
+        if group != prev_group:
+            if group == "setup_viol":
+                rows += _sep_row("⚠ Setup Violations — ordered by WNS (worst first)",
+                                 "sep-setup", NCOLS)
+            elif group == "hold_viol":
+                rows += _sep_row("⚠ Hold Violations — ordered by WHS (worst first)",
+                                 "sep-hold", NCOLS)
+            else:
+                rows += _sep_row("✓ Passing Reports", "sep-pass", NCOLS)
+            prev_group = group
+
+        pid     = f"pp_{idx}"
         wns_cls = "viol-val" if r.wns_ns < 0 else ""
+        whs_cls = "viol-val" if r.whs_ns < 0 else ""
+        btn     = ""
+        if r.is_violated:
+            btn = (f"<span class='expand-btn' "
+                   f"onclick=\"var p=document.getElementById('{pid}');"
+                   f"p.classList.toggle('open');"
+                   f"this.textContent=p.classList.contains('open')?'▼ Hide':'▶ Paths'\">"
+                   f"▶ Paths</span>")
+
         rows += (
             f"<tr>"
+            f"<td>{btn}</td>"
             f"<td class='mono' title='{r.file_path}'>{r.file_name}</td>"
             f"<td class='mono'>{r.corner}</td>"
             f"<td>{r.check}</td>"
@@ -266,19 +378,25 @@ def _report_table(reports: list[ReportRecord]) -> str:
             f"<td class='num'>{r.period_ns}</td>"
             f"<td class='num {wns_cls}'>{r.wns_ns:.3f}</td>"
             f"<td class='num'>{r.tns_ns:.3f}</td>"
-            f"<td class='num'>{r.whs_ns:.3f}</td>"
+            f"<td class='num {whs_cls}'>{r.whs_ns:.3f}</td>"
             f"<td class='num'>{r.coverage_pct}%</td>"
             f"<td>{_badge(r.slack_status)}</td>"
             f"<td class='mono'>{r.elapsed}</td>"
             f"<td class='mono'>{r.tool}</td>"
             f"</tr>\n"
         )
+        if r.is_violated:
+            rows += f"<tr class='path-row'><td colspan='{NCOLS}'>{_path_panel(r, pid)}</td></tr>\n"
+
     return (
-        "<h2>Per-Report Detail</h2>"
+        "<h2>Per-Report Detail &nbsp;<span style='font-weight:400;font-size:0.78rem;"
+        "color:#57606a'>(Setup violations → WNS asc &nbsp;|&nbsp; "
+        "Hold violations → WHS asc &nbsp;|&nbsp; click ▶ to expand critical path)</span></h2>"
         "<div class='tbl-wrap'><table>"
         "<thead><tr>"
+        "<th></th>"
         "<th>File</th><th>Corner</th><th>Check</th><th>Clock</th><th>Period</th>"
-        "<th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th>"
+        "<th>WNS (ns) ↑</th><th>TNS (ns)</th><th>WHS (ns) ↑</th>"
         "<th>Coverage</th><th>Status</th><th>Runtime</th><th>Tool</th>"
         f"</tr></thead><tbody>{rows}</tbody></table></div>"
     )

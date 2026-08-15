@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC",
   "design": "PC_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:33",
+  "parsed_at": "2026-08-15T22:16:48",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -94,6 +94,366 @@
     }
   },
   "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\09_RECOVERY_SS_125C_PC_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.148,
+      "wns_ns": 1.148,
+      "tns_ns": 0.0,
+      "whs_ns": 0.066,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.148,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.156,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.1,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.152,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5768,
+      "constrained_endpoints": 1686,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:06:56",
+      "peak_mem": "3.249 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\10_MULTICYCLE_TT_25C_PC_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.128,
+      "wns_ns": 1.128,
+      "tns_ns": 0.0,
+      "whs_ns": 0.119,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.128,
+          "tns_ns": 0.0,
+          "whs_ns": 0.119
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.157,
+          "tns_ns": 0.0,
+          "whs_ns": 0.113
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.156,
+          "tns_ns": 0.0,
+          "whs_ns": 0.086
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.119,
+          "tns_ns": 0.0,
+          "whs_ns": 0.118
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5031,
+      "constrained_endpoints": 4057,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:50",
+      "peak_mem": "3.232 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\08_CG_CHECK_TT_25C_PC_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.091,
+      "wns_ns": 1.091,
+      "tns_ns": 0.0,
+      "whs_ns": 0.087,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.091,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.084,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.146,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.089,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3936,
+      "constrained_endpoints": 1039,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:18",
+      "peak_mem": "3.47 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\07_SETUP_LVSS_125C_PC_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.084,
+      "wns_ns": 1.084,
+      "tns_ns": 0.0,
+      "whs_ns": 0.088,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.084,
+          "tns_ns": 0.0,
+          "whs_ns": 0.088
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.163,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.103,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.195,
+          "tns_ns": 0.0,
+          "whs_ns": 0.088
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1507,
+      "constrained_endpoints": 5742,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:02:14",
+      "peak_mem": "3.879 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\03_SETUP_TT_25C_PC_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.08,
+      "wns_ns": 1.08,
+      "tns_ns": 0.0,
+      "whs_ns": 0.067,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.08,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.101,
+          "tns_ns": 0.0,
+          "whs_ns": 0.072
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.198,
+          "tns_ns": 0.0,
+          "whs_ns": 0.075
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.136,
+          "tns_ns": 0.0,
+          "whs_ns": 0.098
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1595,
+      "constrained_endpoints": 4413,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:24",
+      "peak_mem": "2.902 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\05_SETUP_SS_M40C_PC_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_PC_TOP.rpt",
+      "design": "PC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_pc_mux/din_reg[0]",
+      "endpoint": "u_pc_buf/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.078,
+      "wns_ns": 1.078,
+      "tns_ns": 0.0,
+      "whs_ns": 0.078,
+      "sub_units": [
+        {
+          "unit": "u_pc_mux",
+          "wns_ns": 1.078,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_pc_adder",
+          "wns_ns": 0.083,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_pc_reg",
+          "wns_ns": 0.142,
+          "tns_ns": 0.0,
+          "whs_ns": 0.102
+        },
+        {
+          "unit": "u_pc_buf",
+          "wns_ns": 0.143,
+          "tns_ns": 0.0,
+          "whs_ns": 0.111
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1174,
+      "constrained_endpoints": 2700,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:05:12",
+      "peak_mem": "3.812 GB"
+    },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\01_SETUP_SS_125C_PC_TOP.rpt",
       "file_name": "01_SETUP_SS_125C_PC_TOP.rpt",
@@ -215,186 +575,6 @@
       "peak_mem": "1.429 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\03_SETUP_TT_25C_PC_TOP.rpt",
-      "file_name": "03_SETUP_TT_25C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Setup   — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.08,
-      "wns_ns": 1.08,
-      "tns_ns": 0.0,
-      "whs_ns": 0.067,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.08,
-          "tns_ns": 0.0,
-          "whs_ns": 0.067
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.101,
-          "tns_ns": 0.0,
-          "whs_ns": 0.072
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.198,
-          "tns_ns": 0.0,
-          "whs_ns": 0.075
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.136,
-          "tns_ns": 0.0,
-          "whs_ns": 0.098
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1595,
-      "constrained_endpoints": 4413,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:07:24",
-      "peak_mem": "2.902 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\04_HOLD_TT_25C_PC_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.135,
-      "wns_ns": 1.135,
-      "tns_ns": 0.0,
-      "whs_ns": 0.064,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.135,
-          "tns_ns": 0.0,
-          "whs_ns": 0.064
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.062,
-          "tns_ns": 0.0,
-          "whs_ns": 0.077
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.155,
-          "tns_ns": 0.0,
-          "whs_ns": 0.09
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.181,
-          "tns_ns": 0.0,
-          "whs_ns": 0.126
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2943,
-      "constrained_endpoints": 1399,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:06:48",
-      "peak_mem": "3.587 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\05_SETUP_SS_M40C_PC_TOP.rpt",
-      "file_name": "05_SETUP_SS_M40C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_n40c",
-      "note": "Cold Setup      — Slow corner, cold temp",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.078,
-      "wns_ns": 1.078,
-      "tns_ns": 0.0,
-      "whs_ns": 0.078,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.078,
-          "tns_ns": 0.0,
-          "whs_ns": 0.078
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.083,
-          "tns_ns": 0.0,
-          "whs_ns": 0.07
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.142,
-          "tns_ns": 0.0,
-          "whs_ns": 0.102
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.143,
-          "tns_ns": 0.0,
-          "whs_ns": 0.111
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1174,
-      "constrained_endpoints": 2700,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p72v_0p72v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
-      "elapsed": "00:05:12",
-      "peak_mem": "3.812 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\06_HOLD_FF_125C_PC_TOP.rpt",
       "file_name": "06_HOLD_FF_125C_PC_TOP.rpt",
       "design": "PC_TOP",
@@ -455,115 +635,55 @@
       "peak_mem": "3.91 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\07_SETUP_LVSS_125C_PC_TOP.rpt",
-      "file_name": "07_SETUP_LVSS_125C_PC_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\04_HOLD_TT_25C_PC_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_PC_TOP.rpt",
       "design": "PC_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p63v_0p63v_125c",
-      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
-      "delay_type": "max",
-      "check": "setup",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_pc_mux/din_reg[0]",
       "endpoint": "u_pc_buf/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.084,
-      "wns_ns": 1.084,
+      "slack_ns": 1.135,
+      "wns_ns": 1.135,
       "tns_ns": 0.0,
-      "whs_ns": 0.088,
+      "whs_ns": 0.064,
       "sub_units": [
         {
           "unit": "u_pc_mux",
-          "wns_ns": 1.084,
+          "wns_ns": 1.135,
           "tns_ns": 0.0,
-          "whs_ns": 0.088
+          "whs_ns": 0.064
         },
         {
           "unit": "u_pc_adder",
-          "wns_ns": 0.163,
+          "wns_ns": 0.062,
           "tns_ns": 0.0,
-          "whs_ns": 0.091
+          "whs_ns": 0.077
         },
         {
           "unit": "u_pc_reg",
-          "wns_ns": 0.103,
+          "wns_ns": 0.155,
           "tns_ns": 0.0,
           "whs_ns": 0.09
         },
         {
           "unit": "u_pc_buf",
-          "wns_ns": 0.195,
+          "wns_ns": 0.181,
           "tns_ns": 0.0,
-          "whs_ns": 0.088
+          "whs_ns": 0.126
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 1507,
-      "constrained_endpoints": 5742,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p63v_0p63v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
-      "elapsed": "00:02:14",
-      "peak_mem": "3.879 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\08_CG_CHECK_TT_25C_PC_TOP.rpt",
-      "file_name": "08_CG_CHECK_TT_25C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Clock Gating Check — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.091,
-      "wns_ns": 1.091,
-      "tns_ns": 0.0,
-      "whs_ns": 0.087,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.091,
-          "tns_ns": 0.0,
-          "whs_ns": 0.087
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.084,
-          "tns_ns": 0.0,
-          "whs_ns": 0.122
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.146,
-          "tns_ns": 0.0,
-          "whs_ns": 0.106
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.089,
-          "tns_ns": 0.0,
-          "whs_ns": 0.067
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 3936,
-      "constrained_endpoints": 1039,
+      "total_endpoints": 2943,
+      "constrained_endpoints": 1399,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
@@ -571,128 +691,8 @@
       "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:07:18",
-      "peak_mem": "3.47 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\09_RECOVERY_SS_125C_PC_TOP.rpt",
-      "file_name": "09_RECOVERY_SS_125C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Recovery/Removal Check — Async reset paths",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.148,
-      "wns_ns": 1.148,
-      "tns_ns": 0.0,
-      "whs_ns": 0.066,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.148,
-          "tns_ns": 0.0,
-          "whs_ns": 0.066
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.156,
-          "tns_ns": 0.0,
-          "whs_ns": 0.078
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.1,
-          "tns_ns": 0.0,
-          "whs_ns": 0.066
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.152,
-          "tns_ns": 0.0,
-          "whs_ns": 0.091
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5768,
-      "constrained_endpoints": 1686,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_ss_0p72v_0p72v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:06:56",
-      "peak_mem": "3.249 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\10_MULTICYCLE_TT_25C_PC_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_PC_TOP.rpt",
-      "design": "PC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_pc_mux/din_reg[0]",
-      "endpoint": "u_pc_buf/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.128,
-      "wns_ns": 1.128,
-      "tns_ns": 0.0,
-      "whs_ns": 0.119,
-      "sub_units": [
-        {
-          "unit": "u_pc_mux",
-          "wns_ns": 1.128,
-          "tns_ns": 0.0,
-          "whs_ns": 0.119
-        },
-        {
-          "unit": "u_pc_adder",
-          "wns_ns": 0.157,
-          "tns_ns": 0.0,
-          "whs_ns": 0.113
-        },
-        {
-          "unit": "u_pc_reg",
-          "wns_ns": 0.156,
-          "tns_ns": 0.0,
-          "whs_ns": 0.086
-        },
-        {
-          "unit": "u_pc_buf",
-          "wns_ns": 0.119,
-          "tns_ns": 0.0,
-          "whs_ns": 0.118
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5031,
-      "constrained_endpoints": 4057,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/FETCH/PC/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/PC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/PC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/PC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:06:50",
-      "peak_mem": "3.232 GB"
+      "elapsed": "00:06:48",
+      "peak_mem": "3.587 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\FETCH\\PC\\PC_TIMING.rpt",

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\FPU\FDIV
   Design          : FDIV_TOP
-  Parsed At       : 2026-08-15T22:10:32
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -48,27 +48,27 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_FDIV_TOP.rpt
+  File     : 07_SETUP_LVSS_125C_FDIV_TOP.rpt
+  Design   : FDIV_TOP              Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.154 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.154 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4129 / 1704
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:53         Memory : 4.252 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p63v_0p63v_125c
+
+  File     : 09_RECOVERY_SS_125C_FDIV_TOP.rpt
   Design   : FDIV_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.079 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
-  Slack    :   +1.079 ns   Status : MET
+  WNS      :   +1.138 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
+  Slack    :   +1.138 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3591 / 4547
+  Coverage : 100.0%   Endpoints : 1990 / 4020
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:34         Memory : 1.321 GB
+  Runtime  : 00:01:29         Memory : 3.695 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_FDIV_TOP.rpt
-  Design   : FDIV_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
-  Slack    :   +1.125 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3569 / 5309
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:19         Memory : 1.991 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_n40c
 
   File     : 03_SETUP_TT_25C_FDIV_TOP.rpt
   Design   : FDIV_TOP              Corner : tt_0p90v_0p90v_25c
@@ -81,15 +81,15 @@ PER-REPORT DETAIL
   Runtime  : 00:04:15         Memory : 2.07 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c
 
-  File     : 04_HOLD_TT_25C_FDIV_TOP.rpt
+  File     : 10_MULTICYCLE_TT_25C_FDIV_TOP.rpt
   Design   : FDIV_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
-  Slack    :   +1.052 ns   Status : MET
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.103 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.103 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3738 / 5520
+  Coverage : 100.0%   Endpoints : 3974 / 2366
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:27         Memory : 3.163 GB
+  Runtime  : 00:03:36         Memory : 4.707 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c
 
   File     : 05_SETUP_SS_M40C_FDIV_TOP.rpt
@@ -103,27 +103,16 @@ PER-REPORT DETAIL
   Runtime  : 00:07:27         Memory : 4.659 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_FDIV_TOP.rpt
-  Design   : FDIV_TOP              Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
-  Slack    :   +1.066 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4306 / 1629
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:14         Memory : 4.331 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_FDIV_TOP.rpt
-  Design   : FDIV_TOP              Corner : ss_0p63v_0p63v_125c
+  File     : 01_SETUP_SS_125C_FDIV_TOP.rpt
+  Design   : FDIV_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.154 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
-  Slack    :   +1.154 ns   Status : MET
+  WNS      :   +1.079 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.079 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4129 / 1704
+  Coverage : 100.0%   Endpoints : 3591 / 4547
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:53         Memory : 4.252 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p63v_0p63v_125c
+  Runtime  : 00:06:34         Memory : 1.321 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_125c
 
   File     : 08_CG_CHECK_TT_25C_FDIV_TOP.rpt
   Design   : FDIV_TOP              Corner : tt_0p90v_0p90v_25c
@@ -136,26 +125,37 @@ PER-REPORT DETAIL
   Runtime  : 00:02:31         Memory : 2.363 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c
 
-  File     : 09_RECOVERY_SS_125C_FDIV_TOP.rpt
-  Design   : FDIV_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.138 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
-  Slack    :   +1.138 ns   Status : MET
+  File     : 02_HOLD_FF_N40C_FDIV_TOP.rpt
+  Design   : FDIV_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.125 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1990 / 4020
+  Coverage : 100.0%   Endpoints : 3569 / 5309
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:29         Memory : 3.695 GB
-  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_125c
+  Runtime  : 00:07:19         Memory : 1.991 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_n40c
 
-  File     : 10_MULTICYCLE_TT_25C_FDIV_TOP.rpt
-  Design   : FDIV_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.103 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
-  Slack    :   +1.103 ns   Status : MET
+  File     : 06_HOLD_FF_125C_FDIV_TOP.rpt
+  Design   : FDIV_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.066 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3974 / 2366
+  Coverage : 100.0%   Endpoints : 4306 / 1629
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:36         Memory : 4.707 GB
+  Runtime  : 00:06:14         Memory : 4.331 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_125c
+
+  File     : 04_HOLD_TT_25C_FDIV_TOP.rpt
+  Design   : FDIV_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.052 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3738 / 5520
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:27         Memory : 3.163 GB
   Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c
 
   File     : FDIV_TIMING.rpt

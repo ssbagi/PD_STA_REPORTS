@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\RENAME_DISPATCH\DISPATCH_QUEUE
   Design          : DISPATCH_QUEUE_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 31
 
 
@@ -51,83 +51,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
-  Slack    :   +1.118 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5520 / 3426
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:12         Memory : 3.662 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.169 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
-  Slack    :   +1.169 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2010 / 3226
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:33         Memory : 1.314 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
-
-  File     : 03_SETUP_TT_25C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.036 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
-  Slack    :   +1.036 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1403 / 2997
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:55         Memory : 3.033 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.134 ns   TNS :   +0.000 ns   WHS :   +0.107 ns
-  Slack    :   +1.134 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5314 / 5729
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:18         Memory : 4.263 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
-  Slack    :   +1.087 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4384 / 2228
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:22         Memory : 4.718 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.074 ns   TNS :   +0.000 ns   WHS :   +0.098 ns
-  Slack    :   +1.074 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4285 / 969
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:26         Memory : 4.514 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.056 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
-  Slack    :   +1.056 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1329 / 3709
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:39         Memory : 2.775 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p63v_0p63v_125c
-
   File     : 08_CG_CHECK_TT_25C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -138,94 +61,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:08:33         Memory : 1.743 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
-
-  File     : 09_RECOVERY_SS_125C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.145 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
-  Slack    :   +1.145 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5435 / 5362
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:25         Memory : 3.995 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
-  File     : 10_MULTICYCLE_TT_25C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.067 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
-  Slack    :   +1.067 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2006 / 4547
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:46         Memory : 2.506 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
-
-  File     : 11_SETUP_SS_125C_OCV_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.087 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4077 / 4548
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:48         Memory : 4.47 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
-  File     : 12_HOLD_FF_N40C_OCV_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.112 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.112 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6171 / 4470
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:22         Memory : 4.393 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
-
-  File     : 13_SETUP_SS_125C_POCV_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.097 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4710 / 6651
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:19         Memory : 2.462 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
-  File     : 14_HOLD_FF_N40C_POCV_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.127 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6014 / 1974
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:14         Memory : 1.333 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
-
-  File     : 15_SETUP_TT_85C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_85c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.079 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.079 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2855 / 5519
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:43         Memory : 3.721 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_85c
-
-  File     : 16_HOLD_TT_85C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_85c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.078 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2993 / 2979
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:21         Memory : 2.04 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_85c
 
   File     : 17_SETUP_FF_125C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_125c
@@ -238,16 +73,38 @@ PER-REPORT DETAIL
   Runtime  : 00:02:11         Memory : 1.594 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_125c
 
-  File     : 18_HOLD_SS_125C_DISPATCH_QUEUE_TOP.rpt
+  File     : 09_RECOVERY_SS_125C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.078 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5434 / 3108
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.145 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.145 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5435 / 5362
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:12         Memory : 3.163 GB
+  Runtime  : 00:02:25         Memory : 3.995 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 30_SETUP_TT_25C_FINAL_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.136 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.136 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5123 / 6102
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:38         Memory : 3.981 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 24_SETUP_TT_25C_ECO_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.120 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.120 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1440 / 3837
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:52         Memory : 1.895 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
 
   File     : 19_SETUP_LVSS_N40C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p63v_0p63v_n40c
@@ -260,16 +117,27 @@ PER-REPORT DETAIL
   Runtime  : 00:08:52         Memory : 4.25 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p63v_0p63v_n40c
 
-  File     : 20_HOLD_LVFF_N40C_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p32v_1p32v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.150 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.150 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4675 / 2405
+  File     : 01_SETUP_SS_125C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
+  Slack    :   +1.118 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5520 / 3426
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:53         Memory : 4.52 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p32v_1p32v_n40c
+  Runtime  : 00:08:12         Memory : 3.662 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 13_SETUP_SS_125C_POCV_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.097 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4710 / 6651
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:19         Memory : 2.462 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
 
   File     : 21_CG_CHECK_SS_125C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
@@ -280,6 +148,50 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 5734 / 3932
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:05:33         Memory : 4.989 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 05_SETUP_SS_M40C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.087 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4384 / 2228
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:22         Memory : 4.718 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_n40c
+
+  File     : 11_SETUP_SS_125C_OCV_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.087 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4077 / 4548
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:48         Memory : 4.47 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 15_SETUP_TT_85C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.079 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.079 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2855 / 5519
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:43         Memory : 3.721 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_85c
+
+  File     : 28_SETUP_SS_125C_FINAL_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.077 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5783 / 3676
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:43         Memory : 3.221 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
 
   File     : 22_RECOVERY_TT_25C_DISPATCH_QUEUE_TOP.rpt
@@ -293,6 +205,17 @@ PER-REPORT DETAIL
   Runtime  : 00:06:16         Memory : 4.354 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
 
+  File     : 10_MULTICYCLE_TT_25C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.067 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
+  Slack    :   +1.067 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2006 / 4547
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:46         Memory : 2.506 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
+
   File     : 23_MULTICYCLE_SS_125C_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -303,28 +226,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:06:46         Memory : 3.493 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
-  File     : 24_SETUP_TT_25C_ECO_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.120 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.120 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1440 / 3837
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:52         Memory : 1.895 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
-
-  File     : 25_HOLD_TT_25C_ECO_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.075 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4197 / 5816
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:55         Memory : 3.486 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
 
   File     : 26_SETUP_SS_125C_SI_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
@@ -337,6 +238,127 @@ PER-REPORT DETAIL
   Runtime  : 00:05:12         Memory : 3.521 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
 
+  File     : 07_SETUP_LVSS_125C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.056 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
+  Slack    :   +1.056 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1329 / 3709
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:39         Memory : 2.775 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p63v_0p63v_125c
+
+  File     : 03_SETUP_TT_25C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.036 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.036 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1403 / 2997
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:55         Memory : 3.033 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 02_HOLD_FF_N40C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.169 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
+  Slack    :   +1.169 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2010 / 3226
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:33         Memory : 1.314 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
+
+  File     : 04_HOLD_TT_25C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.134 ns   TNS :   +0.000 ns   WHS :   +0.107 ns
+  Slack    :   +1.134 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5314 / 5729
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:18         Memory : 4.263 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.074 ns   TNS :   +0.000 ns   WHS :   +0.098 ns
+  Slack    :   +1.074 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4285 / 969
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:26         Memory : 4.514 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_125c
+
+  File     : 12_HOLD_FF_N40C_OCV_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.112 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.112 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6171 / 4470
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:22         Memory : 4.393 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
+
+  File     : 14_HOLD_FF_N40C_POCV_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6014 / 1974
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:14         Memory : 1.333 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
+
+  File     : 16_HOLD_TT_85C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_85c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.078 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2993 / 2979
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:21         Memory : 2.04 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_85c
+
+  File     : 18_HOLD_SS_125C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.078 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5434 / 3108
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:12         Memory : 3.163 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
+
+  File     : 20_HOLD_LVFF_N40C_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p32v_1p32v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.150 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.150 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4675 / 2405
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:53         Memory : 4.52 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p32v_1p32v_n40c
+
+  File     : 25_HOLD_TT_25C_ECO_DISPATCH_QUEUE_TOP.rpt
+  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.075 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4197 / 5816
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:55         Memory : 3.486 GB
+  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
+
   File     : 27_HOLD_FF_N40C_SI_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -348,17 +370,6 @@ PER-REPORT DETAIL
   Runtime  : 00:07:57         Memory : 2.815 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
 
-  File     : 28_SETUP_SS_125C_FINAL_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.077 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5783 / 3676
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:43         Memory : 3.221 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ss_0p72v_0p72v_125c
-
   File     : 29_HOLD_FF_N40C_FINAL_DISPATCH_QUEUE_TOP.rpt
   Design   : DISPATCH_QUEUE_TOP    Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -369,17 +380,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:01:27         Memory : 2.552 GB
   Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_ff_1p16v_1p16v_n40c
-
-  File     : 30_SETUP_TT_25C_FINAL_DISPATCH_QUEUE_TOP.rpt
-  Design   : DISPATCH_QUEUE_TOP    Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.136 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.136 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5123 / 6102
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:38         Memory : 3.981 GB
-  Run Dir  : /proj/cpu_rtl/sta/RENAME_DISPATCH/DISPATCH_QUEUE/run_tt_0p90v_0p90v_25c
 
   File     : DISPATCH_QUEUE_TIMING.rpt
   Design   : N/A                   Corner : N/A

@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\COMMIT\ROB_COMMIT
   Design          : ROB_COMMIT_TOP
-  Parsed At       : 2026-08-15T22:10:32
+  Parsed At       : 2026-08-15T22:16:47
   Total Reports   : 11
 
 
@@ -59,38 +59,16 @@ PER-REPORT DETAIL
   Runtime  : 00:05:57         Memory : 2.558 GB
   Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ss_0p72v_0p72v_125c
 
-  File     : 02_HOLD_FF_N40C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
-  Slack    :   +1.073 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5440 / 2785
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:54         Memory : 3.593 GB
-  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ff_1p16v_1p16v_n40c
-
-  File     : 03_SETUP_TT_25C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
+  File     : 07_SETUP_LVSS_125C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : ss_0p63v_0p63v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.074 ns
-  Slack    :   +1.073 ns   Status : MET
+  WNS      :   +1.152 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.152 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2121 / 2922
+  Coverage : 100.0%   Endpoints : 1055 / 2667
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:34         Memory : 2.414 GB
-  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.135 ns   TNS :   +0.000 ns   WHS :   +0.080 ns
-  Slack    :   +1.135 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3406 / 4669
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:45         Memory : 2.667 GB
-  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
+  Runtime  : 00:07:53         Memory : 3.783 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ss_0p63v_0p63v_125c
 
   File     : 05_SETUP_SS_M40C_ROB_COMMIT_TOP.rpt
   Design   : ROB_COMMIT_TOP        Corner : ss_0p72v_0p72v_n40c
@@ -103,28 +81,6 @@ PER-REPORT DETAIL
   Runtime  : 00:04:20         Memory : 2.444 GB
   Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ss_0p72v_0p72v_n40c
 
-  File     : 06_HOLD_FF_125C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
-  Slack    :   +1.147 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2157 / 953
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:41         Memory : 4.402 GB
-  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.152 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
-  Slack    :   +1.152 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1055 / 2667
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:53         Memory : 3.783 GB
-  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ss_0p63v_0p63v_125c
-
   File     : 08_CG_CHECK_TT_25C_ROB_COMMIT_TOP.rpt
   Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -134,6 +90,28 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 3158 / 1761
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:08:12         Memory : 2.787 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
+
+  File     : 03_SETUP_TT_25C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.074 ns
+  Slack    :   +1.073 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2121 / 2922
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:34         Memory : 2.414 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
+
+  File     : 10_MULTICYCLE_TT_25C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.070 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
+  Slack    :   +1.070 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3295 / 3641
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:51         Memory : 2.866 GB
   Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
 
   File     : 09_RECOVERY_SS_125C_ROB_COMMIT_TOP.rpt
@@ -147,15 +125,37 @@ PER-REPORT DETAIL
   Runtime  : 00:05:29         Memory : 1.705 GB
   Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ss_0p72v_0p72v_125c
 
-  File     : 10_MULTICYCLE_TT_25C_ROB_COMMIT_TOP.rpt
-  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.070 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
-  Slack    :   +1.070 ns   Status : MET
+  File     : 02_HOLD_FF_N40C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
+  Slack    :   +1.073 ns   Status : MET
   Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3295 / 3641
+  Coverage : 100.0%   Endpoints : 5440 / 2785
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:51         Memory : 2.866 GB
+  Runtime  : 00:08:54         Memory : 3.593 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ff_1p16v_1p16v_n40c
+
+  File     : 06_HOLD_FF_125C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
+  Slack    :   +1.147 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2157 / 953
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:41         Memory : 4.402 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_ff_1p16v_1p16v_125c
+
+  File     : 04_HOLD_TT_25C_ROB_COMMIT_TOP.rpt
+  Design   : ROB_COMMIT_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.135 ns   TNS :   +0.000 ns   WHS :   +0.080 ns
+  Slack    :   +1.135 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3406 / 4669
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:45         Memory : 2.667 GB
   Run Dir  : /proj/cpu_rtl/sta/COMMIT/ROB_COMMIT/run_tt_0p90v_0p90v_25c
 
   File     : ROB_COMMIT_TIMING.rpt

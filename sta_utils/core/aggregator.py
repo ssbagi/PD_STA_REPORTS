@@ -125,6 +125,19 @@ def aggregate_block(
     tns_vals    = [r.tns_ns for r in records]
     whs_vals    = [r.whs_ns for r in records]
 
+    # ── sort: setup violations first (WNS asc), then hold violations (WHS asc),
+    #          then all passing reports (setup first, then hold).
+    def _sort_key(r: ReportRecord):
+        if r.is_violated and r.is_setup:
+            return (0, r.wns_ns,  0.0)   # setup violations  — worst WNS first
+        if r.is_violated and r.is_hold:
+            return (1, 0.0, r.whs_ns)    # hold violations   — worst WHS first
+        if r.is_setup:
+            return (2, -r.wns_ns, 0.0)   # passing setup     — best WNS first
+        return     (3, 0.0, -r.whs_ns)   # passing hold      — best WHS first
+
+    sorted_records = sorted(records, key=_sort_key)
+
     return BlockSummary(
         block_dir        = str(block_dir),
         design           = records[0].design,
@@ -138,7 +151,7 @@ def aggregate_block(
         overall_status   = "VIOLATED" if violations else "MET",
         by_corner        = _group_records(records, "corner"),
         by_check         = _group_records(records, "check"),
-        reports          = records,
+        reports          = sorted_records,
     )
 
 
@@ -179,6 +192,11 @@ def aggregate_top(
     # ── build flat BlockEntry list with ownership ────────────────────────────
     root = root_dir.resolve()
     entries: List[BlockEntry] = []
+    # sort block_summaries: violated blocks first, then by worst WNS ascending
+    block_summaries = sorted(
+        block_summaries,
+        key=lambda bs: (0 if bs.overall_status == "VIOLATED" else 1, bs.worst_wns_ns),
+    )
     for bs in block_summaries:
         try:
             rel = str(Path(bs.block_dir).resolve().relative_to(root))

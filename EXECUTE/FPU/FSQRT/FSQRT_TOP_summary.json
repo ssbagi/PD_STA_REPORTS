@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT",
   "design": "FSQRT_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,126 +95,6 @@
   },
   "reports": [
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\01_SETUP_SS_125C_FSQRT_TOP.rpt",
-      "file_name": "01_SETUP_SS_125C_FSQRT_TOP.rpt",
-      "design": "FSQRT_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Worst-case Setup — Slow corner, high temp",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fsqrt_init/din_reg[0]",
-      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.069,
-      "wns_ns": 1.069,
-      "tns_ns": 0.0,
-      "whs_ns": 0.096,
-      "sub_units": [
-        {
-          "unit": "u_fsqrt_init",
-          "wns_ns": 1.069,
-          "tns_ns": 0.0,
-          "whs_ns": 0.096
-        },
-        {
-          "unit": "u_fsqrt_iter",
-          "wns_ns": 0.075,
-          "tns_ns": 0.0,
-          "whs_ns": 0.103
-        },
-        {
-          "unit": "u_fsqrt_norm",
-          "wns_ns": 0.182,
-          "tns_ns": 0.0,
-          "whs_ns": 0.111
-        },
-        {
-          "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.186,
-          "tns_ns": 0.0,
-          "whs_ns": 0.055
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1737,
-      "constrained_endpoints": 5808,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ss_0p72v_0p72v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:08:27",
-      "peak_mem": "2.448 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\02_HOLD_FF_N40C_FSQRT_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_FSQRT_TOP.rpt",
-      "design": "FSQRT_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fsqrt_init/din_reg[0]",
-      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.096,
-      "wns_ns": 1.096,
-      "tns_ns": 0.0,
-      "whs_ns": 0.08,
-      "sub_units": [
-        {
-          "unit": "u_fsqrt_init",
-          "wns_ns": 1.096,
-          "tns_ns": 0.0,
-          "whs_ns": 0.08
-        },
-        {
-          "unit": "u_fsqrt_iter",
-          "wns_ns": 0.16,
-          "tns_ns": 0.0,
-          "whs_ns": 0.127
-        },
-        {
-          "unit": "u_fsqrt_norm",
-          "wns_ns": 0.086,
-          "tns_ns": 0.0,
-          "whs_ns": 0.087
-        },
-        {
-          "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.105,
-          "tns_ns": 0.0,
-          "whs_ns": 0.112
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5775,
-      "constrained_endpoints": 3526,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:04:37",
-      "peak_mem": "4.497 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\03_SETUP_TT_25C_FSQRT_TOP.rpt",
       "file_name": "03_SETUP_TT_25C_FSQRT_TOP.rpt",
       "design": "FSQRT_TOP",
@@ -273,66 +153,6 @@
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
       "elapsed": "00:06:30",
       "peak_mem": "1.451 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\04_HOLD_TT_25C_FSQRT_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_FSQRT_TOP.rpt",
-      "design": "FSQRT_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fsqrt_init/din_reg[0]",
-      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.099,
-      "wns_ns": 1.099,
-      "tns_ns": 0.0,
-      "whs_ns": 0.076,
-      "sub_units": [
-        {
-          "unit": "u_fsqrt_init",
-          "wns_ns": 1.099,
-          "tns_ns": 0.0,
-          "whs_ns": 0.076
-        },
-        {
-          "unit": "u_fsqrt_iter",
-          "wns_ns": 0.077,
-          "tns_ns": 0.0,
-          "whs_ns": 0.077
-        },
-        {
-          "unit": "u_fsqrt_norm",
-          "wns_ns": 0.127,
-          "tns_ns": 0.0,
-          "whs_ns": 0.07
-        },
-        {
-          "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.113,
-          "tns_ns": 0.0,
-          "whs_ns": 0.119
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 3491,
-      "constrained_endpoints": 4461,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:01:41",
-      "peak_mem": "3.954 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\05_SETUP_SS_M40C_FSQRT_TOP.rpt",
@@ -395,64 +215,124 @@
       "peak_mem": "3.559 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\06_HOLD_FF_125C_FSQRT_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_FSQRT_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\09_RECOVERY_SS_125C_FSQRT_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_FSQRT_TOP.rpt",
       "design": "FSQRT_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_fsqrt_init/din_reg[0]",
       "endpoint": "u_fsqrt_rnd/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.095,
-      "wns_ns": 1.095,
+      "slack_ns": 1.071,
+      "wns_ns": 1.071,
       "tns_ns": 0.0,
-      "whs_ns": 0.076,
+      "whs_ns": 0.084,
       "sub_units": [
         {
           "unit": "u_fsqrt_init",
-          "wns_ns": 1.095,
+          "wns_ns": 1.071,
           "tns_ns": 0.0,
-          "whs_ns": 0.076
+          "whs_ns": 0.084
         },
         {
           "unit": "u_fsqrt_iter",
-          "wns_ns": 0.155,
+          "wns_ns": 0.078,
           "tns_ns": 0.0,
-          "whs_ns": 0.101
+          "whs_ns": 0.092
         },
         {
           "unit": "u_fsqrt_norm",
-          "wns_ns": 0.054,
+          "wns_ns": 0.2,
           "tns_ns": 0.0,
-          "whs_ns": 0.125
+          "whs_ns": 0.061
         },
         {
           "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.184,
+          "wns_ns": 0.134,
           "tns_ns": 0.0,
-          "whs_ns": 0.097
+          "whs_ns": 0.056
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 1386,
-      "constrained_endpoints": 5381,
+      "total_endpoints": 5974,
+      "constrained_endpoints": 5584,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ff_1p16v_1p16v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ss_0p72v_0p72v_125c",
       "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:04:25",
-      "peak_mem": "3.516 GB"
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:01:14",
+      "peak_mem": "4.667 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\01_SETUP_SS_125C_FSQRT_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_FSQRT_TOP.rpt",
+      "design": "FSQRT_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fsqrt_init/din_reg[0]",
+      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.069,
+      "wns_ns": 1.069,
+      "tns_ns": 0.0,
+      "whs_ns": 0.096,
+      "sub_units": [
+        {
+          "unit": "u_fsqrt_init",
+          "wns_ns": 1.069,
+          "tns_ns": 0.0,
+          "whs_ns": 0.096
+        },
+        {
+          "unit": "u_fsqrt_iter",
+          "wns_ns": 0.075,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_fsqrt_norm",
+          "wns_ns": 0.182,
+          "tns_ns": 0.0,
+          "whs_ns": 0.111
+        },
+        {
+          "unit": "u_fsqrt_rnd",
+          "wns_ns": 0.186,
+          "tns_ns": 0.0,
+          "whs_ns": 0.055
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1737,
+      "constrained_endpoints": 5808,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:27",
+      "peak_mem": "2.448 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\07_SETUP_LVSS_125C_FSQRT_TOP.rpt",
@@ -515,6 +395,66 @@
       "peak_mem": "4.645 GB"
     },
     {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\10_MULTICYCLE_TT_25C_FSQRT_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_FSQRT_TOP.rpt",
+      "design": "FSQRT_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fsqrt_init/din_reg[0]",
+      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.047,
+      "wns_ns": 1.047,
+      "tns_ns": 0.0,
+      "whs_ns": 0.095,
+      "sub_units": [
+        {
+          "unit": "u_fsqrt_init",
+          "wns_ns": 1.047,
+          "tns_ns": 0.0,
+          "whs_ns": 0.095
+        },
+        {
+          "unit": "u_fsqrt_iter",
+          "wns_ns": 0.179,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        },
+        {
+          "unit": "u_fsqrt_norm",
+          "wns_ns": 0.176,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_fsqrt_rnd",
+          "wns_ns": 0.148,
+          "tns_ns": 0.0,
+          "whs_ns": 0.11
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2908,
+      "constrained_endpoints": 2088,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:38",
+      "peak_mem": "2.527 GB"
+    },
+    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\08_CG_CHECK_TT_25C_FSQRT_TOP.rpt",
       "file_name": "08_CG_CHECK_TT_25C_FSQRT_TOP.rpt",
       "design": "FSQRT_TOP",
@@ -575,115 +515,115 @@
       "peak_mem": "1.979 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\09_RECOVERY_SS_125C_FSQRT_TOP.rpt",
-      "file_name": "09_RECOVERY_SS_125C_FSQRT_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\02_HOLD_FF_N40C_FSQRT_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_FSQRT_TOP.rpt",
       "design": "FSQRT_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Recovery/Removal Check — Async reset paths",
-      "delay_type": "max",
-      "check": "setup",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_fsqrt_init/din_reg[0]",
       "endpoint": "u_fsqrt_rnd/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.071,
-      "wns_ns": 1.071,
+      "slack_ns": 1.096,
+      "wns_ns": 1.096,
       "tns_ns": 0.0,
-      "whs_ns": 0.084,
+      "whs_ns": 0.08,
       "sub_units": [
         {
           "unit": "u_fsqrt_init",
-          "wns_ns": 1.071,
+          "wns_ns": 1.096,
           "tns_ns": 0.0,
-          "whs_ns": 0.084
+          "whs_ns": 0.08
         },
         {
           "unit": "u_fsqrt_iter",
-          "wns_ns": 0.078,
+          "wns_ns": 0.16,
           "tns_ns": 0.0,
-          "whs_ns": 0.092
+          "whs_ns": 0.127
         },
         {
           "unit": "u_fsqrt_norm",
-          "wns_ns": 0.2,
+          "wns_ns": 0.086,
           "tns_ns": 0.0,
-          "whs_ns": 0.061
+          "whs_ns": 0.087
         },
         {
           "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.134,
+          "wns_ns": 0.105,
           "tns_ns": 0.0,
-          "whs_ns": 0.056
+          "whs_ns": 0.112
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 5974,
-      "constrained_endpoints": 5584,
+      "total_endpoints": 5775,
+      "constrained_endpoints": 3526,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ss_0p72v_0p72v_125c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ff_1p16v_1p16v_n40c",
       "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:01:14",
-      "peak_mem": "4.667 GB"
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:04:37",
+      "peak_mem": "4.497 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\10_MULTICYCLE_TT_25C_FSQRT_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_FSQRT_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\04_HOLD_TT_25C_FSQRT_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_FSQRT_TOP.rpt",
       "design": "FSQRT_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
-      "delay_type": "max",
-      "check": "setup",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_fsqrt_init/din_reg[0]",
       "endpoint": "u_fsqrt_rnd/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.047,
-      "wns_ns": 1.047,
+      "slack_ns": 1.099,
+      "wns_ns": 1.099,
       "tns_ns": 0.0,
-      "whs_ns": 0.095,
+      "whs_ns": 0.076,
       "sub_units": [
         {
           "unit": "u_fsqrt_init",
-          "wns_ns": 1.047,
+          "wns_ns": 1.099,
           "tns_ns": 0.0,
-          "whs_ns": 0.095
+          "whs_ns": 0.076
         },
         {
           "unit": "u_fsqrt_iter",
-          "wns_ns": 0.179,
+          "wns_ns": 0.077,
           "tns_ns": 0.0,
-          "whs_ns": 0.106
+          "whs_ns": 0.077
         },
         {
           "unit": "u_fsqrt_norm",
-          "wns_ns": 0.176,
+          "wns_ns": 0.127,
           "tns_ns": 0.0,
-          "whs_ns": 0.122
+          "whs_ns": 0.07
         },
         {
           "unit": "u_fsqrt_rnd",
-          "wns_ns": 0.148,
+          "wns_ns": 0.113,
           "tns_ns": 0.0,
-          "whs_ns": 0.11
+          "whs_ns": 0.119
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 2908,
-      "constrained_endpoints": 2088,
+      "total_endpoints": 3491,
+      "constrained_endpoints": 4461,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_tt_0p90v_0p90v_25c",
@@ -691,8 +631,68 @@
       "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:02:38",
-      "peak_mem": "2.527 GB"
+      "elapsed": "00:01:41",
+      "peak_mem": "3.954 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\06_HOLD_FF_125C_FSQRT_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_FSQRT_TOP.rpt",
+      "design": "FSQRT_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fsqrt_init/din_reg[0]",
+      "endpoint": "u_fsqrt_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.095,
+      "wns_ns": 1.095,
+      "tns_ns": 0.0,
+      "whs_ns": 0.076,
+      "sub_units": [
+        {
+          "unit": "u_fsqrt_init",
+          "wns_ns": 1.095,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        },
+        {
+          "unit": "u_fsqrt_iter",
+          "wns_ns": 0.155,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_fsqrt_norm",
+          "wns_ns": 0.054,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        },
+        {
+          "unit": "u_fsqrt_rnd",
+          "wns_ns": 0.184,
+          "tns_ns": 0.0,
+          "whs_ns": 0.097
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1386,
+      "constrained_endpoints": 5381,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FSQRT_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FSQRT_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FSQRT_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:04:25",
+      "peak_mem": "3.516 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FSQRT\\FSQRT_TIMING.rpt",

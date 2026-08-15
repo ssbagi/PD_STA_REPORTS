@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC",
   "design": "SIMD_VEC_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:33",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,13 +95,13 @@
   },
   "reports": [
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\01_SETUP_SS_125C_SIMD_VEC_TOP.rpt",
-      "file_name": "01_SETUP_SS_125C_SIMD_VEC_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\10_MULTICYCLE_TT_25C_SIMD_VEC_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_SIMD_VEC_TOP.rpt",
       "design": "SIMD_VEC_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Worst-case Setup — Slow corner, high temp",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -110,109 +110,49 @@
       "startpoint": "u_vec_add/din_reg[0]",
       "endpoint": "u_vec_perm/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.113,
-      "wns_ns": 1.113,
+      "slack_ns": 1.137,
+      "wns_ns": 1.137,
       "tns_ns": 0.0,
-      "whs_ns": 0.096,
+      "whs_ns": 0.113,
       "sub_units": [
         {
           "unit": "u_vec_add",
-          "wns_ns": 1.113,
+          "wns_ns": 1.137,
           "tns_ns": 0.0,
-          "whs_ns": 0.096
+          "whs_ns": 0.113
         },
         {
           "unit": "u_vec_mul",
-          "wns_ns": 0.179,
-          "tns_ns": 0.0,
-          "whs_ns": 0.094
-        },
-        {
-          "unit": "u_vec_shf",
-          "wns_ns": 0.177,
-          "tns_ns": 0.0,
-          "whs_ns": 0.066
-        },
-        {
-          "unit": "u_vec_perm",
-          "wns_ns": 0.198,
-          "tns_ns": 0.0,
-          "whs_ns": 0.071
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2751,
-      "constrained_endpoints": 2460,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p72v_0p72v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:05:38",
-      "peak_mem": "3.463 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\02_HOLD_FF_N40C_SIMD_VEC_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_SIMD_VEC_TOP.rpt",
-      "design": "SIMD_VEC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_vec_add/din_reg[0]",
-      "endpoint": "u_vec_perm/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.138,
-      "wns_ns": 1.138,
-      "tns_ns": 0.0,
-      "whs_ns": 0.103,
-      "sub_units": [
-        {
-          "unit": "u_vec_add",
-          "wns_ns": 1.138,
-          "tns_ns": 0.0,
-          "whs_ns": 0.103
-        },
-        {
-          "unit": "u_vec_mul",
-          "wns_ns": 0.07,
-          "tns_ns": 0.0,
-          "whs_ns": 0.058
-        },
-        {
-          "unit": "u_vec_shf",
           "wns_ns": 0.199,
           "tns_ns": 0.0,
-          "whs_ns": 0.123
+          "whs_ns": 0.121
+        },
+        {
+          "unit": "u_vec_shf",
+          "wns_ns": 0.157,
+          "tns_ns": 0.0,
+          "whs_ns": 0.117
         },
         {
           "unit": "u_vec_perm",
-          "wns_ns": 0.118,
+          "wns_ns": 0.077,
           "tns_ns": 0.0,
-          "whs_ns": 0.105
+          "whs_ns": 0.069
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 4597,
-      "constrained_endpoints": 4701,
+      "total_endpoints": 3668,
+      "constrained_endpoints": 2372,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_n40c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c",
       "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:01:56",
-      "peak_mem": "1.929 GB"
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:11",
+      "peak_mem": "1.625 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\03_SETUP_TT_25C_SIMD_VEC_TOP.rpt",
@@ -275,64 +215,64 @@
       "peak_mem": "3.134 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\04_HOLD_TT_25C_SIMD_VEC_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_SIMD_VEC_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\01_SETUP_SS_125C_SIMD_VEC_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_SIMD_VEC_TOP.rpt",
       "design": "SIMD_VEC_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
       "clock": "CLK_CORE",
       "period_ns": 2.0,
       "freq_mhz": 500.0,
       "startpoint": "u_vec_add/din_reg[0]",
       "endpoint": "u_vec_perm/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.143,
-      "wns_ns": 1.143,
+      "slack_ns": 1.113,
+      "wns_ns": 1.113,
       "tns_ns": 0.0,
-      "whs_ns": 0.101,
+      "whs_ns": 0.096,
       "sub_units": [
         {
           "unit": "u_vec_add",
-          "wns_ns": 1.143,
+          "wns_ns": 1.113,
           "tns_ns": 0.0,
-          "whs_ns": 0.101
+          "whs_ns": 0.096
         },
         {
           "unit": "u_vec_mul",
-          "wns_ns": 0.105,
+          "wns_ns": 0.179,
           "tns_ns": 0.0,
-          "whs_ns": 0.06
+          "whs_ns": 0.094
         },
         {
           "unit": "u_vec_shf",
-          "wns_ns": 0.078,
+          "wns_ns": 0.177,
           "tns_ns": 0.0,
-          "whs_ns": 0.07
+          "whs_ns": 0.066
         },
         {
           "unit": "u_vec_perm",
-          "wns_ns": 0.107,
+          "wns_ns": 0.198,
           "tns_ns": 0.0,
-          "whs_ns": 0.115
+          "whs_ns": 0.071
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 1167,
-      "constrained_endpoints": 4820,
+      "total_endpoints": 2751,
+      "constrained_endpoints": 2460,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ss_0p72v_0p72v_125c",
       "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
       "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:03:18",
-      "peak_mem": "2.518 GB"
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:05:38",
+      "peak_mem": "3.463 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\05_SETUP_SS_M40C_SIMD_VEC_TOP.rpt",
@@ -395,66 +335,6 @@
       "peak_mem": "4.164 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\06_HOLD_FF_125C_SIMD_VEC_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_SIMD_VEC_TOP.rpt",
-      "design": "SIMD_VEC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_vec_add/din_reg[0]",
-      "endpoint": "u_vec_perm/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.065,
-      "wns_ns": 1.065,
-      "tns_ns": 0.0,
-      "whs_ns": 0.077,
-      "sub_units": [
-        {
-          "unit": "u_vec_add",
-          "wns_ns": 1.065,
-          "tns_ns": 0.0,
-          "whs_ns": 0.077
-        },
-        {
-          "unit": "u_vec_mul",
-          "wns_ns": 0.054,
-          "tns_ns": 0.0,
-          "whs_ns": 0.095
-        },
-        {
-          "unit": "u_vec_shf",
-          "wns_ns": 0.163,
-          "tns_ns": 0.0,
-          "whs_ns": 0.075
-        },
-        {
-          "unit": "u_vec_perm",
-          "wns_ns": 0.136,
-          "tns_ns": 0.0,
-          "whs_ns": 0.107
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 2438,
-      "constrained_endpoints": 1322,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:06:25",
-      "peak_mem": "4.123 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\07_SETUP_LVSS_125C_SIMD_VEC_TOP.rpt",
       "file_name": "07_SETUP_LVSS_125C_SIMD_VEC_TOP.rpt",
       "design": "SIMD_VEC_TOP",
@@ -513,66 +393,6 @@
       "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
       "elapsed": "00:07:40",
       "peak_mem": "2.671 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\08_CG_CHECK_TT_25C_SIMD_VEC_TOP.rpt",
-      "file_name": "08_CG_CHECK_TT_25C_SIMD_VEC_TOP.rpt",
-      "design": "SIMD_VEC_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Clock Gating Check — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_vec_add/din_reg[0]",
-      "endpoint": "u_vec_perm/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.06,
-      "wns_ns": 1.06,
-      "tns_ns": 0.0,
-      "whs_ns": 0.075,
-      "sub_units": [
-        {
-          "unit": "u_vec_add",
-          "wns_ns": 1.06,
-          "tns_ns": 0.0,
-          "whs_ns": 0.075
-        },
-        {
-          "unit": "u_vec_mul",
-          "wns_ns": 0.064,
-          "tns_ns": 0.0,
-          "whs_ns": 0.076
-        },
-        {
-          "unit": "u_vec_shf",
-          "wns_ns": 0.194,
-          "tns_ns": 0.0,
-          "whs_ns": 0.117
-        },
-        {
-          "unit": "u_vec_perm",
-          "wns_ns": 0.152,
-          "tns_ns": 0.0,
-          "whs_ns": 0.118
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4943,
-      "constrained_endpoints": 4407,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:01:55",
-      "peak_mem": "3.063 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\09_RECOVERY_SS_125C_SIMD_VEC_TOP.rpt",
@@ -635,13 +455,13 @@
       "peak_mem": "1.747 GB"
     },
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\10_MULTICYCLE_TT_25C_SIMD_VEC_TOP.rpt",
-      "file_name": "10_MULTICYCLE_TT_25C_SIMD_VEC_TOP.rpt",
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\08_CG_CHECK_TT_25C_SIMD_VEC_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_SIMD_VEC_TOP.rpt",
       "design": "SIMD_VEC_TOP",
       "version": "PrimeTime 2023.06-SP3",
       "run_date": "Sat Aug 15 17:34:53 2026",
       "corner": "tt_0p90v_0p90v_25c",
-      "note": "Multicycle Path Check — 2-cycle paths",
+      "note": "Clock Gating Check — Nominal corner",
       "delay_type": "max",
       "check": "setup",
       "clock": "CLK_CORE",
@@ -650,40 +470,40 @@
       "startpoint": "u_vec_add/din_reg[0]",
       "endpoint": "u_vec_perm/dout_reg[0]",
       "slack_status": "MET",
-      "slack_ns": 1.137,
-      "wns_ns": 1.137,
+      "slack_ns": 1.06,
+      "wns_ns": 1.06,
       "tns_ns": 0.0,
-      "whs_ns": 0.113,
+      "whs_ns": 0.075,
       "sub_units": [
         {
           "unit": "u_vec_add",
-          "wns_ns": 1.137,
+          "wns_ns": 1.06,
           "tns_ns": 0.0,
-          "whs_ns": 0.113
+          "whs_ns": 0.075
         },
         {
           "unit": "u_vec_mul",
-          "wns_ns": 0.199,
+          "wns_ns": 0.064,
           "tns_ns": 0.0,
-          "whs_ns": 0.121
+          "whs_ns": 0.076
         },
         {
           "unit": "u_vec_shf",
-          "wns_ns": 0.157,
+          "wns_ns": 0.194,
           "tns_ns": 0.0,
           "whs_ns": 0.117
         },
         {
           "unit": "u_vec_perm",
-          "wns_ns": 0.077,
+          "wns_ns": 0.152,
           "tns_ns": 0.0,
-          "whs_ns": 0.069
+          "whs_ns": 0.118
         }
       ],
       "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
       "coverage_pct": 100.0,
-      "total_endpoints": 3668,
-      "constrained_endpoints": 2372,
+      "total_endpoints": 4943,
+      "constrained_endpoints": 4407,
       "tool": "Synopsys PrimeTime 2023.06-SP3",
       "run_host": "sta-server-01",
       "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c",
@@ -691,8 +511,188 @@
       "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
       "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:02:11",
-      "peak_mem": "1.625 GB"
+      "elapsed": "00:01:55",
+      "peak_mem": "3.063 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\02_HOLD_FF_N40C_SIMD_VEC_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_SIMD_VEC_TOP.rpt",
+      "design": "SIMD_VEC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_vec_add/din_reg[0]",
+      "endpoint": "u_vec_perm/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.138,
+      "wns_ns": 1.138,
+      "tns_ns": 0.0,
+      "whs_ns": 0.103,
+      "sub_units": [
+        {
+          "unit": "u_vec_add",
+          "wns_ns": 1.138,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_vec_mul",
+          "wns_ns": 0.07,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        },
+        {
+          "unit": "u_vec_shf",
+          "wns_ns": 0.199,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        },
+        {
+          "unit": "u_vec_perm",
+          "wns_ns": 0.118,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4597,
+      "constrained_endpoints": 4701,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:01:56",
+      "peak_mem": "1.929 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\04_HOLD_TT_25C_SIMD_VEC_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_SIMD_VEC_TOP.rpt",
+      "design": "SIMD_VEC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_vec_add/din_reg[0]",
+      "endpoint": "u_vec_perm/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.143,
+      "wns_ns": 1.143,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_vec_add",
+          "wns_ns": 1.143,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_vec_mul",
+          "wns_ns": 0.105,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_vec_shf",
+          "wns_ns": 0.078,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_vec_perm",
+          "wns_ns": 0.107,
+          "tns_ns": 0.0,
+          "whs_ns": 0.115
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1167,
+      "constrained_endpoints": 4820,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:03:18",
+      "peak_mem": "2.518 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\06_HOLD_FF_125C_SIMD_VEC_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_SIMD_VEC_TOP.rpt",
+      "design": "SIMD_VEC_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_vec_add/din_reg[0]",
+      "endpoint": "u_vec_perm/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.065,
+      "wns_ns": 1.065,
+      "tns_ns": 0.0,
+      "whs_ns": 0.077,
+      "sub_units": [
+        {
+          "unit": "u_vec_add",
+          "wns_ns": 1.065,
+          "tns_ns": 0.0,
+          "whs_ns": 0.077
+        },
+        {
+          "unit": "u_vec_mul",
+          "wns_ns": 0.054,
+          "tns_ns": 0.0,
+          "whs_ns": 0.095
+        },
+        {
+          "unit": "u_vec_shf",
+          "wns_ns": 0.163,
+          "tns_ns": 0.0,
+          "whs_ns": 0.075
+        },
+        {
+          "unit": "u_vec_perm",
+          "wns_ns": 0.136,
+          "tns_ns": 0.0,
+          "whs_ns": 0.107
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2438,
+      "constrained_endpoints": 1322,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:06:25",
+      "peak_mem": "4.123 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\SIMD_VEC\\SIMD_VEC_TIMING.rpt",

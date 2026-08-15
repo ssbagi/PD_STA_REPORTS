@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV",
   "design": "FDIV_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:10:32",
+  "parsed_at": "2026-08-15T22:16:47",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,
@@ -95,366 +95,6 @@
   },
   "reports": [
     {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\01_SETUP_SS_125C_FDIV_TOP.rpt",
-      "file_name": "01_SETUP_SS_125C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_125c",
-      "note": "Worst-case Setup — Slow corner, high temp",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.079,
-      "wns_ns": 1.079,
-      "tns_ns": 0.0,
-      "whs_ns": 0.064,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.079,
-          "tns_ns": 0.0,
-          "whs_ns": 0.064
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.115,
-          "tns_ns": 0.0,
-          "whs_ns": 0.126
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.125,
-          "tns_ns": 0.0,
-          "whs_ns": 0.091
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.05,
-          "tns_ns": 0.0,
-          "whs_ns": 0.091
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4547,
-      "constrained_endpoints": 3591,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
-      "elapsed": "00:06:34",
-      "peak_mem": "1.321 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\02_HOLD_FF_N40C_FDIV_TOP.rpt",
-      "file_name": "02_HOLD_FF_N40C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_n40c",
-      "note": "Worst-case Hold  — Fast corner, cold temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.125,
-      "wns_ns": 1.125,
-      "tns_ns": 0.0,
-      "whs_ns": 0.108,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.125,
-          "tns_ns": 0.0,
-          "whs_ns": 0.108
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.142,
-          "tns_ns": 0.0,
-          "whs_ns": 0.078
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.177,
-          "tns_ns": 0.0,
-          "whs_ns": 0.118
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.182,
-          "tns_ns": 0.0,
-          "whs_ns": 0.119
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5309,
-      "constrained_endpoints": 3569,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
-      "elapsed": "00:07:19",
-      "peak_mem": "1.991 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\03_SETUP_TT_25C_FDIV_TOP.rpt",
-      "file_name": "03_SETUP_TT_25C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Setup   — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.103,
-      "wns_ns": 1.103,
-      "tns_ns": 0.0,
-      "whs_ns": 0.09,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.103,
-          "tns_ns": 0.0,
-          "whs_ns": 0.09
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.179,
-          "tns_ns": 0.0,
-          "whs_ns": 0.07
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.082,
-          "tns_ns": 0.0,
-          "whs_ns": 0.086
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.138,
-          "tns_ns": 0.0,
-          "whs_ns": 0.091
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 4314,
-      "constrained_endpoints": 5500,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:04:15",
-      "peak_mem": "2.07 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\04_HOLD_TT_25C_FDIV_TOP.rpt",
-      "file_name": "04_HOLD_TT_25C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Typical Hold    — Nominal corner",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.052,
-      "wns_ns": 1.052,
-      "tns_ns": 0.0,
-      "whs_ns": 0.073,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.052,
-          "tns_ns": 0.0,
-          "whs_ns": 0.073
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.162,
-          "tns_ns": 0.0,
-          "whs_ns": 0.071
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.087,
-          "tns_ns": 0.0,
-          "whs_ns": 0.069
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.084,
-          "tns_ns": 0.0,
-          "whs_ns": 0.099
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5520,
-      "constrained_endpoints": 3738,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:01:27",
-      "peak_mem": "3.163 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\05_SETUP_SS_M40C_FDIV_TOP.rpt",
-      "file_name": "05_SETUP_SS_M40C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ss_0p72v_0p72v_n40c",
-      "note": "Cold Setup      — Slow corner, cold temp",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.091,
-      "wns_ns": 1.091,
-      "tns_ns": 0.0,
-      "whs_ns": 0.114,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.091,
-          "tns_ns": 0.0,
-          "whs_ns": 0.114
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.189,
-          "tns_ns": 0.0,
-          "whs_ns": 0.072
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.113,
-          "tns_ns": 0.0,
-          "whs_ns": 0.125
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.067,
-          "tns_ns": 0.0,
-          "whs_ns": 0.071
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 5485,
-      "constrained_endpoints": 4002,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_n40c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
-      "elapsed": "00:07:27",
-      "peak_mem": "4.659 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\06_HOLD_FF_125C_FDIV_TOP.rpt",
-      "file_name": "06_HOLD_FF_125C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "ff_1p16v_1p16v_125c",
-      "note": "Hot Hold        — Fast corner, high temp",
-      "delay_type": "min",
-      "check": "hold",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.066,
-      "wns_ns": 1.066,
-      "tns_ns": 0.0,
-      "whs_ns": 0.092,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.066,
-          "tns_ns": 0.0,
-          "whs_ns": 0.092
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.168,
-          "tns_ns": 0.0,
-          "whs_ns": 0.123
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.075,
-          "tns_ns": 0.0,
-          "whs_ns": 0.095
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.155,
-          "tns_ns": 0.0,
-          "whs_ns": 0.096
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 1629,
-      "constrained_endpoints": 4306,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_125c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
-      "elapsed": "00:06:14",
-      "peak_mem": "4.331 GB"
-    },
-    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\07_SETUP_LVSS_125C_FDIV_TOP.rpt",
       "file_name": "07_SETUP_LVSS_125C_FDIV_TOP.rpt",
       "design": "FDIV_TOP",
@@ -513,66 +153,6 @@
       "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
       "elapsed": "00:03:53",
       "peak_mem": "4.252 GB"
-    },
-    {
-      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\08_CG_CHECK_TT_25C_FDIV_TOP.rpt",
-      "file_name": "08_CG_CHECK_TT_25C_FDIV_TOP.rpt",
-      "design": "FDIV_TOP",
-      "version": "PrimeTime 2023.06-SP3",
-      "run_date": "Sat Aug 15 17:34:53 2026",
-      "corner": "tt_0p90v_0p90v_25c",
-      "note": "Clock Gating Check — Nominal corner",
-      "delay_type": "max",
-      "check": "setup",
-      "clock": "CLK_CORE",
-      "period_ns": 2.0,
-      "freq_mhz": 500.0,
-      "startpoint": "u_fdiv_iter/din_reg[0]",
-      "endpoint": "u_fdiv_rnd/dout_reg[0]",
-      "slack_status": "MET",
-      "slack_ns": 1.048,
-      "wns_ns": 1.048,
-      "tns_ns": 0.0,
-      "whs_ns": 0.11,
-      "sub_units": [
-        {
-          "unit": "u_fdiv_iter",
-          "wns_ns": 1.048,
-          "tns_ns": 0.0,
-          "whs_ns": 0.11
-        },
-        {
-          "unit": "u_fdiv_rem",
-          "wns_ns": 0.1,
-          "tns_ns": 0.0,
-          "whs_ns": 0.115
-        },
-        {
-          "unit": "u_fdiv_quo",
-          "wns_ns": 0.18,
-          "tns_ns": 0.0,
-          "whs_ns": 0.11
-        },
-        {
-          "unit": "u_fdiv_rnd",
-          "wns_ns": 0.134,
-          "tns_ns": 0.0,
-          "whs_ns": 0.06
-        }
-      ],
-      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
-      "coverage_pct": 100.0,
-      "total_endpoints": 832,
-      "constrained_endpoints": 2405,
-      "tool": "Synopsys PrimeTime 2023.06-SP3",
-      "run_host": "sta-server-01",
-      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
-      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
-      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
-      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
-      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
-      "elapsed": "00:02:31",
-      "peak_mem": "2.363 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\09_RECOVERY_SS_125C_FDIV_TOP.rpt",
@@ -635,6 +215,66 @@
       "peak_mem": "3.695 GB"
     },
     {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\03_SETUP_TT_25C_FDIV_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.103,
+      "wns_ns": 1.103,
+      "tns_ns": 0.0,
+      "whs_ns": 0.09,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.103,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.179,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.082,
+          "tns_ns": 0.0,
+          "whs_ns": 0.086
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.138,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4314,
+      "constrained_endpoints": 5500,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:04:15",
+      "peak_mem": "2.07 GB"
+    },
+    {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\10_MULTICYCLE_TT_25C_FDIV_TOP.rpt",
       "file_name": "10_MULTICYCLE_TT_25C_FDIV_TOP.rpt",
       "design": "FDIV_TOP",
@@ -693,6 +333,366 @@
       "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
       "elapsed": "00:03:36",
       "peak_mem": "4.707 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\05_SETUP_SS_M40C_FDIV_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.091,
+      "wns_ns": 1.091,
+      "tns_ns": 0.0,
+      "whs_ns": 0.114,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.091,
+          "tns_ns": 0.0,
+          "whs_ns": 0.114
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.189,
+          "tns_ns": 0.0,
+          "whs_ns": 0.072
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.113,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.067,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5485,
+      "constrained_endpoints": 4002,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:07:27",
+      "peak_mem": "4.659 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\01_SETUP_SS_125C_FDIV_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.079,
+      "wns_ns": 1.079,
+      "tns_ns": 0.0,
+      "whs_ns": 0.064,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.079,
+          "tns_ns": 0.0,
+          "whs_ns": 0.064
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.115,
+          "tns_ns": 0.0,
+          "whs_ns": 0.126
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.125,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.05,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4547,
+      "constrained_endpoints": 3591,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:06:34",
+      "peak_mem": "1.321 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\08_CG_CHECK_TT_25C_FDIV_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.048,
+      "wns_ns": 1.048,
+      "tns_ns": 0.0,
+      "whs_ns": 0.11,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.048,
+          "tns_ns": 0.0,
+          "whs_ns": 0.11
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.1,
+          "tns_ns": 0.0,
+          "whs_ns": 0.115
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.18,
+          "tns_ns": 0.0,
+          "whs_ns": 0.11
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.134,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 832,
+      "constrained_endpoints": 2405,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:31",
+      "peak_mem": "2.363 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\02_HOLD_FF_N40C_FDIV_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.125,
+      "wns_ns": 1.125,
+      "tns_ns": 0.0,
+      "whs_ns": 0.108,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.125,
+          "tns_ns": 0.0,
+          "whs_ns": 0.108
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.142,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.177,
+          "tns_ns": 0.0,
+          "whs_ns": 0.118
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.182,
+          "tns_ns": 0.0,
+          "whs_ns": 0.119
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5309,
+      "constrained_endpoints": 3569,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:07:19",
+      "peak_mem": "1.991 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\06_HOLD_FF_125C_FDIV_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.066,
+      "wns_ns": 1.066,
+      "tns_ns": 0.0,
+      "whs_ns": 0.092,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.066,
+          "tns_ns": 0.0,
+          "whs_ns": 0.092
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.168,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.075,
+          "tns_ns": 0.0,
+          "whs_ns": 0.095
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.155,
+          "tns_ns": 0.0,
+          "whs_ns": 0.096
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1629,
+      "constrained_endpoints": 4306,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:06:14",
+      "peak_mem": "4.331 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\04_HOLD_TT_25C_FDIV_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_FDIV_TOP.rpt",
+      "design": "FDIV_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fdiv_iter/din_reg[0]",
+      "endpoint": "u_fdiv_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.052,
+      "wns_ns": 1.052,
+      "tns_ns": 0.0,
+      "whs_ns": 0.073,
+      "sub_units": [
+        {
+          "unit": "u_fdiv_iter",
+          "wns_ns": 1.052,
+          "tns_ns": 0.0,
+          "whs_ns": 0.073
+        },
+        {
+          "unit": "u_fdiv_rem",
+          "wns_ns": 0.162,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        },
+        {
+          "unit": "u_fdiv_quo",
+          "wns_ns": 0.087,
+          "tns_ns": 0.0,
+          "whs_ns": 0.069
+        },
+        {
+          "unit": "u_fdiv_rnd",
+          "wns_ns": 0.084,
+          "tns_ns": 0.0,
+          "whs_ns": 0.099
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5520,
+      "constrained_endpoints": 3738,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FDIV/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FDIV_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FDIV_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FDIV_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:27",
+      "peak_mem": "3.163 GB"
     },
     {
       "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FDIV\\FDIV_TIMING.rpt",

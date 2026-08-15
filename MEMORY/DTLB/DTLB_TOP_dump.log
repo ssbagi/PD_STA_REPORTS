@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\DTLB
   Design          : DTLB_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 31
 
 
@@ -51,28 +51,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
-  Slack    :   +1.110 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1209 / 4084
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:32         Memory : 3.259 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.100 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
-  Slack    :   +1.100 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1900 / 967
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:44         Memory : 3.81 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
-
   File     : 03_SETUP_TT_25C_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -83,39 +61,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:01:13         Memory : 1.539 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.149 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
-  Slack    :   +1.149 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1239 / 1617
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:23         Memory : 1.803 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
-  Slack    :   +1.113 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 837 / 5931
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:37         Memory : 4.483 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.181 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
-  Slack    :   +1.181 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2697 / 4477
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:32         Memory : 3.827 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_125c
 
   File     : 07_SETUP_LVSS_125C_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : ss_0p63v_0p63v_125c
@@ -128,39 +73,6 @@ PER-REPORT DETAIL
   Runtime  : 00:05:41         Memory : 2.339 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p63v_0p63v_125c
 
-  File     : 08_CG_CHECK_TT_25C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
-  Slack    :   +1.110 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5040 / 2210
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:56         Memory : 2.388 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
-  File     : 09_RECOVERY_SS_125C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.079 ns
-  Slack    :   +1.131 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4244 / 931
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:24         Memory : 3.541 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 10_MULTICYCLE_TT_25C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.076 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
-  Slack    :   +1.076 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3191 / 3400
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:49         Memory : 4.277 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
   File     : 11_SETUP_SS_125C_OCV_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -170,83 +82,6 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 2373 / 4434
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:01:51         Memory : 1.631 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 12_HOLD_FF_N40C_OCV_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.086 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5227 / 3656
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:55         Memory : 3.707 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
-
-  File     : 13_SETUP_SS_125C_POCV_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.100 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.100 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2923 / 4378
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:54         Memory : 2.903 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 14_HOLD_FF_N40C_POCV_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.118 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6476 / 5147
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:38         Memory : 4.98 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
-
-  File     : 15_SETUP_TT_85C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_85c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.126 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4201 / 2451
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:39         Memory : 2.748 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_85c
-
-  File     : 16_HOLD_TT_85C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_85c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.086 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5887 / 4786
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:15         Memory : 3.864 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_85c
-
-  File     : 17_SETUP_FF_125C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.090 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1946 / 3613
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:16         Memory : 1.206 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_125c
-
-  File     : 18_HOLD_SS_125C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.060 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.060 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1047 / 6526
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:35         Memory : 2.816 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
 
   File     : 19_SETUP_LVSS_N40C_DTLB_TOP.rpt
@@ -260,38 +95,16 @@ PER-REPORT DETAIL
   Runtime  : 00:02:15         Memory : 2.525 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p63v_0p63v_n40c
 
-  File     : 20_HOLD_LVFF_N40C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p32v_1p32v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.087 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5058 / 6718
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:23         Memory : 2.967 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p32v_1p32v_n40c
-
-  File     : 21_CG_CHECK_SS_125C_DTLB_TOP.rpt
+  File     : 09_RECOVERY_SS_125C_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.065 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.065 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6178 / 6111
+  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.079 ns
+  Slack    :   +1.131 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4244 / 931
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:31         Memory : 3.503 GB
+  Runtime  : 00:06:24         Memory : 3.541 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 22_RECOVERY_TT_25C_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.125 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4093 / 2811
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:31         Memory : 3.372 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
 
   File     : 23_MULTICYCLE_SS_125C_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
@@ -304,49 +117,27 @@ PER-REPORT DETAIL
   Runtime  : 00:05:51         Memory : 1.372 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
 
-  File     : 24_SETUP_TT_25C_ECO_DTLB_TOP.rpt
+  File     : 15_SETUP_TT_85C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.126 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4201 / 2451
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:39         Memory : 2.748 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_85c
+
+  File     : 22_RECOVERY_TT_25C_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.075 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2984 / 3056
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:40         Memory : 3.966 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
-  File     : 25_HOLD_TT_25C_ECO_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.064 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4515 / 2434
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:19         Memory : 4.892 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
-
-  File     : 26_SETUP_SS_125C_SI_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.115 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.115 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4153 / 6781
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:17         Memory : 2.554 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
-
-  File     : 27_HOLD_FF_N40C_SI_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
   WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
   Slack    :   +1.125 ns   Status : MET
   Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2473 / 3382
+  Coverage : 100.0%   Endpoints : 4093 / 2811
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:20         Memory : 1.28 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:02:31         Memory : 3.372 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
 
   File     : 28_SETUP_SS_125C_FINAL_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
@@ -359,16 +150,60 @@ PER-REPORT DETAIL
   Runtime  : 00:08:50         Memory : 4.774 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
 
-  File     : 29_HOLD_FF_N40C_FINAL_DTLB_TOP.rpt
-  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.106 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.106 ns   Status : MET
+  File     : 26_SETUP_SS_125C_SI_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.115 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.115 ns   Status : MET
   Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6016 / 3003
+  Coverage : 100.0%   Endpoints : 4153 / 6781
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:01:54         Memory : 1.352 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:07:17         Memory : 2.554 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
+
+  File     : 05_SETUP_SS_M40C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
+  Slack    :   +1.113 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 837 / 5931
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:37         Memory : 4.483 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_n40c
+
+  File     : 01_SETUP_SS_125C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1209 / 4084
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:32         Memory : 3.259 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
+
+  File     : 08_CG_CHECK_TT_25C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5040 / 2210
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:56         Memory : 2.388 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 13_SETUP_SS_125C_POCV_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.100 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.100 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2923 / 4378
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:54         Memory : 2.903 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
 
   File     : 30_SETUP_TT_25C_FINAL_DTLB_TOP.rpt
   Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
@@ -380,6 +215,171 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:02:47         Memory : 2.261 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 17_SETUP_FF_125C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.090 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1946 / 3613
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:16         Memory : 1.206 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.076 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
+  Slack    :   +1.076 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3191 / 3400
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:49         Memory : 4.277 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 24_SETUP_TT_25C_ECO_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.075 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2984 / 3056
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:40         Memory : 3.966 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 21_CG_CHECK_SS_125C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.065 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.065 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6178 / 6111
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:31         Memory : 3.503 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
+
+  File     : 04_HOLD_TT_25C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.149 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.149 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1239 / 1617
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:23         Memory : 1.803 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 06_HOLD_FF_125C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.181 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
+  Slack    :   +1.181 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2697 / 4477
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:32         Memory : 3.827 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_125c
+
+  File     : 02_HOLD_FF_N40C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.100 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
+  Slack    :   +1.100 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1900 / 967
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:44         Memory : 3.81 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+
+  File     : 12_HOLD_FF_N40C_OCV_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.086 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5227 / 3656
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:55         Memory : 3.707 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+
+  File     : 14_HOLD_FF_N40C_POCV_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.118 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6476 / 5147
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:38         Memory : 4.98 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+
+  File     : 16_HOLD_TT_85C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_85c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.086 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5887 / 4786
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:15         Memory : 3.864 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_85c
+
+  File     : 18_HOLD_SS_125C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.060 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.060 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1047 / 6526
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:35         Memory : 2.816 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ss_0p72v_0p72v_125c
+
+  File     : 20_HOLD_LVFF_N40C_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p32v_1p32v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.087 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5058 / 6718
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:23         Memory : 2.967 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p32v_1p32v_n40c
+
+  File     : 25_HOLD_TT_25C_ECO_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.064 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4515 / 2434
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:19         Memory : 4.892 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_tt_0p90v_0p90v_25c
+
+  File     : 27_HOLD_FF_N40C_SI_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.125 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2473 / 3382
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:20         Memory : 1.28 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
+
+  File     : 29_HOLD_FF_N40C_FINAL_DTLB_TOP.rpt
+  Design   : DTLB_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.106 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.106 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6016 / 3003
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:54         Memory : 1.352 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DTLB/run_ff_1p16v_1p16v_n40c
 
   File     : DTLB_TIMING.rpt
   Design   : N/A                   Corner : N/A

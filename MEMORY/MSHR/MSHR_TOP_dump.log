@@ -4,7 +4,7 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\MSHR
   Design          : MSHR_TOP
-  Parsed At       : 2026-08-15T22:10:33
+  Parsed At       : 2026-08-15T22:16:48
   Total Reports   : 31
 
 
@@ -51,28 +51,6 @@ BY CHECK TYPE
 
 PER-REPORT DETAIL
 ----------------------------------------
-  File     : 01_SETUP_SS_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
-  Slack    :   +1.130 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1659 / 2578
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:46         Memory : 1.284 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
-
-  File     : 02_HOLD_FF_N40C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.063 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
-  Slack    :   +1.063 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5705 / 2530
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:11         Memory : 3.458 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
-
   File     : 03_SETUP_TT_25C_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -82,83 +60,6 @@ PER-REPORT DETAIL
   Coverage : 100.0%   Endpoints : 4418 / 4418
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:04:11         Memory : 4.102 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
-
-  File     : 04_HOLD_TT_25C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.161 ns   TNS :   +0.000 ns   WHS :   +0.107 ns
-  Slack    :   +1.161 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5335 / 1160
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:27         Memory : 2.877 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
-
-  File     : 05_SETUP_SS_M40C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.056 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
-  Slack    :   +1.056 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2813 / 1603
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:52         Memory : 2.161 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_n40c
-
-  File     : 06_HOLD_FF_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.025 ns   TNS :   +0.000 ns   WHS :   +0.116 ns
-  Slack    :   +1.025 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3890 / 1971
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:49         Memory : 2.011 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_125c
-
-  File     : 07_SETUP_LVSS_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p63v_0p63v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.142 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
-  Slack    :   +1.142 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3590 / 1446
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:14         Memory : 4.744 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p63v_0p63v_125c
-
-  File     : 08_CG_CHECK_TT_25C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.092 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
-  Slack    :   +1.092 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3506 / 4536
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:10         Memory : 4.157 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
-
-  File     : 09_RECOVERY_SS_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.068 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
-  Slack    :   +1.068 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5012 / 5814
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:55         Memory : 4.614 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
-
-  File     : 10_MULTICYCLE_TT_25C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.148 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
-  Slack    :   +1.148 ns   Status : MET
-  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3353 / 5447
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:03:53         Memory : 2.916 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
   File     : 11_SETUP_SS_125C_OCV_MSHR_TOP.rpt
@@ -172,136 +73,37 @@ PER-REPORT DETAIL
   Runtime  : 00:05:39         Memory : 4.135 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
 
-  File     : 12_HOLD_FF_N40C_OCV_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.083 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 2279 / 4736
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:22         Memory : 1.87 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
-
-  File     : 13_SETUP_SS_125C_POCV_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.061 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.061 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6597 / 5373
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:27         Memory : 3.038 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
-
-  File     : 14_HOLD_FF_N40C_POCV_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.042 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.042 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6085 / 2325
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:56         Memory : 4.485 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
-
-  File     : 15_SETUP_TT_85C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_85c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.088 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3823 / 6353
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:51         Memory : 2.483 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_85c
-
-  File     : 16_HOLD_TT_85C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_85c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.183 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.183 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1047 / 6985
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:36         Memory : 3.546 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_85c
-
-  File     : 17_SETUP_FF_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.096 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.096 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 5943 / 6051
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:05:11         Memory : 4.236 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_125c
-
-  File     : 18_HOLD_SS_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.064 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4306 / 6450
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:57         Memory : 4.661 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
-
-  File     : 19_SETUP_LVSS_N40C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p63v_0p63v_n40c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.077 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4458 / 4901
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:46         Memory : 2.965 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p63v_0p63v_n40c
-
-  File     : 20_HOLD_LVFF_N40C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p32v_1p32v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.116 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.116 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 6960 / 2367
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:04:10         Memory : 3.776 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p32v_1p32v_n40c
-
-  File     : 21_CG_CHECK_SS_125C_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.081 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.081 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 3789 / 5778
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:12         Memory : 1.321 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
-
-  File     : 22_RECOVERY_TT_25C_MSHR_TOP.rpt
+  File     : 10_MULTICYCLE_TT_25C_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.109 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1575 / 6017
+  WNS      :   +1.148 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
+  Slack    :   +1.148 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3353 / 5447
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:52         Memory : 4.758 GB
+  Runtime  : 00:03:53         Memory : 2.916 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
-  File     : 23_MULTICYCLE_SS_125C_MSHR_TOP.rpt
+  File     : 07_SETUP_LVSS_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.142 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.142 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3590 / 1446
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:14         Memory : 4.744 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p63v_0p63v_125c
+
+  File     : 01_SETUP_SS_125C_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
   Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.049 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.049 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1041 / 4902
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1659 / 2578
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:02:20         Memory : 4.666 GB
+  Runtime  : 00:07:46         Memory : 1.284 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
 
   File     : 24_SETUP_TT_25C_ECO_MSHR_TOP.rpt
@@ -315,16 +117,38 @@ PER-REPORT DETAIL
   Runtime  : 00:03:29         Memory : 4.426 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
-  File     : 25_HOLD_TT_25C_ECO_MSHR_TOP.rpt
+  File     : 22_RECOVERY_TT_25C_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.129 ns   Status : MET
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.109 ns   Status : MET
   Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 1539 / 3253
+  Coverage : 100.0%   Endpoints : 1575 / 6017
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:08:43         Memory : 4.742 GB
+  Runtime  : 00:06:52         Memory : 4.758 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
+
+  File     : 30_SETUP_TT_25C_FINAL_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4952 / 1636
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:32         Memory : 2.607 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
+
+  File     : 17_SETUP_FF_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.096 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.096 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5943 / 6051
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:11         Memory : 4.236 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_125c
 
   File     : 26_SETUP_SS_125C_SI_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
@@ -337,16 +161,16 @@ PER-REPORT DETAIL
   Runtime  : 00:04:35         Memory : 2.68 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
 
-  File     : 27_HOLD_FF_N40C_SI_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
-  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.087 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4231 / 1198
+  File     : 08_CG_CHECK_TT_25C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.092 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
+  Slack    :   +1.092 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3506 / 4536
   Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:07:21         Memory : 1.433 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
+  Runtime  : 00:05:10         Memory : 4.157 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
   File     : 28_SETUP_SS_125C_FINAL_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
@@ -359,6 +183,193 @@ PER-REPORT DETAIL
   Runtime  : 00:02:30         Memory : 4.724 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
 
+  File     : 15_SETUP_TT_85C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3823 / 6353
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:51         Memory : 2.483 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_85c
+
+  File     : 21_CG_CHECK_SS_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.081 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.081 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3789 / 5778
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:12         Memory : 1.321 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
+
+  File     : 19_SETUP_LVSS_N40C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p63v_0p63v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.077 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4458 / 4901
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:46         Memory : 2.965 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p63v_0p63v_n40c
+
+  File     : 09_RECOVERY_SS_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.068 ns   TNS :   +0.000 ns   WHS :   +0.111 ns
+  Slack    :   +1.068 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5012 / 5814
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:55         Memory : 4.614 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
+
+  File     : 13_SETUP_SS_125C_POCV_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.061 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.061 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6597 / 5373
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:27         Memory : 3.038 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
+
+  File     : 05_SETUP_SS_M40C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.056 ns   TNS :   +0.000 ns   WHS :   +0.084 ns
+  Slack    :   +1.056 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2813 / 1603
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:52         Memory : 2.161 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_n40c
+
+  File     : 23_MULTICYCLE_SS_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.049 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.049 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1041 / 4902
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:20         Memory : 4.666 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
+
+  File     : 06_HOLD_FF_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.025 ns   TNS :   +0.000 ns   WHS :   +0.116 ns
+  Slack    :   +1.025 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3890 / 1971
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:49         Memory : 2.011 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_125c
+
+  File     : 04_HOLD_TT_25C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.161 ns   TNS :   +0.000 ns   WHS :   +0.107 ns
+  Slack    :   +1.161 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5335 / 1160
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:27         Memory : 2.877 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
+
+  File     : 02_HOLD_FF_N40C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.063 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
+  Slack    :   +1.063 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5705 / 2530
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:11         Memory : 3.458 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
+
+  File     : 12_HOLD_FF_N40C_OCV_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2279 / 4736
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:22         Memory : 1.87 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
+
+  File     : 14_HOLD_FF_N40C_POCV_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.042 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.042 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6085 / 2325
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:56         Memory : 4.485 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
+
+  File     : 16_HOLD_TT_85C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_85c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.183 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.183 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1047 / 6985
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:36         Memory : 3.546 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_85c
+
+  File     : 18_HOLD_SS_125C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.064 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.064 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4306 / 6450
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:57         Memory : 4.661 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ss_0p72v_0p72v_125c
+
+  File     : 20_HOLD_LVFF_N40C_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p32v_1p32v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.116 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.116 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6960 / 2367
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:10         Memory : 3.776 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p32v_1p32v_n40c
+
+  File     : 25_HOLD_TT_25C_ECO_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.129 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1539 / 3253
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:43         Memory : 4.742 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
+
+  File     : 27_HOLD_FF_N40C_SI_MSHR_TOP.rpt
+  Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.087 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.087 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4231 / 1198
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:21         Memory : 1.433 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
+
   File     : 29_HOLD_FF_N40C_FINAL_MSHR_TOP.rpt
   Design   : MSHR_TOP              Corner : ff_1p16v_1p16v_n40c
   Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
@@ -369,17 +380,6 @@ PER-REPORT DETAIL
   Tool     : Synopsys PrimeTime 2023.06-SP3
   Runtime  : 00:08:28         Memory : 3.654 GB
   Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_ff_1p16v_1p16v_n40c
-
-  File     : 30_SETUP_TT_25C_FINAL_MSHR_TOP.rpt
-  Design   : MSHR_TOP              Corner : tt_0p90v_0p90v_25c
-  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
-  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
-  Slack    :   +1.098 ns   Status : MET
-  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
-  Coverage : 100.0%   Endpoints : 4952 / 1636
-  Tool     : Synopsys PrimeTime 2023.06-SP3
-  Runtime  : 00:06:32         Memory : 2.607 GB
-  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MSHR/run_tt_0p90v_0p90v_25c
 
   File     : MSHR_TIMING.rpt
   Design   : N/A                   Corner : N/A
