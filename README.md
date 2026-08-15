@@ -1,30 +1,29 @@
 # PD_STA_REPORTS
 
-> **Purpose** — This repository stores, parses and distributes **Synopsys PrimeTime
+> **Purpose** — This repository stores, parses, and distributes **Synopsys PrimeTime
 > Static Timing Analysis (STA)** reports for every block in the CPU pipeline.
 > The tooling automatically identifies timing violations (setup, hold, clock-gating,
-> recovery/removal, multicycle), packages findings into structured reports, and
-> **emails results to the responsible block owners** so they can investigate, fix
-> bottlenecks and close the reports.
+> recovery/removal, multicycle), packages findings into structured interactive reports,
+> and **emails results to the responsible block owners** so they can investigate, fix
+> bottlenecks, and close the reports.
 
 ---
 
 > [!NOTE]
 > **Purpose of this automation**
 >
-> This automation is intended to streamline recurring model-validation
-> activities, reduce repetitive manual steps, and provide a consistent
-> record of each run. It is a practical engineering workflow for improving
-> **repeatability**, **traceability**, and **validation quality**.
+> This automation is intended to streamline recurring model-validation activities,
+> reduce repetitive manual steps, and provide a consistent record of each run.
+> It is a practical engineering workflow for improving **repeatability**,
+> **traceability**, and **validation quality**.
 >
-> It is **not** intended to make judgments about individuals, teams, or
-> organisations, and it is **not** a micromanagement or surveillance tool.
-> Emails and reports are triggered solely by **timing closure criteria** —
-> never by individual performance monitoring.
+> It is **not** intended to make judgments about individuals, teams, or organisations,
+> and it is **not** a micromanagement or surveillance tool. Emails and reports are
+> triggered solely by **timing closure criteria** — never by individual performance
+> monitoring.
 >
-> For any questions, concerns, or clarifications please **contact the
-> respective block or module owners directly** rather than raising issues
-> through this tooling.
+> For any questions, concerns, or clarifications please **contact the respective
+> block or module owners directly** rather than raising issues through this tooling.
 
 ---
 
@@ -34,101 +33,83 @@
 2.  [Prerequisites](#2-prerequisites)
 3.  [Repository Structure](#3-repository-structure)
 4.  [CPU Pipeline Directory Layout](#4-cpu-pipeline-directory-layout)
-5.  [Timing Report Naming Convention](#5-timing-report-naming-convention)
-6.  [Python Tooling — Package Overview](#6-python-tooling--package-overview)
-7.  [Quick-Start](#7-quick-start)
-8.  [Block-Level Parser — `sta_block_parser.py`](#8-block-level-parser--sta_block_parserpy)
-    - 8.1 [What it parses](#81-what-it-parses)
-    - 8.2 [Output files](#82-output-files)
-    - 8.3 [Basic usage](#83-basic-usage)
-    - 8.4 [Output control](#84-output-control)
-    - 8.5 [Logging options](#85-logging-options)
-    - 8.6 [Email usage](#86-email-usage)
-    - 8.7 [Full argument reference](#87-full-argument-reference)
-9.  [Top-Level Hierarchy Parser — `sta_top_parser.py`](#9-top-level-hierarchy-parser--sta_top_parserpy)
-    - 9.1 [What it does](#91-what-it-does)
+5.  [HTML Report Features](#5-html-report-features)
+6.  [Timing Report Naming Convention](#6-timing-report-naming-convention)
+7.  [Python Tooling — Package Overview](#7-python-tooling--package-overview)
+8.  [Quick-Start](#8-quick-start)
+9.  [Block-Level Parser — `sta_block_parser.py`](#9-block-level-parser--sta_block_parserpy)
+    - 9.1 [What it parses](#91-what-it-parses)
     - 9.2 [Output files](#92-output-files)
     - 9.3 [Basic usage](#93-basic-usage)
-    - 9.4 [Stage filtering](#94-stage-filtering)
-    - 9.5 [Per-block outputs](#95-per-block-outputs)
-    - 9.6 [Output control](#96-output-control)
-    - 9.7 [Logging options](#97-logging-options)
-    - 9.8 [Email usage](#98-email-usage)
-    - 9.9 [Full argument reference](#99-full-argument-reference)
-10. [Code Quality Checker — `sta_code_check.py`](#10-code-quality-checker--sta_code_checkpy)
-    - 10.1 [What it checks](#101-what-it-checks)
+    - 9.4 [Output control](#94-output-control)
+    - 9.5 [Logging options](#95-logging-options)
+    - 9.6 [Email usage](#96-email-usage)
+    - 9.7 [Full argument reference](#97-full-argument-reference)
+10. [Top-Level Hierarchy Parser — `sta_top_parser.py`](#10-top-level-hierarchy-parser--sta_top_parserpy)
+    - 10.1 [What it does](#101-what-it-does)
     - 10.2 [Output files](#102-output-files)
     - 10.3 [Basic usage](#103-basic-usage)
-    - 10.4 [Auto-correct usage](#104-auto-correct-usage)
-    - 10.5 [Scoping — dirs and files](#105-scoping--dirs-and-files)
-    - 10.6 [Style hints (PEP-8)](#106-style-hints-pep-8)
-    - 10.7 [Logging options](#107-logging-options)
-    - 10.8 [Full argument reference](#108-full-argument-reference)
-11. [Email Notification Workflow](#11-email-notification-workflow)
-    - 11.1 [How it works end-to-end](#111-how-it-works-end-to-end)
-    - 11.2 [Required arguments — internal SMTP](#112-required-arguments--internal-smtp)
-    - 11.3 [Authentication modes](#113-authentication-modes)
-    - 11.4 [Email content](#114-email-content)
-12. [BTO — Block Timing Owner](#12-bto--block-timing-owner)
-    - 12.1 [Definition and scope](#121-definition-and-scope)
-    - 12.2 [Responsibilities](#122-responsibilities)
-    - 12.3 [Fix types](#123-fix-types)
-    - 12.4 [BTO assignment table](#124-bto-assignment-table)
-    - 12.5 [BTO email trigger](#125-bto-email-trigger)
-    - 12.6 [Closure checklist](#126-closure-checklist)
-13. [MTO — Module Timing Owner](#13-mto--module-timing-owner)
-    - 13.1 [Definition and scope](#131-definition-and-scope)
-    - 13.2 [Responsibilities](#132-responsibilities)
-    - 13.3 [MTO stage assignment](#133-mto-stage-assignment)
-    - 13.4 [MTO email trigger](#134-mto-email-trigger)
-    - 13.5 [Tapeout sign-off criteria](#135-tapeout-sign-off-criteria)
-14. [Developer Guide — `sta_utils` Package](#14-developer-guide--sta_utils-package)
-    - 14.1 [Adding a new output format](#141-adding-a-new-output-format)
-    - 14.2 [Adding a new parsed field](#142-adding-a-new-parsed-field)
-    - 14.3 [Running the parsers programmatically](#143-running-the-parsers-programmatically)
-    - 14.4 [Log level usage guide](#144-log-level-usage-guide)
-    - 14.5 [Git workflow](#145-git-workflow)
+    - 10.4 [Stage filtering](#104-stage-filtering)
+    - 10.5 [Per-block outputs](#105-per-block-outputs)
+    - 10.6 [Output control](#106-output-control)
+    - 10.7 [Full argument reference](#107-full-argument-reference)
+11. [Code Quality Checker — `sta_code_check.py`](#11-code-quality-checker--sta_code_checkpy)
+    - 11.1 [What it checks](#111-what-it-checks)
+    - 11.2 [Basic usage](#112-basic-usage)
+    - 11.3 [Full argument reference](#113-full-argument-reference)
+12. [Email Notification Workflow](#12-email-notification-workflow)
+    - 12.1 [How it works end-to-end](#121-how-it-works-end-to-end)
+    - 12.2 [Authentication modes](#122-authentication-modes)
+13. [BTO — Block Timing Owner](#13-bto--block-timing-owner)
+    - 13.1 [Responsibilities](#131-responsibilities)
+    - 13.2 [Fix types](#132-fix-types)
+    - 13.3 [Closure checklist](#133-closure-checklist)
+14. [MTO — Module Timing Owner](#14-mto--module-timing-owner)
+    - 14.1 [Responsibilities](#141-responsibilities)
+    - 14.2 [Stage assignment](#142-stage-assignment)
+    - 14.3 [Tapeout sign-off criteria](#143-tapeout-sign-off-criteria)
+15. [Developer Guide — `sta_utils` Package](#15-developer-guide--sta_utils-package)
+    - 15.1 [Adding a new output format](#151-adding-a-new-output-format)
+    - 15.2 [Adding a new parsed field](#152-adding-a-new-parsed-field)
+    - 15.3 [Running the parsers programmatically](#153-running-the-parsers-programmatically)
+    - 15.4 [Git workflow](#154-git-workflow)
 
 ---
 
 ## 1. What This Repo Does
 
-The full end-to-end flow is:
+End-to-end flow from PrimeTime run to closed finding:
 
 ```
-PrimeTime STA run
-      │
-      │  produces .rpt files
-      ▼
-Block directory  (e.g. FETCH/PC/, EXECUTE/FPU/FADD/)
-      │
-      │  sta_block_parser.py  scans the directory
-      ▼
-Parse every .rpt  ──►  ReportRecord (design, corner, check, WNS, TNS, WHS,
-                                     slack, coverage, tool metadata, ...)
-      │
-      │  aggregate_block()
-      ▼
-BlockSummary  (worst WNS/TNS/WHS per corner, per check, overall)
-      │
-      ├──► <prefix>_dump.log        human-readable grep-friendly dump
-      ├──► <prefix>_summary.json    full structured data
-      ├──► <prefix>_report.html     self-contained interactive HTML
-      └──► email  ──► BTO           block timing owner reviews & fixes
-                      │
-                      │  after fix: re-run PrimeTime, drop new .rpt, re-parse
-                      ▼
-                 violations = 0  →  finding closed
+PrimeTime STA run  →  .rpt files land in block directory
+        │
+        │  sta_block_parser.py  /  sta_top_parser.py
+        ▼
+  parse_report()       →  ReportRecord  (design, corner, check, WNS, TNS, WHS,
+                                         slack, startpoint, endpoint, coverage, …)
+        │
+        │  aggregate_block()
+        ▼
+  BlockSummary  (worst WNS/TNS/WHS by corner, by check, overall)
+        │
+        ├──► <design>_dump.log        human-readable grep-friendly dump
+        ├──► <design>_summary.json    fully structured parsed data
+        ├──► <design>_report.html     interactive self-contained HTML report
+        └──► email  ──►  BTO          block timing owner investigates & fixes
+                          │
+                          │  fix → re-run PrimeTime → drop new .rpt → re-parse
+                          ▼
+                     violations = 0  →  finding CLOSED
 
-      (in parallel, sta_top_parser.py rolls up ALL 57 blocks)
-            │
-            ▼
-      TopSummary  (by stage, by corner, by check, per block)
-            │
-            ├──► _TOP_dump.log
-            ├──► _TOP_summary.json
-            ├──► _TOP_report.html
-            └──► email  ──► MTO    module timing owner tracks convergence
+  (in parallel, sta_top_parser.py rolls up ALL 57 blocks)
+        │
+        ▼
+  TopSummary  (by pipeline stage, by corner, by check, per block)
+        │
+        ├──► _TOP_dump.log
+        ├──► _TOP_summary.json
+        ├──► _TOP_report.html         hierarchy rollup with per-block expand panels
+        └──► email  ──►  MTO          module timing owner tracks chip-level convergence
 ```
 
 **Fields extracted from every `.rpt` file:**
@@ -136,24 +117,22 @@ BlockSummary  (worst WNS/TNS/WHS per corner, per check, overall)
 | Field | Description |
 |---|---|
 | `design` | Block name (e.g. `PC_TOP`) |
-| `corner` | PVT corner (e.g. `ss_0p72v_0p72v_125c`) |
+| `corner` | PVT corner string (e.g. `ss_0p72v_0p72v_125c`) |
 | `check` | `setup` / `hold` / `cg` / `recovery` / `multicycle` |
 | `clock` | Clock domain name (e.g. `CLK_CORE`) |
-| `period_ns` | Clock period in nanoseconds |
-| `freq_mhz` | Clock frequency in MHz |
+| `period_ns` / `freq_mhz` | Clock period and frequency |
 | `WNS` | Worst Negative Slack — most critical path |
 | `TNS` | Total Negative Slack — sum of all failing slacks |
 | `WHS` | Worst Hold Slack — tightest hold margin |
 | `slack_status` | `MET` or `VIOLATED` |
 | `startpoint` | Critical path start flip-flop / port |
 | `endpoint` | Critical path end flip-flop / port |
+| `sub_units` | Per sub-unit WNS / TNS / WHS breakdown table |
 | `coverage_pct` | Constraint coverage percentage |
-| `total_endpoints` | Total register endpoints in design |
-| `constrained_endpoints` | Endpoints with timing constraints applied |
-| `tool` | PrimeTime version string |
-| `liberty` | Liberty (.db) file used |
-| `elapsed` | PrimeTime runtime for this run |
-| `peak_mem` | Peak memory usage |
+| `total_endpoints` | Total register endpoints in the design |
+| `tool` | Synopsys PrimeTime version string |
+| `liberty` | Liberty `.db` file used for this corner |
+| `elapsed` / `peak_mem` | PrimeTime runtime and peak memory usage |
 
 ---
 
@@ -161,33 +140,31 @@ BlockSummary  (worst WNS/TNS/WHS per corner, per check, overall)
 
 ### Python
 
-- Python **3.10 or newer** (uses `match` statement syntax internally via dataclasses)
-- No external dependencies required for core parsing
-
-### Optional
+- Python **3.10 or newer**
+- No external dependencies for core parsing or HTML generation
 
 ```bash
-pip install pycodestyle   # only needed for sta_code_check.py --style flag
+# Optional — only needed for sta_code_check.py --style flag
+pip install pycodestyle
 ```
 
 ### Git
 
 ```bash
-git --version    # any version >= 2.20 is fine
+git --version   # any version >= 2.20
 ```
 
-### Internal SMTP (for email)
+### Internal SMTP (for email features)
 
-Contact your **IT / infrastructure team** for:
+Contact your IT / infrastructure team for:
 
 | Setting | What to ask for |
 |---|---|
 | `smtp-host` | Internal SMTP relay hostname (e.g. `smtp.company.com`) |
 | `smtp-port` | `587` for STARTTLS  or  `465` for SSL/SMTPS |
-| `smtp-user` | Service account username (if auth is required on the relay) |
+| `smtp-user` | Service account username (if auth is required) |
 | `smtp-pass` | Service account password |
 | Auth mode | STARTTLS (`--email-tls`) or SSL (`--email-ssl`) or none |
-| Relay whitelist | Whether the sender address needs to be whitelisted |
 
 ---
 
@@ -201,108 +178,123 @@ PD_STA_REPORTS/
 │
 ├── sta_block_parser.py              ← CLI: parse one block directory
 ├── sta_top_parser.py                ← CLI: parse full hierarchy (all 57 blocks)
-├── sta_code_check.py                ← CLI: syntax / indentation / style checker
+├── sta_code_check.py                ← CLI: Python syntax / style / indent checker
 │
 ├── sta_utils/                       ← importable Python package
-│   ├── __init__.py
 │   ├── core/
-│   │   ├── __init__.py
 │   │   ├── models.py                ← dataclasses: ReportRecord, BlockSummary,
 │   │   │                               TopSummary, BlockEntry, CornerGroup, SubUnitRow
 │   │   ├── parser.py                ← regex engine: parse_report(), scan_block_dir()
 │   │   └── aggregator.py           ← rollup: aggregate_block(), aggregate_top()
+│   │                                   sorts reports: setup violations (WNS ↑) first,
+│   │                                   then hold violations (WHS ↑), then passing
 │   └── outputs/
-│       ├── __init__.py
-│       ├── logger.py                ← setup_logging(): 7 levels, rotating file,
-│       │                               UTF-8 console, STALogger wrapper
-│       ├── dump_log.py              ← write_dump_log(): structured plain-text dump
-│       ├── json_writer.py           ← write_json(): dataclass → JSON
+│       ├── logger.py                ← setup_logging() — 7 levels, rotating file
+│       ├── dump_log.py              ← write_dump_log() — structured plain-text
+│       ├── json_writer.py           ← write_json() — dataclass → JSON
 │       ├── html_writer.py           ← write_block_html() / write_top_html()
+│       │                               sortable tables, KPI tiles, expand panels
 │       └── email_sender.py         ← send_email(), EmailConfig dataclass
 │
 ├── FETCH/                           ─┐
 ├── DECODE/                           │
 ├── RENAME_DISPATCH/                  │  CPU Pipeline block directories
-├── ISSUE/                            │  57 blocks total
-├── EXECUTE/                          │  Each leaf dir holds 10 × .rpt files
-├── MEMORY/                           │  (one per corner / check type)
+├── ISSUE/                            │  57 blocks total, 10 .rpt files each
+├── EXECUTE/                          │
+├── MEMORY/                           │
 ├── WRITEBACK/                        │
 ├── COMMIT/                           │
 ├── CACHE/                           ─┘
-└── UNCORE/
+├── UNCORE/
+│
+├── _TOP_report.html                 ← latest full-hierarchy HTML report
+├── _TOP_summary.json                ← latest full-hierarchy JSON
+└── _TOP_dump.log                    ← latest full-hierarchy dump log
 ```
 
 ---
 
 ## 4. CPU Pipeline Directory Layout
 
-10 pipeline stages → 57 leaf block directories → 570 `.rpt` files total.
+10 pipeline stages → 57 leaf block directories → 570 `.rpt` files.
 
-```
-FETCH/                           (7 blocks)
-  PC/                BPU/BTB/           BPU/PHT/
-  BPU/RAS/           ICACHE/            ITLB/
-  FETCH_QUEUE/
-
-DECODE/                          (5 blocks)
-  PRE_DECODE/        INSTRUCTION_DECODER/
-  MICRO_OP_SPLITTER/ INSTRUCTION_LENGTH_DECODER/
-  DECODE_QUEUE/
-
-RENAME_DISPATCH/                 (4 blocks)
-  RAT/               FREE_LIST/         ROB/
-  DISPATCH_QUEUE/
-
-ISSUE/                           (4 blocks)
-  IQ_INT/            IQ_FP/             IQ_LSU/
-  WAKEUP_SELECT/
-
-EXECUTE/                         (13 blocks)
-  ALU/ALU0/          ALU/ALU1/          MUL/
-  DIV/               BRU/               SIMD_VEC/
-  FPU/FADD/          FPU/FMUL/          FPU/FDIV/
-  FPU/FSQRT/         LSU/LDU/           LSU/STU/
-  LSU/STL_FORWARD/
-
-MEMORY/                          (6 blocks)
-  LDQ/               STQ/               DCACHE/
-  DTLB/              MOB/               MSHR/
-
-WRITEBACK/                       (3 blocks)
-  RESULT_BROADCAST_BUS/          PRF/INT_RF/
-  PRF/FP_RF/
-
-COMMIT/                          (4 blocks)
-  ROB_COMMIT/        ARF/               EXCEPTION_HANDLER/
-  RETIRE_QUEUE/
-
-CACHE/                           (5 blocks)
-  L1I/               L1D/               L2/
-  L3_LLC/            CACHE_CONTROLLER/
-
-UNCORE/                          (6 blocks)
-  MEMORY_CONTROLLER/ BIU/               INTERRUPT_CONTROLLER/
-  DEBUG_UNIT/        PMU/               CLOCK_DOMAIN/
-```
+| Stage | Blocks | Leaf directories |
+|---|---|---|
+| `FETCH` | 7 | `PC` `ICACHE` `ITLB` `FETCH_QUEUE` `BPU/BTB` `BPU/PHT` `BPU/RAS` |
+| `DECODE` | 5 | `PRE_DECODE` `INSTRUCTION_DECODER` `INSTRUCTION_LENGTH_DECODER` `MICRO_OP_SPLITTER` `DECODE_QUEUE` |
+| `RENAME_DISPATCH` | 4 | `RAT` `FREE_LIST` `ROB` `DISPATCH_QUEUE` |
+| `ISSUE` | 4 | `IQ_INT` `IQ_FP` `IQ_LSU` `WAKEUP_SELECT` |
+| `EXECUTE` | 13 | `ALU/ALU0` `ALU/ALU1` `MUL` `DIV` `BRU` `SIMD_VEC` `FPU/FADD` `FPU/FMUL` `FPU/FDIV` `FPU/FSQRT` `LSU/LDU` `LSU/STU` `LSU/STL_FORWARD` |
+| `MEMORY` | 6 | `LDQ` `STQ` `DCACHE` `DTLB` `MOB` `MSHR` |
+| `WRITEBACK` | 3 | `RESULT_BROADCAST_BUS` `PRF/INT_RF` `PRF/FP_RF` |
+| `COMMIT` | 4 | `ROB_COMMIT` `ARF` `EXCEPTION_HANDLER` `RETIRE_QUEUE` |
+| `CACHE` | 5 | `L1I` `L1D` `L2` `L3_LLC` `CACHE_CONTROLLER` |
+| `UNCORE` | 6 | `MEMORY_CONTROLLER` `BIU` `INTERRUPT_CONTROLLER` `DEBUG_UNIT` `PMU` `CLOCK_DOMAIN` |
 
 ---
 
-## 5. Timing Report Naming Convention
+## 5. HTML Report Features
+
+Both the top-level `_TOP_report.html` and each per-block `*_report.html` include the same interactive features.
+
+### Status banner and KPI tiles
+
+- Colour-coded banner: 🟢 **MET** (green) / 🔴 **VIOLATED** (red)
+- KPI tiles: Worst WNS, Worst TNS, Worst WHS, Violations, Blocks / Reports parsed
+
+### Sortable summary tables
+
+- **By Corner** — WNS / TNS / WHS / status per PVT corner
+- **By Check Type** — setup / hold / clock-gating / recovery / multicycle
+- **By Pipeline Stage** *(top-level only)* — stage-level rollup with MTO name
+- Click any column header to sort ascending / descending
+
+### Per-Report Detail table — violation ordering
+
+Reports are automatically ordered before display:
+
+| Position | Group | Sort key |
+|---|---|---|
+| 1st | ⚠ Setup Violations | WNS ascending (worst = most negative first) |
+| 2nd | ⚠ Hold Violations | WHS ascending (worst first) |
+| 3rd | ✓ Passing Reports | WNS descending (best margin first) |
+
+Coloured section-separator rows mark each group clearly.
+
+### ▶ Expand button — critical path detail (per-report)
+
+Every **VIOLATED** row in the Per-Report Detail table has a **`▶ Paths`** button.
+Click it to expand an inline panel showing:
+
+| Panel section | Contents |
+|---|---|
+| **Critical Path** | Startpoint → Endpoint, Corner, Clock / Period, Slack (colour-coded), WNS / TNS, WHS |
+| **Sub-Unit Breakdown** | Per sub-unit WNS / TNS / WHS table, sorted worst-first; violated sub-units highlighted in red |
+
+Click again to collapse.
+
+### ▶ Top Paths button — top-5 violations per block (top-level only)
+
+In `_TOP_report.html`, every **VIOLATED** block row in the Per-Block Rollup table
+has a **`▶ Top Paths`** button. Click it to see up to **5 worst-violating paths**
+for that block, each as a card showing:
+
+- **Card header** — Path N · Setup/Hold · Corner · WNS or WHS value (red)
+- **Left column** — File, Startpoint, Endpoint, Clock/Period, Slack, WNS/TNS, WHS
+- **Right column** — Sub-unit breakdown sorted worst-first
+
+Setup violations are shown before hold violations; within each group paths are
+sorted by WNS / WHS ascending (most negative = worst = first).
+
+---
+
+## 6. Timing Report Naming Convention
 
 Every `.rpt` file follows the pattern:
 
 ```
 <NN>_<CHECK>_<CORNER>_<DESIGN>.rpt
 ```
-
-### Token definitions
-
-| Token | Values | Meaning |
-|---|---|---|
-| `NN` | `01` – `10` | Run order / check index |
-| `CHECK` | `SETUP` `HOLD` `CG_CHECK` `RECOVERY` `MULTICYCLE` | Timing check type |
-| `CORNER` | `SS_125C` `FF_N40C` `TT_25C` `SS_M40C` `FF_125C` `LVSS_125C` | PVT corner shorthand |
-| `DESIGN` | e.g. `PC_TOP` `FADD_TOP` `ROB_TOP` | PrimeTime design name |
 
 ### The 10 standard reports per block
 
@@ -312,77 +304,155 @@ Every `.rpt` file follows the pattern:
 | 02 | `02_HOLD_FF_N40C` | hold | `ff_1p16v_1p16v_n40c` | Worst-case hold — fast silicon, cold |
 | 03 | `03_SETUP_TT_25C` | setup | `tt_0p90v_0p90v_25c` | Typical setup — nominal |
 | 04 | `04_HOLD_TT_25C` | hold | `tt_0p90v_0p90v_25c` | Typical hold — nominal |
-| 05 | `05_SETUP_SS_M40C` | setup | `ss_0p72v_0p72v_n40c` | Cold setup — slow silicon, cold |
+| 05 | `05_SETUP_SS_M40C` | setup | `ss_0p72v_0p72v_m40c` | Cold setup — slow silicon, cold |
 | 06 | `06_HOLD_FF_125C` | hold | `ff_1p16v_1p16v_125c` | Hot hold — fast silicon, hot |
-| 07 | `07_SETUP_LVSS_125C` | setup | `ss_0p63v_0p63v_125c` | Ultra-low-voltage setup |
+| 07 | `07_SETUP_LVSS_125C` | setup | `lvss_0p63v_0p63v_125c` | Ultra-low-voltage setup |
 | 08 | `08_CG_CHECK_TT_25C` | clock-gating | `tt_0p90v_0p90v_25c` | ICG enable timing |
-| 09 | `09_RECOVERY_SS_125C` | recovery | `ss_0p72v_0p72v_125c` | Async reset recovery/removal |
+| 09 | `09_RECOVERY_SS_125C` | recovery | `ss_0p72v_0p72v_125c` | Async reset recovery / removal |
 | 10 | `10_MULTICYCLE_TT_25C` | multicycle | `tt_0p90v_0p90v_25c` | 2-cycle path checks |
 
-### Example filenames
+### NOTMET example reports (injected for demonstration)
 
-```
-01_SETUP_SS_125C_PC_TOP.rpt
-02_HOLD_FF_N40C_FADD_TOP.rpt
-08_CG_CHECK_TT_25C_ROB_TOP.rpt
-10_MULTICYCLE_TT_25C_DCACHE_TOP.rpt
-```
+The following blocks currently have **VIOLATED** reports to demonstrate the tooling's
+violation detection, expand panels, and sorting features:
+
+| Block | File | Check | Corner | WNS / WHS |
+|---|---|---|---|---|
+| `WRITEBACK/PRF/INT_RF` | `07_SETUP_LVSS_125C_INT_RF_TOP.rpt` | setup | lvss_125°C | **−0.231 ns** |
+| `EXECUTE/MUL` | `05_SETUP_SS_M40C_MUL_TOP.rpt` | setup | ss_−40°C | **−0.198 ns** |
+| `CACHE/L2` | `01_SETUP_SS_125C_L2_TOP.rpt` | setup | ss_125°C | **−0.145 ns** |
+| `EXECUTE/ALU/ALU0` | `01_SETUP_SS_125C_ALU0_TOP.rpt` | setup | ss_125°C | **−0.112 ns** |
+| `DECODE/INSTRUCTION_DECODER` | `01_SETUP_SS_125C_INSTR_DECODER_TOP.rpt` | setup | ss_125°C | **−0.089 ns** |
+| `MEMORY/MSHR` | `03_SETUP_TT_25C_MSHR_TOP.rpt` | setup | tt_25°C | **−0.063 ns** |
+| `FETCH/ICACHE` | `08_CG_CHECK_TT_25C_ICACHE_TOP.rpt` | CG check | tt_25°C | **−0.048 ns** |
+| `RENAME_DISPATCH/ROB` | `02_HOLD_FF_N40C_ROB_TOP.rpt` | hold | ff_−40°C | WHS **−0.033 ns** |
+| `ISSUE/IQ_INT` | `06_HOLD_FF_125C_IQ_INT_TOP.rpt` | hold | ff_125°C | WHS **−0.041 ns** |
 
 ---
 
-## 6. Python Tooling — Package Overview
+## 7. Python Tooling — Package Overview
 
-### `sta_utils` — module-by-module breakdown
+### `sta_utils` module-by-module
 
-| Module | Public API | Standalone reusable |
+| Module | Public API | Notes |
 |---|---|---|
-| `core/models.py` | `ReportRecord` `SubUnitRow` `BlockSummary` `TopSummary` `BlockEntry` `CornerGroup` | Yes — pure dataclasses, no deps |
-| `core/parser.py` | `parse_report(path, logger)` `scan_block_dir(dir, pattern, logger)` | Yes |
-| `core/aggregator.py` | `aggregate_block(records, dir)` `aggregate_top(summaries, root)` | Yes |
-| `outputs/logger.py` | `setup_logging(...)` `get_logger(name)` `log_section()` `log_kv()` `log_table_row()` `STALogger` | Yes — drop into any project |
-| `outputs/dump_log.py` | `write_dump_log(summary, path, logger)` | Yes — auto-detects Block vs Top |
-| `outputs/json_writer.py` | `write_json(summary, path, logger)` | Yes — works on any dataclass |
-| `outputs/html_writer.py` | `write_block_html(summary, path, logger)` `write_top_html(summary, path, logger)` | Yes |
-| `outputs/email_sender.py` | `send_email(summary, EmailConfig, html_path, logger)` | Yes — zero CLI coupling |
+| `core/models.py` | `ReportRecord` `SubUnitRow` `BlockSummary` `TopSummary` `BlockEntry` `CornerGroup` | Pure dataclasses — no dependencies |
+| `core/parser.py` | `parse_report(path, logger)` `scan_block_dir(dir, pattern, logger)` | Lenient regex parser — missing fields default gracefully |
+| `core/aggregator.py` | `aggregate_block(records, dir)` `aggregate_top(summaries, root)` | Auto-sorts: setup violations (WNS ↑) → hold violations (WHS ↑) → passing |
+| `outputs/logger.py` | `setup_logging(...)` | 7 log levels: TRACE DEBUG INFO SUCCESS WARNING ERROR FATAL |
+| `outputs/dump_log.py` | `write_dump_log(summary, path, logger)` | Auto-detects Block vs Top summary |
+| `outputs/json_writer.py` | `write_json(summary, path, logger)` | Works on any dataclass via `dataclasses.asdict()` |
+| `outputs/html_writer.py` | `write_block_html(summary, path, logger)` `write_top_html(summary, path, logger)` | Sortable tables, KPI tiles, expand panels, section separators |
+| `outputs/email_sender.py` | `send_email(summary, EmailConfig, html_path, logger)` | Zero CLI coupling — usable standalone |
 
-### Log levels (lowest → highest severity)
+### Log levels
 
-| Level | Value | Method | Use when |
-|---|---|---|---|
-| TRACE | 5 | `logger.trace()` | Fine-grained loop / regex match detail |
-| DEBUG | 10 | `logger.debug()` | Per-file parsing internals, field values |
-| INFO | 20 | `logger.info()` | Normal progress milestones |
-| SUCCESS | 25 | `logger.success()` | Explicit confirmation something finished correctly |
-| WARNING | 30 | `logger.warning()` / `.warn()` | Non-fatal anomaly — skipped file, missing field |
-| ERROR | 40 | `logger.error()` | Recoverable failure — file unreadable, write failed |
-| FATAL | 50 | `logger.fatal()` | Unrecoverable error — aborts run |
+| Level | Value | Use when |
+|---|---|---|
+| TRACE | 5 | Fine-grained loop / regex match detail |
+| DEBUG | 10 | Per-file parsing internals, extracted field values |
+| INFO | 20 | Normal progress milestones |
+| SUCCESS | 25 | Explicit confirmation — block parsed clean, email sent |
+| WARNING | 30 | Non-fatal anomaly — skipped file, missing field |
+| ERROR | 40 | Recoverable failure — file unreadable, write failed |
+| FATAL | 50 | Unrecoverable — aborts run |
 
 ---
 
-## 7. Quick-Start
+## 8. Quick-Start
 
 ```bash
 # 1. Clone
 git clone https://github.com/ssbagi/PD_STA_REPORTS.git
 cd PD_STA_REPORTS
 
-# 2. (Optional) install pycodestyle for the --style flag
+# 2. (Optional) install pycodestyle for --style flag
 pip install pycodestyle
 
-# 3. Verify code quality of the tooling itself
-python sta_code_check.py
-
-# 4. Parse a single block — outputs written into FETCH/PC/
+# 3. Parse a single block — outputs written into FETCH/PC/
 python sta_block_parser.py --dir FETCH/PC --verbose
 
-# 5. Parse the full hierarchy — outputs written to current directory
-python sta_top_parser.py --verbose
+# 4. Parse full hierarchy with per-block outputs — 57 blocks, 1007 reports
+python sta_top_parser.py --per-block --verbose
 
-# 6. BTO email — send block findings to the block owner
-python sta_block_parser.py \
-    --dir FETCH/PC \
+# 5. Open the top-level report in your browser
+#    Windows:
+start _TOP_report.html
+#    macOS:
+open  _TOP_report.html
+#    Linux:
+xdg-open _TOP_report.html
+
+# 6. Check code quality of the tooling
+python sta_code_check.py --verbose
+```
+
+---
+
+## 9. Block-Level Parser — `sta_block_parser.py`
+
+### 9.1 What it parses
+
+Scans **one block directory** (e.g. `FETCH/PC/`) for all `.rpt` files, parses each
+with the `sta_utils.core.parser` regex engine, aggregates WNS / TNS / WHS across all
+reports, and writes the four output artefacts.
+
+### 9.2 Output files
+
+| File | Description |
+|---|---|
+| `<design>_dump.log` | Structured plain-text dump: aggregate, by-corner, by-check, per-report |
+| `<design>_summary.json` | Full parsed data — all records, sub-units, metadata |
+| `<design>_report.html` | Self-contained interactive HTML with expand panels and sortable tables |
+| `<design>_run_<ts>.log` | Rotating DEBUG run log |
+
+### 9.3 Basic usage
+
+```bash
+# Minimal — scan FETCH/PC, outputs written into the same directory
+python sta_block_parser.py --dir FETCH/PC
+
+# Other blocks
+python sta_block_parser.py --dir DECODE/INSTRUCTION_DECODER
+python sta_block_parser.py --dir EXECUTE/FPU/FADD
+python sta_block_parser.py --dir MEMORY/MSHR
+python sta_block_parser.py --dir CACHE/L2
+python sta_block_parser.py --dir WRITEBACK/PRF/INT_RF
+
+# Custom output directory
+python sta_block_parser.py --dir FETCH/PC --outdir ./reports
+
+# Only setup reports
+python sta_block_parser.py --dir EXECUTE/ALU/ALU0 --pattern "*_SETUP_*.rpt"
+
+# Only hold reports
+python sta_block_parser.py --dir ISSUE/IQ_INT --pattern "*_HOLD_*.rpt"
+```
+
+### 9.4 Output control
+
+```bash
+python sta_block_parser.py --dir FETCH/PC --no-json       # HTML + dump only
+python sta_block_parser.py --dir FETCH/PC --no-html       # JSON + dump only
+python sta_block_parser.py --dir FETCH/PC --no-dump       # JSON + HTML only
+python sta_block_parser.py --dir FETCH/PC --no-json --no-dump  # HTML only
+```
+
+### 9.5 Logging options
+
+```bash
+python sta_block_parser.py --dir FETCH/PC                  # INFO on console (default)
+python sta_block_parser.py --dir FETCH/PC --verbose        # DEBUG on console
+python sta_block_parser.py --dir FETCH/PC --logfile ./fetch_pc.log
+```
+
+### 9.6 Email usage
+
+```bash
+# STARTTLS — recommended (port 587)
+python sta_block_parser.py --dir FETCH/PC \
     --email \
-    --email-to   bto-fetch@company.com \
+    --email-to   bto-pc@company.com \
     --email-from sta-bot@company.com \
     --smtp-host  smtp.company.com \
     --smtp-port  587 \
@@ -390,163 +460,28 @@ python sta_block_parser.py \
     --email-attach-html \
     --email-subject-prefix "[STA-BTO]"
 
-# 7. MTO weekly rollup — send full hierarchy findings to leads
-python sta_top_parser.py \
-    --per-block \
-    --outdir ./reports/week47 \
-    --prefix WEEK47 \
-    --email \
-    --email-to   mto@company.com  chip-lead@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][WEEK47]"
-```
-
----
-
-## 8. Block-Level Parser — `sta_block_parser.py`
-
-### 8.1 What it parses
-
-Scans **one block directory** (e.g. `FETCH/PC/`) for all `.rpt` files.
-Parses each file with the `sta_utils.core.parser` regex engine, then aggregates
-WNS / TNS / WHS across all reports using `sta_utils.core.aggregator`.
-
-### 8.2 Output files
-
-| File | When written | Description |
-|---|---|---|
-| `<prefix>_dump.log` | Always (unless `--no-dump`) | Structured plain-text dump: aggregate, by-corner, by-check, per-report detail |
-| `<prefix>_summary.json` | Always (unless `--no-json`) | Full parsed data — all records, sub-units, metadata |
-| `<prefix>_report.html` | Always (unless `--no-html`) | Self-contained interactive HTML with sortable tables, KPI tiles, status banner |
-| `_run_<timestamp>.log` | Always | Rotating DEBUG run log (file) + INFO on console |
-
-`<prefix>` defaults to the PrimeTime design name (e.g. `PC_TOP`).
-
-### 8.3 Basic usage
-
-```bash
-# Minimal — scan FETCH/PC, all outputs in the same directory
-python sta_block_parser.py --dir FETCH/PC
-
-# Different blocks
-python sta_block_parser.py --dir DECODE/INSTRUCTION_DECODER
-python sta_block_parser.py --dir EXECUTE/FPU/FADD
-python sta_block_parser.py --dir MEMORY/DCACHE
-python sta_block_parser.py --dir CACHE/L3_LLC
-python sta_block_parser.py --dir UNCORE/MEMORY_CONTROLLER
-
-# Custom output directory
-python sta_block_parser.py --dir FETCH/PC --outdir ./reports
-
-# Custom output directory + custom filename prefix
-python sta_block_parser.py --dir FETCH/PC --outdir ./reports --prefix PC_TOP_run1
-
-# Only scan the 10 numbered reports (excludes old placeholder .rpt)
-python sta_block_parser.py --dir FETCH/PC --pattern "0[0-9]_*.rpt"
-
-# Only scan setup reports
-python sta_block_parser.py --dir EXECUTE/FPU/FADD --pattern "*_SETUP_*.rpt"
-
-# Only scan hold reports
-python sta_block_parser.py --dir EXECUTE/FPU/FADD --pattern "*_HOLD_*.rpt"
-```
-
-### 8.4 Output control
-
-```bash
-# Skip JSON — only produce HTML + dump log
-python sta_block_parser.py --dir FETCH/PC --no-json
-
-# Skip HTML — only produce JSON + dump log
-python sta_block_parser.py --dir FETCH/PC --no-html
-
-# Skip dump log — only produce JSON + HTML
-python sta_block_parser.py --dir FETCH/PC --no-dump
-
-# Minimal output — JSON only
-python sta_block_parser.py --dir FETCH/PC --no-html --no-dump
-
-# HTML only
-python sta_block_parser.py --dir FETCH/PC --no-json --no-dump
-```
-
-### 8.5 Logging options
-
-```bash
-# INFO level on console (default)
-python sta_block_parser.py --dir FETCH/PC
-
-# DEBUG level on console
-python sta_block_parser.py --dir FETCH/PC --verbose
-
-# Explicit log file path
-python sta_block_parser.py --dir FETCH/PC --logfile ./logs/FETCH_PC.log
-
-# Verbose + custom log file
-python sta_block_parser.py --dir FETCH/PC --verbose --logfile ./logs/FETCH_PC_debug.log
-```
-
-### 8.6 Email usage
-
-#### STARTTLS (recommended — port 587)
-
-```bash
-python sta_block_parser.py --dir FETCH/PC \
-    --email \
-    --email-to   eng@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls
-```
-
-#### STARTTLS + authenticated + HTML attachment
-
-```bash
-python sta_block_parser.py --dir MEMORY/MSHR \
-    --email \
-    --email-to   lead@company.com  bto@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --smtp-user  sta-bot \
-    --smtp-pass  "<password>" \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-BLOCK][URGENT]"
-```
-
-#### SSL/SMTPS (port 465)
-
-```bash
+# VIOLATION urgency flag — multiple recipients
 python sta_block_parser.py --dir EXECUTE/ALU/ALU0 \
     --email \
-    --email-to   owner@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  465 \
-    --email-ssl \
-    --email-attach-html
-```
-
-#### Multiple recipients + custom subject
-
-```bash
-python sta_block_parser.py --dir CACHE/L1D \
-    --email \
-    --email-to   bto@company.com  reviewer@company.com  mgr@company.com \
+    --email-to   bto-alu@company.com  sta-lead@company.com \
     --email-from sta-bot@company.com \
     --smtp-host  smtp.company.com \
     --smtp-port  587 \
     --email-tls \
     --email-attach-html \
     --email-subject-prefix "[STA-BTO][VIOLATION]"
+
+# SSL/SMTPS (port 465)
+python sta_block_parser.py --dir MEMORY/MSHR \
+    --email \
+    --email-to   bto-mem@company.com \
+    --smtp-host  smtp.company.com \
+    --smtp-port  465 \
+    --email-ssl \
+    --email-attach-html
 ```
 
-### 8.7 Full argument reference
+### 9.7 Full argument reference
 
 ```
 Input:
@@ -554,8 +489,8 @@ Input:
   --pattern GLOB          Glob pattern for report files  [default: *.rpt]
 
 Output:
-  --outdir PATH           Directory for generated files  [default: same as --dir]
-  --prefix STR            Filename prefix for all outputs  [default: <design name>]
+  --outdir PATH           Output directory  [default: same as --dir]
+  --prefix STR            Filename prefix   [default: <design name>]
   --no-json               Skip JSON output
   --no-html               Skip HTML output
   --no-dump               Skip dump-log output
@@ -566,229 +501,107 @@ Logging:
 
 Email:
   --email                 Send summary email on completion
-  --email-to ADDR ...     Recipient addresses  (required when --email is set)
+  --email-to ADDR ...     Recipient addresses
   --email-from ADDR       Sender address  [default: sta-bot@company.com]
-  --smtp-host HOST        SMTP server hostname  [default: smtp.company.com]
-  --smtp-port PORT        SMTP server port  [default: 587]
-  --smtp-user USER        SMTP username  (optional — for authenticated relays)
-  --smtp-pass PASS        SMTP password  (optional — for authenticated relays)
-  --email-tls             Use STARTTLS  (use with --smtp-port 587)
-  --email-ssl             Use SSL/SMTPS  (use with --smtp-port 465)
-  --email-attach-html     Attach the HTML report file to the email
+  --smtp-host HOST        SMTP server hostname
+  --smtp-port PORT        SMTP port  [default: 587]
+  --smtp-user USER        SMTP username (optional)
+  --smtp-pass PASS        SMTP password (optional)
+  --email-tls             Use STARTTLS (port 587)
+  --email-ssl             Use SSL/SMTPS (port 465)
+  --email-attach-html     Attach the HTML report to the email
   --email-subject-prefix  Subject line prefix  [default: [STA Block]]
 ```
 
 ---
 
-## 9. Top-Level Hierarchy Parser — `sta_top_parser.py`
+## 10. Top-Level Hierarchy Parser — `sta_top_parser.py`
 
-### 9.1 What it does
+### 10.1 What it does
 
-Recursively walks the entire `PD_STA_REPORTS` tree, finds every leaf directory
-that contains `.rpt` files, parses them all, then produces a **rolled-up
-hierarchy report** across all 57 blocks and 570 reports using `aggregate_top()`.
+Recursively walks the full `PD_STA_REPORTS` tree, finds every leaf directory
+containing `.rpt` files, parses them all (currently **57 blocks, 1 007 reports**),
+rolls up to a `TopSummary`, and writes the four top-level output artefacts.
 
-### 9.2 Output files
+With `--per-block`, also writes a `_dump.log`, `_summary.json`, and `_report.html`
+directly into each block directory.
 
-| File | When written | Description |
-|---|---|---|
-| `<prefix>_dump.log` | Always (unless `--no-dump`) | Full hierarchy dump: by-stage, by-corner, by-check, per-block table |
-| `<prefix>_summary.json` | Always (unless `--no-json`) | Complete rollup JSON — all blocks, all records |
-| `<prefix>_report.html` | Always (unless `--no-html`) | Interactive HTML: stage/corner/check summary + per-block rollup table |
-| `<prefix>_run_<ts>.log` | Always | Full rotating DEBUG run log |
+### 10.2 Output files
 
-Default `<prefix>` is `_TOP`.
+| File | Description |
+|---|---|
+| `_TOP_dump.log` | Full hierarchy dump: by-stage, by-corner, by-check, per-block table |
+| `_TOP_summary.json` | Complete rollup JSON — all 57 blocks, all records |
+| `_TOP_report.html` | Interactive HTML: stage / corner / check summaries + per-block ▶ Top Paths expand |
+| `_TOP_run_<ts>.log` | Full rotating DEBUG run log |
 
-With `--per-block`, also writes into every block directory:
+Per-block artefacts (with `--per-block`):
 
 | File | Description |
 |---|---|
 | `<design>_dump.log` | Block-level dump |
 | `<design>_summary.json` | Block-level JSON |
-| `<design>_report.html` | Block-level HTML |
+| `<design>_report.html` | Block-level HTML with ▶ Paths expand per violated report |
 
-### 9.3 Basic usage
+### 10.3 Basic usage
 
 ```bash
-# Full scan from current directory (PD_STA_REPORTS root)
+# Full scan — all 57 blocks, outputs written to current directory
 python sta_top_parser.py
 
-# Explicit root directory
-python sta_top_parser.py --root .
+# Full scan + per-block artefacts in every block directory
+python sta_top_parser.py --per-block
 
-# Explicit root + custom output directory
-python sta_top_parser.py --root . --outdir ./sta_outputs
+# Custom output directory
+python sta_top_parser.py --per-block --outdir ./reports/week47
 
-# Custom output prefix
-python sta_top_parser.py --prefix STA_ROLLUP_W47
+# Named prefix (e.g. for weekly snapshots)
+python sta_top_parser.py --per-block --outdir ./reports/week47 --prefix WEEK47
 
 # Verbose console output
-python sta_top_parser.py --verbose
-
-# Limit recursion depth (useful for shallow scans)
-python sta_top_parser.py --max-depth 3
+python sta_top_parser.py --per-block --verbose
 ```
 
-### 9.4 Stage filtering
+### 10.4 Stage filtering
 
 ```bash
-# Scan FETCH stage only
+# Single stage
 python sta_top_parser.py --stages FETCH
+python sta_top_parser.py --stages EXECUTE
 
-# Scan front-end stages
-python sta_top_parser.py --stages FETCH DECODE
-
-# Scan front-end + rename + issue
+# Multiple stages
 python sta_top_parser.py --stages FETCH DECODE RENAME_DISPATCH ISSUE
 
-# Scan execute + memory
-python sta_top_parser.py --stages EXECUTE MEMORY
-
-# Scan all except UNCORE
+# All except UNCORE
 python sta_top_parser.py \
     --stages FETCH DECODE RENAME_DISPATCH ISSUE EXECUTE \
              MEMORY WRITEBACK COMMIT CACHE
-
-# Scan cache hierarchy only
-python sta_top_parser.py --stages CACHE
-
-# Scan uncore / system blocks only
-python sta_top_parser.py --stages UNCORE
 ```
 
-### 9.5 Per-block outputs
+### 10.5 Per-block outputs
 
 ```bash
-# Generate per-block artefacts inside each block directory
-python sta_top_parser.py --per-block
-
-# Per-block outputs + top-level outputs in a separate folder
-python sta_top_parser.py --per-block --outdir ./weekly_reports
-
-# Per-block for FETCH only
-python sta_top_parser.py --per-block --stages FETCH
+python sta_top_parser.py --per-block                          # all blocks
+python sta_top_parser.py --per-block --stages FETCH           # FETCH only
+python sta_top_parser.py --per-block --outdir ./weekly_out    # custom dir
 ```
 
-### 9.6 Output control
+### 10.6 Output control
 
 ```bash
-# Skip JSON — HTML + dump log only
-python sta_top_parser.py --no-json
-
-# Skip HTML — JSON + dump log only
-python sta_top_parser.py --no-html
-
-# Dump log only
-python sta_top_parser.py --no-json --no-html
-
-# JSON only
-python sta_top_parser.py --no-html --no-dump
+python sta_top_parser.py --no-json             # HTML + dump only
+python sta_top_parser.py --no-html             # JSON + dump only
+python sta_top_parser.py --no-json --no-html   # dump log only
 ```
 
-### 9.7 Logging options
-
-```bash
-# Default INFO on console
-python sta_top_parser.py
-
-# DEBUG on console
-python sta_top_parser.py --verbose
-
-# Explicit log file
-python sta_top_parser.py --logfile ./logs/top_run.log
-
-# Verbose + custom log
-python sta_top_parser.py --verbose --logfile ./logs/top_debug.log
-```
-
-### 9.8 Email usage
-
-#### STARTTLS — leads + manager
-
-```bash
-python sta_top_parser.py \
-    --email \
-    --email-to   sta-lead@company.com  chip-owner@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls
-```
-
-#### Weekly rollup with HTML attachment
-
-```bash
-python sta_top_parser.py \
-    --email \
-    --email-to   sta-lead@company.com  chip-owner@company.com  mgr@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-TOP][WEEKLY]"
-```
-
-#### Milestone / tapeout email
-
-```bash
-python sta_top_parser.py \
-    --per-block \
-    --outdir ./milestone_reports/m5 \
-    --prefix M5_FREEZE \
-    --email \
-    --email-to   sta-lead@company.com  chip-lead@company.com  director@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --smtp-user  sta-bot \
-    --smtp-pass  "<password>" \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][M5-FREEZE]"
-```
-
-#### SSL mode (port 465)
-
-```bash
-python sta_top_parser.py \
-    --email \
-    --email-to   mto@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  465 \
-    --email-ssl \
-    --email-attach-html
-```
-
-#### Full production run
-
-```bash
-python sta_top_parser.py \
-    --per-block \
-    --verbose \
-    --outdir ./reports/week47 \
-    --prefix WEEK47 \
-    --email \
-    --email-to   mto@company.com  sta-lead@company.com  chip-lead@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --smtp-user  sta-bot \
-    --smtp-pass  "<password>" \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][WEEK47]" \
-    --logfile ./reports/week47/run.log
-```
-
-### 9.9 Full argument reference
+### 10.7 Full argument reference
 
 ```
 Input:
   --root PATH             Root directory to scan  [default: .]
-  --pattern GLOB          Glob pattern for report files  [default: *.rpt]
+  --pattern GLOB          Glob pattern  [default: *.rpt]
   --stages STAGE ...      Restrict to these top-level stage directories
-  --max-depth N           Maximum directory recursion depth  [default: 10]
+  --max-depth N           Maximum recursion depth  [default: 10]
 
 Output:
   --outdir PATH           Directory for top-level outputs  [default: --root]
@@ -799,165 +612,76 @@ Output:
   --no-dump               Skip dump-log output
 
 Logging:
-  --verbose / -v          Set console log level to DEBUG
+  --verbose / -v          DEBUG on console
   --logfile PATH          Explicit run .log file path
 
 Email:
   --email                 Send rollup email on completion
-  --email-to ADDR ...     Recipient addresses  (required when --email is set)
+  --email-to ADDR ...     Recipient addresses
   --email-from ADDR       Sender address  [default: sta-bot@company.com]
-  --smtp-host HOST        SMTP server hostname  [default: smtp.company.com]
-  --smtp-port PORT        SMTP server port  [default: 587]
-  --smtp-user USER        SMTP username  (optional)
-  --smtp-pass PASS        SMTP password  (optional)
-  --email-tls             Use STARTTLS  (use with --smtp-port 587)
-  --email-ssl             Use SSL/SMTPS  (use with --smtp-port 465)
+  --smtp-host HOST        SMTP server hostname
+  --smtp-port PORT        SMTP port  [default: 587]
+  --smtp-user USER        SMTP username (optional)
+  --smtp-pass PASS        SMTP password (optional)
+  --email-tls             STARTTLS (port 587)
+  --email-ssl             SSL/SMTPS (port 465)
   --email-attach-html     Attach HTML rollup report to email
-  --email-subject-prefix  Subject line prefix  [default: [STA Top]]
+  --email-subject-prefix  Subject prefix  [default: [STA Top]]
 ```
 
 ---
 
-## 10. Code Quality Checker — `sta_code_check.py`
+## 11. Code Quality Checker — `sta_code_check.py`
 
-### 10.1 What it checks
-
-Runs 5 sequential checks on every `.py` file:
+### 11.1 What it checks
 
 | Step | Check | Severity |
 |---|---|---|
-| 1 | **Syntax** — `py_compile` compilation; reports exact line/col | ERROR |
-| 2 | **Indentation** — mixed tabs+spaces, wrong indent width, trailing whitespace, blank-line whitespace, CRLF line endings | WARNING / ERROR |
-| 3 | **Auto-correct** *(with `--fix`)* — tabs→spaces, strip trailing WS, clear blank-line WS, CRLF→LF | INFO (fix log) |
+| 1 | **Syntax** — `py_compile` compilation | ERROR |
+| 2 | **Indentation** — mixed tabs/spaces, wrong indent width, trailing whitespace, CRLF | WARNING / ERROR |
+| 3 | **Auto-correct** *(with `--fix`)* — tabs→spaces, strip trailing WS, CRLF→LF | INFO |
 | 4 | **AST** — `ast.parse()` on the (possibly fixed) file | ERROR |
 | 5 | **Style hints** *(with `--style`)* — pycodestyle PEP-8 E1/W1 codes | WARNING |
 
-### 10.2 Output files
-
-| File | Description |
-|---|---|
-| `sta_code_check_report.txt` | Human-readable per-file findings, grep-friendly |
-| `sta_code_check_report.json` | Full machine-readable structured findings dump |
-| `sta_code_check_run_<ts>.log` | Full rotating DEBUG run log |
-
-### 10.3 Basic usage
+### 11.2 Basic usage
 
 ```bash
-# Dry-run — check all 14 .py files, no changes
+# Dry-run — check all .py files, no changes made
 python sta_code_check.py
 
-# Show detailed per-file results in console
+# Verbose detail
 python sta_code_check.py --verbose
 
-# Maximum detail (TRACE level)
-python sta_code_check.py --trace
-```
-
-### 10.4 Auto-correct usage
-
-> A `.bak` backup is written beside each modified file before any change is made.
-
-```bash
-# Auto-fix all issues in all files
+# Auto-fix: expand tabs, strip trailing whitespace, normalise CRLF→LF
 python sta_code_check.py --fix
 
-# Auto-fix with 2-space indent target
-python sta_code_check.py --fix --indent-size 2
+# Check + auto-fix a single file
+python sta_code_check.py --fix --files sta_utils/core/parser.py
 
-# Auto-fix a single specific file
-python sta_code_check.py --fix --files sta_block_parser.py
-
-# Auto-fix the whole sta_utils package
-python sta_code_check.py --fix --dirs sta_utils
-
-# Fix without writing .bak backups
-python sta_code_check.py --fix --no-backup
-
-# Fix + verbose — see every change made
-python sta_code_check.py --fix --verbose
-```
-
-### 10.5 Scoping — dirs and files
-
-```bash
-# Only check the sta_utils package
+# Check only the sta_utils package
 python sta_code_check.py --dirs sta_utils
 
-# Only check the core sub-package
-python sta_code_check.py --dirs sta_utils/core
-
-# Only check the outputs sub-package
-python sta_code_check.py --dirs sta_utils/outputs
-
-# Check the three top-level CLI scripts only
-python sta_code_check.py --files sta_block_parser.py sta_top_parser.py sta_code_check.py
-
-# Check a single file
-python sta_code_check.py --files sta_utils/outputs/logger.py
-
-# Exclude test files and __pycache__
-python sta_code_check.py --exclude "test_.*\.py" "__pycache__" "\.bak$"
+# PEP-8 style hints (requires pycodestyle)
+python sta_code_check.py --style --style-codes E1,W1
 ```
 
-### 10.6 Style hints (PEP-8)
-
-> Requires `pip install pycodestyle`
-
-```bash
-# Enable PEP-8 style hints (E1 + W1 = indentation codes)
-python sta_code_check.py --style
-
-# Only E1xx indentation errors
-python sta_code_check.py --style --style-codes E1
-
-# Only W1xx whitespace warnings
-python sta_code_check.py --style --style-codes W1
-
-# E1 + E2 (whitespace around operators)
-python sta_code_check.py --style --style-codes E1,E2
-
-# Full PEP-8 check (all codes)
-python sta_code_check.py --style --style-codes E,W
-```
-
-### 10.7 Logging options
-
-```bash
-# Default — INFO to console
-python sta_code_check.py
-
-# DEBUG to console
-python sta_code_check.py --verbose
-
-# TRACE to console (every file, every line detail)
-python sta_code_check.py --trace
-
-# Write log to custom location
-python sta_code_check.py --logfile ./qa_logs/code_check.log
-
-# Trace + custom log
-python sta_code_check.py --trace --logfile ./qa_logs/code_check_trace.log
-```
-
-### 10.8 Full argument reference
+### 11.3 Full argument reference
 
 ```
 Input:
-  --root PATH             Root directory to scan  [default: .]
-  --dirs DIR ...          Restrict scan to these sub-directories under --root
-  --files FILE ...        Check these specific files only (overrides --dirs/--root)
-  --exclude PAT ...       Regex patterns to exclude  [default: .bak$ __pycache__]
+  --root PATH             Root directory  [default: .]
+  --dirs DIR ...          Restrict to sub-directories
+  --files FILE ...        Check specific files only
+  --exclude PAT ...       Regex exclusion patterns  [default: .bak$ __pycache__]
 
 Check options:
-  --indent-size N         Expected indentation unit in spaces  [default: 4]
-  --style                 Run pycodestyle PEP-8 hints (requires: pip install pycodestyle)
+  --indent-size N         Expected indent unit in spaces  [default: 4]
+  --style                 Run pycodestyle PEP-8 hints
   --style-codes CODES     pycodestyle select codes  [default: E1,W1]
 
 Auto-correct:
-  --fix                   Auto-correct: expand tabs, strip trailing WS,
-                          clear blank-line WS, normalise CRLF→LF
-                          (.bak backup written before any file is modified)
-  --no-backup             Skip writing .bak backup files
+  --fix                   Apply auto-corrections (.bak backup written first)
+  --no-backup             Skip .bak backup files
 
 Output:
   --outdir PATH           Directory for report files  [default: --root]
@@ -965,217 +689,101 @@ Output:
   --no-txt                Skip text report
 
 Logging:
-  --verbose / -v          Set console log level to DEBUG
-  --trace                 Set console log level to TRACE (maximum detail)
-  --logfile PATH          Explicit run .log file path
+  --verbose / -v          DEBUG on console
+  --trace                 TRACE on console (maximum detail)
+  --logfile PATH          Explicit run .log path
 ```
 
 ---
 
-## 11. Email Notification Workflow
+## 12. Email Notification Workflow
 
-### 11.1 How it works end-to-end
+### 12.1 How it works end-to-end
 
 ```
-1.  PrimeTime run completes
-          │
-          ▼
-2.  .rpt files land in the block directory
-          │
-          ▼
-3.  sta_block_parser.py  (or sta_top_parser.py for full hierarchy)
-          │
-          ├─ parse_report()      extracts all timing fields
-          ├─ aggregate_block()   computes WNS/TNS/WHS rollup
-          ├─ write_dump_log()    writes <prefix>_dump.log
-          ├─ write_json()        writes <prefix>_summary.json
-          ├─ write_block_html()  writes <prefix>_report.html
-          └─ send_email()        ──► SMTP relay ──► recipients
-                                              │
-                                              ▼
-4.  BTO receives email with:
-      - inline HTML KPI table (WNS / TNS / WHS / violations / coverage)
-      - optional attached <prefix>_report.html
-          │
-          ▼
-5.  BTO opens the HTML report, reviews:
-      - Status banner (MET / VIOLATED)
-      - Per-corner WNS/TNS/WHS table
-      - Critical path startpoint / endpoint
-      - Corner detail and check type
-          │
-          ▼
-6.  BTO applies fix (ECO / SDC / floorplan / skew)
-          │
-          ▼
-7.  BTO re-runs PrimeTime on fixed netlist
-          │
-          ▼
-8.  New .rpt files dropped into block directory
-          │
-          ▼
-9.  Re-run sta_block_parser.py
-          │
-          ▼
-10. violations = 0, WNS >= 0  →  BTO replies to email thread: CLOSED
+1.  PrimeTime run completes → .rpt files land in block directory
+2.  sta_block_parser.py (or sta_top_parser.py) runs:
+      parse_report()      → extracts all timing fields
+      aggregate_block()   → computes WNS / TNS / WHS rollup
+      write_dump_log()    → <design>_dump.log
+      write_json()        → <design>_summary.json
+      write_block_html()  → <design>_report.html  (with expand panels)
+      send_email()        → SMTP relay → BTO inbox
+3.  BTO opens the HTML attachment, clicks ▶ Paths to inspect:
+        startpoint / endpoint / corner / slack
+        sub-unit breakdown sorted worst-first
+4.  BTO applies fix (ECO / SDC / floorplan / skew)
+5.  BTO re-runs PrimeTime → drops new .rpt → re-runs parser
+6.  violations = 0, WNS ≥ 0 → BTO replies: CLOSED
 ```
 
-### 11.2 Required arguments — internal SMTP
+### 12.2 Authentication modes
 
-| Argument | Required | Notes |
+| Mode | Port | Flags |
 |---|---|---|
-| `--email` | Yes (flag) | Enables email send |
-| `--email-to` | Yes | One or more addresses separated by spaces |
-| `--email-from` | Yes | The sender; must be whitelisted on the relay |
-| `--smtp-host` | Yes | Ask IT team for the internal relay hostname |
-| `--smtp-port` | Yes | `587` = STARTTLS   `465` = SSL/SMTPS |
-| `--email-tls` | Yes (port 587) | Enables STARTTLS negotiation |
-| `--email-ssl` | Yes (port 465) | Enables SSL from the start of the connection |
-| `--smtp-user` | If relay requires auth | Service account login |
-| `--smtp-pass` | If relay requires auth | Service account password |
-| `--email-attach-html` | Recommended | Sends the full HTML as an email attachment |
-| `--email-subject-prefix` | Optional | Prepended to auto-generated subject line |
-
-### 11.3 Authentication modes
-
-| Mode | Port | Flags | When to use |
-|---|---|---|---|
-| No auth, plain | 25 | *(none)* | Internal relay with IP whitelist only |
-| STARTTLS, no auth | 587 | `--email-tls` | Most common internal relay setup |
-| STARTTLS + auth | 587 | `--email-tls --smtp-user U --smtp-pass P` | Auth-required relay |
-| SSL/SMTPS, no auth | 465 | `--email-ssl` | Relays requiring SSL from connect |
-| SSL/SMTPS + auth | 465 | `--email-ssl --smtp-user U --smtp-pass P` | Auth-required SSL relay |
-
-### 11.4 Email content
-
-Every email contains:
-
-- **Subject** — `[<prefix>] <design> — <STATUS>  WNS=<n> ns  TNS=<n> ns  Viols=<n>`
-- **Inline HTML body** — KPI table with status, WNS, TNS, WHS, violations, report count
-- **Optional attachment** — `<prefix>_report.html` (self-contained, no internet required to open)
+| No auth, plain | 25 | *(none)* |
+| STARTTLS, no auth | 587 | `--email-tls` |
+| STARTTLS + auth | 587 | `--email-tls --smtp-user U --smtp-pass P` |
+| SSL/SMTPS, no auth | 465 | `--email-ssl` |
+| SSL/SMTPS + auth | 465 | `--email-ssl --smtp-user U --smtp-pass P` |
 
 ---
 
-## 12. BTO — Block Timing Owner
+## 13. BTO — Block Timing Owner
 
-### 12.1 Definition and scope
+### 13.1 Responsibilities
 
-A **BTO (Block Timing Owner)** is the engineer assigned responsibility for
-timing closure of a **single leaf block** — for example `FETCH/PC` or
-`EXECUTE/FPU/FADD`. The BTO receives automated emails from `sta_block_parser.py`
-whenever new `.rpt` files are parsed for their block.
+1. Monitor the automated `[STA-BTO]` email for assigned block(s).
+2. Open the HTML report attachment — review the Status banner and KPI tiles.
+3. Click **▶ Paths** on any VIOLATED row to see startpoint, endpoint, corner, slack.
+4. Identify root cause: long logic depth, routing congestion, missing SDC exception, etc.
+5. Apply a fix (see [§ 13.2](#132-fix-types)).
+6. Re-run PrimeTime, drop new `.rpt` files into the block directory.
+7. Commit new `.rpt` files to Git with a descriptive message.
+8. Re-run `sta_block_parser.py` to confirm the violation is closed.
+9. Reply to the email thread confirming: **CLOSED**.
 
-### 12.2 Responsibilities
-
-1. Monitor the automated `[STA-BTO]` email for their assigned block(s).
-2. Open the attached HTML report and review the WNS / TNS / WHS numbers.
-3. Identify the critical path: startpoint, endpoint, corner, check type.
-4. Determine the root cause: long logic depth, routing congestion, missing exception, etc.
-5. Apply a fix — see [Section 12.3](#123-fix-types).
-6. Re-run PrimeTime on the fixed design.
-7. Drop new `.rpt` files into the block directory and commit them to Git.
-8. Re-run `sta_block_parser.py` to confirm the fix closed the violation.
-9. Reply to the email thread confirming the finding is **CLOSED**.
-
-### 12.3 Fix types
+### 13.2 Fix types
 
 | Fix type | Description | When to use |
 |---|---|---|
-| **ECO** (Engineering Change Order) | Buffer insertion, gate resizing, route layer promotion | Long combinational path, high-fanout net |
-| **SDC false path** | `set_false_path` to exclude a path from analysis | Functionally impossible path incorrectly analysed |
+| **ECO** | Buffer insertion, gate resizing, route layer promotion | Long combinational path, high-fanout net |
+| **SDC false path** | `set_false_path` to exclude a path | Functionally impossible path |
 | **SDC multicycle** | `set_multicycle_path` to relax a path | Intentional 2-cycle or N-cycle path |
-| **SDC input/output delay** | Tighten or loosen port constraints | Over/under-constrained interface |
+| **SDC port delay** | Tighten or loosen input/output delay | Over- or under-constrained interface |
 | **Floorplan** | Move cells, adjust placement blockages | Placement-driven path length problem |
-| **Useful skew** | Adjust clock latency on endpoint FF | Close hold/setup margin by borrowing skew budget |
+| **Useful skew** | Adjust clock latency on endpoint FF | Borrow setup / hold margin via skew |
 | **Re-synthesis** | Change RTL or synthesis constraints | Fundamental logic depth problem |
 
-### 12.4 BTO assignment table
+### 13.3 Closure checklist
 
-> Fill in your actual block owner assignments below.
+Before replying **CLOSED**, confirm all of the following:
 
-| Block path | Design name | BTO email |
-|---|---|---|
-| `FETCH/PC` | `PC_TOP` | `bto-pc@company.com` |
-| `FETCH/ICACHE` | `ICACHE_TOP` | `bto-fetch@company.com` |
-| `FETCH/BPU/BTB` | `BTB_TOP` | `bto-bpu@company.com` |
-| `FETCH/BPU/PHT` | `PHT_TOP` | `bto-bpu@company.com` |
-| `FETCH/BPU/RAS` | `RAS_TOP` | `bto-bpu@company.com` |
-| `FETCH/ITLB` | `ITLB_TOP` | `bto-fetch@company.com` |
-| `FETCH/FETCH_QUEUE` | `FETCH_QUEUE_TOP` | `bto-fetch@company.com` |
-| `DECODE/…` | `*_TOP` | `bto-decode@company.com` |
-| `EXECUTE/FPU/…` | `F*_TOP` | `bto-fpu@company.com` |
-| `EXECUTE/ALU/…` | `ALU*_TOP` | `bto-alu@company.com` |
-| `EXECUTE/LSU/…` | `L*U_TOP` | `bto-lsu@company.com` |
-| `MEMORY/…` | `*_TOP` | `bto-mem@company.com` |
-| `CACHE/…` | `L*_TOP` | `bto-cache@company.com` |
-| `UNCORE/…` | `*_TOP` | `bto-uncore@company.com` |
-
-### 12.5 BTO email trigger
-
-```bash
-# Standard BTO notification — STARTTLS, HTML attached
-python sta_block_parser.py \
-    --dir FETCH/PC \
-    --email \
-    --email-to   bto-pc@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-BTO]"
-
-# BTO notification with URGENT flag (violation found)
-python sta_block_parser.py \
-    --dir EXECUTE/FPU/FADD \
-    --email \
-    --email-to   bto-fpu@company.com  sta-lead@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-BTO][VIOLATION]"
-```
-
-### 12.6 Closure checklist
-
-Before replying to the email thread as CLOSED, confirm all of the following:
-
-- [ ] WNS ≥ 0.000 ns for all corners
+- [ ] WNS ≥ 0.000 ns for **all** corners and check types
 - [ ] TNS = 0.000 ns
-- [ ] violations = 0
+- [ ] Violations = 0
 - [ ] WHS ≥ 0.000 ns (no hold violations)
-- [ ] Constraint coverage = 100%
-- [ ] New `.rpt` files committed to Git with a descriptive commit message
-- [ ] `sta_block_parser.py` re-run confirms CLEAN status in the HTML report
+- [ ] Constraint coverage = 100 %
+- [ ] New `.rpt` files committed to Git
+- [ ] `sta_block_parser.py` re-run confirms **ALL PATHS CLEAN** in the HTML report
 
 ---
 
-## 13. MTO — Module Timing Owner
+## 14. MTO — Module Timing Owner
 
-### 13.1 Definition and scope
+### 14.1 Responsibilities
 
-An **MTO (Module Timing Owner)** is the senior engineer or lead responsible for
-timing closure across **an entire pipeline stage or the full chip**.
-The MTO receives automated weekly/milestone emails from `sta_top_parser.py`
-and tracks convergence across all BTOs.
-
-### 13.2 Responsibilities
-
-1. Monitor the automated `[STA-MTO]` weekly email.
-2. Review the by-stage WNS/TNS/WHS rollup in the HTML report.
-3. Identify which stages and blocks are the worst offenders.
-4. Assign fixes to the appropriate BTOs (see [Section 12.4](#124-bto-assignment-table)).
+1. Monitor the automated `[STA-MTO]` weekly / milestone email.
+2. Open `_TOP_report.html` — review the by-stage WNS / TNS / WHS table.
+3. For each VIOLATED block, click **▶ Top Paths** to see the worst 5 paths.
+4. Assign fixes to the appropriate BTOs (see [§ 13.1](#131-responsibilities)).
 5. Track convergence week-over-week across multiple PrimeTime runs.
 6. Escalate to design management if any block is not converging.
 7. Sign off on timing closure at tapeout milestones.
 
-### 13.3 MTO stage assignment
+### 14.2 Stage assignment
 
-> Fill in your actual stage owner assignments below.
-
-| Pipeline stage | Blocks | MTO email |
+| Pipeline stage | Blocks | Assign to |
 |---|---|---|
 | FETCH | 7 | `mto-frontend@company.com` |
 | DECODE | 5 | `mto-frontend@company.com` |
@@ -1189,75 +797,27 @@ and tracks convergence across all BTOs.
 | UNCORE | 6 | `mto-uncore@company.com` |
 | **Full chip** | **57** | **`chip-lead@company.com`** |
 
-### 13.4 MTO email trigger
-
-```bash
-# Weekly rollup — all stages
-python sta_top_parser.py \
-    --per-block \
-    --outdir ./reports/week47 \
-    --prefix WEEK47 \
-    --email \
-    --email-to   mto@company.com  sta-lead@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][WEEK47]"
-
-# Stage-specific MTO rollup
-python sta_top_parser.py \
-    --stages EXECUTE \
-    --outdir ./reports/execute_w47 \
-    --prefix EXECUTE_WEEK47 \
-    --email \
-    --email-to   mto-execute@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][EXECUTE]"
-
-# Tapeout milestone sign-off email
-python sta_top_parser.py \
-    --per-block \
-    --outdir ./milestone/m5_freeze \
-    --prefix M5_FREEZE \
-    --email \
-    --email-to   chip-lead@company.com  director@company.com  mto@company.com \
-    --email-from sta-bot@company.com \
-    --smtp-host  smtp.company.com \
-    --smtp-port  587 \
-    --smtp-user  sta-bot \
-    --smtp-pass  "<password>" \
-    --email-tls \
-    --email-attach-html \
-    --email-subject-prefix "[STA-MTO][M5-FREEZE][SIGN-OFF]"
-```
-
-### 13.5 Tapeout sign-off criteria
+### 14.3 Tapeout sign-off criteria
 
 All 57 blocks must satisfy the following before the MTO signs off:
 
 | Criterion | Required value |
 |---|---|
-| WNS (all corners, all checks) | ≥ 0.000 ns |
-| TNS (all corners, all checks) | = 0.000 ns |
-| WHS (all corners, all checks) | ≥ 0.000 ns |
+| WNS — all corners, all checks | ≥ 0.000 ns |
+| TNS — all corners, all checks | = 0.000 ns |
+| WHS — all corners, all checks | ≥ 0.000 ns |
 | Total violations | = 0 |
-| Constraint coverage | = 100% |
-| Overall status (HTML report) | **ALL PATHS CLEAN** |
+| Constraint coverage | = 100 % |
+| Overall status (HTML report banner) | **ALL PATHS CLEAN** |
 
 ---
 
-## 14. Developer Guide — `sta_utils` Package
+## 15. Developer Guide — `sta_utils` Package
 
-### 14.1 Adding a new output format
+### 15.1 Adding a new output format
 
-1. Create `sta_utils/outputs/csv_writer.py` (or any new format)
-2. Implement the writer function:
+1. Create `sta_utils/outputs/csv_writer.py`
+2. Implement the writer:
 
 ```python
 from pathlib import Path
@@ -1279,17 +839,14 @@ def write_csv(
 from .csv_writer import write_csv
 ```
 
-4. Call in `sta_block_parser.py` and/or `sta_top_parser.py` after the other writers.
+4. Call it in `sta_block_parser.py` and/or `sta_top_parser.py` alongside the other writers.
 
-### 14.2 Adding a new parsed field
+### 15.2 Adding a new parsed field
 
 1. Add the field to `ReportRecord` in [`sta_utils/core/models.py`](sta_utils/core/models.py):
 
 ```python
-@dataclass
-class ReportRecord:
-    ...
-    my_new_field: str = "N/A"
+my_new_field: str = "N/A"
 ```
 
 2. Add a compiled regex and extract it in [`sta_utils/core/parser.py`](sta_utils/core/parser.py):
@@ -1304,7 +861,7 @@ return ReportRecord(..., my_new_field=my_new_field)
 
 3. The field propagates automatically to JSON / HTML / dump-log via `dataclasses.asdict()`.
 
-### 14.3 Running the parsers programmatically
+### 15.3 Running the parsers programmatically
 
 ```python
 from pathlib import Path
@@ -1314,19 +871,17 @@ from sta_utils.outputs import (
     write_block_html, write_top_html, send_email, EmailConfig,
 )
 
-# Setup logger (console + rotating file)
 logger = setup_logging("my_script", log_path=Path("run.log"), verbose=True)
 
 # Parse one block
 records = scan_block_dir(Path("FETCH/PC"), logger=logger)
 summary = aggregate_block(records, Path("FETCH/PC"))
 
-# Write outputs
 write_json(summary,       Path("PC_summary.json"), logger)
 write_block_html(summary, Path("PC_report.html"),  logger)
-write_dump_log(summary,   Path("PC_dump.log"),      logger)
+write_dump_log(summary,   Path("PC_dump.log"),     logger)
 
-# Send email
+# Optionally send email
 cfg = EmailConfig(
     to          = ["owner@company.com"],
     from_addr   = "sta-bot@company.com",
@@ -1338,10 +893,8 @@ cfg = EmailConfig(
 send_email(summary, cfg, Path("PC_report.html"), logger)
 
 # Parse full hierarchy
-from sta_utils.core import aggregate_top
-
 block_summaries = []
-for block_dir in Path(".").rglob("*"):
+for block_dir in sorted(Path(".").rglob("*")):
     if block_dir.is_dir() and any(block_dir.glob("*.rpt")):
         recs = scan_block_dir(block_dir, logger=logger)
         if recs:
@@ -1351,43 +904,27 @@ top = aggregate_top(block_summaries, Path("."))
 write_top_html(top, Path("_TOP_report.html"), logger)
 ```
 
-### 14.4 Log level usage guide
-
-```python
-from sta_utils.outputs import setup_logging
-
-logger = setup_logging("my_module", verbose=True)
-
-logger.trace("entering parse loop, file=%s line=%d", fname, lineno)
-logger.debug("regex hit: field=%s value=%r", field, value)
-logger.info("parsed %d reports from %s", count, block_dir)
-logger.success("block %s — WNS=%.3f ns — status=MET", design, wns)
-logger.warning("field 'corner' not found in %s — defaulting to N/A", fname)
-logger.warn("same as warning — stdlib alias")
-logger.error("cannot read %s: %s — skipping", fname, exc)
-logger.fatal("SMTP connection failed — cannot send email — aborting")
-```
-
-### 14.5 Git workflow
+### 15.4 Git workflow
 
 ```bash
 # Always pull before starting work
 git pull
 
-# After a new PrimeTime run — commit the new .rpt files
+# Commit new PrimeTime .rpt files after a run
 git add FETCH/PC/01_SETUP_SS_125C_PC_TOP.rpt
-git commit -m "feat(FETCH/PC): add PrimeTime ss_125c setup run 2025-01-20"
+git commit -m "feat(FETCH/PC): add PrimeTime ss_125c setup run 2026-08-15"
 git push
 
-# After running the parsers — optionally commit generated reports
-git add FETCH/PC/PC_TOP_report.html
-git add FETCH/PC/PC_TOP_summary.json
-git commit -m "chore(FETCH/PC): regenerate HTML + JSON reports"
+# Commit a timing fix — clear description of what changed and why
+git add EXECUTE/ALU/ALU0/01_SETUP_SS_125C_ALU0_TOP.rpt
+git commit -m "fix(EXECUTE/ALU/ALU0): ECO closes setup violation ss_125c
+WNS was -0.112 ns; inserted 2× BUFX4 on u_alu0_add/carry path
+New WNS = +0.048 ns — all corners clean"
 git push
 
-# After a fix — commit the corrected .rpt files
-git add EXECUTE/FPU/FADD/01_SETUP_SS_125C_FADD_TOP.rpt
-git commit -m "fix(EXECUTE/FPU/FADD): ECO closes setup violation ss_125c WNS was -0.032"
+# After regenerating outputs — commit HTML / JSON reports
+git add -A
+git commit -m "chore: regenerate all HTML/JSON/dump reports after ALU0 fix"
 git push
 ```
 
