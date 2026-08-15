@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  STL_FORWARD_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\LSU\STL_FORWARD
+  Design          : STL_FORWARD_TOP
+  Parsed At       : 2026-08-15T18:26:08
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.162
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.066     0.000     0.073  MET
+  ff_1p16v_1p16v_n40c                               1     1.108     0.000     0.064  MET
+  ss_0p63v_0p63v_125c                               1     1.118     0.000     0.102  MET
+  ss_0p72v_0p72v_125c                               2     1.110     0.000     0.101  MET
+  ss_0p72v_0p72v_n40c                               1     1.074     0.000     0.087  MET
+  tt_0p90v_0p90v_25c                                4     1.110     0.000     0.067  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.066     0.000     0.064  MET
+  setup                                             7     1.074     0.000     0.067  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.131 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.131 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 867 / 3539
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:51         Memory : 4.654 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.108 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.108 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1081 / 4404
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:45         Memory : 2.423 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.157 ns   TNS :   +0.000 ns   WHS :   +0.091 ns
+  Slack    :   +1.157 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1391 / 1089
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:27         Memory : 2.094 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.091 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3034 / 1189
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:36         Memory : 1.606 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.074 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.074 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1565 / 4357
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:10         Memory : 2.204 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.066 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.066 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 848 / 5804
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:49         Memory : 4.167 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.118 ns   TNS :   +0.000 ns   WHS :   +0.102 ns
+  Slack    :   +1.118 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2405 / 2789
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:13         Memory : 3.911 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3322 / 4133
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:29         Memory : 2.015 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.119 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3766 / 5548
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:13         Memory : 3.438 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_STL_FORWARD_TOP.rpt
+  Design   : STL_FORWARD_TOP       Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.162 ns   TNS :   +0.000 ns   WHS :   +0.067 ns
+  Slack    :   +1.162 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2980 / 4801
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:47         Memory : 4.794 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/LSU/STL_FORWARD/run_tt_0p90v_0p90v_25c
+
+  File     : STL_FORWARD_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

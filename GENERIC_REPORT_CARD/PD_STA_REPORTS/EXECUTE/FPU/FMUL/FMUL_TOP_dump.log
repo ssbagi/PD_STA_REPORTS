@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  FMUL_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\FPU\FMUL
+  Design          : FMUL_TOP
+  Parsed At       : 2026-08-15T18:26:08
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.142
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.075     0.000     0.077  MET
+  ff_1p16v_1p16v_n40c                               1     1.142     0.000     0.104  MET
+  ss_0p63v_0p63v_125c                               1     1.098     0.000     0.075  MET
+  ss_0p72v_0p72v_125c                               2     1.019     0.000     0.062  MET
+  ss_0p72v_0p72v_n40c                               1     1.105     0.000     0.109  MET
+  tt_0p90v_0p90v_25c                                4     1.081     0.000     0.083  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.075     0.000     0.077  MET
+  setup                                             7     1.019     0.000     0.062  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.019 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.019 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4831 / 2516
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:49         Memory : 2.344 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.142 ns   TNS :   +0.000 ns   WHS :   +0.104 ns
+  Slack    :   +1.142 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3711 / 4882
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:10         Memory : 4.44 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5571 / 2089
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:49         Memory : 3.484 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.081 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.081 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5859 / 5592
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:19         Memory : 2.423 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
+  Slack    :   +1.105 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3771 / 4595
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:38         Memory : 3.138 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
+  Slack    :   +1.075 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2854 / 3375
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:47         Memory : 3.947 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.098 ns   TNS :   +0.000 ns   WHS :   +0.075 ns
+  Slack    :   +1.098 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4199 / 5127
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:18         Memory : 2.567 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4311 / 5114
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:17         Memory : 2.738 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.082 ns   TNS :   +0.000 ns   WHS :   +0.091 ns
+  Slack    :   +1.082 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3201 / 3988
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:20         Memory : 1.576 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_FMUL_TOP.rpt
+  Design   : FMUL_TOP              Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.099 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.099 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3166 / 2734
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:54         Memory : 3.514 GB
+  Run Dir  : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c
+
+  File     : FMUL_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

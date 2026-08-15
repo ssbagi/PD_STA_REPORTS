@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  CACHE_CTRL_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\CACHE\CACHE_CONTROLLER
+  Design          : CACHE_CTRL_TOP
+  Parsed At       : 2026-08-15T18:26:04
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.147
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.069     0.000     0.081  MET
+  ff_1p16v_1p16v_n40c                               1     1.088     0.000     0.104  MET
+  ss_0p63v_0p63v_125c                               1     1.133     0.000     0.072  MET
+  ss_0p72v_0p72v_125c                               2     1.065     0.000     0.094  MET
+  ss_0p72v_0p72v_n40c                               1     1.043     0.000     0.109  MET
+  tt_0p90v_0p90v_25c                                4     1.083     0.000     0.082  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.069     0.000     0.081  MET
+  setup                                             7     1.043     0.000     0.072  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.119 ns   TNS :   +0.000 ns   WHS :   +0.116 ns
+  Slack    :   +1.119 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1519 / 3624
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:37         Memory : 4.7 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.104 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4535 / 4992
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:39         Memory : 4.229 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.105 ns
+  Slack    :   +1.126 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5671 / 4913
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:21         Memory : 2.441 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.098 ns
+  Slack    :   +1.147 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5138 / 2159
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:28         Memory : 4.739 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.043 ns   TNS :   +0.000 ns   WHS :   +0.109 ns
+  Slack    :   +1.043 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1733 / 1402
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:33         Memory : 3.607 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.069 ns   TNS :   +0.000 ns   WHS :   +0.081 ns
+  Slack    :   +1.069 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5412 / 874
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:10         Memory : 1.586 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.133 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
+  Slack    :   +1.133 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2240 / 5124
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:40         Memory : 3.422 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.088 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.088 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 881 / 1431
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:18         Memory : 2.694 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.065 ns   TNS :   +0.000 ns   WHS :   +0.094 ns
+  Slack    :   +1.065 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4003 / 3738
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:56         Memory : 1.825 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_CACHE_CTRL_TOP.rpt
+  Design   : CACHE_CTRL_TOP        Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1152 / 2229
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:55         Memory : 3.342 GB
+  Run Dir  : /proj/cpu_rtl/sta/CACHE/CACHE_CONTROLLER/run_tt_0p90v_0p90v_25c
+
+  File     : CACHE_CTRL_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

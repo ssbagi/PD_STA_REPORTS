@@ -1,0 +1,389 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  MOB_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\MOB
+  Design          : MOB_TOP
+  Parsed At       : 2026-08-15T18:26:11
+  Total Reports   : 31
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.163
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               2     1.071     0.000     0.000  MET
+  ff_1p16v_1p16v_n40c                               5     1.055     0.000     0.000  MET
+  ff_1p32v_1p32v_n40c                               1     1.154     0.000     0.000  MET
+  ss_0p63v_0p63v_125c                               1     1.104     0.000     0.103  MET
+  ss_0p63v_0p63v_n40c                               1     1.142     0.000     0.000  MET
+  ss_0p72v_0p72v_125c                               9     1.075     0.000     0.000  MET
+  ss_0p72v_0p72v_n40c                               1     1.072     0.000     0.090  MET
+  tt_0p90v_0p90v_25c                                8     1.044     0.000     0.000  MET
+  tt_0p90v_0p90v_85c                                2     1.076     0.000     0.000  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                             11     1.055     0.000     0.000  MET
+  setup                                            19     1.044     0.000     0.000  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.070 ns
+  Slack    :   +1.105 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4066 / 1507
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:10         Memory : 2.794 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.099 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.099 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3564 / 2009
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:52         Memory : 3.384 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.111 ns   TNS :   +0.000 ns   WHS :   +0.118 ns
+  Slack    :   +1.111 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1219 / 5482
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:13         Memory : 3.435 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.089 ns   TNS :   +0.000 ns   WHS :   +0.103 ns
+  Slack    :   +1.089 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2394 / 2691
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:13         Memory : 2.706 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.072 ns   TNS :   +0.000 ns   WHS :   +0.090 ns
+  Slack    :   +1.072 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4571 / 890
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:12         Memory : 2.102 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.071 ns   TNS :   +0.000 ns   WHS :   +0.092 ns
+  Slack    :   +1.071 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 912 / 1717
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:46         Memory : 4.788 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.103 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1181 / 3365
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:54         Memory : 3.344 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.129 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1456 / 5132
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:21         Memory : 1.863 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.163 ns   TNS :   +0.000 ns   WHS :   +0.063 ns
+  Slack    :   +1.163 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3703 / 1037
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:18         Memory : 4.406 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.065 ns   TNS :   +0.000 ns   WHS :   +0.072 ns
+  Slack    :   +1.065 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1311 / 1045
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:16         Memory : 1.283 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 11_SETUP_SS_125C_OCV_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.107 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.107 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1995 / 937
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:13         Memory : 3.053 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 12_HOLD_FF_N40C_OCV_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.082 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.082 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2824 / 5547
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:24         Memory : 3.229 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_n40c
+
+  File     : 13_SETUP_SS_125C_POCV_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.075 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.075 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1743 / 1937
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:32         Memory : 4.549 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 14_HOLD_FF_N40C_POCV_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.055 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.055 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5891 / 927
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:37         Memory : 3.029 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_n40c
+
+  File     : 15_SETUP_TT_85C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.112 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.112 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1010 / 5806
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:16         Memory : 3.172 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_85c
+
+  File     : 16_HOLD_TT_85C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_85c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.076 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.076 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2656 / 1850
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:11         Memory : 2.777 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_85c
+
+  File     : 17_SETUP_FF_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.077 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.077 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6808 / 5904
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:17         Memory : 2.578 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_125c
+
+  File     : 18_HOLD_SS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.113 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.113 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5449 / 4854
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:22         Memory : 2.209 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 19_SETUP_LVSS_N40C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p63v_0p63v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.142 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.142 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2898 / 6448
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:56         Memory : 1.321 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p63v_0p63v_n40c
+
+  File     : 20_HOLD_LVFF_N40C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p32v_1p32v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.154 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.154 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6087 / 3206
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:33         Memory : 4.67 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p32v_1p32v_n40c
+
+  File     : 21_CG_CHECK_SS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.142 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.142 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2035 / 4019
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:29         Memory : 3.412 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 22_RECOVERY_TT_25C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.044 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.044 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4700 / 2997
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:33         Memory : 4.492 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 23_MULTICYCLE_SS_125C_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.147 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6146 / 929
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:48         Memory : 2.289 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 24_SETUP_TT_25C_ECO_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.109 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1118 / 1389
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:15         Memory : 3.543 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 25_HOLD_TT_25C_ECO_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.135 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.135 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4948 / 4139
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:16         Memory : 1.656 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : 26_SETUP_SS_125C_SI_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.127 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.127 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3911 / 5578
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:47         Memory : 1.963 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 27_HOLD_FF_N40C_SI_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.085 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.085 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6642 / 6863
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:35         Memory : 4.74 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_n40c
+
+  File     : 28_SETUP_SS_125C_FINAL_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1176 / 3224
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:36         Memory : 2.348 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ss_0p72v_0p72v_125c
+
+  File     : 29_HOLD_FF_N40C_FINAL_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.097 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.097 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5378 / 4845
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:23         Memory : 1.125 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_ff_1p16v_1p16v_n40c
+
+  File     : 30_SETUP_TT_25C_FINAL_MOB_TOP.rpt
+  Design   : MOB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.096 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.096 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5890 / 6491
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:31         Memory : 1.677 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/MOB/run_tt_0p90v_0p90v_25c
+
+  File     : MOB_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

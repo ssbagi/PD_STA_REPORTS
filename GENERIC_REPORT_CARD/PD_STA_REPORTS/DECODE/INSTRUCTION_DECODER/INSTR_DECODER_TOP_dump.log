@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  INSTR_DECODER_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\DECODE\INSTRUCTION_DECODER
+  Design          : INSTR_DECODER_TOP
+  Parsed At       : 2026-08-15T18:26:06
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.137
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.035     0.000     0.104  MET
+  ff_1p16v_1p16v_n40c                               1     1.137     0.000     0.114  MET
+  ss_0p63v_0p63v_125c                               1     1.104     0.000     0.106  MET
+  ss_0p72v_0p72v_125c                               2     1.021     0.000     0.085  MET
+  ss_0p72v_0p72v_n40c                               1     1.093     0.000     0.064  MET
+  tt_0p90v_0p90v_25c                                4     1.060     0.000     0.062  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.035     0.000     0.082  MET
+  setup                                             7     1.021     0.000     0.062  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.021 ns   TNS :   +0.000 ns   WHS :   +0.085 ns
+  Slack    :   +1.021 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1038 / 3774
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:26         Memory : 3.942 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.137 ns   TNS :   +0.000 ns   WHS :   +0.114 ns
+  Slack    :   +1.137 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1728 / 1277
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:24         Memory : 2.096 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.105 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.105 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5623 / 4988
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:43         Memory : 4.285 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.060 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
+  Slack    :   +1.060 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1482 / 3764
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:42         Memory : 3.506 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.093 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.093 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1768 / 1633
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:25         Memory : 3.855 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.035 ns   TNS :   +0.000 ns   WHS :   +0.104 ns
+  Slack    :   +1.035 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3495 / 1551
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:32         Memory : 1.805 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.106 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4816 / 2023
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:14         Memory : 2.143 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.082 ns   TNS :   +0.000 ns   WHS :   +0.112 ns
+  Slack    :   +1.082 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4197 / 2324
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:19         Memory : 1.771 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.057 ns   TNS :   +0.000 ns   WHS :   +0.110 ns
+  Slack    :   +1.057 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5050 / 1939
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:22         Memory : 4.003 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_INSTR_DECODER_TOP.rpt
+  Design   : INSTR_DECODER_TOP     Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.128 ns   TNS :   +0.000 ns   WHS :   +0.076 ns
+  Slack    :   +1.128 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4257 / 2092
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:41         Memory : 3.353 GB
+  Run Dir  : /proj/cpu_rtl/sta/DECODE/INSTRUCTION_DECODER/run_tt_0p90v_0p90v_25c
+
+  File     : INSTR_DECODER_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

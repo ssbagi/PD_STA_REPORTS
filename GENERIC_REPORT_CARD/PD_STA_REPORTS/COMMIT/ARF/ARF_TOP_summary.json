@@ -1,0 +1,733 @@
+{
+  "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF",
+  "design": "ARF_TOP",
+  "total_reports": 11,
+  "parsed_at": "2026-08-15T18:26:05",
+  "worst_wns_ns": 0.0,
+  "worst_tns_ns": 0.0,
+  "worst_whs_ns": 0.0,
+  "best_wns_ns": 1.179,
+  "total_violations": 0,
+  "overall_status": "MET",
+  "by_corner": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_125c": {
+      "name": "ff_1p16v_1p16v_125c",
+      "count": 1,
+      "wns_ns": 1.067,
+      "tns_ns": 0.0,
+      "whs_ns": 0.073,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_n40c": {
+      "name": "ff_1p16v_1p16v_n40c",
+      "count": 1,
+      "wns_ns": 1.104,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "status": "MET"
+    },
+    "ss_0p63v_0p63v_125c": {
+      "name": "ss_0p63v_0p63v_125c",
+      "count": 1,
+      "wns_ns": 1.053,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_125c": {
+      "name": "ss_0p72v_0p72v_125c",
+      "count": 2,
+      "wns_ns": 1.112,
+      "tns_ns": 0.0,
+      "whs_ns": 0.082,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_n40c": {
+      "name": "ss_0p72v_0p72v_n40c",
+      "count": 1,
+      "wns_ns": 1.125,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "status": "MET"
+    },
+    "tt_0p90v_0p90v_25c": {
+      "name": "tt_0p90v_0p90v_25c",
+      "count": 4,
+      "wns_ns": 1.068,
+      "tns_ns": 0.0,
+      "whs_ns": 0.066,
+      "status": "MET"
+    }
+  },
+  "by_check": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "hold": {
+      "name": "hold",
+      "count": 3,
+      "wns_ns": 1.067,
+      "tns_ns": 0.0,
+      "whs_ns": 0.073,
+      "status": "MET"
+    },
+    "setup": {
+      "name": "setup",
+      "count": 7,
+      "wns_ns": 1.053,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    }
+  },
+  "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\01_SETUP_SS_125C_ARF_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.179,
+      "wns_ns": 1.179,
+      "tns_ns": 0.0,
+      "whs_ns": 0.082,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.179,
+          "tns_ns": 0.0,
+          "whs_ns": 0.082
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.159,
+          "tns_ns": 0.0,
+          "whs_ns": 0.093
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.157,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.078,
+          "tns_ns": 0.0,
+          "whs_ns": 0.111
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4598,
+      "constrained_endpoints": 2912,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:04:46",
+      "peak_mem": "3.992 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\02_HOLD_FF_N40C_ARF_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.104,
+      "wns_ns": 1.104,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.104,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.145,
+          "tns_ns": 0.0,
+          "whs_ns": 0.08
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.083,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.105,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 912,
+      "constrained_endpoints": 3209,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:06:58",
+      "peak_mem": "1.784 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\03_SETUP_TT_25C_ARF_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.073,
+      "wns_ns": 1.073,
+      "tns_ns": 0.0,
+      "whs_ns": 0.087,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.073,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.097,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.064,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.078,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1569,
+      "constrained_endpoints": 5825,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:05:26",
+      "peak_mem": "4.024 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\04_HOLD_TT_25C_ARF_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.101,
+      "wns_ns": 1.101,
+      "tns_ns": 0.0,
+      "whs_ns": 0.116,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.101,
+          "tns_ns": 0.0,
+          "whs_ns": 0.116
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.11,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.133,
+          "tns_ns": 0.0,
+          "whs_ns": 0.077
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.058,
+          "tns_ns": 0.0,
+          "whs_ns": 0.057
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3186,
+      "constrained_endpoints": 2180,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:49",
+      "peak_mem": "2.898 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\05_SETUP_SS_M40C_ARF_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.125,
+      "wns_ns": 1.125,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.125,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.115,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.197,
+          "tns_ns": 0.0,
+          "whs_ns": 0.088
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.106,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2907,
+      "constrained_endpoints": 1195,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:06:43",
+      "peak_mem": "4.07 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\06_HOLD_FF_125C_ARF_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.067,
+      "wns_ns": 1.067,
+      "tns_ns": 0.0,
+      "whs_ns": 0.073,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.067,
+          "tns_ns": 0.0,
+          "whs_ns": 0.073
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.114,
+          "tns_ns": 0.0,
+          "whs_ns": 0.064
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.113,
+          "tns_ns": 0.0,
+          "whs_ns": 0.128
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.08,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4172,
+      "constrained_endpoints": 1700,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:01:53",
+      "peak_mem": "4.775 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\07_SETUP_LVSS_125C_ARF_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.053,
+      "wns_ns": 1.053,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.053,
+          "tns_ns": 0.0,
+          "whs_ns": 0.062
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.099,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.109,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.187,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2130,
+      "constrained_endpoints": 3202,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:07:53",
+      "peak_mem": "1.823 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\08_CG_CHECK_TT_25C_ARF_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.068,
+      "wns_ns": 1.068,
+      "tns_ns": 0.0,
+      "whs_ns": 0.066,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.068,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.19,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.063,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.114,
+          "tns_ns": 0.0,
+          "whs_ns": 0.125
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1011,
+      "constrained_endpoints": 4766,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:53",
+      "peak_mem": "1.77 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\09_RECOVERY_SS_125C_ARF_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.112,
+      "wns_ns": 1.112,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.112,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.071,
+          "tns_ns": 0.0,
+          "whs_ns": 0.129
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.139,
+          "tns_ns": 0.0,
+          "whs_ns": 0.077
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.199,
+          "tns_ns": 0.0,
+          "whs_ns": 0.12
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2489,
+      "constrained_endpoints": 1692,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:27",
+      "peak_mem": "4.16 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\10_MULTICYCLE_TT_25C_ARF_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_ARF_TOP.rpt",
+      "design": "ARF_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_arf_rd/din_reg[0]",
+      "endpoint": "u_arf_rst/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.149,
+      "wns_ns": 1.149,
+      "tns_ns": 0.0,
+      "whs_ns": 0.108,
+      "sub_units": [
+        {
+          "unit": "u_arf_rd",
+          "wns_ns": 1.149,
+          "tns_ns": 0.0,
+          "whs_ns": 0.108
+        },
+        {
+          "unit": "u_arf_wr",
+          "wns_ns": 0.092,
+          "tns_ns": 0.0,
+          "whs_ns": 0.12
+        },
+        {
+          "unit": "u_arf_chkpt",
+          "wns_ns": 0.172,
+          "tns_ns": 0.0,
+          "whs_ns": 0.095
+        },
+        {
+          "unit": "u_arf_rst",
+          "wns_ns": 0.102,
+          "tns_ns": 0.0,
+          "whs_ns": 0.056
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5608,
+      "constrained_endpoints": 2409,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/ARF_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/ARF_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/ARF_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:54",
+      "peak_mem": "1.275 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\ARF\\ARF_TIMING.rpt",
+      "file_name": "ARF_TIMING.rpt",
+      "design": "N/A",
+      "version": "N/A",
+      "run_date": "N/A",
+      "corner": "N/A",
+      "note": "N/A",
+      "delay_type": "N/A",
+      "check": "N/A",
+      "clock": "N/A",
+      "period_ns": 0.0,
+      "freq_mhz": 0.0,
+      "startpoint": "N/A",
+      "endpoint": "N/A",
+      "slack_status": "UNKNOWN",
+      "slack_ns": 0.0,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "sub_units": [],
+      "status": "N/A",
+      "coverage_pct": 0.0,
+      "total_endpoints": 0,
+      "constrained_endpoints": 0,
+      "tool": "N/A",
+      "run_host": "N/A",
+      "run_dir": "N/A",
+      "sdc_file": "N/A",
+      "netlist": "N/A",
+      "spef_file": "N/A",
+      "liberty": "N/A",
+      "elapsed": "N/A",
+      "peak_mem": "N/A"
+    }
+  ]
+}

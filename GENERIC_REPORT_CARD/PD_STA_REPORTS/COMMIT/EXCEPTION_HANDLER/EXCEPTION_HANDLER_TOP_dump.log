@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  EXCEPTION_HANDLER_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\COMMIT\EXCEPTION_HANDLER
+  Design          : EXCEPTION_HANDLER_TOP
+  Parsed At       : 2026-08-15T18:26:05
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.117
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.116     0.000     0.070  MET
+  ff_1p16v_1p16v_n40c                               1     1.086     0.000     0.069  MET
+  ss_0p63v_0p63v_125c                               1     1.102     0.000     0.061  MET
+  ss_0p72v_0p72v_125c                               2     1.083     0.000     0.078  MET
+  ss_0p72v_0p72v_n40c                               1     1.117     0.000     0.112  MET
+  tt_0p90v_0p90v_25c                                4     1.090     0.000     0.062  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.086     0.000     0.062  MET
+  setup                                             7     1.083     0.000     0.061  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.099 ns   TNS :   +0.000 ns   WHS :   +0.078 ns
+  Slack    :   +1.099 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5972 / 4445
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:37         Memory : 1.233 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.086 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2167 / 3796
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:20         Memory : 2.93 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.074 ns
+  Slack    :   +1.090 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2777 / 2740
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:12         Memory : 2.728 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.095 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.095 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3068 / 1640
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:44         Memory : 2.237 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.117 ns   TNS :   +0.000 ns   WHS :   +0.112 ns
+  Slack    :   +1.117 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3564 / 5119
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:30         Memory : 4.072 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.116 ns   TNS :   +0.000 ns   WHS :   +0.070 ns
+  Slack    :   +1.116 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2181 / 5667
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:22         Memory : 1.23 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.102 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.102 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2658 / 2166
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:54         Memory : 2.936 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.114 ns   TNS :   +0.000 ns   WHS :   +0.065 ns
+  Slack    :   +1.114 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3290 / 2006
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:41         Memory : 4.045 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3781 / 5054
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:15         Memory : 3.63 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_EXCEPTION_HANDLER_TOP.rpt
+  Design   : EXCEPTION_HANDLER_TOP  Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.117 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.117 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5721 / 1917
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:27         Memory : 4.142 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c
+
+  File     : EXCEPTION_HANDLER_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

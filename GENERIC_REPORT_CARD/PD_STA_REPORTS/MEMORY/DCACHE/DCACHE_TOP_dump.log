@@ -1,0 +1,389 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  DCACHE_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\DCACHE
+  Design          : DCACHE_TOP
+  Parsed At       : 2026-08-15T18:26:11
+  Total Reports   : 31
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.147
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               2     1.067     0.000     0.000  MET
+  ff_1p16v_1p16v_n40c                               5     1.058     0.000     0.000  MET
+  ff_1p32v_1p32v_n40c                               1     1.121     0.000     0.000  MET
+  ss_0p63v_0p63v_125c                               1     1.130     0.000     0.108  MET
+  ss_0p63v_0p63v_n40c                               1     1.101     0.000     0.000  MET
+  ss_0p72v_0p72v_125c                               9     1.039     0.000     0.000  MET
+  ss_0p72v_0p72v_n40c                               1     1.101     0.000     0.104  MET
+  tt_0p90v_0p90v_25c                                8     1.055     0.000     0.000  MET
+  tt_0p90v_0p90v_85c                                2     1.090     0.000     0.000  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                             11     1.039     0.000     0.000  MET
+  setup                                            19     1.055     0.000     0.000  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2434 / 981
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:44         Memory : 2.626 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.068 ns   TNS :   +0.000 ns   WHS :   +0.083 ns
+  Slack    :   +1.068 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1198 / 4561
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:45         Memory : 4.193 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.055 ns   TNS :   +0.000 ns   WHS :   +0.061 ns
+  Slack    :   +1.055 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1229 / 5812
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:50         Memory : 3.26 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.121 ns   TNS :   +0.000 ns   WHS :   +0.100 ns
+  Slack    :   +1.121 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2700 / 1127
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:10         Memory : 1.402 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.104 ns
+  Slack    :   +1.101 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5604 / 2509
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:44         Memory : 1.508 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.129 ns   TNS :   +0.000 ns   WHS :   +0.097 ns
+  Slack    :   +1.129 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4659 / 2744
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:30         Memory : 3.459 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.130 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.130 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1448 / 4833
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:33         Memory : 3.277 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.079 ns   TNS :   +0.000 ns   WHS :   +0.116 ns
+  Slack    :   +1.079 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4404 / 3511
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:18         Memory : 1.867 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.110 ns   TNS :   +0.000 ns   WHS :   +0.099 ns
+  Slack    :   +1.110 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3402 / 5806
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:22         Memory : 3.294 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.139 ns   TNS :   +0.000 ns   WHS :   +0.064 ns
+  Slack    :   +1.139 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5523 / 3293
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:26         Memory : 3.282 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 11_SETUP_SS_125C_OCV_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.096 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.096 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2696 / 2403
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:14         Memory : 2.158 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 12_HOLD_FF_N40C_OCV_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.126 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.126 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6591 / 6112
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:50         Memory : 1.63 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_n40c
+
+  File     : 13_SETUP_SS_125C_POCV_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.108 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.108 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5807 / 3872
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:42         Memory : 3.876 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 14_HOLD_FF_N40C_POCV_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.101 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6285 / 4089
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:14         Memory : 1.137 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_n40c
+
+  File     : 15_SETUP_TT_85C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_85c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.143 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.143 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4139 / 3801
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:15         Memory : 2.331 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_85c
+
+  File     : 16_HOLD_TT_85C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_85c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.090 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.090 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2297 / 3852
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:52         Memory : 4.84 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_85c
+
+  File     : 17_SETUP_FF_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.067 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.067 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4553 / 4263
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:17         Memory : 1.881 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_125c
+
+  File     : 18_HOLD_SS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.039 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.039 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6392 / 5345
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:50         Memory : 3.138 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 19_SETUP_LVSS_N40C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p63v_0p63v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.101 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4765 / 2096
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:39         Memory : 2.112 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p63v_0p63v_n40c
+
+  File     : 20_HOLD_LVFF_N40C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p32v_1p32v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.121 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.121 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4318 / 6127
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:57         Memory : 1.416 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p32v_1p32v_n40c
+
+  File     : 21_CG_CHECK_SS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.107 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.107 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1275 / 2564
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:41         Memory : 4.447 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 22_RECOVERY_TT_25C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.078 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.078 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2515 / 3680
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:38         Memory : 2.36 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 23_MULTICYCLE_SS_125C_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.106 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.106 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3719 / 1098
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:50         Memory : 2.41 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 24_SETUP_TT_25C_ECO_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.084 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.084 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4983 / 5257
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:58         Memory : 2.12 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 25_HOLD_TT_25C_ECO_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.147 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.147 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 6010 / 4673
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:31         Memory : 1.888 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : 26_SETUP_SS_125C_SI_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.095 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.095 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5261 / 6371
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:18         Memory : 3.569 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 27_HOLD_FF_N40C_SI_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.073 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3596 / 5585
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:31         Memory : 3.211 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_n40c
+
+  File     : 28_SETUP_SS_125C_FINAL_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.083 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.083 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5747 / 4528
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:51         Memory : 4.596 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ss_0p72v_0p72v_125c
+
+  File     : 29_HOLD_FF_N40C_FINAL_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.058 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.058 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2201 / 2561
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:27         Memory : 3.463 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_ff_1p16v_1p16v_n40c
+
+  File     : 30_SETUP_TT_25C_FINAL_DCACHE_TOP.rpt
+  Design   : DCACHE_TOP            Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.136 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +1.136 ns   Status : MET
+  Status   : ALL PATHS CLEAN -- No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5030 / 3624
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:24         Memory : 4.237 GB
+  Run Dir  : /proj/cpu_rtl/sta/MEMORY/DCACHE/run_tt_0p90v_0p90v_25c
+
+  File     : DCACHE_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

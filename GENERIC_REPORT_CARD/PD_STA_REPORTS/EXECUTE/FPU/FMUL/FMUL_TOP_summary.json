@@ -1,0 +1,733 @@
+{
+  "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL",
+  "design": "FMUL_TOP",
+  "total_reports": 11,
+  "parsed_at": "2026-08-15T18:26:08",
+  "worst_wns_ns": 0.0,
+  "worst_tns_ns": 0.0,
+  "worst_whs_ns": 0.0,
+  "best_wns_ns": 1.142,
+  "total_violations": 0,
+  "overall_status": "MET",
+  "by_corner": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_125c": {
+      "name": "ff_1p16v_1p16v_125c",
+      "count": 1,
+      "wns_ns": 1.075,
+      "tns_ns": 0.0,
+      "whs_ns": 0.077,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_n40c": {
+      "name": "ff_1p16v_1p16v_n40c",
+      "count": 1,
+      "wns_ns": 1.142,
+      "tns_ns": 0.0,
+      "whs_ns": 0.104,
+      "status": "MET"
+    },
+    "ss_0p63v_0p63v_125c": {
+      "name": "ss_0p63v_0p63v_125c",
+      "count": 1,
+      "wns_ns": 1.098,
+      "tns_ns": 0.0,
+      "whs_ns": 0.075,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_125c": {
+      "name": "ss_0p72v_0p72v_125c",
+      "count": 2,
+      "wns_ns": 1.019,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_n40c": {
+      "name": "ss_0p72v_0p72v_n40c",
+      "count": 1,
+      "wns_ns": 1.105,
+      "tns_ns": 0.0,
+      "whs_ns": 0.109,
+      "status": "MET"
+    },
+    "tt_0p90v_0p90v_25c": {
+      "name": "tt_0p90v_0p90v_25c",
+      "count": 4,
+      "wns_ns": 1.081,
+      "tns_ns": 0.0,
+      "whs_ns": 0.083,
+      "status": "MET"
+    }
+  },
+  "by_check": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "hold": {
+      "name": "hold",
+      "count": 3,
+      "wns_ns": 1.075,
+      "tns_ns": 0.0,
+      "whs_ns": 0.077,
+      "status": "MET"
+    },
+    "setup": {
+      "name": "setup",
+      "count": 7,
+      "wns_ns": 1.019,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    }
+  },
+  "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\01_SETUP_SS_125C_FMUL_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.019,
+      "wns_ns": 1.019,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.019,
+          "tns_ns": 0.0,
+          "whs_ns": 0.062
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.098,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.127,
+          "tns_ns": 0.0,
+          "whs_ns": 0.127
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.052,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2516,
+      "constrained_endpoints": 4831,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:49",
+      "peak_mem": "2.344 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\02_HOLD_FF_N40C_FMUL_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.142,
+      "wns_ns": 1.142,
+      "tns_ns": 0.0,
+      "whs_ns": 0.104,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.142,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.199,
+          "tns_ns": 0.0,
+          "whs_ns": 0.073
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.19,
+          "tns_ns": 0.0,
+          "whs_ns": 0.056
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.071,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4882,
+      "constrained_endpoints": 3711,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:05:10",
+      "peak_mem": "4.44 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\03_SETUP_TT_25C_FMUL_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.13,
+      "wns_ns": 1.13,
+      "tns_ns": 0.0,
+      "whs_ns": 0.087,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.13,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.189,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.18,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.063,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2089,
+      "constrained_endpoints": 5571,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:49",
+      "peak_mem": "3.484 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\04_HOLD_TT_25C_FMUL_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.081,
+      "wns_ns": 1.081,
+      "tns_ns": 0.0,
+      "whs_ns": 0.083,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.081,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.195,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.14,
+          "tns_ns": 0.0,
+          "whs_ns": 0.121
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.073,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5592,
+      "constrained_endpoints": 5859,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:19",
+      "peak_mem": "2.423 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\05_SETUP_SS_M40C_FMUL_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.105,
+      "wns_ns": 1.105,
+      "tns_ns": 0.0,
+      "whs_ns": 0.109,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.105,
+          "tns_ns": 0.0,
+          "whs_ns": 0.109
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.098,
+          "tns_ns": 0.0,
+          "whs_ns": 0.098
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.091,
+          "tns_ns": 0.0,
+          "whs_ns": 0.094
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.061,
+          "tns_ns": 0.0,
+          "whs_ns": 0.063
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4595,
+      "constrained_endpoints": 3771,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:05:38",
+      "peak_mem": "3.138 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\06_HOLD_FF_125C_FMUL_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.075,
+      "wns_ns": 1.075,
+      "tns_ns": 0.0,
+      "whs_ns": 0.077,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.075,
+          "tns_ns": 0.0,
+          "whs_ns": 0.077
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.054,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.145,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.112,
+          "tns_ns": 0.0,
+          "whs_ns": 0.058
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3375,
+      "constrained_endpoints": 2854,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:08:47",
+      "peak_mem": "3.947 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\07_SETUP_LVSS_125C_FMUL_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.098,
+      "wns_ns": 1.098,
+      "tns_ns": 0.0,
+      "whs_ns": 0.075,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.098,
+          "tns_ns": 0.0,
+          "whs_ns": 0.075
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.115,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.076,
+          "tns_ns": 0.0,
+          "whs_ns": 0.118
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.075,
+          "tns_ns": 0.0,
+          "whs_ns": 0.073
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5127,
+      "constrained_endpoints": 4199,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:08:18",
+      "peak_mem": "2.567 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\08_CG_CHECK_TT_25C_FMUL_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.127,
+      "wns_ns": 1.127,
+      "tns_ns": 0.0,
+      "whs_ns": 0.108,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.127,
+          "tns_ns": 0.0,
+          "whs_ns": 0.108
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.099,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.124,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.169,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5114,
+      "constrained_endpoints": 4311,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:07:17",
+      "peak_mem": "2.738 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\09_RECOVERY_SS_125C_FMUL_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.082,
+      "wns_ns": 1.082,
+      "tns_ns": 0.0,
+      "whs_ns": 0.091,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.082,
+          "tns_ns": 0.0,
+          "whs_ns": 0.091
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.158,
+          "tns_ns": 0.0,
+          "whs_ns": 0.104
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.067,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.175,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3988,
+      "constrained_endpoints": 3201,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:04:20",
+      "peak_mem": "1.576 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\10_MULTICYCLE_TT_25C_FMUL_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_FMUL_TOP.rpt",
+      "design": "FMUL_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_fmul_pp/din_reg[0]",
+      "endpoint": "u_fmul_rnd/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.099,
+      "wns_ns": 1.099,
+      "tns_ns": 0.0,
+      "whs_ns": 0.101,
+      "sub_units": [
+        {
+          "unit": "u_fmul_pp",
+          "wns_ns": 1.099,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        },
+        {
+          "unit": "u_fmul_csa",
+          "wns_ns": 0.127,
+          "tns_ns": 0.0,
+          "whs_ns": 0.118
+        },
+        {
+          "unit": "u_fmul_norm",
+          "wns_ns": 0.17,
+          "tns_ns": 0.0,
+          "whs_ns": 0.057
+        },
+        {
+          "unit": "u_fmul_rnd",
+          "wns_ns": 0.182,
+          "tns_ns": 0.0,
+          "whs_ns": 0.123
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2734,
+      "constrained_endpoints": 3166,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/FMUL_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/FMUL_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/FMUL_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:54",
+      "peak_mem": "3.514 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\EXECUTE\\FPU\\FMUL\\FMUL_TIMING.rpt",
+      "file_name": "FMUL_TIMING.rpt",
+      "design": "N/A",
+      "version": "N/A",
+      "run_date": "N/A",
+      "corner": "N/A",
+      "note": "N/A",
+      "delay_type": "N/A",
+      "check": "N/A",
+      "clock": "N/A",
+      "period_ns": 0.0,
+      "freq_mhz": 0.0,
+      "startpoint": "N/A",
+      "endpoint": "N/A",
+      "slack_status": "UNKNOWN",
+      "slack_ns": 0.0,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "sub_units": [],
+      "status": "N/A",
+      "coverage_pct": 0.0,
+      "total_endpoints": 0,
+      "constrained_endpoints": 0,
+      "tool": "N/A",
+      "run_host": "N/A",
+      "run_dir": "N/A",
+      "sdc_file": "N/A",
+      "netlist": "N/A",
+      "spef_file": "N/A",
+      "liberty": "N/A",
+      "elapsed": "N/A",
+      "peak_mem": "N/A"
+    }
+  ]
+}

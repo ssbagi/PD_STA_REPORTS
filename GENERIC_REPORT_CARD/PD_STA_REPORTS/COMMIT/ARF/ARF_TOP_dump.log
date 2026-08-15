@@ -1,0 +1,166 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  ARF_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\COMMIT\ARF
+  Design          : ARF_TOP
+  Parsed At       : 2026-08-15T18:26:05
+  Total Reports   : 11
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.179
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.067     0.000     0.073  MET
+  ff_1p16v_1p16v_n40c                               1     1.104     0.000     0.101  MET
+  ss_0p63v_0p63v_125c                               1     1.053     0.000     0.062  MET
+  ss_0p72v_0p72v_125c                               2     1.112     0.000     0.082  MET
+  ss_0p72v_0p72v_n40c                               1     1.125     0.000     0.101  MET
+  tt_0p90v_0p90v_25c                                4     1.068     0.000     0.066  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.067     0.000     0.073  MET
+  setup                                             7     1.053     0.000     0.062  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.179 ns   TNS :   +0.000 ns   WHS :   +0.082 ns
+  Slack    :   +1.179 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2912 / 4598
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:46         Memory : 3.992 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.104 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.104 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3209 / 912
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:58         Memory : 1.784 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.073 ns   TNS :   +0.000 ns   WHS :   +0.087 ns
+  Slack    :   +1.073 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5825 / 1569
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:26         Memory : 4.024 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.101 ns   TNS :   +0.000 ns   WHS :   +0.116 ns
+  Slack    :   +1.101 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2180 / 3186
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:49         Memory : 2.898 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.125 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.125 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1195 / 2907
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:43         Memory : 4.07 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.067 ns   TNS :   +0.000 ns   WHS :   +0.073 ns
+  Slack    :   +1.067 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1700 / 4172
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:53         Memory : 4.775 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.053 ns   TNS :   +0.000 ns   WHS :   +0.062 ns
+  Slack    :   +1.053 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3202 / 2130
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:53         Memory : 1.823 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.068 ns   TNS :   +0.000 ns   WHS :   +0.066 ns
+  Slack    :   +1.068 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4766 / 1011
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:53         Memory : 1.77 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.112 ns   TNS :   +0.000 ns   WHS :   +0.101 ns
+  Slack    :   +1.112 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1692 / 2489
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:08:27         Memory : 4.16 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_ARF_TOP.rpt
+  Design   : ARF_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.149 ns   TNS :   +0.000 ns   WHS :   +0.108 ns
+  Slack    :   +1.149 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2409 / 5608
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:01:54         Memory : 1.275 GB
+  Run Dir  : /proj/cpu_rtl/sta/COMMIT/ARF/run_tt_0p90v_0p90v_25c
+
+  File     : ARF_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

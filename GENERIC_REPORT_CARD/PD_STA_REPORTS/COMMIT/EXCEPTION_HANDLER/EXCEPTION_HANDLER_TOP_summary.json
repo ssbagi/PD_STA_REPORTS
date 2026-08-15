@@ -1,0 +1,733 @@
+{
+  "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER",
+  "design": "EXCEPTION_HANDLER_TOP",
+  "total_reports": 11,
+  "parsed_at": "2026-08-15T18:26:05",
+  "worst_wns_ns": 0.0,
+  "worst_tns_ns": 0.0,
+  "worst_whs_ns": 0.0,
+  "best_wns_ns": 1.117,
+  "total_violations": 0,
+  "overall_status": "MET",
+  "by_corner": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_125c": {
+      "name": "ff_1p16v_1p16v_125c",
+      "count": 1,
+      "wns_ns": 1.116,
+      "tns_ns": 0.0,
+      "whs_ns": 0.07,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_n40c": {
+      "name": "ff_1p16v_1p16v_n40c",
+      "count": 1,
+      "wns_ns": 1.086,
+      "tns_ns": 0.0,
+      "whs_ns": 0.069,
+      "status": "MET"
+    },
+    "ss_0p63v_0p63v_125c": {
+      "name": "ss_0p63v_0p63v_125c",
+      "count": 1,
+      "wns_ns": 1.102,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_125c": {
+      "name": "ss_0p72v_0p72v_125c",
+      "count": 2,
+      "wns_ns": 1.083,
+      "tns_ns": 0.0,
+      "whs_ns": 0.078,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_n40c": {
+      "name": "ss_0p72v_0p72v_n40c",
+      "count": 1,
+      "wns_ns": 1.117,
+      "tns_ns": 0.0,
+      "whs_ns": 0.112,
+      "status": "MET"
+    },
+    "tt_0p90v_0p90v_25c": {
+      "name": "tt_0p90v_0p90v_25c",
+      "count": 4,
+      "wns_ns": 1.09,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    }
+  },
+  "by_check": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "hold": {
+      "name": "hold",
+      "count": 3,
+      "wns_ns": 1.086,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "status": "MET"
+    },
+    "setup": {
+      "name": "setup",
+      "count": 7,
+      "wns_ns": 1.083,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "status": "MET"
+    }
+  },
+  "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\01_SETUP_SS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.099,
+      "wns_ns": 1.099,
+      "tns_ns": 0.0,
+      "whs_ns": 0.078,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.099,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.08
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.077,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.159,
+          "tns_ns": 0.0,
+          "whs_ns": 0.105
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4445,
+      "constrained_endpoints": 5972,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:02:37",
+      "peak_mem": "1.233 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\02_HOLD_FF_N40C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.086,
+      "wns_ns": 1.086,
+      "tns_ns": 0.0,
+      "whs_ns": 0.069,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.086,
+          "tns_ns": 0.0,
+          "whs_ns": 0.069
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.119,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.175,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.195,
+          "tns_ns": 0.0,
+          "whs_ns": 0.093
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3796,
+      "constrained_endpoints": 2167,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:08:20",
+      "peak_mem": "2.93 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\03_SETUP_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.09,
+      "wns_ns": 1.09,
+      "tns_ns": 0.0,
+      "whs_ns": 0.074,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.09,
+          "tns_ns": 0.0,
+          "whs_ns": 0.074
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.18,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.15,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.115,
+          "tns_ns": 0.0,
+          "whs_ns": 0.071
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2740,
+      "constrained_endpoints": 2777,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:12",
+      "peak_mem": "2.728 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\04_HOLD_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.095,
+      "wns_ns": 1.095,
+      "tns_ns": 0.0,
+      "whs_ns": 0.062,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.095,
+          "tns_ns": 0.0,
+          "whs_ns": 0.062
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.081
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.118,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.133,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1640,
+      "constrained_endpoints": 3068,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:44",
+      "peak_mem": "2.237 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\05_SETUP_SS_M40C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.117,
+      "wns_ns": 1.117,
+      "tns_ns": 0.0,
+      "whs_ns": 0.112,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.112
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.129,
+          "tns_ns": 0.0,
+          "whs_ns": 0.107
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.052,
+          "tns_ns": 0.0,
+          "whs_ns": 0.085
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.168,
+          "tns_ns": 0.0,
+          "whs_ns": 0.102
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5119,
+      "constrained_endpoints": 3564,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:08:30",
+      "peak_mem": "4.072 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\06_HOLD_FF_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.116,
+      "wns_ns": 1.116,
+      "tns_ns": 0.0,
+      "whs_ns": 0.07,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.116,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.124,
+          "tns_ns": 0.0,
+          "whs_ns": 0.07
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.181,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.181,
+          "tns_ns": 0.0,
+          "whs_ns": 0.063
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5667,
+      "constrained_endpoints": 2181,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:05:22",
+      "peak_mem": "1.23 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\07_SETUP_LVSS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.102,
+      "wns_ns": 1.102,
+      "tns_ns": 0.0,
+      "whs_ns": 0.061,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.102,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.067,
+          "tns_ns": 0.0,
+          "whs_ns": 0.111
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.164,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.074,
+          "tns_ns": 0.0,
+          "whs_ns": 0.124
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2166,
+      "constrained_endpoints": 2658,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:02:54",
+      "peak_mem": "2.936 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\08_CG_CHECK_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.114,
+      "wns_ns": 1.114,
+      "tns_ns": 0.0,
+      "whs_ns": 0.065,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.114,
+          "tns_ns": 0.0,
+          "whs_ns": 0.065
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.152,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.052,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.178,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2006,
+      "constrained_endpoints": 3290,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:41",
+      "peak_mem": "4.045 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\09_RECOVERY_SS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.083,
+      "wns_ns": 1.083,
+      "tns_ns": 0.0,
+      "whs_ns": 0.087,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.083,
+          "tns_ns": 0.0,
+          "whs_ns": 0.087
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.135,
+          "tns_ns": 0.0,
+          "whs_ns": 0.089
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.068,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.157,
+          "tns_ns": 0.0,
+          "whs_ns": 0.101
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5054,
+      "constrained_endpoints": 3781,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:15",
+      "peak_mem": "3.63 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\10_MULTICYCLE_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_EXCEPTION_HANDLER_TOP.rpt",
+      "design": "EXCEPTION_HANDLER_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:54 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_exc_det/din_reg[0]",
+      "endpoint": "u_exc_flush/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.117,
+      "wns_ns": 1.117,
+      "tns_ns": 0.0,
+      "whs_ns": 0.069,
+      "sub_units": [
+        {
+          "unit": "u_exc_det",
+          "wns_ns": 1.117,
+          "tns_ns": 0.0,
+          "whs_ns": 0.069
+        },
+        {
+          "unit": "u_exc_pri",
+          "wns_ns": 0.106,
+          "tns_ns": 0.0,
+          "whs_ns": 0.057
+        },
+        {
+          "unit": "u_exc_vec",
+          "wns_ns": 0.144,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        },
+        {
+          "unit": "u_exc_flush",
+          "wns_ns": 0.088,
+          "tns_ns": 0.0,
+          "whs_ns": 0.13
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1917,
+      "constrained_endpoints": 5721,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/COMMIT/EXCEPTION_HANDLER/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/EXCEPTION_HANDLER_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/EXCEPTION_HANDLER_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/EXCEPTION_HANDLER_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:01:27",
+      "peak_mem": "4.142 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\COMMIT\\EXCEPTION_HANDLER\\EXCEPTION_HANDLER_TIMING.rpt",
+      "file_name": "EXCEPTION_HANDLER_TIMING.rpt",
+      "design": "N/A",
+      "version": "N/A",
+      "run_date": "N/A",
+      "corner": "N/A",
+      "note": "N/A",
+      "delay_type": "N/A",
+      "check": "N/A",
+      "clock": "N/A",
+      "period_ns": 0.0,
+      "freq_mhz": 0.0,
+      "startpoint": "N/A",
+      "endpoint": "N/A",
+      "slack_status": "UNKNOWN",
+      "slack_ns": 0.0,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "sub_units": [],
+      "status": "N/A",
+      "coverage_pct": 0.0,
+      "total_endpoints": 0,
+      "constrained_endpoints": 0,
+      "tool": "N/A",
+      "run_host": "N/A",
+      "run_dir": "N/A",
+      "sdc_file": "N/A",
+      "netlist": "N/A",
+      "spef_file": "N/A",
+      "liberty": "N/A",
+      "elapsed": "N/A",
+      "peak_mem": "N/A"
+    }
+  ]
+}

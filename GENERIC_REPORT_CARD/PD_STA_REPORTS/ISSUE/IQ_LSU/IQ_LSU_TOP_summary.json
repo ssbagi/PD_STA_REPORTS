@@ -1,0 +1,733 @@
+{
+  "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU",
+  "design": "IQ_LSU_TOP",
+  "total_reports": 11,
+  "parsed_at": "2026-08-15T18:26:10",
+  "worst_wns_ns": 0.0,
+  "worst_tns_ns": 0.0,
+  "worst_whs_ns": 0.0,
+  "best_wns_ns": 1.128,
+  "total_violations": 0,
+  "overall_status": "MET",
+  "by_corner": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_125c": {
+      "name": "ff_1p16v_1p16v_125c",
+      "count": 1,
+      "wns_ns": 1.125,
+      "tns_ns": 0.0,
+      "whs_ns": 0.116,
+      "status": "MET"
+    },
+    "ff_1p16v_1p16v_n40c": {
+      "name": "ff_1p16v_1p16v_n40c",
+      "count": 1,
+      "wns_ns": 1.073,
+      "tns_ns": 0.0,
+      "whs_ns": 0.072,
+      "status": "MET"
+    },
+    "ss_0p63v_0p63v_125c": {
+      "name": "ss_0p63v_0p63v_125c",
+      "count": 1,
+      "wns_ns": 1.128,
+      "tns_ns": 0.0,
+      "whs_ns": 0.064,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_125c": {
+      "name": "ss_0p72v_0p72v_125c",
+      "count": 2,
+      "wns_ns": 1.096,
+      "tns_ns": 0.0,
+      "whs_ns": 0.065,
+      "status": "MET"
+    },
+    "ss_0p72v_0p72v_n40c": {
+      "name": "ss_0p72v_0p72v_n40c",
+      "count": 1,
+      "wns_ns": 1.105,
+      "tns_ns": 0.0,
+      "whs_ns": 0.078,
+      "status": "MET"
+    },
+    "tt_0p90v_0p90v_25c": {
+      "name": "tt_0p90v_0p90v_25c",
+      "count": 4,
+      "wns_ns": 1.06,
+      "tns_ns": 0.0,
+      "whs_ns": 0.065,
+      "status": "MET"
+    }
+  },
+  "by_check": {
+    "N/A": {
+      "name": "N/A",
+      "count": 1,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "status": "MET"
+    },
+    "hold": {
+      "name": "hold",
+      "count": 3,
+      "wns_ns": 1.067,
+      "tns_ns": 0.0,
+      "whs_ns": 0.072,
+      "status": "MET"
+    },
+    "setup": {
+      "name": "setup",
+      "count": 7,
+      "wns_ns": 1.06,
+      "tns_ns": 0.0,
+      "whs_ns": 0.064,
+      "status": "MET"
+    }
+  },
+  "reports": [
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\01_SETUP_SS_125C_IQ_LSU_TOP.rpt",
+      "file_name": "01_SETUP_SS_125C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Worst-case Setup — Slow corner, high temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.096,
+      "wns_ns": 1.096,
+      "tns_ns": 0.0,
+      "whs_ns": 0.065,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.096,
+          "tns_ns": 0.0,
+          "whs_ns": 0.065
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.184,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.107,
+          "tns_ns": 0.0,
+          "whs_ns": 0.057
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.099,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 5340,
+      "constrained_endpoints": 4533,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:08:22",
+      "peak_mem": "2.397 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\02_HOLD_FF_N40C_IQ_LSU_TOP.rpt",
+      "file_name": "02_HOLD_FF_N40C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_n40c",
+      "note": "Worst-case Hold  — Fast corner, cold temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.073,
+      "wns_ns": 1.073,
+      "tns_ns": 0.0,
+      "whs_ns": 0.072,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.073,
+          "tns_ns": 0.0,
+          "whs_ns": 0.072
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.144,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.062,
+          "tns_ns": 0.0,
+          "whs_ns": 0.06
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.071,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4341,
+      "constrained_endpoints": 1493,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ff_1p16v_1p16v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_n40c.db",
+      "elapsed": "00:02:23",
+      "peak_mem": "4.372 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\03_SETUP_TT_25C_IQ_LSU_TOP.rpt",
+      "file_name": "03_SETUP_TT_25C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Setup   — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.09,
+      "wns_ns": 1.09,
+      "tns_ns": 0.0,
+      "whs_ns": 0.065,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.09,
+          "tns_ns": 0.0,
+          "whs_ns": 0.065
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.149,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.128,
+          "tns_ns": 0.0,
+          "whs_ns": 0.09
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.122,
+          "tns_ns": 0.0,
+          "whs_ns": 0.128
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4515,
+      "constrained_endpoints": 2043,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:03:36",
+      "peak_mem": "3.698 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\04_HOLD_TT_25C_IQ_LSU_TOP.rpt",
+      "file_name": "04_HOLD_TT_25C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Typical Hold    — Nominal corner",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.067,
+      "wns_ns": 1.067,
+      "tns_ns": 0.0,
+      "whs_ns": 0.112,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.067,
+          "tns_ns": 0.0,
+          "whs_ns": 0.112
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.127,
+          "tns_ns": 0.0,
+          "whs_ns": 0.068
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.137,
+          "tns_ns": 0.0,
+          "whs_ns": 0.128
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.059,
+          "tns_ns": 0.0,
+          "whs_ns": 0.067
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4769,
+      "constrained_endpoints": 4096,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:02:30",
+      "peak_mem": "1.558 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\05_SETUP_SS_M40C_IQ_LSU_TOP.rpt",
+      "file_name": "05_SETUP_SS_M40C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_n40c",
+      "note": "Cold Setup      — Slow corner, cold temp",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.105,
+      "wns_ns": 1.105,
+      "tns_ns": 0.0,
+      "whs_ns": 0.078,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.105,
+          "tns_ns": 0.0,
+          "whs_ns": 0.078
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.079,
+          "tns_ns": 0.0,
+          "whs_ns": 0.109
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.11,
+          "tns_ns": 0.0,
+          "whs_ns": 0.108
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.183,
+          "tns_ns": 0.0,
+          "whs_ns": 0.076
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4980,
+      "constrained_endpoints": 2448,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ss_0p72v_0p72v_n40c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_n40c.db",
+      "elapsed": "00:01:35",
+      "peak_mem": "2.107 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\06_HOLD_FF_125C_IQ_LSU_TOP.rpt",
+      "file_name": "06_HOLD_FF_125C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ff_1p16v_1p16v_125c",
+      "note": "Hot Hold        — Fast corner, high temp",
+      "delay_type": "min",
+      "check": "hold",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.125,
+      "wns_ns": 1.125,
+      "tns_ns": 0.0,
+      "whs_ns": 0.116,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.125,
+          "tns_ns": 0.0,
+          "whs_ns": 0.116
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.116,
+          "tns_ns": 0.0,
+          "whs_ns": 0.061
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.173,
+          "tns_ns": 0.0,
+          "whs_ns": 0.124
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.137,
+          "tns_ns": 0.0,
+          "whs_ns": 0.129
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 3773,
+      "constrained_endpoints": 3986,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ff_1p16v_1p16v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ff_1p16v_1p16v_125c.db",
+      "elapsed": "00:04:26",
+      "peak_mem": "3.025 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\07_SETUP_LVSS_125C_IQ_LSU_TOP.rpt",
+      "file_name": "07_SETUP_LVSS_125C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p63v_0p63v_125c",
+      "note": "Low-Vdd Setup   — Ultra-low voltage corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.128,
+      "wns_ns": 1.128,
+      "tns_ns": 0.0,
+      "whs_ns": 0.064,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.128,
+          "tns_ns": 0.0,
+          "whs_ns": 0.064
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.078,
+          "tns_ns": 0.0,
+          "whs_ns": 0.066
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.086,
+          "tns_ns": 0.0,
+          "whs_ns": 0.119
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.192,
+          "tns_ns": 0.0,
+          "whs_ns": 0.074
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4168,
+      "constrained_endpoints": 3788,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ss_0p63v_0p63v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p63v_0p63v_125c.db",
+      "elapsed": "00:05:27",
+      "peak_mem": "3.609 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\08_CG_CHECK_TT_25C_IQ_LSU_TOP.rpt",
+      "file_name": "08_CG_CHECK_TT_25C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Clock Gating Check — Nominal corner",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.101,
+      "wns_ns": 1.101,
+      "tns_ns": 0.0,
+      "whs_ns": 0.097,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.101,
+          "tns_ns": 0.0,
+          "whs_ns": 0.097
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.198,
+          "tns_ns": 0.0,
+          "whs_ns": 0.086
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.164,
+          "tns_ns": 0.0,
+          "whs_ns": 0.122
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.119,
+          "tns_ns": 0.0,
+          "whs_ns": 0.063
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 4442,
+      "constrained_endpoints": 5831,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:06:58",
+      "peak_mem": "2.934 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\09_RECOVERY_SS_125C_IQ_LSU_TOP.rpt",
+      "file_name": "09_RECOVERY_SS_125C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "ss_0p72v_0p72v_125c",
+      "note": "Recovery/Removal Check — Async reset paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.124,
+      "wns_ns": 1.124,
+      "tns_ns": 0.0,
+      "whs_ns": 0.089,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.124,
+          "tns_ns": 0.0,
+          "whs_ns": 0.089
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.07,
+          "tns_ns": 0.0,
+          "whs_ns": 0.106
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.091,
+          "tns_ns": 0.0,
+          "whs_ns": 0.084
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.101,
+          "tns_ns": 0.0,
+          "whs_ns": 0.083
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 2771,
+      "constrained_endpoints": 5749,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_ss_0p72v_0p72v_125c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_ss_0p72v_0p72v_125c.db",
+      "elapsed": "00:01:18",
+      "peak_mem": "4.414 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\10_MULTICYCLE_TT_25C_IQ_LSU_TOP.rpt",
+      "file_name": "10_MULTICYCLE_TT_25C_IQ_LSU_TOP.rpt",
+      "design": "IQ_LSU_TOP",
+      "version": "PrimeTime 2023.06-SP3",
+      "run_date": "Sat Aug 15 17:34:53 2026",
+      "corner": "tt_0p90v_0p90v_25c",
+      "note": "Multicycle Path Check — 2-cycle paths",
+      "delay_type": "max",
+      "check": "setup",
+      "clock": "CLK_CORE",
+      "period_ns": 2.0,
+      "freq_mhz": 500.0,
+      "startpoint": "u_iql_ent/din_reg[0]",
+      "endpoint": "u_iql_age/dout_reg[0]",
+      "slack_status": "MET",
+      "slack_ns": 1.06,
+      "wns_ns": 1.06,
+      "tns_ns": 0.0,
+      "whs_ns": 0.092,
+      "sub_units": [
+        {
+          "unit": "u_iql_ent",
+          "wns_ns": 1.06,
+          "tns_ns": 0.0,
+          "whs_ns": 0.092
+        },
+        {
+          "unit": "u_iql_wkup",
+          "wns_ns": 0.137,
+          "tns_ns": 0.0,
+          "whs_ns": 0.103
+        },
+        {
+          "unit": "u_iql_sel",
+          "wns_ns": 0.182,
+          "tns_ns": 0.0,
+          "whs_ns": 0.13
+        },
+        {
+          "unit": "u_iql_age",
+          "wns_ns": 0.098,
+          "tns_ns": 0.0,
+          "whs_ns": 0.13
+        }
+      ],
+      "status": "ALL PATHS CLEAN — No Setup or Hold Violations",
+      "coverage_pct": 100.0,
+      "total_endpoints": 1766,
+      "constrained_endpoints": 2471,
+      "tool": "Synopsys PrimeTime 2023.06-SP3",
+      "run_host": "sta-server-01",
+      "run_dir": "/proj/cpu_rtl/sta/ISSUE/IQ_LSU/run_tt_0p90v_0p90v_25c",
+      "sdc_file": "/proj/cpu_rtl/constraints/IQ_LSU_TOP.sdc",
+      "netlist": "/proj/cpu_rtl/netlist/IQ_LSU_TOP.v.gz",
+      "spef_file": "/proj/cpu_rtl/spef/IQ_LSU_TOP.spef.gz",
+      "liberty": "saed32nm_rvt_tt_0p90v_0p90v_25c.db",
+      "elapsed": "00:03:16",
+      "peak_mem": "2.424 GB"
+    },
+    {
+      "file_path": "D:\\Certificates\\PD_STA_REPORTS\\ISSUE\\IQ_LSU\\IQ_LSU_TIMING.rpt",
+      "file_name": "IQ_LSU_TIMING.rpt",
+      "design": "N/A",
+      "version": "N/A",
+      "run_date": "N/A",
+      "corner": "N/A",
+      "note": "N/A",
+      "delay_type": "N/A",
+      "check": "N/A",
+      "clock": "N/A",
+      "period_ns": 0.0,
+      "freq_mhz": 0.0,
+      "startpoint": "N/A",
+      "endpoint": "N/A",
+      "slack_status": "UNKNOWN",
+      "slack_ns": 0.0,
+      "wns_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.0,
+      "sub_units": [],
+      "status": "N/A",
+      "coverage_pct": 0.0,
+      "total_endpoints": 0,
+      "constrained_endpoints": 0,
+      "tool": "N/A",
+      "run_host": "N/A",
+      "run_dir": "N/A",
+      "sdc_file": "N/A",
+      "netlist": "N/A",
+      "spef_file": "N/A",
+      "liberty": "N/A",
+      "elapsed": "N/A",
+      "peak_mem": "N/A"
+    }
+  ]
+}
