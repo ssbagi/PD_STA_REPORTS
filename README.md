@@ -9,6 +9,17 @@
 
 ---
 
+> [!NOTE]
+> **This tooling is not a micromanagement or surveillance tool.**
+> Its sole purpose is to surface timing violations automatically so that
+> the right engineer receives actionable data quickly. Emails and reports
+> are triggered by **timing closure criteria**, not by individual
+> performance monitoring. Block and module owners retain full engineering
+> autonomy — the tool gives them the information they need to do their
+> job, nothing more.
+
+---
+
 ## Table of Contents
 
 1.  [What This Repo Does](#1-what-this-repo-does)
