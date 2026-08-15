@@ -1,0 +1,44 @@
+################################################################################
+#  EXECUTE STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User5
+  Email              : mto5@company.com
+  Employee ID        : EMP-1005
+
+[RTL TEAM LEAD]
+  Name               : TeamLead5
+  Email              : teamlead5@company.com
+
+[PD ENGINEER]
+  Name               : PDEng5
+  Email              : pdeng5@company.com
+
+[STA ENGINEER]
+  Name               : STAEng5
+  Email              : staeng5@company.com
+
+[BLOCKS IN THIS STAGE]
+  EXECUTE\ALU\ALU0                           BTO = User21      <user21@company.com>  EMP-2021
+  EXECUTE\ALU\ALU1                           BTO = User22      <user22@company.com>  EMP-2022
+  EXECUTE\BRU                                BTO = User23      <user23@company.com>  EMP-2023
+  EXECUTE\DIV                                BTO = User24      <user24@company.com>  EMP-2024
+  EXECUTE\FPU\FADD                           BTO = User25      <user25@company.com>  EMP-2025
+  EXECUTE\FPU\FDIV                           BTO = User26      <user26@company.com>  EMP-2026
+  EXECUTE\FPU\FMUL                           BTO = User27      <user27@company.com>  EMP-2027
+  EXECUTE\FPU\FSQRT                          BTO = User28      <user28@company.com>  EMP-2028
+  EXECUTE\LSU\LDU                            BTO = User29      <user29@company.com>  EMP-2029
+  EXECUTE\LSU\STL_FORWARD                    BTO = User30      <user30@company.com>  EMP-2030
+  EXECUTE\LSU\STU                            BTO = User31      <user31@company.com>  EMP-2031
+  EXECUTE\MUL                                BTO = User32      <user32@company.com>  EMP-2032
+  EXECUTE\SIMD_VEC                           BTO = User33      <user33@company.com>  EMP-2033
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User5 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

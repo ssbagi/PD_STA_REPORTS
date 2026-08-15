@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : FMUL_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Typical Setup   — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_fmul_pp/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_fmul_rnd/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.157      0.157
+  u_fmul_pp/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.157 r
+  u_fmul_pp/din_reg[0]/Q  (DFFARX1_RVT)                        0.141       0.298 r
+  u_fmul_pp/U12/Y (INVX2_RVT)                                  0.065       0.363 f
+  u_fmul_pp/U34/Y (NAND2X1_RVT)                                0.07       0.433 r
+  u_fmul_csa/U07/Y (AOI22X1_RVT)                                0.072       0.505 f
+  u_fmul_csa/U19/Y (OAI21X1_RVT)                                0.091       0.596 r
+  u_fmul_norm/U03/Y (MUX21X1_RVT)                                0.087       0.683 r
+  u_fmul_norm/U11/Y (AND2X1_RVT)                                 0.057       0.74 f
+  u_fmul_norm/U22/Y (NOR2X1_RVT)                                 0.042       0.782 r
+  u_fmul_rnd/U05/Y (BUFX4_RVT)                                  0.06       0.842 r
+  u_fmul_rnd/dout_reg[0]/D (DFFARX1_RVT)                        0.057      0.899 f
+  data arrival time                                                    0.899
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.157      2.157
+  clock uncertainty                                      -0.05   2.107
+  u_fmul_rnd/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.107 r
+  library setup time                                     -0.078   2.029
+  data required time                                                   2.029
+  -------------------------------------------------------------------------
+  data required time                                                   2.029
+  data arrival time                                                   -0.899
+  -------------------------------------------------------------------------
+  slack (MET)   1.13
+
+
+=========================================================================
+                   FMUL_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : FMUL_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Typical Setup   — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_fmul_pp          1.13       0        0      0.087        0     │
+  │ u_fmul_csa          0.189       0        0      0.123        0     │
+  │ u_fmul_norm          0.18       0        0      0.091        0     │
+  │ u_fmul_rnd          0.063       0        0      0.105        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ FMUL_TOP  1.13       0        0      0.087        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_fmul_pp/*] -to [get_cells u_fmul_rnd/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_fmul_pp/*] -to [get_cells u_fmul_rnd/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.017 ns  (max across FMUL_TOP)
+  Latency  : 0.157 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 2089
+  Constrained endpoints      : 5571
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/EXECUTE/FPU/FMUL/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/FMUL_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/FMUL_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/FMUL_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:07:49
+  Peak Memory  : 3.484 GB
+
+=========================================================================
+End of Report
+=========================================================================

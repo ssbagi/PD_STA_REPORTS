@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : SIMD_VEC_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ff_1p16v_1p16v_n40c
+Note   : Worst-case Hold  — Fast corner, cold temp
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_vec_add/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_vec_perm/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.138      0.138
+  u_vec_add/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.138 r
+  u_vec_add/din_reg[0]/Q  (DFFARX1_RVT)                        0.144       0.282 r
+  u_vec_add/U12/Y (INVX2_RVT)                                  0.032       0.314 f
+  u_vec_add/U34/Y (NAND2X1_RVT)                                0.057       0.371 r
+  u_vec_mul/U07/Y (AOI22X1_RVT)                                0.093       0.464 f
+  u_vec_mul/U19/Y (OAI21X1_RVT)                                0.093       0.557 r
+  u_vec_shf/U03/Y (MUX21X1_RVT)                                0.069       0.626 r
+  u_vec_shf/U11/Y (AND2X1_RVT)                                 0.056       0.682 f
+  u_vec_shf/U22/Y (NOR2X1_RVT)                                 0.069       0.751 r
+  u_vec_perm/U05/Y (BUFX4_RVT)                                  0.057       0.808 r
+  u_vec_perm/dout_reg[0]/D (DFFARX1_RVT)                        0.072      0.88 f
+  data arrival time                                                    0.88
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.138      2.138
+  clock uncertainty                                      -0.05   2.088
+  u_vec_perm/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.088 r
+  library setup time                                     -0.07   2.018
+  data required time                                                   2.018
+  -------------------------------------------------------------------------
+  data required time                                                   2.018
+  data arrival time                                                   -0.88
+  -------------------------------------------------------------------------
+  slack (MET)   1.138
+
+
+=========================================================================
+                   SIMD_VEC_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : SIMD_VEC_TOP
+  Corner       : ff_1p16v_1p16v_n40c
+  Check        : min  (Worst-case Hold  — Fast corner, cold temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_vec_add          1.138       0        0      0.103        0     │
+  │ u_vec_mul          0.07       0        0      0.058        0     │
+  │ u_vec_shf          0.199       0        0      0.123        0     │
+  │ u_vec_perm          0.118       0        0      0.105        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ SIMD_VEC_TOP  1.138       0        0      0.103        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_vec_add/*] -to [get_cells u_vec_perm/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_vec_add/*] -to [get_cells u_vec_perm/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.025 ns  (max across SIMD_VEC_TOP)
+  Latency  : 0.138 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 4597
+  Constrained endpoints      : 4701
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/EXECUTE/SIMD_VEC/run_ff_1p16v_1p16v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/SIMD_VEC_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/SIMD_VEC_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/SIMD_VEC_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time : 00:01:56
+  Peak Memory  : 1.929 GB
+
+=========================================================================
+End of Report
+=========================================================================

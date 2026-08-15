@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : FSQRT_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ff_1p16v_1p16v_n40c
+Note   : Worst-case Hold  — Fast corner, cold temp
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_fsqrt_init/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_fsqrt_rnd/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.142      0.142
+  u_fsqrt_init/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.142 r
+  u_fsqrt_init/din_reg[0]/Q  (DFFARX1_RVT)                        0.131       0.273 r
+  u_fsqrt_init/U12/Y (INVX2_RVT)                                  0.04       0.313 f
+  u_fsqrt_init/U34/Y (NAND2X1_RVT)                                0.086       0.399 r
+  u_fsqrt_iter/U07/Y (AOI22X1_RVT)                                0.085       0.484 f
+  u_fsqrt_iter/U19/Y (OAI21X1_RVT)                                0.087       0.571 r
+  u_fsqrt_norm/U03/Y (MUX21X1_RVT)                                0.079       0.65 r
+  u_fsqrt_norm/U11/Y (AND2X1_RVT)                                 0.068       0.718 f
+  u_fsqrt_norm/U22/Y (NOR2X1_RVT)                                 0.068       0.786 r
+  u_fsqrt_rnd/U05/Y (BUFX4_RVT)                                  0.067       0.853 r
+  u_fsqrt_rnd/dout_reg[0]/D (DFFARX1_RVT)                        0.059      0.912 f
+  data arrival time                                                    0.912
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.142      2.142
+  clock uncertainty                                      -0.05   2.092
+  u_fsqrt_rnd/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.092 r
+  library setup time                                     -0.084   2.008
+  data required time                                                   2.008
+  -------------------------------------------------------------------------
+  data required time                                                   2.008
+  data arrival time                                                   -0.912
+  -------------------------------------------------------------------------
+  slack (MET)   1.096
+
+
+=========================================================================
+                   FSQRT_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : FSQRT_TOP
+  Corner       : ff_1p16v_1p16v_n40c
+  Check        : min  (Worst-case Hold  — Fast corner, cold temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_fsqrt_init          1.096       0        0      0.08        0     │
+  │ u_fsqrt_iter          0.16       0        0      0.127        0     │
+  │ u_fsqrt_norm          0.086       0        0      0.087        0     │
+  │ u_fsqrt_rnd          0.105       0        0      0.112        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ FSQRT_TOP  1.096       0        0      0.08        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_fsqrt_init/*] -to [get_cells u_fsqrt_rnd/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_fsqrt_init/*] -to [get_cells u_fsqrt_rnd/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.024 ns  (max across FSQRT_TOP)
+  Latency  : 0.142 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 5775
+  Constrained endpoints      : 3526
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/EXECUTE/FPU/FSQRT/run_ff_1p16v_1p16v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/FSQRT_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/FSQRT_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/FSQRT_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
+  Elapsed Time : 00:04:37
+  Peak Memory  : 4.497 GB
+
+=========================================================================
+End of Report
+=========================================================================

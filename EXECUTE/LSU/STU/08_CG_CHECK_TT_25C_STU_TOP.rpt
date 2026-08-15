@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : STU_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Clock Gating Check — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_stu_agen/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_stu_merge/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.151      0.151
+  u_stu_agen/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.151 r
+  u_stu_agen/din_reg[0]/Q  (DFFARX1_RVT)                        0.136       0.287 r
+  u_stu_agen/U12/Y (INVX2_RVT)                                  0.03       0.317 f
+  u_stu_agen/U34/Y (NAND2X1_RVT)                                0.056       0.373 r
+  u_stu_tlb/U07/Y (AOI22X1_RVT)                                0.096       0.469 f
+  u_stu_tlb/U19/Y (OAI21X1_RVT)                                0.091       0.56 r
+  u_stu_dc/U03/Y (MUX21X1_RVT)                                0.07       0.63 r
+  u_stu_dc/U11/Y (AND2X1_RVT)                                 0.062       0.692 f
+  u_stu_dc/U22/Y (NOR2X1_RVT)                                 0.049       0.741 r
+  u_stu_merge/U05/Y (BUFX4_RVT)                                  0.064       0.805 r
+  u_stu_merge/dout_reg[0]/D (DFFARX1_RVT)                        0.072      0.877 f
+  data arrival time                                                    0.877
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.151      2.151
+  clock uncertainty                                      -0.05   2.101
+  u_stu_merge/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.101 r
+  library setup time                                     -0.077   2.024
+  data required time                                                   2.024
+  -------------------------------------------------------------------------
+  data required time                                                   2.024
+  data arrival time                                                   -0.877
+  -------------------------------------------------------------------------
+  slack (MET)   1.147
+
+
+=========================================================================
+                   STU_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : STU_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Clock Gating Check — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_stu_agen          1.147       0        0      0.096        0     │
+  │ u_stu_tlb          0.153       0        0      0.126        0     │
+  │ u_stu_dc          0.143       0        0      0.103        0     │
+  │ u_stu_merge          0.058       0        0      0.097        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ STU_TOP  1.147       0        0      0.096        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_stu_agen/*] -to [get_cells u_stu_merge/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_stu_agen/*] -to [get_cells u_stu_merge/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.02 ns  (max across STU_TOP)
+  Latency  : 0.151 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 5734
+  Constrained endpoints      : 1524
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/EXECUTE/LSU/STU/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/STU_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/STU_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/STU_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:03:20
+  Peak Memory  : 1.982 GB
+
+=========================================================================
+End of Report
+=========================================================================

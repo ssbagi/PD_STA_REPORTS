@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : ALU1_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ss_0p63v_0p63v_125c
+Note   : Low-Vdd Setup   — Ultra-low voltage corner
+****************************************
+
+Operating Conditions : ss_0p63v_0p63v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_alu1_add/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_alu1_cmp/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.13      0.13
+  u_alu1_add/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.13 r
+  u_alu1_add/din_reg[0]/Q  (DFFARX1_RVT)                        0.121       0.251 r
+  u_alu1_add/U12/Y (INVX2_RVT)                                  0.041       0.292 f
+  u_alu1_add/U34/Y (NAND2X1_RVT)                                0.06       0.352 r
+  u_alu1_log/U07/Y (AOI22X1_RVT)                                0.082       0.434 f
+  u_alu1_log/U19/Y (OAI21X1_RVT)                                0.112       0.546 r
+  u_alu1_shf/U03/Y (MUX21X1_RVT)                                0.092       0.638 r
+  u_alu1_shf/U11/Y (AND2X1_RVT)                                 0.053       0.691 f
+  u_alu1_shf/U22/Y (NOR2X1_RVT)                                 0.061       0.752 r
+  u_alu1_cmp/U05/Y (BUFX4_RVT)                                  0.07       0.822 r
+  u_alu1_cmp/dout_reg[0]/D (DFFARX1_RVT)                        0.073      0.895 f
+  data arrival time                                                    0.895
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.13      2.13
+  clock uncertainty                                      -0.05   2.08
+  u_alu1_cmp/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.08 r
+  library setup time                                     -0.065   2.015
+  data required time                                                   2.015
+  -------------------------------------------------------------------------
+  data required time                                                   2.015
+  data arrival time                                                   -0.895
+  -------------------------------------------------------------------------
+  slack (MET)   1.12
+
+
+=========================================================================
+                   ALU1_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : ALU1_TOP
+  Corner       : ss_0p63v_0p63v_125c
+  Check        : max  (Low-Vdd Setup   — Ultra-low voltage corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_alu1_add          1.12       0        0      0.111        0     │
+  │ u_alu1_log          0.068       0        0      0.124        0     │
+  │ u_alu1_shf          0.052       0        0      0.083        0     │
+  │ u_alu1_cmp          0.07       0        0      0.125        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ ALU1_TOP  1.12       0        0      0.111        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_alu1_add/*] -to [get_cells u_alu1_cmp/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_alu1_add/*] -to [get_cells u_alu1_cmp/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.021 ns  (max across ALU1_TOP)
+  Latency  : 0.13 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 5966
+  Constrained endpoints      : 4087
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/EXECUTE/ALU/ALU1/run_ss_0p63v_0p63v_125c
+  SDC File     : /proj/cpu_rtl/constraints/ALU1_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/ALU1_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/ALU1_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p63v_0p63v_125c.db
+  Elapsed Time : 00:03:10
+  Peak Memory  : 3.086 GB
+
+=========================================================================
+End of Report
+=========================================================================
