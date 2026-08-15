@@ -57,6 +57,16 @@ tr:hover td{background:#f9fafb}
 .badge-viol{background:#fee2e2;color:#991b1b}
 .badge-unk {background:#fef3c7;color:#92400e}
 
+/* ── owner card ── */
+.owner-card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;
+            padding:16px 20px;margin-bottom:24px}
+.ow-title{font-size:0.8rem;font-weight:700;color:#3b82d4;
+          text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.ow-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+.ow-table td{padding:3px 8px;vertical-align:top}
+.ow-label{color:#57606a;white-space:nowrap;width:220px;font-weight:600}
+.ow-val  {color:#1f2328;font-family:monospace;font-size:0.78rem}
+
 /* ── footer ── */
 footer{text-align:center;font-size:0.72rem;color:#aaa;
        border-top:1px solid #e5e7eb;margin-top:32px;padding-top:12px}
@@ -66,8 +76,8 @@ footer{text-align:center;font-size:0.72rem;color:#aaa;
 <body>
 <div class='wrap'>
 <h1>STA Block Timing Report &mdash; CLOCK_DOMAIN_TOP</h1>
-<div class='meta'>Directory: <code>D:\Certificates\PD_STA_REPORTS\UNCORE\CLOCK_DOMAIN</code>&nbsp;|&nbsp;Parsed: 2026-08-15T18:25:17&nbsp;|&nbsp;Reports: 31</div>
-<div class="banner banner-met">Overall Status: <strong>MET</strong> &nbsp;|&nbsp; Worst WNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst TNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst WHS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Violations: <strong>0</strong></div><div class='kpi-grid'><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst TNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WHS (ns)</div></div><div class="kpi ok"><div class="val">1.181</div><div class="lbl">Best WNS (ns)</div></div><div class="kpi"><div class="val">0</div><div class="lbl">Violations</div></div><div class="kpi"><div class="val">31</div><div class="lbl">Reports Parsed</div></div></div><h2>Summary by Corner</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>1</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+<div class='meta'>Directory: <code>D:\Certificates\PD_STA_REPORTS\UNCORE\CLOCK_DOMAIN</code>&nbsp;|&nbsp;Parsed: 2026-08-15T19:15:04&nbsp;|&nbsp;Reports: 31</div>
+<div class='owner-card'><div class='ow-title'>Owner</div><table class='ow-table'><tr><td class='ow-label'>Block Owner</td><td class='ow-val'>User53 &lt;user53@company.com&gt;</td></tr></table></div><div class="banner banner-met">Overall Status: <strong>MET</strong> &nbsp;|&nbsp; Worst WNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst TNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst WHS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Violations: <strong>0</strong></div><div class='kpi-grid'><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst TNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WHS (ns)</div></div><div class="kpi ok"><div class="val">1.181</div><div class="lbl">Best WNS (ns)</div></div><div class="kpi"><div class="val">0</div><div class="lbl">Violations</div></div><div class="kpi"><div class="val">31</div><div class="lbl">Reports Parsed</div></div></div><h2>Summary by Corner</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>1</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
 <tr><td class='mono'>ff_1p16v_1p16v_125c</td><td class='num'>2</td><td class='num ok-val'>1.099</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
 <tr><td class='mono'>ff_1p16v_1p16v_n40c</td><td class='num'>5</td><td class='num ok-val'>1.063</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
 <tr><td class='mono'>ff_1p32v_1p32v_n40c</td><td class='num'>1</td><td class='num ok-val'>1.181</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>

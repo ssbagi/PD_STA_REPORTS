@@ -1,0 +1,65 @@
+================================================================================
+  STA TOP-LEVEL DUMP LOG  —  PD_STA_REPORTS
+================================================================================
+
+  Root Directory   : D:\Certificates\PD_STA_REPORTS
+  Parsed At        : 2026-08-15T19:15:03
+  Total Blocks     : 13
+  Total Reports    : 143
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Total Violations : 0
+
+BY PIPELINE STAGE
+----------------------------------------
+  Stage                   Owner            #       WNS       TNS       WHS  STATUS
+  ──────────────────────  ────────────  ────  ────────  ────────  ────────  ──────────
+  EXECUTE                 MTO_User5       13     0.000     0.000     0.000  MET
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                              13     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                              13     1.049     0.000     0.061  MET
+  ff_1p16v_1p16v_n40c                              13     1.064     0.000     0.064  MET
+  ss_0p63v_0p63v_125c                              13     1.060     0.000     0.061  MET
+  ss_0p72v_0p72v_125c                              26     1.019     0.000     0.062  MET
+  ss_0p72v_0p72v_n40c                              13     1.074     0.000     0.069  MET
+  tt_0p90v_0p90v_25c                               52     1.030     0.000     0.061  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                              13     0.000     0.000     0.000  MET
+  hold                                             39     1.049     0.000     0.061  MET
+  setup                                            91     1.019     0.000     0.061  MET
+
+PER-BLOCK SUMMARY
+----------------------------------------
+  Block                                          Design                  Rpts       WNS       TNS       WHS  STATUS      Owner
+  ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────  ────────────
+  EXECUTE\ALU\ALU0                               ALU0_TOP                  11     0.000     0.000     0.000  MET         User21
+  EXECUTE\ALU\ALU1                               ALU1_TOP                  11     0.000     0.000     0.000  MET         User22
+  EXECUTE\BRU                                    BRU_TOP                   11     0.000     0.000     0.000  MET         User23
+  EXECUTE\DIV                                    DIV_TOP                   11     0.000     0.000     0.000  MET         User24
+  EXECUTE\FPU\FADD                               FADD_TOP                  11     0.000     0.000     0.000  MET         User25
+  EXECUTE\FPU\FDIV                               FDIV_TOP                  11     0.000     0.000     0.000  MET         User26
+  EXECUTE\FPU\FMUL                               FMUL_TOP                  11     0.000     0.000     0.000  MET         User27
+  EXECUTE\FPU\FSQRT                              FSQRT_TOP                 11     0.000     0.000     0.000  MET         User28
+  EXECUTE\LSU\LDU                                LDU_TOP                   11     0.000     0.000     0.000  MET         User29
+  EXECUTE\LSU\STL_FORWARD                        STL_FORWARD_TOP           11     0.000     0.000     0.000  MET         User30
+  EXECUTE\LSU\STU                                STU_TOP                   11     0.000     0.000     0.000  MET         User31
+  EXECUTE\MUL                                    MUL_TOP                   11     0.000     0.000     0.000  MET         User32
+  EXECUTE\SIMD_VEC                               SIMD_VEC_TOP              11     0.000     0.000     0.000  MET         User33
+
+================================================================================
+END OF TOP-LEVEL DUMP LOG
+================================================================================

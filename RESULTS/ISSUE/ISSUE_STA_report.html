@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>STA — PD_STA_REPORTS</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;font-size:14px;
+     line-height:1.6;background:#f7f8fa;color:#1f2328}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.35rem;font-weight:700;margin-bottom:4px}
+h2{font-size:1.0rem;font-weight:600;margin:28px 0 10px;color:#3b82d4;
+   border-bottom:1px solid #e5e7eb;padding-bottom:4px}
+.meta{font-size:0.8rem;color:#57606a;margin-bottom:20px}
+.meta code{background:#eef0f3;padding:1px 5px;border-radius:3px;font-size:0.78rem}
+
+/* ── banner ── */
+.banner{padding:12px 18px;border-radius:6px;margin-bottom:24px;
+        font-weight:600;font-size:0.95rem}
+.banner-met {background:#d1fae5;color:#065f46;border-left:5px solid #10b981}
+.banner-viol{background:#fee2e2;color:#7f1d1d;border-left:5px solid #ef4444}
+.banner-nd  {background:#fef9c3;color:#713f12;border-left:5px solid #eab308}
+
+/* ── KPI grid ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+          gap:12px;margin-bottom:28px}
+.kpi{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;text-align:center}
+.kpi .val{font-size:1.45rem;font-weight:700;color:#1f2328}
+.kpi .lbl{font-size:0.72rem;color:#57606a;margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.kpi.warn .val{color:#dc2626}
+.kpi.ok   .val{color:#059669}
+
+/* ── tables ── */
+.tbl-wrap{overflow-x:auto;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;background:#fff;
+      border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;font-size:0.82rem}
+th{background:#f0f4ff;color:#1f2328;font-weight:600;padding:8px 10px;
+   text-align:left;border-bottom:2px solid #e5e7eb;white-space:nowrap;
+   cursor:pointer;user-select:none}
+th:hover{background:#e0e8ff}
+th.sort-asc::after {content:" ▲"}
+th.sort-desc::after{content:" ▼"}
+td{padding:7px 10px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f9fafb}
+.mono{font-family:monospace;font-size:0.78rem;color:#57606a;
+      max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.viol-val{color:#dc2626;font-weight:700}
+.ok-val  {color:#059669}
+
+/* ── badges ── */
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;
+       font-size:0.7rem;font-weight:700;letter-spacing:.03em}
+.badge-met {background:#d1fae5;color:#065f46}
+.badge-viol{background:#fee2e2;color:#991b1b}
+.badge-unk {background:#fef3c7;color:#92400e}
+
+/* ── owner card ── */
+.owner-card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;
+            padding:16px 20px;margin-bottom:24px}
+.ow-title{font-size:0.8rem;font-weight:700;color:#3b82d4;
+          text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.ow-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+.ow-table td{padding:3px 8px;vertical-align:top}
+.ow-label{color:#57606a;white-space:nowrap;width:220px;font-weight:600}
+.ow-val  {color:#1f2328;font-family:monospace;font-size:0.78rem}
+
+/* ── footer ── */
+footer{text-align:center;font-size:0.72rem;color:#aaa;
+       border-top:1px solid #e5e7eb;margin-top:32px;padding-top:12px}
+</style>
+
+</head>
+<body>
+<div class='wrap'>
+<h1>STA Top-Level Timing Report &mdash; PD_STA_REPORTS</h1>
+<div class='meta'>Root: <code>D:\Certificates\PD_STA_REPORTS</code>&nbsp;|&nbsp;Parsed: 2026-08-15T19:15:04&nbsp;|&nbsp;Blocks: 4&nbsp;|&nbsp;Reports: 44</div>
+<div class='owner-card'><div class='ow-title'>Chip Ownership</div><table class='ow-table'><tr><td class='ow-label'>CHIP TIMING OWNER (CTO)</td><td class='ow-val'>ChipTimingOwner1 &lt;cto1@company.com&gt; [EMP-0001]</td></tr><tr><td class='ow-label'>DESIGN MANAGER</td><td class='ow-val'>DesignManager1 &lt;dm1@company.com&gt; [EMP-0002]</td></tr><tr><td class='ow-label'>PD LEAD</td><td class='ow-val'>PDLead1 &lt;pdlead1@company.com&gt; [EMP-0003]</td></tr><tr><td class='ow-label'>STA LEAD</td><td class='ow-val'>STALead1 &lt;stalead1@company.com&gt; [EMP-0004]</td></tr><tr><td class='ow-label' colspan='2'><strong>Stage MTOs</strong></td></tr><tr><td class='ow-label'>FETCH</td><td class='ow-val'>MTO_User1     <mto1@company.com>  EMP-1001</td></tr><tr><td class='ow-label'>DECODE</td><td class='ow-val'>MTO_User2     <mto2@company.com>  EMP-1002</td></tr><tr><td class='ow-label'>RENAME_DISPATCH</td><td class='ow-val'>MTO_User3     <mto3@company.com>  EMP-1003</td></tr><tr><td class='ow-label'>ISSUE</td><td class='ow-val'>MTO_User4     <mto4@company.com>  EMP-1004</td></tr><tr><td class='ow-label'>EXECUTE</td><td class='ow-val'>MTO_User5     <mto5@company.com>  EMP-1005</td></tr><tr><td class='ow-label'>MEMORY</td><td class='ow-val'>MTO_User6     <mto6@company.com>  EMP-1006</td></tr><tr><td class='ow-label'>WRITEBACK</td><td class='ow-val'>MTO_User7     <mto7@company.com>  EMP-1007</td></tr><tr><td class='ow-label'>COMMIT</td><td class='ow-val'>MTO_User8     <mto8@company.com>  EMP-1008</td></tr><tr><td class='ow-label'>CACHE</td><td class='ow-val'>MTO_User9     <mto9@company.com>  EMP-1009</td></tr><tr><td class='ow-label'>UNCORE</td><td class='ow-val'>MTO_User10    <mto10@company.com>  EMP-1010</td></tr></table></div><div class="banner banner-met">Overall Status: <strong>MET</strong> &nbsp;|&nbsp; Worst WNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst TNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst WHS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Violations: <strong>0</strong></div><div class='kpi-grid'><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst TNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WHS (ns)</div></div><div class="kpi"><div class="val">0</div><div class="lbl">Violations</div></div><div class="kpi"><div class="val">4</div><div class="lbl">Blocks Scanned</div></div><div class="kpi"><div class="val">44</div><div class="lbl">Total Reports</div></div></div><h2>Summary by Pipeline Stage</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>Owner</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>ISSUE</td><td class='mono'>MTO_User4</td><td class='num'>4</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+</tbody></table></div><h2>Summary by Corner</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>4</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ff_1p16v_1p16v_125c</td><td class='num'>4</td><td class='num ok-val'>1.046</td><td class='num'>0.000</td><td class='num'>0.060</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ff_1p16v_1p16v_n40c</td><td class='num'>4</td><td class='num ok-val'>1.059</td><td class='num'>0.000</td><td class='num'>0.072</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p63v_0p63v_125c</td><td class='num'>4</td><td class='num ok-val'>1.051</td><td class='num'>0.000</td><td class='num'>0.064</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p72v_0p72v_125c</td><td class='num'>8</td><td class='num ok-val'>1.072</td><td class='num'>0.000</td><td class='num'>0.065</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p72v_0p72v_n40c</td><td class='num'>4</td><td class='num ok-val'>1.090</td><td class='num'>0.000</td><td class='num'>0.073</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>tt_0p90v_0p90v_25c</td><td class='num'>16</td><td class='num ok-val'>1.048</td><td class='num'>0.000</td><td class='num'>0.065</td><td><span class="badge badge-met">MET</span></td></tr>
+</tbody></table></div><h2>Summary by Check Type</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>4</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>hold</td><td class='num'>12</td><td class='num ok-val'>1.046</td><td class='num'>0.000</td><td class='num'>0.060</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>setup</td><td class='num'>28</td><td class='num ok-val'>1.048</td><td class='num'>0.000</td><td class='num'>0.064</td><td><span class="badge badge-met">MET</span></td></tr>
+</tbody></table></div><h2>Per-Block Rollup</h2><div class='tbl-wrap'><table><thead><tr><th>Block Path</th><th>Design</th><th>#&nbsp;Reports</th><th>Worst WNS (ns)</th><th>Worst TNS (ns)</th><th>Worst WHS (ns)</th><th>Violations</th><th>Status</th><th>Owner</th></tr></thead><tbody><tr><td class='mono'>ISSUE\IQ_FP</td><td class='mono'>IQ_FP_TOP</td><td class='num'>11</td><td class='num '>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td class='num'>0</td><td><span class="badge badge-met">MET</span></td><td class='mono'>User17</td></tr>
+<tr><td class='mono'>ISSUE\IQ_INT</td><td class='mono'>IQ_INT_TOP</td><td class='num'>11</td><td class='num '>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td class='num'>0</td><td><span class="badge badge-met">MET</span></td><td class='mono'>User18</td></tr>
+<tr><td class='mono'>ISSUE\IQ_LSU</td><td class='mono'>IQ_LSU_TOP</td><td class='num'>11</td><td class='num '>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td class='num'>0</td><td><span class="badge badge-met">MET</span></td><td class='mono'>User19</td></tr>
+<tr><td class='mono'>ISSUE\WAKEUP_SELECT</td><td class='mono'>WAKEUP_SELECT_TOP</td><td class='num'>11</td><td class='num '>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td class='num'>0</td><td><span class="badge badge-met">MET</span></td><td class='mono'>User20</td></tr>
+</tbody></table></div>
+<footer>Made with IBM Bob &nbsp;|&nbsp; sta_utils.outputs.html_writer &nbsp;|&nbsp; Synopsys PrimeTime STA Report Parser</footer>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll("table").forEach(function(tbl){
+    var ths = tbl.querySelectorAll("thead th");
+    ths.forEach(function(th, ci){
+      th.addEventListener("click", function(){
+        var asc = !th.classList.contains("sort-asc");
+        ths.forEach(function(h){ h.classList.remove("sort-asc","sort-desc"); });
+        th.classList.add(asc ? "sort-asc" : "sort-desc");
+        var tbody = tbl.querySelector("tbody");
+        var rows  = Array.from(tbody.querySelectorAll("tr"));
+        rows.sort(function(a,b){
+          var av = a.cells[ci] ? a.cells[ci].innerText.trim() : "";
+          var bv = b.cells[ci] ? b.cells[ci].innerText.trim() : "";
+          var an = parseFloat(av), bn = parseFloat(bv);
+          var cmp = isNaN(an)||isNaN(bn) ? av.localeCompare(bv) : an - bn;
+          return asc ? cmp : -cmp;
+        });
+        rows.forEach(function(r){ tbody.appendChild(r); });
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

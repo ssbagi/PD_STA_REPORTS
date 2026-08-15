@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\CACHE\L1D
   Design          : L1D_TOP
-  Parsed At       : 2026-08-15T18:25:16
+  Parsed At       : 2026-08-15T19:15:03
   Total Reports   : 11
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User48  <user48@company.com>  [EMP-2048]
+  TEAM LEAD                    : MTO_User9  <mto9@company.com>  [EMP-1009]
+  RTL TEAM LEAD                : TeamLead9  <teamlead9@company.com>
+  PD ENGINEER                  : PDEng9  <pdeng9@company.com>
+  STA ENGINEER                 : STAEng9  <staeng9@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------

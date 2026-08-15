@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\MEMORY\STQ
   Design          : STQ_TOP
-  Parsed At       : 2026-08-15T18:25:17
+  Parsed At       : 2026-08-15T19:15:03
   Total Reports   : 31
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User39  <user39@company.com>  [EMP-2039]
+  TEAM LEAD                    : MTO_User6  <mto6@company.com>  [EMP-1006]
+  RTL TEAM LEAD                : TeamLead6  <teamlead6@company.com>
+  PD ENGINEER                  : PDEng6  <pdeng6@company.com>
+  STA ENGINEER                 : STAEng6  <staeng6@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------

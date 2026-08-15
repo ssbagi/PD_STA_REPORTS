@@ -1,0 +1,194 @@
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:302] ====================================================================
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:303]   sta_top_parser.py — Synopsys PrimeTime STA Hierarchy Parser
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:304]   Root       : D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:305]   Output dir : D:\Certificates\PD_STA_REPORTS\RESULTS\CACHE
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:306]   Pattern    : *.rpt
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:308]   Stages     : ['CACHE']
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:309] ====================================================================
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): .git
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): __pycache__
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): COMMIT
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): DECODE
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): EXECUTE
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): FETCH
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): GENERIC_REPORT_CARD
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): ISSUE
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): MEMORY
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): RENAME_DISPATCH
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): RESULTS
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): sta_utils
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): UNCORE
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:221]   Skipping stage (filtered): WRITEBACK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:228] Found 5 block director(ies) with '*.rpt' files under D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:328] [1/5] Scanning: CACHE\CACHE_CONTROLLER
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:284]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\CACHE\CACHE_CONTROLLER
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 01_SETUP_SS_125C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.119  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 02_HOLD_FF_N40C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ff_1p16v_1p16v_n40c                 check=hold   wns=+1.088  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 03_SETUP_TT_25C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.126  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 04_HOLD_TT_25C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=tt_0p90v_0p90v_25c                  check=hold   wns=+1.147  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 05_SETUP_SS_M40C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ss_0p72v_0p72v_n40c                 check=setup  wns=+1.043  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 06_HOLD_FF_125C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ff_1p16v_1p16v_125c                 check=hold   wns=+1.069  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 07_SETUP_LVSS_125C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ss_0p63v_0p63v_125c                 check=setup  wns=+1.133  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 08_CG_CHECK_TT_25C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.088  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 09_RECOVERY_SS_125C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.065  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 10_MULTICYCLE_TT_25C_CACHE_CTRL_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=CACHE_CTRL_TOP       corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.083  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: CACHE_CTRL_TIMING.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=N/A                  corner=N/A                                 check=N/A    wns=+0.000  status=UNKNOWN
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 11 / 11 report(s) OK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\CACHE\CACHE_CONTROLLER\CACHE_CTRL_TOP_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\CACHE\CACHE_CONTROLLER\CACHE_CTRL_TOP_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\CACHE\CACHE_CONTROLLER\CACHE_CTRL_TOP_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:328] [2/5] Scanning: CACHE\L1D
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:284]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\CACHE\L1D
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 01_SETUP_SS_125C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.045  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 02_HOLD_FF_N40C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ff_1p16v_1p16v_n40c                 check=hold   wns=+1.116  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 03_SETUP_TT_25C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.132  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 04_HOLD_TT_25C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=tt_0p90v_0p90v_25c                  check=hold   wns=+1.040  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 05_SETUP_SS_M40C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ss_0p72v_0p72v_n40c                 check=setup  wns=+1.130  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 06_HOLD_FF_125C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ff_1p16v_1p16v_125c                 check=hold   wns=+1.081  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 07_SETUP_LVSS_125C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ss_0p63v_0p63v_125c                 check=setup  wns=+1.121  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 08_CG_CHECK_TT_25C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.089  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 09_RECOVERY_SS_125C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.110  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 10_MULTICYCLE_TT_25C_L1D_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1D_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.124  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: L1D_TIMING.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=N/A                  corner=N/A                                 check=N/A    wns=+0.000  status=UNKNOWN
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 11 / 11 report(s) OK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\CACHE\L1D\L1D_TOP_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\CACHE\L1D\L1D_TOP_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\CACHE\L1D\L1D_TOP_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:328] [3/5] Scanning: CACHE\L1I
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:284]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\CACHE\L1I
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 01_SETUP_SS_125C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.088  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 02_HOLD_FF_N40C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ff_1p16v_1p16v_n40c                 check=hold   wns=+1.058  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 03_SETUP_TT_25C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.127  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 04_HOLD_TT_25C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=tt_0p90v_0p90v_25c                  check=hold   wns=+1.101  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 05_SETUP_SS_M40C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ss_0p72v_0p72v_n40c                 check=setup  wns=+1.085  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 06_HOLD_FF_125C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ff_1p16v_1p16v_125c                 check=hold   wns=+1.130  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 07_SETUP_LVSS_125C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ss_0p63v_0p63v_125c                 check=setup  wns=+1.104  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 08_CG_CHECK_TT_25C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.083  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 09_RECOVERY_SS_125C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.123  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 10_MULTICYCLE_TT_25C_L1I_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L1I_TOP              corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.066  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: L1I_TIMING.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=N/A                  corner=N/A                                 check=N/A    wns=+0.000  status=UNKNOWN
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 11 / 11 report(s) OK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\CACHE\L1I\L1I_TOP_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\CACHE\L1I\L1I_TOP_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\CACHE\L1I\L1I_TOP_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:328] [4/5] Scanning: CACHE\L2
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:284]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\CACHE\L2
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 01_SETUP_SS_125C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.562  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 02_HOLD_FF_N40C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ff_1p16v_1p16v_n40c                 check=hold   wns=+1.613  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 03_SETUP_TT_25C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.623  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 04_HOLD_TT_25C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=tt_0p90v_0p90v_25c                  check=hold   wns=+1.601  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 05_SETUP_SS_M40C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ss_0p72v_0p72v_n40c                 check=setup  wns=+1.610  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 06_HOLD_FF_125C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ff_1p16v_1p16v_125c                 check=hold   wns=+1.577  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 07_SETUP_LVSS_125C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ss_0p63v_0p63v_125c                 check=setup  wns=+1.614  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 08_CG_CHECK_TT_25C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.579  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 09_RECOVERY_SS_125C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=ss_0p72v_0p72v_125c                 check=setup  wns=+1.594  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 10_MULTICYCLE_TT_25C_L2_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L2_TOP               corner=tt_0p90v_0p90v_25c                  check=setup  wns=+1.638  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: L2_TIMING.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=N/A                  corner=N/A                                 check=N/A    wns=+0.000  status=UNKNOWN
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 11 / 11 report(s) OK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\CACHE\L2\L2_TOP_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\CACHE\L2\L2_TOP_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\CACHE\L2\L2_TOP_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:328] [5/5] Scanning: CACHE\L3_LLC
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:284]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\CACHE\L3_LLC
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 01_SETUP_SS_125C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ss_0p72v_0p72v_125c                 check=setup  wns=+2.489  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 02_HOLD_FF_N40C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ff_1p16v_1p16v_n40c                 check=hold   wns=+2.426  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 03_SETUP_TT_25C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=tt_0p90v_0p90v_25c                  check=setup  wns=+2.478  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 04_HOLD_TT_25C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=tt_0p90v_0p90v_25c                  check=hold   wns=+2.475  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 05_SETUP_SS_M40C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ss_0p72v_0p72v_n40c                 check=setup  wns=+2.444  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 06_HOLD_FF_125C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ff_1p16v_1p16v_125c                 check=hold   wns=+2.429  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 07_SETUP_LVSS_125C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ss_0p63v_0p63v_125c                 check=setup  wns=+2.407  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 08_CG_CHECK_TT_25C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=tt_0p90v_0p90v_25c                  check=setup  wns=+2.393  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 09_RECOVERY_SS_125C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=ss_0p72v_0p72v_125c                 check=setup  wns=+2.375  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: 10_MULTICYCLE_TT_25C_L3_LLC_TOP.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=L3_LLC_TOP           corner=tt_0p90v_0p90v_25c                  check=setup  wns=+2.403  status=MET
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: L3_LLC_TIMING.rpt
+[2026-08-15 19:15:03] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=N/A                  corner=N/A                                 check=N/A    wns=+0.000  status=UNKNOWN
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 11 / 11 report(s) OK
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\CACHE\L3_LLC\L3_LLC_TOP_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\CACHE\L3_LLC\L3_LLC_TOP_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\CACHE\L3_LLC\L3_LLC_TOP_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:353] ────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:354] Aggregating 5 block(s) …
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:239] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:240]   STA TOP-LEVEL SUMMARY  —  PD_STA_REPORTS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:241]   Root       : D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:242]   Parsed at  : 2026-08-15T19:15:03
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:243]   Blocks: 5   Reports: 55
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:244] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:245]   STATUS      WORST WNS  WORST TNS  WORST WHS  VIOLATIONS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:247]   MET            +0.000     +0.000     +0.000  0
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:251] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:252]   BY PIPELINE STAGE
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:253]   STAGE                      BLKS   WNS(ns)   TNS(ns)   WHS(ns)  STATUS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:255]   ──────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:257]   CACHE                         5    +0.000    +0.000    +0.000  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:260] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:261]   BY CORNER
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:262]   CORNER                                         WNS(ns)   TNS(ns)   WHS(ns)  STATUS
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:264]   ────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   N/A                                             +0.000    +0.000    +0.000  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   ff_1p16v_1p16v_125c                             +1.069    +0.000    +0.065  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   ff_1p16v_1p16v_n40c                             +1.058    +0.000    +0.065  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   ss_0p63v_0p63v_125c                             +1.104    +0.000    +0.069  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   ss_0p72v_0p72v_125c                             +1.045    +0.000    +0.070  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   ss_0p72v_0p72v_n40c                             +1.043    +0.000    +0.089  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:266]   tt_0p90v_0p90v_25c                              +1.040    +0.000    +0.065  MET
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:268] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\RESULTS\CACHE\CACHE_STA_dump.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\RESULTS\CACHE\CACHE_STA_summary.json
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [html_writer.py:453] HTML report → D:\Certificates\PD_STA_REPORTS\RESULTS\CACHE\CACHE_STA_report.html
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:392] Run log     → D:\Certificates\PD_STA_REPORTS\RESULTS\CACHE\CACHE_STA_run_20260815_191503.log
+[2026-08-15 19:15:03] [INFO    ] [sta_top_parser] [sta_top_parser.py:393] Done.  5 blocks  |  55 reports  |  status: MET

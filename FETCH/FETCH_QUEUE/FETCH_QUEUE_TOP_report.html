@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>STA — FETCH_QUEUE_TOP</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;font-size:14px;
+     line-height:1.6;background:#f7f8fa;color:#1f2328}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 20px}
+h1{font-size:1.35rem;font-weight:700;margin-bottom:4px}
+h2{font-size:1.0rem;font-weight:600;margin:28px 0 10px;color:#3b82d4;
+   border-bottom:1px solid #e5e7eb;padding-bottom:4px}
+.meta{font-size:0.8rem;color:#57606a;margin-bottom:20px}
+.meta code{background:#eef0f3;padding:1px 5px;border-radius:3px;font-size:0.78rem}
+
+/* ── banner ── */
+.banner{padding:12px 18px;border-radius:6px;margin-bottom:24px;
+        font-weight:600;font-size:0.95rem}
+.banner-met {background:#d1fae5;color:#065f46;border-left:5px solid #10b981}
+.banner-viol{background:#fee2e2;color:#7f1d1d;border-left:5px solid #ef4444}
+.banner-nd  {background:#fef9c3;color:#713f12;border-left:5px solid #eab308}
+
+/* ── KPI grid ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+          gap:12px;margin-bottom:28px}
+.kpi{background:#fff;border:1px solid #e5e7eb;border-radius:6px;padding:14px;text-align:center}
+.kpi .val{font-size:1.45rem;font-weight:700;color:#1f2328}
+.kpi .lbl{font-size:0.72rem;color:#57606a;margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.kpi.warn .val{color:#dc2626}
+.kpi.ok   .val{color:#059669}
+
+/* ── tables ── */
+.tbl-wrap{overflow-x:auto;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;background:#fff;
+      border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;font-size:0.82rem}
+th{background:#f0f4ff;color:#1f2328;font-weight:600;padding:8px 10px;
+   text-align:left;border-bottom:2px solid #e5e7eb;white-space:nowrap;
+   cursor:pointer;user-select:none}
+th:hover{background:#e0e8ff}
+th.sort-asc::after {content:" ▲"}
+th.sort-desc::after{content:" ▼"}
+td{padding:7px 10px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f9fafb}
+.mono{font-family:monospace;font-size:0.78rem;color:#57606a;
+      max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.viol-val{color:#dc2626;font-weight:700}
+.ok-val  {color:#059669}
+
+/* ── badges ── */
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;
+       font-size:0.7rem;font-weight:700;letter-spacing:.03em}
+.badge-met {background:#d1fae5;color:#065f46}
+.badge-viol{background:#fee2e2;color:#991b1b}
+.badge-unk {background:#fef3c7;color:#92400e}
+
+/* ── owner card ── */
+.owner-card{background:#fff;border:1px solid #e5e7eb;border-radius:6px;
+            padding:16px 20px;margin-bottom:24px}
+.ow-title{font-size:0.8rem;font-weight:700;color:#3b82d4;
+          text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.ow-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+.ow-table td{padding:3px 8px;vertical-align:top}
+.ow-label{color:#57606a;white-space:nowrap;width:220px;font-weight:600}
+.ow-val  {color:#1f2328;font-family:monospace;font-size:0.78rem}
+
+/* ── footer ── */
+footer{text-align:center;font-size:0.72rem;color:#aaa;
+       border-top:1px solid #e5e7eb;margin-top:32px;padding-top:12px}
+</style>
+
+</head>
+<body>
+<div class='wrap'>
+<h1>STA Block Timing Report &mdash; FETCH_QUEUE_TOP</h1>
+<div class='meta'>Directory: <code>D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE</code>&nbsp;|&nbsp;Parsed: 2026-08-15T19:14:51&nbsp;|&nbsp;Reports: 11</div>
+<div class='owner-card'><div class='ow-title'>Owner</div><table class='ow-table'><tr><td class='ow-label'>Block Owner</td><td class='ow-val'>User4 &lt;user4@company.com&gt;</td></tr></table></div><div class="banner banner-met">Overall Status: <strong>MET</strong> &nbsp;|&nbsp; Worst WNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst TNS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Worst WHS: <strong>0.000 ns</strong> &nbsp;|&nbsp; Violations: <strong>0</strong></div><div class='kpi-grid'><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst TNS (ns)</div></div><div class="kpi"><div class="val">0.000</div><div class="lbl">Worst WHS (ns)</div></div><div class="kpi ok"><div class="val">1.167</div><div class="lbl">Best WNS (ns)</div></div><div class="kpi"><div class="val">0</div><div class="lbl">Violations</div></div><div class="kpi"><div class="val">11</div><div class="lbl">Reports Parsed</div></div></div><h2>Summary by Corner</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>1</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ff_1p16v_1p16v_125c</td><td class='num'>1</td><td class='num ok-val'>1.118</td><td class='num'>0.000</td><td class='num'>0.075</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ff_1p16v_1p16v_n40c</td><td class='num'>1</td><td class='num ok-val'>1.099</td><td class='num'>0.000</td><td class='num'>0.115</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p63v_0p63v_125c</td><td class='num'>1</td><td class='num ok-val'>1.115</td><td class='num'>0.000</td><td class='num'>0.082</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p72v_0p72v_125c</td><td class='num'>2</td><td class='num ok-val'>1.077</td><td class='num'>0.000</td><td class='num'>0.108</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>ss_0p72v_0p72v_n40c</td><td class='num'>1</td><td class='num ok-val'>1.167</td><td class='num'>0.000</td><td class='num'>0.095</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>tt_0p90v_0p90v_25c</td><td class='num'>4</td><td class='num ok-val'>1.070</td><td class='num'>0.000</td><td class='num'>0.070</td><td><span class="badge badge-met">MET</span></td></tr>
+</tbody></table></div><h2>Summary by Check Type</h2><div class='tbl-wrap'><table><thead><tr><th>Name</th><th>#&nbsp;Reports</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th></tr></thead><tbody><tr><td class='mono'>N/A</td><td class='num'>1</td><td class='num ok-val'>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>hold</td><td class='num'>3</td><td class='num ok-val'>1.070</td><td class='num'>0.000</td><td class='num'>0.075</td><td><span class="badge badge-met">MET</span></td></tr>
+<tr><td class='mono'>setup</td><td class='num'>7</td><td class='num ok-val'>1.077</td><td class='num'>0.000</td><td class='num'>0.070</td><td><span class="badge badge-met">MET</span></td></tr>
+</tbody></table></div><h2>Per-Report Detail</h2><div class='tbl-wrap'><table><thead><tr><th>File</th><th>Corner</th><th>Check</th><th>Clock</th><th>Period</th><th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Coverage</th><th>Status</th><th>Runtime</th><th>Tool</th></tr></thead><tbody><tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\01_SETUP_SS_125C_FETCH_QUEUE_TOP.rpt'>01_SETUP_SS_125C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ss_0p72v_0p72v_125c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.077</td><td class='num'>0.000</td><td class='num'>0.109</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:01:20</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\02_HOLD_FF_N40C_FETCH_QUEUE_TOP.rpt'>02_HOLD_FF_N40C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ff_1p16v_1p16v_n40c</td><td>hold</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.099</td><td class='num'>0.000</td><td class='num'>0.115</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:06:15</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\03_SETUP_TT_25C_FETCH_QUEUE_TOP.rpt'>03_SETUP_TT_25C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>tt_0p90v_0p90v_25c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.114</td><td class='num'>0.000</td><td class='num'>0.070</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:05:29</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\04_HOLD_TT_25C_FETCH_QUEUE_TOP.rpt'>04_HOLD_TT_25C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>tt_0p90v_0p90v_25c</td><td>hold</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.070</td><td class='num'>0.000</td><td class='num'>0.094</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:04:43</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\05_SETUP_SS_M40C_FETCH_QUEUE_TOP.rpt'>05_SETUP_SS_M40C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ss_0p72v_0p72v_n40c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.167</td><td class='num'>0.000</td><td class='num'>0.095</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:07:14</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\06_HOLD_FF_125C_FETCH_QUEUE_TOP.rpt'>06_HOLD_FF_125C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ff_1p16v_1p16v_125c</td><td>hold</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.118</td><td class='num'>0.000</td><td class='num'>0.075</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:01:34</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\07_SETUP_LVSS_125C_FETCH_QUEUE_TOP.rpt'>07_SETUP_LVSS_125C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ss_0p63v_0p63v_125c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.115</td><td class='num'>0.000</td><td class='num'>0.082</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:05:39</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\08_CG_CHECK_TT_25C_FETCH_QUEUE_TOP.rpt'>08_CG_CHECK_TT_25C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>tt_0p90v_0p90v_25c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.108</td><td class='num'>0.000</td><td class='num'>0.096</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:05:56</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\09_RECOVERY_SS_125C_FETCH_QUEUE_TOP.rpt'>09_RECOVERY_SS_125C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>ss_0p72v_0p72v_125c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.122</td><td class='num'>0.000</td><td class='num'>0.108</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:02:26</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\10_MULTICYCLE_TT_25C_FETCH_QUEUE_TOP.rpt'>10_MULTICYCLE_TT_25C_FETCH_QUEUE_TOP.rpt</td><td class='mono'>tt_0p90v_0p90v_25c</td><td>setup</td><td class='mono'>CLK_CORE</td><td class='num'>2.0</td><td class='num '>1.136</td><td class='num'>0.000</td><td class='num'>0.113</td><td class='num'>100.0%</td><td><span class="badge badge-met">MET</span></td><td class='mono'>00:05:43</td><td class='mono'>Synopsys PrimeTime 2023.06-SP3</td></tr>
+<tr><td class='mono' title='D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE\FETCH_QUEUE_TIMING.rpt'>FETCH_QUEUE_TIMING.rpt</td><td class='mono'>N/A</td><td>N/A</td><td class='mono'>N/A</td><td class='num'>0.0</td><td class='num '>0.000</td><td class='num'>0.000</td><td class='num'>0.000</td><td class='num'>0.0%</td><td><span class="badge badge-unk">UNKNOWN</span></td><td class='mono'>N/A</td><td class='mono'>N/A</td></tr>
+</tbody></table></div>
+<footer>Made with IBM Bob &nbsp;|&nbsp; sta_utils.outputs.html_writer &nbsp;|&nbsp; Synopsys PrimeTime STA Report Parser</footer>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll("table").forEach(function(tbl){
+    var ths = tbl.querySelectorAll("thead th");
+    ths.forEach(function(th, ci){
+      th.addEventListener("click", function(){
+        var asc = !th.classList.contains("sort-asc");
+        ths.forEach(function(h){ h.classList.remove("sort-asc","sort-desc"); });
+        th.classList.add(asc ? "sort-asc" : "sort-desc");
+        var tbody = tbl.querySelector("tbody");
+        var rows  = Array.from(tbody.querySelectorAll("tr"));
+        rows.sort(function(a,b){
+          var av = a.cells[ci] ? a.cells[ci].innerText.trim() : "";
+          var bv = b.cells[ci] ? b.cells[ci].innerText.trim() : "";
+          var an = parseFloat(av), bn = parseFloat(bv);
+          var cmp = isNaN(an)||isNaN(bn) ? av.localeCompare(bv) : an - bn;
+          return asc ? cmp : -cmp;
+        });
+        rows.forEach(function(r){ tbody.appendChild(r); });
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

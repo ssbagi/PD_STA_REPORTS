@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\RENAME_DISPATCH\RAT
   Design          : RAT_TOP
-  Parsed At       : 2026-08-15T18:25:17
+  Parsed At       : 2026-08-15T19:15:04
   Total Reports   : 31
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User15  <user15@company.com>  [EMP-2015]
+  TEAM LEAD                    : MTO_User3  <mto3@company.com>  [EMP-1003]
+  RTL TEAM LEAD                : TeamLead3  <teamlead3@company.com>
+  PD ENGINEER                  : PDEng3  <pdeng3@company.com>
+  STA ENGINEER                 : STAEng3  <staeng3@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------

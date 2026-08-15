@@ -198,14 +198,24 @@ def _find_block_dirs(
         if depth > max_depth:
             return
         # Check if this directory itself has matching rpt files
-        if any(directory.glob(pattern)):
-            block_dirs.append(directory)
-            return   # don't recurse into a leaf that already has reports
-        # Otherwise recurse
+        has_rpts = any(directory.glob(pattern))
+        # Check if any child subdirectory also has rpt files (making this an
+        # intermediate/stage dir, not a true leaf block directory)
         try:
-            for child in sorted(directory.iterdir()):
-                if not child.is_dir():
-                    continue
+            subdirs = [c for c in directory.iterdir() if c.is_dir()]
+        except PermissionError as exc:
+            logger.warning("Permission denied: %s — %s", directory, exc)
+            return
+        has_child_rpts = has_rpts and any(
+            any(c.rglob(pattern)) for c in subdirs
+        )
+        if has_rpts and not has_child_rpts:
+            # True leaf: has reports and no child subtree with reports
+            block_dirs.append(directory)
+            return
+        # Either no reports here, or this is an intermediate dir — recurse
+        try:
+            for child in sorted(subdirs):
                 # Apply stage filter at the top level only
                 if depth == 0 and stages and child.name not in stages:
                     logger.debug("  Skipping stage (filtered): %s", child.name)

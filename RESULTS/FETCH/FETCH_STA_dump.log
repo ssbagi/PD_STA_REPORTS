@@ -1,0 +1,59 @@
+================================================================================
+  STA TOP-LEVEL DUMP LOG  —  PD_STA_REPORTS
+================================================================================
+
+  Root Directory   : D:\Certificates\PD_STA_REPORTS
+  Parsed At        : 2026-08-15T19:14:51
+  Total Blocks     : 7
+  Total Reports    : 77
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Total Violations : 0
+
+BY PIPELINE STAGE
+----------------------------------------
+  Stage                   Owner            #       WNS       TNS       WHS  STATUS
+  ──────────────────────  ────────────  ────  ────────  ────────  ────────  ──────────
+  FETCH                   MTO_User1        7     0.000     0.000     0.000  MET
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               7     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               7     1.049     0.000     0.064  MET
+  ff_1p16v_1p16v_n40c                               7     1.046     0.000     0.063  MET
+  ss_0p63v_0p63v_125c                               7     1.056     0.000     0.071  MET
+  ss_0p72v_0p72v_125c                              14     1.023     0.000     0.062  MET
+  ss_0p72v_0p72v_n40c                               7     1.078     0.000     0.078  MET
+  tt_0p90v_0p90v_25c                               28     1.056     0.000     0.063  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               7     0.000     0.000     0.000  MET
+  hold                                             21     1.046     0.000     0.063  MET
+  setup                                            49     1.023     0.000     0.062  MET
+
+PER-BLOCK SUMMARY
+----------------------------------------
+  Block                                          Design                  Rpts       WNS       TNS       WHS  STATUS      Owner
+  ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────  ────────────
+  FETCH\BPU\BTB                                  BTB_TOP                   11     0.000     0.000     0.000  MET         User5
+  FETCH\BPU\PHT                                  PHT_TOP                   11     0.000     0.000     0.000  MET         User6
+  FETCH\BPU\RAS                                  RAS_TOP                   11     0.000     0.000     0.000  MET         User7
+  FETCH\FETCH_QUEUE                              FETCH_QUEUE_TOP           11     0.000     0.000     0.000  MET         User4
+  FETCH\ICACHE                                   ICACHE_TOP                11     0.000     0.000     0.000  MET         User2
+  FETCH\ITLB                                     ITLB_TOP                  11     0.000     0.000     0.000  MET         User3
+  FETCH\PC                                       PC_TOP                    11     0.000     0.000     0.000  MET         User1
+
+================================================================================
+END OF TOP-LEVEL DUMP LOG
+================================================================================

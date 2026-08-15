@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\BRU
   Design          : BRU_TOP
-  Parsed At       : 2026-08-15T18:25:16
+  Parsed At       : 2026-08-15T19:15:02
   Total Reports   : 11
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User23  <user23@company.com>  [EMP-2023]
+  TEAM LEAD                    : MTO_User5  <mto5@company.com>  [EMP-1005]
+  RTL TEAM LEAD                : TeamLead5  <teamlead5@company.com>
+  PD ENGINEER                  : PDEng5  <pdeng5@company.com>
+  STA ENGINEER                 : STAEng5  <staeng5@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------

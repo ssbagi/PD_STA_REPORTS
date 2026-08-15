@@ -1,0 +1,56 @@
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:292] ====================================================================
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:293]   sta_top_parser.py — Synopsys PrimeTime STA Hierarchy Parser
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:294]   Root       : D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:295]   Output dir : D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:296]   Pattern    : *.rpt
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:298]   Stages     : ['FETCH']
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:299] ====================================================================
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): .git
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): __pycache__
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): CACHE
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): COMMIT
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): DECODE
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): EXECUTE
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): GENERIC_REPORT_CARD
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): ISSUE
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): MEMORY
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): RENAME_DISPATCH
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): RESULTS
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): sta_utils
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): UNCORE
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [sta_top_parser.py:211]   Skipping stage (filtered): WRITEBACK
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:218] Found 1 block director(ies) with '*.rpt' files under D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:318] [1/1] Scanning: FETCH
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [parser.py:284]   Found 1 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [parser.py:130]   Parsing: FETCH_TIMING_REPORT.rpt
+[2026-08-15 19:12:24] [DEBUG   ] [sta_top_parser] [parser.py:209]     → design=FETCH_TOP            corner=ss_0p72v_0p72v_125c                 check=setup  wns=+0.351  status=MET
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [parser.py:294]   Parsed 1 / 1 report(s) OK
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_TOP_dump.log
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_TOP_summary.json
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [html_writer.py:361] HTML report → D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_TOP_report.html
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:343] ────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:344] Aggregating 1 block(s) …
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:229] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:230]   STA TOP-LEVEL SUMMARY  —  PD_STA_REPORTS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:231]   Root       : D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:232]   Parsed at  : 2026-08-15T19:12:24
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:233]   Blocks: 1   Reports: 1
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:234] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:235]   STATUS      WORST WNS  WORST TNS  WORST WHS  VIOLATIONS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:237]   MET            +0.351     +0.000     +0.000  0
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:241] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:242]   BY PIPELINE STAGE
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:243]   STAGE                      BLKS   WNS(ns)   TNS(ns)   WHS(ns)  STATUS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:245]   ──────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:247]   FETCH                         1    +0.351    +0.000    +0.000  MET
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:250] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:251]   BY CORNER
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:252]   CORNER                                         WNS(ns)   TNS(ns)   WHS(ns)  STATUS
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:254]   ────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:256]   ss_0p72v_0p72v_125c                             +0.351    +0.000    +0.000  MET
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:258] ────────────────────────────────────────────────────────────────────────────────
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [dump_log.py:246] Dump log    → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_dump.log
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [json_writer.py:75] JSON dump   → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_summary.json
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [html_writer.py:453] HTML report → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_report.html
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:382] Run log     → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_run_20260815_191224.log
+[2026-08-15 19:12:24] [INFO    ] [sta_top_parser] [sta_top_parser.py:383] Done.  1 blocks  |  1 reports  |  status: MET

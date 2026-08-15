@@ -1,0 +1,175 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  BTB_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\FETCH\BPU\BTB
+  Design          : BTB_TOP
+  Parsed At       : 2026-08-15T19:14:51
+  Total Reports   : 11
+
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User5  <user5@company.com>  [EMP-2005]
+  TEAM LEAD                    : MTO_User1  <mto1@company.com>  [EMP-1001]
+  RTL TEAM LEAD                : TeamLead1  <teamlead1@company.com>
+  PD ENGINEER                  : PDEng1  <pdeng1@company.com>
+  STA ENGINEER                 : STAEng1  <staeng1@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 1.163
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                               1     1.052     0.000     0.069  MET
+  ff_1p16v_1p16v_n40c                               1     1.094     0.000     0.071  MET
+  ss_0p63v_0p63v_125c                               1     1.068     0.000     0.115  MET
+  ss_0p72v_0p72v_125c                               2     1.086     0.000     0.096  MET
+  ss_0p72v_0p72v_n40c                               1     1.109     0.000     0.103  MET
+  tt_0p90v_0p90v_25c                                4     1.108     0.000     0.077  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               1     0.000     0.000     0.000  MET
+  hold                                              3     1.052     0.000     0.069  MET
+  setup                                             7     1.068     0.000     0.077  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : 01_SETUP_SS_125C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.086 ns   TNS :   +0.000 ns   WHS :   +0.114 ns
+  Slack    :   +1.086 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1981 / 1807
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:47         Memory : 4.473 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ss_0p72v_0p72v_125c
+
+  File     : 02_HOLD_FF_N40C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ff_1p16v_1p16v_n40c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.094 ns   TNS :   +0.000 ns   WHS :   +0.071 ns
+  Slack    :   +1.094 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3510 / 4300
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:45         Memory : 4.687 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ff_1p16v_1p16v_n40c
+
+  File     : 03_SETUP_TT_25C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.108 ns   TNS :   +0.000 ns   WHS :   +0.077 ns
+  Slack    :   +1.108 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 1484 / 2128
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:40         Memory : 3.603 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_tt_0p90v_0p90v_25c
+
+  File     : 04_HOLD_TT_25C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.163 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.163 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 3267 / 1303
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:06:27         Memory : 3.653 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_tt_0p90v_0p90v_25c
+
+  File     : 05_SETUP_SS_M40C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ss_0p72v_0p72v_n40c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.109 ns   TNS :   +0.000 ns   WHS :   +0.103 ns
+  Slack    :   +1.109 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5986 / 1392
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:50         Memory : 3.319 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ss_0p72v_0p72v_n40c
+
+  File     : 06_HOLD_FF_125C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ff_1p16v_1p16v_125c
+  Check    : hold        Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.052 ns   TNS :   +0.000 ns   WHS :   +0.069 ns
+  Slack    :   +1.052 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5809 / 1064
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:03:14         Memory : 4.577 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ff_1p16v_1p16v_125c
+
+  File     : 07_SETUP_LVSS_125C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ss_0p63v_0p63v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.068 ns   TNS :   +0.000 ns   WHS :   +0.115 ns
+  Slack    :   +1.068 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5860 / 1773
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:07:44         Memory : 3.838 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ss_0p63v_0p63v_125c
+
+  File     : 08_CG_CHECK_TT_25C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.119 ns   TNS :   +0.000 ns   WHS :   +0.117 ns
+  Slack    :   +1.119 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 2915 / 2566
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:02:24         Memory : 2.235 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_tt_0p90v_0p90v_25c
+
+  File     : 09_RECOVERY_SS_125C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.146 ns   TNS :   +0.000 ns   WHS :   +0.096 ns
+  Slack    :   +1.146 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5053 / 1714
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:05:17         Memory : 4.642 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_ss_0p72v_0p72v_125c
+
+  File     : 10_MULTICYCLE_TT_25C_BTB_TOP.rpt
+  Design   : BTB_TOP               Corner : tt_0p90v_0p90v_25c
+  Check    : setup       Clock  : CLK_CORE  Period = 2.0 ns  (500.0 MHz)
+  WNS      :   +1.137 ns   TNS :   +0.000 ns   WHS :   +0.105 ns
+  Slack    :   +1.137 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 5855 / 2256
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:21         Memory : 3.358 GB
+  Run Dir  : /proj/cpu_rtl/sta/FETCH/BPU/BTB/run_tt_0p90v_0p90v_25c
+
+  File     : BTB_TIMING.rpt
+  Design   : N/A                   Corner : N/A
+  Check    : N/A         Clock  : N/A  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.000 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.000 ns   Status : UNKNOWN
+  Status   : N/A
+  Coverage : 0.0%   Endpoints : 0 / 0
+  Tool     : N/A
+  Runtime  : N/A              Memory : N/A
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================

@@ -423,3 +423,111 @@ sta_utils/outputs/logger.py
 ---
 
 *See `RESULTS/USAGE.md` for the full argument reference and re-run instructions.*
+
+---
+
+## Run 4 — Per-Stage Rollup (All 10 Pipeline Stages)
+
+**Date/time:** 2026-08-15 19:14:51 → 19:15:05  
+**Script:** `sta_top_parser.py`  
+**Fix applied:** Walker now correctly skips intermediate stage directories that contain
+both a stage-level `.rpt` and sub-block directories with their own `.rpt` files.
+
+### Exact commands
+
+```powershell
+python sta_top_parser.py --stages FETCH          --outdir RESULTS/FETCH          --prefix FETCH_STA          --per-block
+python sta_top_parser.py --stages DECODE         --outdir RESULTS/DECODE         --prefix DECODE_STA         --per-block
+python sta_top_parser.py --stages EXECUTE        --outdir RESULTS/EXECUTE        --prefix EXECUTE_STA        --per-block
+python sta_top_parser.py --stages MEMORY         --outdir RESULTS/MEMORY         --prefix MEMORY_STA         --per-block
+python sta_top_parser.py --stages CACHE          --outdir RESULTS/CACHE          --prefix CACHE_STA          --per-block
+python sta_top_parser.py --stages COMMIT         --outdir RESULTS/COMMIT         --prefix COMMIT_STA         --per-block
+python sta_top_parser.py --stages ISSUE          --outdir RESULTS/ISSUE          --prefix ISSUE_STA          --per-block
+python sta_top_parser.py --stages RENAME_DISPATCH --outdir RESULTS/RENAME_DISPATCH --prefix RENAME_DISPATCH_STA --per-block
+python sta_top_parser.py --stages UNCORE         --outdir RESULTS/UNCORE         --prefix UNCORE_STA         --per-block
+python sta_top_parser.py --stages WRITEBACK      --outdir RESULTS/WRITEBACK      --prefix WRITEBACK_STA      --per-block
+```
+
+### Per-stage results summary
+
+| Stage           | Blocks | Reports | Status |
+|-----------------|-------:|--------:|--------|
+| FETCH           |      7 |      77 | MET    |
+| DECODE          |      5 |      55 | MET    |
+| EXECUTE         |     13 |     143 | MET    |
+| MEMORY          |      6 |     186 | MET    |
+| CACHE           |      5 |      55 | MET    |
+| COMMIT          |      4 |      44 | MET    |
+| ISSUE           |      4 |      44 | MET    |
+| RENAME_DISPATCH |      4 |     124 | MET    |
+| UNCORE          |      6 |     186 | MET    |
+| WRITEBACK       |      3 |      93 | MET    |
+| **TOTAL**       | **57** | **1007**| **MET**|
+
+### Verbatim console evidence (representative — FETCH stage)
+
+```
+[2026-08-15 19:14:51] [INFO    ] Found 7 block director(ies) with '*.rpt' files under D:\Certificates\PD_STA_REPORTS
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\BPU\BTB
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\BPU\PHT
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\BPU\RAS
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\FETCH_QUEUE
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\ICACHE
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\ITLB
+[2026-08-15 19:14:51] [INFO    ]   Found 11 report file(s) in D:\Certificates\PD_STA_REPORTS\FETCH\PC
+[2026-08-15 19:14:51] [INFO    ]   Blocks: 7   Reports: 77
+[2026-08-15 19:14:51] [INFO    ]   STATUS      WORST WNS  WORST TNS  WORST WHS  VIOLATIONS
+[2026-08-15 19:14:51] [INFO    ]   MET            +0.000     +0.000     +0.000  0
+[2026-08-15 19:14:51] [INFO    ]   BY PIPELINE STAGE
+[2026-08-15 19:14:51] [INFO    ]   FETCH                         7    +0.000    +0.000    +0.000  MET
+[2026-08-15 19:14:51] [INFO    ] Dump log    → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_dump.log
+[2026-08-15 19:14:51] [INFO    ] JSON dump   → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_summary.json
+[2026-08-15 19:14:51] [INFO    ] HTML report → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_report.html
+[2026-08-15 19:14:51] [INFO    ] Run log     → D:\Certificates\PD_STA_REPORTS\RESULTS\FETCH\FETCH_STA_run_20260815_191451.log
+[2026-08-15 19:14:51] [INFO    ] Done.  7 blocks  |  77 reports  |  status: MET
+```
+
+### Output files generated
+
+```
+RESULTS/FETCH/FETCH_STA_dump.log
+RESULTS/FETCH/FETCH_STA_summary.json
+RESULTS/FETCH/FETCH_STA_report.html
+RESULTS/FETCH/FETCH_STA_run_20260815_191451.log
+RESULTS/DECODE/DECODE_STA_dump.log
+RESULTS/DECODE/DECODE_STA_summary.json
+RESULTS/DECODE/DECODE_STA_report.html
+RESULTS/DECODE/DECODE_STA_run_20260815_191502.log
+RESULTS/EXECUTE/EXECUTE_STA_dump.log
+RESULTS/EXECUTE/EXECUTE_STA_summary.json
+RESULTS/EXECUTE/EXECUTE_STA_report.html
+RESULTS/EXECUTE/EXECUTE_STA_run_20260815_191502.log
+RESULTS/MEMORY/MEMORY_STA_dump.log
+RESULTS/MEMORY/MEMORY_STA_summary.json
+RESULTS/MEMORY/MEMORY_STA_report.html
+RESULTS/MEMORY/MEMORY_STA_run_20260815_191503.log
+RESULTS/CACHE/CACHE_STA_dump.log
+RESULTS/CACHE/CACHE_STA_summary.json
+RESULTS/CACHE/CACHE_STA_report.html
+RESULTS/CACHE/CACHE_STA_run_20260815_191503.log
+RESULTS/COMMIT/COMMIT_STA_dump.log
+RESULTS/COMMIT/COMMIT_STA_summary.json
+RESULTS/COMMIT/COMMIT_STA_report.html
+RESULTS/COMMIT/COMMIT_STA_run_20260815_191503.log
+RESULTS/ISSUE/ISSUE_STA_dump.log
+RESULTS/ISSUE/ISSUE_STA_summary.json
+RESULTS/ISSUE/ISSUE_STA_report.html
+RESULTS/ISSUE/ISSUE_STA_run_20260815_191504.log
+RESULTS/RENAME_DISPATCH/RENAME_DISPATCH_STA_dump.log
+RESULTS/RENAME_DISPATCH/RENAME_DISPATCH_STA_summary.json
+RESULTS/RENAME_DISPATCH/RENAME_DISPATCH_STA_report.html
+RESULTS/RENAME_DISPATCH/RENAME_DISPATCH_STA_run_20260815_191504.log
+RESULTS/UNCORE/UNCORE_STA_dump.log
+RESULTS/UNCORE/UNCORE_STA_summary.json
+RESULTS/UNCORE/UNCORE_STA_report.html
+RESULTS/UNCORE/UNCORE_STA_run_20260815_191504.log
+RESULTS/WRITEBACK/WRITEBACK_STA_dump.log
+RESULTS/WRITEBACK/WRITEBACK_STA_summary.json
+RESULTS/WRITEBACK/WRITEBACK_STA_report.html
+RESULTS/WRITEBACK/WRITEBACK_STA_run_20260815_191505.log
+```

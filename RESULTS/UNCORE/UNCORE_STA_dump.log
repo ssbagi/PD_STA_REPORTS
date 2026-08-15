@@ -1,0 +1,61 @@
+================================================================================
+  STA TOP-LEVEL DUMP LOG  —  PD_STA_REPORTS
+================================================================================
+
+  Root Directory   : D:\Certificates\PD_STA_REPORTS
+  Parsed At        : 2026-08-15T19:15:05
+  Total Blocks     : 6
+  Total Reports    : 186
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.000
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Total Violations : 0
+
+BY PIPELINE STAGE
+----------------------------------------
+  Stage                   Owner            #       WNS       TNS       WHS  STATUS
+  ──────────────────────  ────────────  ────  ────────  ────────  ────────  ──────────
+  UNCORE                  MTO_User10       6     0.000     0.000     0.000  MET
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               6     0.000     0.000     0.000  MET
+  ff_1p16v_1p16v_125c                              12     1.073     0.000     0.000  MET
+  ff_1p16v_1p16v_n40c                              30     1.021     0.000     0.000  MET
+  ff_1p32v_1p32v_n40c                               6     1.126     0.000     0.000  MET
+  ss_0p63v_0p63v_125c                               6     1.088     0.000     0.066  MET
+  ss_0p63v_0p63v_n40c                               6     1.056     0.000     0.000  MET
+  ss_0p72v_0p72v_125c                              54     0.995     0.000     0.000  MET
+  ss_0p72v_0p72v_n40c                               6     1.057     0.000     0.062  MET
+  tt_0p90v_0p90v_25c                               48     1.059     0.000     0.000  MET
+  tt_0p90v_0p90v_85c                               12     1.044     0.000     0.000  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  N/A                                               6     0.000     0.000     0.000  MET
+  hold                                             66     1.021     0.000     0.000  MET
+  setup                                           114     0.995     0.000     0.000  MET
+
+PER-BLOCK SUMMARY
+----------------------------------------
+  Block                                          Design                  Rpts       WNS       TNS       WHS  STATUS      Owner
+  ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────  ────────────
+  UNCORE\BIU                                     BIU_TOP                   31     0.000     0.000     0.000  MET         User52
+  UNCORE\CLOCK_DOMAIN                            CLOCK_DOMAIN_TOP          31     0.000     0.000     0.000  MET         User53
+  UNCORE\DEBUG_UNIT                              DEBUG_UNIT_TOP            31     0.000     0.000     0.000  MET         User54
+  UNCORE\INTERRUPT_CONTROLLER                    INT_CTRL_TOP              31     0.000     0.000     0.000  MET         User55
+  UNCORE\MEMORY_CONTROLLER                       MC_TOP                    31     0.000     0.000     0.000  MET         User56
+  UNCORE\PMU                                     PMU_TOP                   31     0.000     0.000     0.000  MET         User57
+
+================================================================================
+END OF TOP-LEVEL DUMP LOG
+================================================================================

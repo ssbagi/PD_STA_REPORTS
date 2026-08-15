@@ -4,9 +4,16 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\FETCH
   Design          : FETCH_TOP
-  Parsed At       : 2026-08-15T18:25:17
+  Parsed At       : 2026-08-15T19:12:24
   Total Reports   : 1
 
+
+OWNERSHIP
+----------------------------------------
+  MODULE TIMING OWNER          : MTO_User1  <mto1@company.com>  [EMP-1001]
+  RTL TEAM LEAD                : TeamLead1  <teamlead1@company.com>
+  PD ENGINEER                  : PDEng1  <pdeng1@company.com>
+  STA ENGINEER                 : STAEng1  <staeng1@company.com>
 
 AGGREGATE SUMMARY
 ----------------------------------------

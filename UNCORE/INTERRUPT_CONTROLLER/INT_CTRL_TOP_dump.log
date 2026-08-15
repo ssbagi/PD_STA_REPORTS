@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\UNCORE\INTERRUPT_CONTROLLER
   Design          : INT_CTRL_TOP
-  Parsed At       : 2026-08-15T18:25:17
+  Parsed At       : 2026-08-15T19:15:04
   Total Reports   : 31
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User55  <user55@company.com>  [EMP-2055]
+  TEAM LEAD                    : MTO_User10  <mto10@company.com>  [EMP-1010]
+  RTL TEAM LEAD                : TeamLead10  <teamlead10@company.com>
+  PD ENGINEER                  : PDEng10  <pdeng10@company.com>
+  STA ENGINEER                 : STAEng10  <staeng10@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------

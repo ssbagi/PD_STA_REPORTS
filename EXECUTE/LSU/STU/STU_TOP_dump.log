@@ -4,9 +4,18 @@
 
   Block Directory : D:\Certificates\PD_STA_REPORTS\EXECUTE\LSU\STU
   Design          : STU_TOP
-  Parsed At       : 2026-08-15T18:25:17
+  Parsed At       : 2026-08-15T19:15:03
   Total Reports   : 11
 
+
+OWNERSHIP
+----------------------------------------
+  BLOCK TIMING OWNER           : User31  <user31@company.com>  [EMP-2031]
+  TEAM LEAD                    : MTO_User5  <mto5@company.com>  [EMP-1005]
+  RTL TEAM LEAD                : TeamLead5  <teamlead5@company.com>
+  PD ENGINEER                  : PDEng5  <pdeng5@company.com>
+  STA ENGINEER                 : STAEng5  <staeng5@company.com>
+  CHIP STA LEAD                : STALead1  <stalead1@company.com>  [EMP-0004]
 
 AGGREGATE SUMMARY
 ----------------------------------------
