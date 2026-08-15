@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\UNCORE\\INTERRUPT_CONTROLLER",
   "design": "INT_CTRL_TOP",
   "total_reports": 31,
-  "parsed_at": "2026-08-15T22:16:48",
+  "parsed_at": "2026-08-15T22:23:24",
   "worst_wns_ns": 0.0,
   "worst_tns_ns": 0.0,
   "worst_whs_ns": 0.0,

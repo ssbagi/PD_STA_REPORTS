@@ -519,28 +519,154 @@ def write_top_html(
         + "</div>"
     )
 
-    # per-block table — single Owner column (BTO name from OWNERS.txt)
+    # ── build rel_path → BlockSummary lookup so we can pull violated reports ──
+    _bs_by_rel: dict = {}
+    root_p = Path(summary.root_dir).resolve()
+    for bs in summary.block_summaries:
+        try:
+            rel = str(Path(bs.block_dir).resolve().relative_to(root_p))
+        except ValueError:
+            rel = bs.block_dir
+        _bs_by_rel[rel] = bs
+
+    # ── per-block table with expand panel for VIOLATED blocks ────────────────
+    BLK_COLS = 10   # total columns in the per-block table
     blk_rows = ""
-    for b in summary.blocks:
+    for bidx, b in enumerate(summary.blocks):
         wns_cls = "viol-val" if b.worst_wns_ns < 0 else ""
+        whs_cls = "viol-val" if b.worst_whs_ns < 0 else ""
         owner   = b.bto or "—"
+        bpid    = f"blk_{bidx}"
+
+        btn = ""
+        if b.overall_status == "VIOLATED":
+            btn = (
+                f"<span class='expand-btn' "
+                f"onclick=\"var p=document.getElementById('{bpid}');"
+                f"p.classList.toggle('open');"
+                f"this.textContent=p.classList.contains('open')?'▼ Hide':'▶ Top Paths'\">"
+                f"▶ Top Paths</span>"
+            )
+
         blk_rows += (
             f"<tr>"
+            f"<td>{btn}</td>"
             f"<td class='mono'>{b.rel_path}</td>"
             f"<td class='mono'>{b.design}</td>"
             f"<td class='num'>{b.total_reports}</td>"
             f"<td class='num {wns_cls}'>{b.worst_wns_ns:.3f}</td>"
             f"<td class='num'>{b.worst_tns_ns:.3f}</td>"
-            f"<td class='num'>{b.worst_whs_ns:.3f}</td>"
+            f"<td class='num {whs_cls}'>{b.worst_whs_ns:.3f}</td>"
             f"<td class='num'>{b.total_violations}</td>"
             f"<td>{_badge(b.overall_status)}</td>"
             f"<td class='mono'>{owner}</td>"
             f"</tr>\n"
         )
+
+        # ── expand panel: top-5 violating paths for this block ───────────────
+        if b.overall_status == "VIOLATED":
+            bs = _bs_by_rel.get(b.rel_path)
+            viol_reports = [r for r in (bs.reports if bs else []) if r.is_violated]
+            # sort: setup violations WNS asc, then hold violations WHS asc
+            setup_viols = sorted(
+                [r for r in viol_reports if r.is_setup], key=lambda r: r.wns_ns
+            )
+            hold_viols  = sorted(
+                [r for r in viol_reports if r.is_hold],  key=lambda r: r.whs_ns
+            )
+            top5 = (setup_viols + hold_viols)[:5]
+
+            path_cards = ""
+            for pi, r in enumerate(top5):
+                vtype    = "Setup" if r.is_setup else "Hold"
+                slk_val  = r.wns_ns if r.is_setup else r.whs_ns
+                slk_lbl  = "WNS" if r.is_setup else "WHS"
+                slk_cls  = "viol-val"
+                hdr_bg   = "#fff1f2" if r.is_setup else "#fff7ed"
+                hdr_col  = "#991b1b" if r.is_setup else "#92400e"
+
+                # sub-units for this report sorted worst-first
+                sub = sorted(r.sub_units,
+                             key=lambda s: (0 if s.wns_ns < 0 else 1, s.wns_ns))
+
+                def _sr(s) -> str:
+                    wn = "viol-val" if s.wns_ns < 0 else "ok-val"
+                    wh = "viol-val" if s.whs_ns < 0 else ""
+                    return (
+                        f"<tr><td>{s.unit}</td>"
+                        f"<td class='num {wn}'>{s.wns_ns:.3f}</td>"
+                        f"<td class='num'>{s.tns_ns:.3f}</td>"
+                        f"<td class='num {wh}'>{s.whs_ns:.3f}</td></tr>"
+                    )
+
+                sub_html = (
+                    "".join(_sr(s) for s in sub)
+                    if sub else
+                    "<tr><td colspan='4' style='color:#aaa'>No sub-unit data</td></tr>"
+                )
+
+                path_cards += (
+                    f"<div style='margin-bottom:12px;border:1px solid #e5e7eb;"
+                    f"border-radius:5px;overflow:hidden'>"
+                    # card header
+                    f"<div style='background:{hdr_bg};color:{hdr_col};font-weight:700;"
+                    f"font-size:0.75rem;padding:5px 10px;border-bottom:1px solid #e5e7eb'>"
+                    f"Path {pi+1} &nbsp;·&nbsp; {vtype} Violation &nbsp;·&nbsp; "
+                    f"Corner: {r.corner} &nbsp;·&nbsp; "
+                    f"<span class='viol-val'>{slk_lbl} = {slk_val:.3f} ns</span>"
+                    f"</div>"
+                    # two-column inner layout
+                    f"<div style='display:grid;grid-template-columns:1fr 1fr;gap:0'>"
+                    # left: critical path info
+                    f"<div style='padding:8px 12px;border-right:1px solid #f0f0f0'>"
+                    f"<table class='path-panel' style='display:block;background:transparent;"
+                    f"padding:0;border:none'>"
+                    f"<thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>"
+                    f"<tr><td>File</td><td class='mono'>{r.file_name}</td></tr>"
+                    f"<tr><td>Startpoint</td><td class='mono'>{r.startpoint}</td></tr>"
+                    f"<tr><td>Endpoint</td><td class='mono'>{r.endpoint}</td></tr>"
+                    f"<tr><td>Clock / Period</td>"
+                    f"<td class='mono'>{r.clock} &nbsp;{r.period_ns} ns ({r.freq_mhz} MHz)</td></tr>"
+                    f"<tr><td>Slack</td>"
+                    f"<td class='mono {slk_cls}'><strong>{r.slack_ns:+.3f} ns ({r.slack_status})</strong></td></tr>"
+                    f"<tr><td>WNS / TNS</td>"
+                    f"<td class='mono'>{r.wns_ns:.3f} ns / {r.tns_ns:.3f} ns</td></tr>"
+                    f"<tr><td>WHS</td><td class='mono'>{r.whs_ns:.3f} ns</td></tr>"
+                    f"</tbody></table></div>"
+                    # right: sub-unit table
+                    f"<div style='padding:8px 12px'>"
+                    f"<table class='path-panel' style='display:block;background:transparent;"
+                    f"padding:0;border:none'>"
+                    f"<thead><tr>"
+                    f"<th>Sub-Unit</th><th>WNS</th><th>TNS</th><th>WHS</th>"
+                    f"</tr></thead><tbody>{sub_html}</tbody></table>"
+                    f"</div>"
+                    f"</div>"  # end grid
+                    f"</div>"  # end card
+                )
+
+            panel_html = (
+                f"<div class='path-panel' id='{bpid}'>"
+                f"<div class='phead' style='margin-bottom:10px'>"
+                f"Top {len(top5)} Violating Path(s) for {b.design} &nbsp;"
+                f"<span style='font-weight:400;color:#57606a'>"
+                f"(Setup sorted WNS ↑ &nbsp;|&nbsp; Hold sorted WHS ↑)</span>"
+                f"</div>"
+                + path_cards +
+                f"</div>"
+            )
+            blk_rows += (
+                f"<tr class='path-row'>"
+                f"<td colspan='{BLK_COLS}'>{panel_html}</td>"
+                f"</tr>\n"
+            )
+
     blk_table = (
-        "<h2>Per-Block Rollup</h2>"
+        "<h2>Per-Block Rollup &nbsp;<span style='font-weight:400;font-size:0.78rem;"
+        "color:#57606a'>(VIOLATED blocks first · click ▶ Top Paths to expand)</span></h2>"
         "<div class='tbl-wrap'><table>"
         "<thead><tr>"
+        "<th></th>"
         "<th>Block Path</th><th>Design</th><th>#&nbsp;Reports</th>"
         "<th>Worst WNS (ns)</th><th>Worst TNS (ns)</th><th>Worst WHS (ns)</th>"
         "<th>Violations</th><th>Status</th><th>Owner</th>"

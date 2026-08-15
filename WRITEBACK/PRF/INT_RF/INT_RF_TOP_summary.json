@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\WRITEBACK\\PRF\\INT_RF",
   "design": "INT_RF_TOP",
   "total_reports": 31,
-  "parsed_at": "2026-08-15T22:16:48",
+  "parsed_at": "2026-08-15T22:23:24",
   "worst_wns_ns": -0.231,
   "worst_tns_ns": -6.788,
   "worst_whs_ns": 0.0,
