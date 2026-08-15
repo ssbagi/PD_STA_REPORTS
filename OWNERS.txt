@@ -1,0 +1,47 @@
+################################################################################
+#  PD_STA_REPORTS -- CHIP-LEVEL OWNERSHIP REGISTRY
+#  Design  : CPU_CHIP_TOP
+#  Updated : 2026-08-15
+################################################################################
+
+[CHIP]
+  Design Name        : CPU_CHIP_TOP
+  Project            : PD_STA_REPORTS
+
+[CHIP TIMING OWNER (CTO)]
+  Name               : ChipTimingOwner1
+  Email              : cto1@company.com
+  Employee ID        : EMP-0001
+
+[DESIGN MANAGER]
+  Name               : DesignManager1
+  Email              : dm1@company.com
+  Employee ID        : EMP-0002
+
+[PD LEAD]
+  Name               : PDLead1
+  Email              : pdlead1@company.com
+  Employee ID        : EMP-0003
+
+[STA LEAD]
+  Name               : STALead1
+  Email              : stalead1@company.com
+  Employee ID        : EMP-0004
+
+[MODULE TIMING OWNERS (MTO) BY STAGE]
+  FETCH                  : MTO_User1     <mto1@company.com>  EMP-1001
+  DECODE                 : MTO_User2     <mto2@company.com>  EMP-1002
+  RENAME_DISPATCH        : MTO_User3     <mto3@company.com>  EMP-1003
+  ISSUE                  : MTO_User4     <mto4@company.com>  EMP-1004
+  EXECUTE                : MTO_User5     <mto5@company.com>  EMP-1005
+  MEMORY                 : MTO_User6     <mto6@company.com>  EMP-1006
+  WRITEBACK              : MTO_User7     <mto7@company.com>  EMP-1007
+  COMMIT                 : MTO_User8     <mto8@company.com>  EMP-1008
+  CACHE                  : MTO_User9     <mto9@company.com>  EMP-1009
+  UNCORE                 : MTO_User10    <mto10@company.com>  EMP-1010
+
+[SIGN-OFF AUTHORITY]
+  Setup / Hold Closure : STALead1 + Stage MTO
+  Tapeout Approval     : ChipTimingOwner1 + DesignManager1
+
+################################################################################

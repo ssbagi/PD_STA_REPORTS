@@ -1,0 +1,41 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# STA parser auto-corrector backups
+*.bak
+
+# Run-log files (timestamped, regenerated every run)
+_run_*.log
+sta_code_check_run_*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Windows
+ehthumbs.db
+
+# Temp / scratch
+*.tmp
+*.temp
+*.orig
