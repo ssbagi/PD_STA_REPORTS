@@ -1,0 +1,48 @@
+================================================================================
+  STA BLOCK DUMP LOG  —  FETCH_TOP
+================================================================================
+
+  Block Directory : D:\Certificates\PD_STA_REPORTS\FETCH
+  Design          : FETCH_TOP
+  Parsed At       : 2026-08-15T18:25:17
+  Total Reports   : 1
+
+
+AGGREGATE SUMMARY
+----------------------------------------
+  Overall Status   : MET
+  Worst WNS  (ns)  : 0.351
+  Worst TNS  (ns)  : 0.000
+  Worst WHS  (ns)  : 0.000
+  Best  WNS  (ns)  : 0.351
+  Total Violations : 0
+
+BY CORNER
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  ss_0p72v_0p72v_125c                               1     0.351     0.000     0.000  MET
+
+BY CHECK TYPE
+----------------------------------------
+  Name                                              #       WNS       TNS       WHS  STATUS
+  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
+  setup                                             1     0.351     0.000     0.000  MET
+
+PER-REPORT DETAIL
+----------------------------------------
+  File     : FETCH_TIMING_REPORT.rpt
+  Design   : FETCH_TOP             Corner : ss_0p72v_0p72v_125c
+  Check    : setup       Clock  : CLK_CORE  Period = 0.0 ns  (0.0 MHz)
+  WNS      :   +0.351 ns   TNS :   +0.000 ns   WHS :   +0.000 ns
+  Slack    :   +0.351 ns   Status : MET
+  Status   : ALL PATHS CLEAN — No Setup or Hold Violations
+  Coverage : 100.0%   Endpoints : 4827 / 4827
+  Tool     : Synopsys PrimeTime 2023.06-SP3
+  Runtime  : 00:04:37         Memory : 3.21 GB
+  Run Dir  : N/A
+
+
+================================================================================
+END OF BLOCK DUMP LOG
+================================================================================
