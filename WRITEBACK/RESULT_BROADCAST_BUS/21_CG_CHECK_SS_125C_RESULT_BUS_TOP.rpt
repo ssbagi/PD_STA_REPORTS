@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : RESULT_BUS_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : ss_0p72v_0p72v_125c
+Note   : Clock Gating check — Slow worst corner
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_rbus_arb/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_rbus_fwd/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.15      0.15
+  u_rbus_arb/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.15 r
+  u_rbus_arb/din_reg[0]/Q  (DFFARX1_RVT)                        0.132         0.282 r
+  u_rbus_arb/U12/Y (INVX2_RVT)                                  0.059         0.341 f
+  u_rbus_arb/U34/Y (NAND2X1_RVT)                                0.065         0.406 r
+  u_rbus_mux/U07/Y (AOI22X1_RVT)                                0.099         0.505 f
+  u_rbus_mux/U19/Y (OAI21X1_RVT)                                0.099         0.604 r
+  u_rbus_buf/U03/Y (MUX21X1_RVT)                                0.063         0.667 r
+  u_rbus_buf/U11/Y (AND2X1_RVT)                                 0.083         0.75 f
+  u_rbus_buf/U22/Y (NOR2X1_RVT)                                 0.038         0.788 r
+  u_rbus_fwd/U05/Y (BUFX4_RVT)                                  0.058         0.846 r
+  u_rbus_fwd/dout_reg[0]/D (DFFARX1_RVT)                        0.076        0.922 f
+  data arrival time                                                    0.922
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.15      2.15
+  clock uncertainty                                      -0.05   2.1
+  u_rbus_fwd/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.1 r
+  library setup time                                     -0.071   2.029
+  data required time                                                   2.029
+  -------------------------------------------------------------------------
+  data required time                                                   2.029
+  data arrival time                                                   -0.922
+  -------------------------------------------------------------------------
+  slack (MET)      1.107
+
+
+=========================================================================
+                   RESULT_BUS_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : RESULT_BUS_TOP
+  Corner       : ss_0p72v_0p72v_125c
+  Check        : max  (Clock Gating check — Slow worst corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_rbus_arb          1.107       0.000       0      0.086        0     |
+  | u_rbus_mux          0.2       0.000       0      0.082        0     |
+  | u_rbus_buf          0.168       0.000       0      0.122        0     |
+  | u_rbus_fwd          0.14       0.000       0      0.052        0     |
+  +------------------------------------------------------------------+
+  | RESULT_BUS_TOP   1.107       0.000       0      0.086        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_rbus_arb/*] -to [get_cells u_rbus_fwd/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_rbus_arb/*] -to [get_cells u_rbus_fwd/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.019 ns  (max across RESULT_BUS_TOP)
+  Latency  : 0.15 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 4209
+  Constrained endpoints      : 2742
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/WRITEBACK/RESULT_BROADCAST_BUS/run_ss_0p72v_0p72v_125c
+  SDC File     : /proj/cpu_rtl/constraints/RESULT_BUS_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/RESULT_BUS_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/RESULT_BUS_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_125c.db
+  Elapsed Time : 00:02:48
+  Peak Memory  : 3.097 GB
+
+=========================================================================
+End of Report
+=========================================================================

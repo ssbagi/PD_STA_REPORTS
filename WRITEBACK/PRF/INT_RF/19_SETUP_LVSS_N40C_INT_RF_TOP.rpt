@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : INT_RF_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 18:20:45 2026
+Corner : ss_0p63v_0p63v_n40c
+Note   : Setup — Ultra-low-voltage, cold
+****************************************
+
+Operating Conditions : ss_0p63v_0p63v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_irf_rd0/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_irf_byp/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.162      0.162
+  u_irf_rd0/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.162 r
+  u_irf_rd0/din_reg[0]/Q  (DFFARX1_RVT)                        0.121         0.283 r
+  u_irf_rd0/U12/Y (INVX2_RVT)                                  0.039         0.322 f
+  u_irf_rd0/U34/Y (NAND2X1_RVT)                                0.068         0.39 r
+  u_irf_rd1/U07/Y (AOI22X1_RVT)                                0.082         0.472 f
+  u_irf_rd1/U19/Y (OAI21X1_RVT)                                0.082         0.554 r
+  u_irf_wr/U03/Y (MUX21X1_RVT)                                0.072         0.626 r
+  u_irf_wr/U11/Y (AND2X1_RVT)                                 0.053         0.679 f
+  u_irf_wr/U22/Y (NOR2X1_RVT)                                 0.049         0.728 r
+  u_irf_byp/U05/Y (BUFX4_RVT)                                  0.058         0.786 r
+  u_irf_byp/dout_reg[0]/D (DFFARX1_RVT)                        0.066        0.852 f
+  data arrival time                                                    0.852
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.162      2.162
+  clock uncertainty                                      -0.05   2.112
+  u_irf_byp/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.112 r
+  library setup time                                     -0.08   2.032
+  data required time                                                   2.032
+  -------------------------------------------------------------------------
+  data required time                                                   2.032
+  data arrival time                                                   -0.852
+  -------------------------------------------------------------------------
+  slack (MET)      1.18
+
+
+=========================================================================
+                   INT_RF_TOP -- TIMING SUMMARY
+=========================================================================
+
+  Block        : INT_RF_TOP
+  Corner       : ss_0p63v_0p63v_n40c
+  Check        : max  (Setup — Ultra-low-voltage, cold)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  +------------------------------------------------------------------+
+  | Sub-Unit          WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  |
+  +------------------------------------------------------------------+
+  | u_irf_rd0          1.18       0.000       0      0.074        0     |
+  | u_irf_rd1          0.184       0.000       0      0.108        0     |
+  | u_irf_wr          0.187       0.000       0      0.073        0     |
+  | u_irf_byp          0.138       0.000       0      0.042        0     |
+  +------------------------------------------------------------------+
+  | INT_RF_TOP   1.18       0.000       0      0.074        0     |
+  +------------------------------------------------------------------+
+
+  Status : ALL PATHS CLEAN -- No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_irf_rd0/*] -to [get_cells u_irf_byp/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_irf_rd0/*] -to [get_cells u_irf_byp/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.016 ns  (max across INT_RF_TOP)
+  Latency  : 0.162 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 1642
+  Constrained endpoints      : 1250
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/WRITEBACK/PRF/INT_RF/run_ss_0p63v_0p63v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/INT_RF_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/INT_RF_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/INT_RF_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p63v_0p63v_n40c.db
+  Elapsed Time : 00:01:11
+  Peak Memory  : 1.825 GB
+
+=========================================================================
+End of Report
+=========================================================================

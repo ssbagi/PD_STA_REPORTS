@@ -1,0 +1,34 @@
+################################################################################
+#  WRITEBACK STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User7
+  Email              : mto7@company.com
+  Employee ID        : EMP-1007
+
+[RTL TEAM LEAD]
+  Name               : TeamLead7
+  Email              : teamlead7@company.com
+
+[PD ENGINEER]
+  Name               : PDEng7
+  Email              : pdeng7@company.com
+
+[STA ENGINEER]
+  Name               : STAEng7
+  Email              : staeng7@company.com
+
+[BLOCKS IN THIS STAGE]
+  WRITEBACK\PRF\FP_RF                        BTO = User40      <user40@company.com>  EMP-2040
+  WRITEBACK\PRF\INT_RF                       BTO = User41      <user41@company.com>  EMP-2041
+  WRITEBACK\RESULT_BROADCAST_BUS             BTO = User42      <user42@company.com>  EMP-2042
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User7 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################
