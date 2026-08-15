@@ -149,6 +149,20 @@ class BlockEntry:
     worst_whs_ns:     float
     total_violations: int
     overall_status:   str
+    # ── ownership (populated from OWNERS.txt by aggregator) ─────────────────
+    bto:              str = ""   # Block Timing Owner name (shown as "Owner")
+
+
+@dataclass
+class StageEntry:
+    """Rolled-up entry for one pipeline stage inside the top-level summary."""
+    name:             str
+    count:            int
+    wns_ns:           float
+    tns_ns:           float
+    whs_ns:           float
+    status:           str
+    mto:              str = ""   # Module Timing Owner for this stage
 
 
 @dataclass
@@ -167,8 +181,8 @@ class TopSummary:
     total_violations:  int
     overall_status:    str
 
-    # ── per-stage rollup (stage = top-level folder e.g. FETCH, DECODE …) ────
-    by_stage:  Dict[str, CornerGroup] = field(default_factory=dict)
+    # ── per-stage rollup (now uses StageEntry to carry MTO) ─────────────────
+    by_stage:  Dict[str, StageEntry] = field(default_factory=dict)
     by_corner: Dict[str, CornerGroup] = field(default_factory=dict)
     by_check:  Dict[str, CornerGroup] = field(default_factory=dict)
 

@@ -22,8 +22,10 @@ from .models import (
     BlockSummary,
     CornerGroup,
     ReportRecord,
+    StageEntry,
     TopSummary,
 )
+from ..owners import parse_owners, owner_summary
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -174,7 +176,7 @@ def aggregate_top(
             overall_status   = "NO_DATA",
         )
 
-    # ── build flat BlockEntry list ───────────────────────────────────────────
+    # ── build flat BlockEntry list with ownership ────────────────────────────
     root = root_dir.resolve()
     entries: List[BlockEntry] = []
     for bs in block_summaries:
@@ -182,6 +184,9 @@ def aggregate_top(
             rel = str(Path(bs.block_dir).resolve().relative_to(root))
         except ValueError:
             rel = bs.block_dir
+        # read OWNERS.txt for this block — BTO is shown as "Owner" in all outputs
+        ow  = parse_owners(bs.block_dir)
+        bto = ow.get("BLOCK TIMING OWNER (BTO)", {}).get("Name", "")
         entries.append(BlockEntry(
             rel_path         = rel,
             design           = bs.design,
@@ -191,6 +196,7 @@ def aggregate_top(
             worst_whs_ns     = bs.worst_whs_ns,
             total_violations = bs.total_violations,
             overall_status   = bs.overall_status,
+            bto              = bto,
         ))
 
     # ── aggregate numbers ────────────────────────────────────────────────────
@@ -199,13 +205,28 @@ def aggregate_top(
     tns_all = [bs.worst_tns_ns for bs in block_summaries]
     whs_all = [bs.worst_whs_ns for bs in block_summaries]
 
-    # ── by-stage grouping (top-level directory, e.g. FETCH, DECODE …) ────────
+    # ── by-stage grouping with MTO from stage OWNERS.txt ────────────────────
+    stage_buckets: Dict[str, List[BlockEntry]] = {}
     for e in entries:
-        # rel_path looks like "FETCH/PC" or "FETCH\PC" on Windows
         e_stage = Path(e.rel_path).parts[0] if e.rel_path else "UNKNOWN"
-        e.__dict__["stage"] = e_stage  # inject ephemeral attr for grouping
+        e.__dict__["stage"] = e_stage
+        stage_buckets.setdefault(e_stage, []).append(e)
 
-    by_stage = _group_entries(entries, "stage")
+    by_stage: Dict[str, StageEntry] = {}
+    for stage_name, items in sorted(stage_buckets.items()):
+        violated = any(i.overall_status == "VIOLATED" for i in items)
+        # read stage-level OWNERS.txt for MTO name
+        stage_ow  = parse_owners(root_dir / stage_name)
+        stage_mto = stage_ow.get("MODULE TIMING OWNER (MTO)", {}).get("Name", "")
+        by_stage[stage_name] = StageEntry(
+            name   = stage_name,
+            count  = len(items),
+            wns_ns = min(i.worst_wns_ns for i in items),
+            tns_ns = min(i.worst_tns_ns for i in items),
+            whs_ns = min(i.worst_whs_ns for i in items),
+            status = "VIOLATED" if violated else "MET",
+            mto    = stage_mto,
+        )
 
     # ── by-corner / by-check across all reports ──────────────────────────────
     all_records = [r for bs in block_summaries for r in bs.reports]

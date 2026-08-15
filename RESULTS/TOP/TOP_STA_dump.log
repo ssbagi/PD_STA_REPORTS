@@ -3,7 +3,7 @@
 ================================================================================
 
   Root Directory   : D:\Certificates\PD_STA_REPORTS
-  Parsed At        : 2026-08-15T18:44:32
+  Parsed At        : 2026-08-15T19:03:47
   Total Blocks     : 51
   Total Reports    : 931
 
@@ -18,18 +18,18 @@ AGGREGATE SUMMARY
 
 BY PIPELINE STAGE
 ----------------------------------------
-  Name                                              #       WNS       TNS       WHS  STATUS
-  ─────────────────────────────────────────────  ────  ────────  ────────  ────────  ──────────
-  CACHE                                             5     0.000     0.000     0.000  MET
-  COMMIT                                            4     0.000     0.000     0.000  MET
-  DECODE                                            5     0.000     0.000     0.000  MET
-  EXECUTE                                          13     0.000     0.000     0.000  MET
-  FETCH                                             1     0.351     0.000     0.000  MET
-  ISSUE                                             4     0.000     0.000     0.000  MET
-  MEMORY                                            6     0.000     0.000     0.000  MET
-  RENAME_DISPATCH                                   4     0.000     0.000     0.000  MET
-  UNCORE                                            6     0.000     0.000     0.000  MET
-  WRITEBACK                                         3     0.000     0.000     0.000  MET
+  Stage                   Owner            #       WNS       TNS       WHS  STATUS
+  ──────────────────────  ────────────  ────  ────────  ────────  ────────  ──────────
+  CACHE                   MTO_User9        5     0.000     0.000     0.000  MET
+  COMMIT                  MTO_User8        4     0.000     0.000     0.000  MET
+  DECODE                  MTO_User2        5     0.000     0.000     0.000  MET
+  EXECUTE                 MTO_User5       13     0.000     0.000     0.000  MET
+  FETCH                   MTO_User1        1     0.351     0.000     0.000  MET
+  ISSUE                   MTO_User4        4     0.000     0.000     0.000  MET
+  MEMORY                  MTO_User6        6     0.000     0.000     0.000  MET
+  RENAME_DISPATCH         MTO_User3        4     0.000     0.000     0.000  MET
+  UNCORE                  MTO_User10       6     0.000     0.000     0.000  MET
+  WRITEBACK               MTO_User7        3     0.000     0.000     0.000  MET
 
 BY CORNER
 ----------------------------------------
@@ -56,115 +56,59 @@ BY CHECK TYPE
 
 PER-BLOCK SUMMARY
 ----------------------------------------
-  Block Path                                     Design                  Rpts       WNS       TNS       WHS  STATUS
-  ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────
-  CACHE\CACHE_CONTROLLER                         CACHE_CTRL_TOP            11     0.000     0.000     0.000  MET
-  CACHE\L1D                                      L1D_TOP                   11     0.000     0.000     0.000  MET
-  CACHE\L1I                                      L1I_TOP                   11     0.000     0.000     0.000  MET
-  CACHE\L2                                       L2_TOP                    11     0.000     0.000     0.000  MET
-  CACHE\L3_LLC                                   L3_LLC_TOP                11     0.000     0.000     0.000  MET
-  COMMIT\ARF                                     ARF_TOP                   11     0.000     0.000     0.000  MET
-  COMMIT\EXCEPTION_HANDLER                       EXCEPTION_HANDLER_TOP     11     0.000     0.000     0.000  MET
-  COMMIT\RETIRE_QUEUE                            RETIRE_QUEUE_TOP          11     0.000     0.000     0.000  MET
-  COMMIT\ROB_COMMIT                              ROB_COMMIT_TOP            11     0.000     0.000     0.000  MET
-  DECODE\DECODE_QUEUE                            DECODE_QUEUE_TOP          11     0.000     0.000     0.000  MET
-  DECODE\INSTRUCTION_DECODER                     INSTR_DECODER_TOP         11     0.000     0.000     0.000  MET
-  DECODE\INSTRUCTION_LENGTH_DECODER              ILD_TOP                   11     0.000     0.000     0.000  MET
-  DECODE\MICRO_OP_SPLITTER                       MICRO_OP_SPLIT_TOP        11     0.000     0.000     0.000  MET
-  DECODE\PRE_DECODE                              PRE_DECODE_TOP            11     0.000     0.000     0.000  MET
-  EXECUTE\ALU\ALU0                               ALU0_TOP                  11     0.000     0.000     0.000  MET
-  EXECUTE\ALU\ALU1                               ALU1_TOP                  11     0.000     0.000     0.000  MET
-  EXECUTE\BRU                                    BRU_TOP                   11     0.000     0.000     0.000  MET
-  EXECUTE\DIV                                    DIV_TOP                   11     0.000     0.000     0.000  MET
-  EXECUTE\FPU\FADD                               FADD_TOP                  11     0.000     0.000     0.000  MET
-  EXECUTE\FPU\FDIV                               FDIV_TOP                  11     0.000     0.000     0.000  MET
-  EXECUTE\FPU\FMUL                               FMUL_TOP                  11     0.000     0.000     0.000  MET
-  EXECUTE\FPU\FSQRT                              FSQRT_TOP                 11     0.000     0.000     0.000  MET
-  EXECUTE\LSU\LDU                                LDU_TOP                   11     0.000     0.000     0.000  MET
-  EXECUTE\LSU\STL_FORWARD                        STL_FORWARD_TOP           11     0.000     0.000     0.000  MET
-  EXECUTE\LSU\STU                                STU_TOP                   11     0.000     0.000     0.000  MET
-  EXECUTE\MUL                                    MUL_TOP                   11     0.000     0.000     0.000  MET
-  EXECUTE\SIMD_VEC                               SIMD_VEC_TOP              11     0.000     0.000     0.000  MET
-  FETCH                                          FETCH_TOP                  1     0.351     0.000     0.000  MET
-  ISSUE\IQ_FP                                    IQ_FP_TOP                 11     0.000     0.000     0.000  MET
-  ISSUE\IQ_INT                                   IQ_INT_TOP                11     0.000     0.000     0.000  MET
-  ISSUE\IQ_LSU                                   IQ_LSU_TOP                11     0.000     0.000     0.000  MET
-  ISSUE\WAKEUP_SELECT                            WAKEUP_SELECT_TOP         11     0.000     0.000     0.000  MET
-  MEMORY\DCACHE                                  DCACHE_TOP                31     0.000     0.000     0.000  MET
-  MEMORY\DTLB                                    DTLB_TOP                  31     0.000     0.000     0.000  MET
-  MEMORY\LDQ                                     LDQ_TOP                   31     0.000     0.000     0.000  MET
-  MEMORY\MOB                                     MOB_TOP                   31     0.000     0.000     0.000  MET
-  MEMORY\MSHR                                    MSHR_TOP                  31     0.000     0.000     0.000  MET
-  MEMORY\STQ                                     STQ_TOP                   31     0.000     0.000     0.000  MET
-  RENAME_DISPATCH\DISPATCH_QUEUE                 DISPATCH_QUEUE_TOP        31     0.000     0.000     0.000  MET
-  RENAME_DISPATCH\FREE_LIST                      FREE_LIST_TOP             31     0.000     0.000     0.000  MET
-  RENAME_DISPATCH\RAT                            RAT_TOP                   31     0.000     0.000     0.000  MET
-  RENAME_DISPATCH\ROB                            ROB_TOP                   31     0.000     0.000     0.000  MET
-  UNCORE\BIU                                     BIU_TOP                   31     0.000     0.000     0.000  MET
-  UNCORE\CLOCK_DOMAIN                            CLOCK_DOMAIN_TOP          31     0.000     0.000     0.000  MET
-  UNCORE\DEBUG_UNIT                              DEBUG_UNIT_TOP            31     0.000     0.000     0.000  MET
-  UNCORE\INTERRUPT_CONTROLLER                    INT_CTRL_TOP              31     0.000     0.000     0.000  MET
-  UNCORE\MEMORY_CONTROLLER                       MC_TOP                    31     0.000     0.000     0.000  MET
-  UNCORE\PMU                                     PMU_TOP                   31     0.000     0.000     0.000  MET
-  WRITEBACK\PRF\FP_RF                            FP_RF_TOP                 31     0.000     0.000     0.000  MET
-  WRITEBACK\PRF\INT_RF                           INT_RF_TOP                31     0.000     0.000     0.000  MET
-  WRITEBACK\RESULT_BROADCAST_BUS                 RESULT_BUS_TOP            31     0.000     0.000     0.000  MET
-
-PER-BLOCK OWNERSHIP
-----------------------------------------
-  Block Path                                     BTO           MTO         
-  ─────────────────────────────────────────────  ────────────  ────────────
-  CACHE\CACHE_CONTROLLER                         User47        MTO_User9
-  CACHE\L1D                                      User48        MTO_User9
-  CACHE\L1I                                      User49        MTO_User9
-  CACHE\L2                                       User50        MTO_User9
-  CACHE\L3_LLC                                   User51        MTO_User9
-  COMMIT\ARF                                     User43        MTO_User8
-  COMMIT\EXCEPTION_HANDLER                       User44        MTO_User8
-  COMMIT\RETIRE_QUEUE                            User45        MTO_User8
-  COMMIT\ROB_COMMIT                              User46        MTO_User8
-  DECODE\DECODE_QUEUE                            User8         MTO_User2
-  DECODE\INSTRUCTION_DECODER                     User9         MTO_User2
-  DECODE\INSTRUCTION_LENGTH_DECODER              User10        MTO_User2
-  DECODE\MICRO_OP_SPLITTER                       User11        MTO_User2
-  DECODE\PRE_DECODE                              User12        MTO_User2
-  EXECUTE\ALU\ALU0                               User21        MTO_User5
-  EXECUTE\ALU\ALU1                               User22        MTO_User5
-  EXECUTE\BRU                                    User23        MTO_User5
-  EXECUTE\DIV                                    User24        MTO_User5
-  EXECUTE\FPU\FADD                               User25        MTO_User5
-  EXECUTE\FPU\FDIV                               User26        MTO_User5
-  EXECUTE\FPU\FMUL                               User27        MTO_User5
-  EXECUTE\FPU\FSQRT                              User28        MTO_User5
-  EXECUTE\LSU\LDU                                User29        MTO_User5
-  EXECUTE\LSU\STL_FORWARD                        User30        MTO_User5
-  EXECUTE\LSU\STU                                User31        MTO_User5
-  EXECUTE\MUL                                    User32        MTO_User5
-  EXECUTE\SIMD_VEC                               User33        MTO_User5
-  FETCH                                          —             —
-  ISSUE\IQ_FP                                    User17        MTO_User4
-  ISSUE\IQ_INT                                   User18        MTO_User4
-  ISSUE\IQ_LSU                                   User19        MTO_User4
-  ISSUE\WAKEUP_SELECT                            User20        MTO_User4
-  MEMORY\DCACHE                                  User34        MTO_User6
-  MEMORY\DTLB                                    User35        MTO_User6
-  MEMORY\LDQ                                     User36        MTO_User6
-  MEMORY\MOB                                     User37        MTO_User6
-  MEMORY\MSHR                                    User38        MTO_User6
-  MEMORY\STQ                                     User39        MTO_User6
-  RENAME_DISPATCH\DISPATCH_QUEUE                 User13        MTO_User3
-  RENAME_DISPATCH\FREE_LIST                      User14        MTO_User3
-  RENAME_DISPATCH\RAT                            User15        MTO_User3
-  RENAME_DISPATCH\ROB                            User16        MTO_User3
-  UNCORE\BIU                                     User52        MTO_User10
-  UNCORE\CLOCK_DOMAIN                            User53        MTO_User10
-  UNCORE\DEBUG_UNIT                              User54        MTO_User10
-  UNCORE\INTERRUPT_CONTROLLER                    User55        MTO_User10
-  UNCORE\MEMORY_CONTROLLER                       User56        MTO_User10
-  UNCORE\PMU                                     User57        MTO_User10
-  WRITEBACK\PRF\FP_RF                            User40        MTO_User7
-  WRITEBACK\PRF\INT_RF                           User41        MTO_User7
-  WRITEBACK\RESULT_BROADCAST_BUS                 User42        MTO_User7
+  Block                                          Design                  Rpts       WNS       TNS       WHS  STATUS      Owner
+  ─────────────────────────────────────────────  ──────────────────────  ────  ────────  ────────  ────────  ──────────  ────────────
+  CACHE\CACHE_CONTROLLER                         CACHE_CTRL_TOP            11     0.000     0.000     0.000  MET         User47
+  CACHE\L1D                                      L1D_TOP                   11     0.000     0.000     0.000  MET         User48
+  CACHE\L1I                                      L1I_TOP                   11     0.000     0.000     0.000  MET         User49
+  CACHE\L2                                       L2_TOP                    11     0.000     0.000     0.000  MET         User50
+  CACHE\L3_LLC                                   L3_LLC_TOP                11     0.000     0.000     0.000  MET         User51
+  COMMIT\ARF                                     ARF_TOP                   11     0.000     0.000     0.000  MET         User43
+  COMMIT\EXCEPTION_HANDLER                       EXCEPTION_HANDLER_TOP     11     0.000     0.000     0.000  MET         User44
+  COMMIT\RETIRE_QUEUE                            RETIRE_QUEUE_TOP          11     0.000     0.000     0.000  MET         User45
+  COMMIT\ROB_COMMIT                              ROB_COMMIT_TOP            11     0.000     0.000     0.000  MET         User46
+  DECODE\DECODE_QUEUE                            DECODE_QUEUE_TOP          11     0.000     0.000     0.000  MET         User8
+  DECODE\INSTRUCTION_DECODER                     INSTR_DECODER_TOP         11     0.000     0.000     0.000  MET         User9
+  DECODE\INSTRUCTION_LENGTH_DECODER              ILD_TOP                   11     0.000     0.000     0.000  MET         User10
+  DECODE\MICRO_OP_SPLITTER                       MICRO_OP_SPLIT_TOP        11     0.000     0.000     0.000  MET         User11
+  DECODE\PRE_DECODE                              PRE_DECODE_TOP            11     0.000     0.000     0.000  MET         User12
+  EXECUTE\ALU\ALU0                               ALU0_TOP                  11     0.000     0.000     0.000  MET         User21
+  EXECUTE\ALU\ALU1                               ALU1_TOP                  11     0.000     0.000     0.000  MET         User22
+  EXECUTE\BRU                                    BRU_TOP                   11     0.000     0.000     0.000  MET         User23
+  EXECUTE\DIV                                    DIV_TOP                   11     0.000     0.000     0.000  MET         User24
+  EXECUTE\FPU\FADD                               FADD_TOP                  11     0.000     0.000     0.000  MET         User25
+  EXECUTE\FPU\FDIV                               FDIV_TOP                  11     0.000     0.000     0.000  MET         User26
+  EXECUTE\FPU\FMUL                               FMUL_TOP                  11     0.000     0.000     0.000  MET         User27
+  EXECUTE\FPU\FSQRT                              FSQRT_TOP                 11     0.000     0.000     0.000  MET         User28
+  EXECUTE\LSU\LDU                                LDU_TOP                   11     0.000     0.000     0.000  MET         User29
+  EXECUTE\LSU\STL_FORWARD                        STL_FORWARD_TOP           11     0.000     0.000     0.000  MET         User30
+  EXECUTE\LSU\STU                                STU_TOP                   11     0.000     0.000     0.000  MET         User31
+  EXECUTE\MUL                                    MUL_TOP                   11     0.000     0.000     0.000  MET         User32
+  EXECUTE\SIMD_VEC                               SIMD_VEC_TOP              11     0.000     0.000     0.000  MET         User33
+  FETCH                                          FETCH_TOP                  1     0.351     0.000     0.000  MET         —
+  ISSUE\IQ_FP                                    IQ_FP_TOP                 11     0.000     0.000     0.000  MET         User17
+  ISSUE\IQ_INT                                   IQ_INT_TOP                11     0.000     0.000     0.000  MET         User18
+  ISSUE\IQ_LSU                                   IQ_LSU_TOP                11     0.000     0.000     0.000  MET         User19
+  ISSUE\WAKEUP_SELECT                            WAKEUP_SELECT_TOP         11     0.000     0.000     0.000  MET         User20
+  MEMORY\DCACHE                                  DCACHE_TOP                31     0.000     0.000     0.000  MET         User34
+  MEMORY\DTLB                                    DTLB_TOP                  31     0.000     0.000     0.000  MET         User35
+  MEMORY\LDQ                                     LDQ_TOP                   31     0.000     0.000     0.000  MET         User36
+  MEMORY\MOB                                     MOB_TOP                   31     0.000     0.000     0.000  MET         User37
+  MEMORY\MSHR                                    MSHR_TOP                  31     0.000     0.000     0.000  MET         User38
+  MEMORY\STQ                                     STQ_TOP                   31     0.000     0.000     0.000  MET         User39
+  RENAME_DISPATCH\DISPATCH_QUEUE                 DISPATCH_QUEUE_TOP        31     0.000     0.000     0.000  MET         User13
+  RENAME_DISPATCH\FREE_LIST                      FREE_LIST_TOP             31     0.000     0.000     0.000  MET         User14
+  RENAME_DISPATCH\RAT                            RAT_TOP                   31     0.000     0.000     0.000  MET         User15
+  RENAME_DISPATCH\ROB                            ROB_TOP                   31     0.000     0.000     0.000  MET         User16
+  UNCORE\BIU                                     BIU_TOP                   31     0.000     0.000     0.000  MET         User52
+  UNCORE\CLOCK_DOMAIN                            CLOCK_DOMAIN_TOP          31     0.000     0.000     0.000  MET         User53
+  UNCORE\DEBUG_UNIT                              DEBUG_UNIT_TOP            31     0.000     0.000     0.000  MET         User54
+  UNCORE\INTERRUPT_CONTROLLER                    INT_CTRL_TOP              31     0.000     0.000     0.000  MET         User55
+  UNCORE\MEMORY_CONTROLLER                       MC_TOP                    31     0.000     0.000     0.000  MET         User56
+  UNCORE\PMU                                     PMU_TOP                   31     0.000     0.000     0.000  MET         User57
+  WRITEBACK\PRF\FP_RF                            FP_RF_TOP                 31     0.000     0.000     0.000  MET         User40
+  WRITEBACK\PRF\INT_RF                           INT_RF_TOP                31     0.000     0.000     0.000  MET         User41
+  WRITEBACK\RESULT_BROADCAST_BUS                 RESULT_BUS_TOP            31     0.000     0.000     0.000  MET         User42
 
 ================================================================================
 END OF TOP-LEVEL DUMP LOG

@@ -140,19 +140,21 @@ def _badge(status: str) -> str:
 
 
 def _owner_card(directory: str | Path) -> str:
-    """Return an HTML ownership card for the given directory, or '' if no OWNERS.txt."""
+    """Return a compact HTML ownership card showing just the BTO as Owner."""
     owners = parse_owners(directory)
-    pairs  = owner_summary(owners)
-    if not pairs:
+    bto    = owners.get("BLOCK TIMING OWNER (BTO)", {}).get("Name", "")
+    email  = owners.get("BLOCK TIMING OWNER (BTO)", {}).get("Email", "")
+    if not bto:
         return ""
-    rows = "".join(
-        f"<tr><td class='ow-label'>{label}</td><td class='ow-val'>{value}</td></tr>"
-        for label, value in pairs
-    )
+    val = bto
+    if email:
+        val += f" &lt;{email}&gt;"
     return (
         "<div class='owner-card'>"
-        "<div class='ow-title'>Block Ownership</div>"
-        f"<table class='ow-table'>{rows}</table>"
+        "<div class='ow-title'>Owner</div>"
+        "<table class='ow-table'>"
+        f"<tr><td class='ow-label'>Block Owner</td><td class='ow-val'>{val}</td></tr>"
+        "</table>"
         "</div>"
     )
 
@@ -223,24 +225,29 @@ def _kpi(val: str, label: str, warn: bool = False, ok: bool = False) -> str:
     )
 
 
-def _corner_table(groups: dict[str, CornerGroup], caption: str) -> str:
+def _corner_table(groups: dict, caption: str) -> str:
+    has_owner = any(getattr(g, "mto", "") for g in groups.values())
     rows = ""
     for name, grp in groups.items():
+        wns_cls  = "viol-val" if grp.wns_ns < 0 else "ok-val"
+        owner_td = f"<td class='mono'>{getattr(grp, 'mto', '')}</td>" if has_owner else ""
         rows += (
             f"<tr>"
             f"<td class='mono'>{name}</td>"
-            f"<td class='num'>{grp.count}</td>"
-            f"<td class='num {'viol-val' if grp.wns_ns < 0 else 'ok-val'}'>{grp.wns_ns:.3f}</td>"
+            + owner_td
+            + f"<td class='num'>{grp.count}</td>"
+            f"<td class='num {wns_cls}'>{grp.wns_ns:.3f}</td>"
             f"<td class='num'>{grp.tns_ns:.3f}</td>"
             f"<td class='num'>{grp.whs_ns:.3f}</td>"
             f"<td>{_badge(grp.status)}</td>"
             f"</tr>\n"
         )
+    owner_th = "<th>Owner</th>" if has_owner else ""
     return (
         f"<h2>{caption}</h2>"
         f"<div class='tbl-wrap'><table>"
         f"<thead><tr>"
-        f"<th>Name</th><th>#&nbsp;Reports</th>"
+        f"<th>Name</th>{owner_th}<th>#&nbsp;Reports</th>"
         f"<th>WNS (ns)</th><th>TNS (ns)</th><th>WHS (ns)</th><th>Status</th>"
         f"</tr></thead><tbody>{rows}</tbody></table></div>"
     )
@@ -394,13 +401,11 @@ def write_top_html(
         + "</div>"
     )
 
-    # per-block table — with BTO column
+    # per-block table — single Owner column (BTO name from OWNERS.txt)
     blk_rows = ""
     for b in summary.blocks:
-        wns_cls  = "viol-val" if b.worst_wns_ns < 0 else ""
-        blk_own  = parse_owners(Path(summary.root_dir) / b.rel_path)
-        bto_name = blk_own.get("BLOCK TIMING OWNER (BTO)", {}).get("Name", "—")
-        mto_name = blk_own.get("TEAM LEAD (MTO)", {}).get("Name", "—")
+        wns_cls = "viol-val" if b.worst_wns_ns < 0 else ""
+        owner   = b.bto or "—"
         blk_rows += (
             f"<tr>"
             f"<td class='mono'>{b.rel_path}</td>"
@@ -411,8 +416,7 @@ def write_top_html(
             f"<td class='num'>{b.worst_whs_ns:.3f}</td>"
             f"<td class='num'>{b.total_violations}</td>"
             f"<td>{_badge(b.overall_status)}</td>"
-            f"<td class='mono'>{bto_name}</td>"
-            f"<td class='mono'>{mto_name}</td>"
+            f"<td class='mono'>{owner}</td>"
             f"</tr>\n"
         )
     blk_table = (
@@ -421,8 +425,7 @@ def write_top_html(
         "<thead><tr>"
         "<th>Block Path</th><th>Design</th><th>#&nbsp;Reports</th>"
         "<th>Worst WNS (ns)</th><th>Worst TNS (ns)</th><th>Worst WHS (ns)</th>"
-        "<th>Violations</th><th>Status</th>"
-        "<th>BTO</th><th>MTO / Team Lead</th>"
+        "<th>Violations</th><th>Status</th><th>Owner</th>"
         f"</tr></thead><tbody>{blk_rows}</tbody></table></div>"
     )
 

@@ -21,7 +21,7 @@ import logging
 from pathlib import Path
 from typing import Optional, Union
 
-from ..core.models import BlockSummary, CornerGroup, ReportRecord, TopSummary
+from ..core.models import BlockSummary, CornerGroup, ReportRecord, StageEntry, TopSummary
 from ..owners import parse_owners, owner_summary
 
 _LOG = logging.getLogger(__name__)
@@ -131,6 +131,21 @@ def _report_block(r: ReportRecord) -> list[str]:
 #  Top-level dump
 # ─────────────────────────────────────────────────────────────────────────────
 
+def _stage_rows(stages: dict) -> list[str]:
+    """Format by-stage table with Owner column."""
+    lines = [
+        f"  {'Stage':<22}  {'Owner':<12}  {'#':>4}  {'WNS':>8}  {'TNS':>8}  {'WHS':>8}  STATUS",
+        f"  {'─'*22}  {'─'*12}  {'─'*4}  {'─'*8}  {'─'*8}  {'─'*8}  {'─'*10}",
+    ]
+    for name, st in stages.items():
+        owner = getattr(st, "mto", "") or "—"
+        lines.append(
+            f"  {name:<22}  {owner:<12}  {st.count:>4}  "
+            f"{st.wns_ns:>8.3f}  {st.tns_ns:>8.3f}  {st.whs_ns:>8.3f}  {st.status}"
+        )
+    return lines
+
+
 def _top_lines(s: TopSummary) -> list[str]:
     lines: list[str] = []
 
@@ -161,9 +176,9 @@ def _top_lines(s: TopSummary) -> list[str]:
         f"  Total Violations : {s.total_violations}",
     ]
 
-    # by stage
+    # by stage — with MTO
     lines += _section("BY PIPELINE STAGE")
-    lines += _corner_rows(s.by_stage)
+    lines += _stage_rows(s.by_stage)
 
     # by corner
     lines += _section("BY CORNER")
@@ -173,31 +188,21 @@ def _top_lines(s: TopSummary) -> list[str]:
     lines += _section("BY CHECK TYPE")
     lines += _corner_rows(s.by_check)
 
-    # per-block table
+    # per-block table: timing + single Owner column
     lines += _section("PER-BLOCK SUMMARY")
     lines += [
-        f"  {'Block Path':<45}  {'Design':<22}  {'Rpts':>4}  "
-        f"{'WNS':>8}  {'TNS':>8}  {'WHS':>8}  STATUS",
-        f"  {'─'*45}  {'─'*22}  {'─'*4}  {'─'*8}  {'─'*8}  {'─'*8}  {'─'*10}",
+        f"  {'Block':<45}  {'Design':<22}  {'Rpts':>4}  "
+        f"{'WNS':>8}  {'TNS':>8}  {'WHS':>8}  {'STATUS':<10}  Owner",
+        f"  {'─'*45}  {'─'*22}  {'─'*4}  "
+        f"{'─'*8}  {'─'*8}  {'─'*8}  {'─'*10}  {'─'*12}",
     ]
     for b in s.blocks:
+        owner = b.bto or "—"
         lines.append(
             f"  {b.rel_path:<45}  {b.design:<22}  {b.total_reports:>4}  "
             f"{b.worst_wns_ns:>8.3f}  {b.worst_tns_ns:>8.3f}  "
-            f"{b.worst_whs_ns:>8.3f}  {b.overall_status}"
+            f"{b.worst_whs_ns:>8.3f}  {b.overall_status:<10}  {owner}"
         )
-
-    # per-block ownership column appended inline
-    lines += _section("PER-BLOCK OWNERSHIP")
-    lines += [
-        f"  {'Block Path':<45}  {'BTO':<12}  {'MTO':<12}",
-        f"  {'─'*45}  {'─'*12}  {'─'*12}",
-    ]
-    for b in s.blocks:
-        blk_owners = parse_owners(Path(s.root_dir) / b.rel_path)
-        bto = blk_owners.get("BLOCK TIMING OWNER (BTO)", {}).get("Name", "—")
-        mto = blk_owners.get("TEAM LEAD (MTO)", {}).get("Name", "—")
-        lines.append(f"  {b.rel_path:<45}  {bto:<12}  {mto}")
 
     lines += ["", _SEP, "END OF TOP-LEVEL DUMP LOG", _SEP]
     return lines
