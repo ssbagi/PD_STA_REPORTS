@@ -1,4 +1,4 @@
-﻿****************************************
+****************************************
 Report : timing
         -path_type full
         -delay_type max
@@ -14,9 +14,9 @@ Note   : Clock Gating Check — Nominal corner
 Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
 Wire Load Model Mode : Interconnect (StarRC Extracted)
 
-  Startpoint : u_ic_tag/din_reg[0]
+  Startpoint : u_icache_tag/cg_en_reg
                (rising edge-triggered flip-flop clocked by CLK_CORE)
-  Endpoint   : u_ic_lru/dout_reg[0]
+  Endpoint   : u_icache_fill/fill_state_reg[2]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
   Path Group : CLK_CORE
   Path Type  : max
@@ -24,31 +24,31 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Point                                                   Incr        Path
   -------------------------------------------------------------------------
   clock CLK_CORE (rise edge)                                  0.000       0.000
-  clock network delay (propagated)                        0.155      0.155
-  u_ic_tag/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.155 r
-  u_ic_tag/din_reg[0]/Q  (DFFARX1_RVT)                        0.124       0.279 r
-  u_ic_tag/U12/Y (INVX2_RVT)                                  0.033       0.312 f
-  u_ic_tag/U34/Y (NAND2X1_RVT)                                0.055       0.367 r
-  u_ic_data/U07/Y (AOI22X1_RVT)                                0.071       0.438 f
-  u_ic_data/U19/Y (OAI21X1_RVT)                                0.098       0.536 r
-  u_ic_ctrl/U03/Y (MUX21X1_RVT)                                0.075       0.611 r
-  u_ic_ctrl/U11/Y (AND2X1_RVT)                                 0.064       0.675 f
-  u_ic_ctrl/U22/Y (NOR2X1_RVT)                                 0.065       0.74 r
-  u_ic_lru/U05/Y (BUFX4_RVT)                                  0.069       0.809 r
-  u_ic_lru/dout_reg[0]/D (DFFARX1_RVT)                        0.051      0.86 f
-  data arrival time                                                    0.86
+  clock network delay (propagated)                        0.157      0.157
+  u_icache_tag/cg_en_reg/CK (DFFARX1_RVT)                      0.000       0.157 r
+  u_icache_tag/cg_en_reg/Q  (DFFARX1_RVT)                      0.139       0.296 r
+  u_icache_tag/U08/Y (INVX2_RVT)                               0.046       0.342 f
+  u_icache_tag/U19/Y (NAND2X1_RVT)                             0.086       0.428 r
+  u_icache_data/U06/Y (AOI22X1_RVT)                            0.109       0.537 f
+  u_icache_data/U17/Y (OAI21X1_RVT)                            0.121       0.658 r
+  u_icache_fill/U04/Y (MUX21X1_RVT)                            0.068       0.726 r
+  u_icache_fill/U12/Y (AND2X1_RVT)                             0.083       0.809 f
+  u_icache_ctrl/U05/Y (NOR2X1_RVT)                             0.072       0.881 r
+  u_icache_ctrl/U13/Y (BUFX4_RVT)                              0.059       0.940 r
+  u_icache_fill/fill_state_reg[2]/D (DFFARX1_RVT)              0.065       1.005 f
+  data arrival time                                                        1.005
 
   clock CLK_CORE (rise edge)                                  2     2
-  clock network delay (propagated)                        0.155      2.155
-  clock uncertainty                                      -0.05   2.105
-  u_ic_lru/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.105 r
-  library setup time                                     -0.077   2.028
-  data required time                                                   2.028
+  clock network delay (propagated)                        0.157      2.157
+  clock uncertainty                                      -0.05   2.107
+  u_icache_fill/fill_state_reg[2]/CK (DFFARX1_RVT)             0.000       2.107 r
+  library setup time                                     -0.071   2.036
+  data required time                                                       2.036
   -------------------------------------------------------------------------
-  data required time                                                   2.028
-  data arrival time                                                   -0.86
+  data required time                                                       2.036
+  data arrival time                                                       -2.084
   -------------------------------------------------------------------------
-  slack (MET)   1.168
+  slack (VIOLATED)   -0.048
 
 
 =========================================================================
@@ -64,15 +64,16 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   ┌────────────────────────────────────────────────────────────────┐
   │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
   ├────────────────────────────────────────────────────────────────┤
-  │ u_ic_tag          1.168       0        0      0.113        0     │
-  │ u_ic_data          0.138       0        0      0.065        0     │
-  │ u_ic_ctrl          0.192       0        0      0.125        0     │
-  │ u_ic_lru          0.098       0        0      0.059        0     │
+  │ u_icache_tag       -0.048      -0.384       8      0.091        0     │
+  │ u_icache_data       0.027       0.000       0      0.082        0     │
+  │ u_icache_fill      -0.021      -0.084       4      0.073        0     │
+  │ u_icache_ctrl       0.033       0.000       0      0.064        0     │
   ├────────────────────────────────────────────────────────────────┤
-  │ ICACHE_TOP  1.168       0        0      0.113        0     │
+  │ ICACHE_TOP -0.048      -0.468      12      0.091        0     │
   └────────────────────────────────────────────────────────────────┘
 
-  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+  Status : TIMING VIOLATED — Clock gating setup violations detected
+  SETUP VIOLATIONS : 12 paths   (WNS = -0.048 ns,  TNS = -0.468 ns)
 
 
 =========================================================================
@@ -81,8 +82,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
   set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
-  set_multicycle_path 2 -setup -from [get_cells u_ic_tag/*] -to [get_cells u_ic_lru/*]
-  set_multicycle_path 1 -hold  -from [get_cells u_ic_tag/*] -to [get_cells u_ic_lru/*]
+  set_multicycle_path 2 -setup -from [get_cells u_icache_tag/*] -to [get_cells u_icache_fill/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_icache_tag/*] -to [get_cells u_icache_fill/*]
   set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
   set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
 
@@ -94,16 +95,16 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Clock    : CLK_CORE
   Period   : 2 ns
   Waveform : {0.000 1}
-  Skew     : 0.02 ns  (max across ICACHE_TOP)
-  Latency  : 0.155 ns  (max)
+  Skew     : 0.018 ns  (max across ICACHE_TOP)
+  Latency  : 0.157 ns  (max)
 
 
 =========================================================================
                    CONSTRAINT COVERAGE
 =========================================================================
 
-  Total register endpoints   : 2879
-  Constrained endpoints      : 3479
+  Total register endpoints   : 6231
+  Constrained endpoints      : 6231
   Unconstrained endpoints    :      0
   Coverage                   :  100.0%
 
@@ -119,8 +120,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Netlist      : /proj/cpu_rtl/netlist/ICACHE_TOP.v.gz
   SPEF File    : /proj/cpu_rtl/spef/ICACHE_TOP.spef.gz
   Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
-  Elapsed Time : 00:05:23
-  Peak Memory  : 4.417 GB
+  Elapsed Time : 00:04:55
+  Peak Memory  : 5.014 GB
 
 =========================================================================
 End of Report

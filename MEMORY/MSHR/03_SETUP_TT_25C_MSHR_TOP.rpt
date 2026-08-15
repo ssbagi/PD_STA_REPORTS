@@ -1,4 +1,4 @@
-﻿****************************************
+****************************************
 Report : timing
         -path_type full
         -delay_type max
@@ -6,17 +6,17 @@ Report : timing
         -sort_by slack
 Design : MSHR_TOP
 Version: PrimeTime 2023.06-SP3
-Date   : Sat Aug 15 17:34:54 2026
+Date   : Sat Aug 15 17:34:53 2026
 Corner : tt_0p90v_0p90v_25c
-Note   : Typical Setup   — Nominal corner
+Note   : Typical-case Setup — Nominal corner
 ****************************************
 
 Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
 Wire Load Model Mode : Interconnect (StarRC Extracted)
 
-  Startpoint : u_mshr_ent/din_reg[0]
+  Startpoint : u_mshr_alloc/idx_reg[5]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
-  Endpoint   : u_mshr_rsp/dout_reg[0]
+  Endpoint   : u_mshr_alloc/state_reg[5]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
   Path Group : CLK_CORE
   Path Type  : max
@@ -24,31 +24,31 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Point                                                   Incr        Path
   -------------------------------------------------------------------------
   clock CLK_CORE (rise edge)                                  0.000       0.000
-  clock network delay (propagated)                        0.161      0.161
-  u_mshr_ent/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.161 r
-  u_mshr_ent/din_reg[0]/Q  (DFFARX1_RVT)                        0.131       0.292 r
-  u_mshr_ent/U12/Y (INVX2_RVT)                                  0.055       0.347 f
-  u_mshr_ent/U34/Y (NAND2X1_RVT)                                0.058       0.405 r
-  u_mshr_alloc/U07/Y (AOI22X1_RVT)                                0.099       0.504 f
-  u_mshr_alloc/U19/Y (OAI21X1_RVT)                                0.11       0.614 r
-  u_mshr_mrg/U03/Y (MUX21X1_RVT)                                0.083       0.697 r
-  u_mshr_mrg/U11/Y (AND2X1_RVT)                                 0.045       0.742 f
-  u_mshr_mrg/U22/Y (NOR2X1_RVT)                                 0.054       0.796 r
-  u_mshr_rsp/U05/Y (BUFX4_RVT)                                  0.056       0.852 r
-  u_mshr_rsp/dout_reg[0]/D (DFFARX1_RVT)                        0.054      0.906 f
-  data arrival time                                                    0.906
+  clock network delay (propagated)                        0.159      0.159
+  u_mshr_alloc/idx_reg[5]/CK (DFFARX1_RVT)                     0.000       0.159 r
+  u_mshr_alloc/idx_reg[5]/Q  (DFFARX1_RVT)                     0.143       0.302 r
+  u_mshr_alloc/U06/Y (INVX2_RVT)                               0.044       0.346 f
+  u_mshr_alloc/U13/Y (NAND2X1_RVT)                             0.082       0.428 r
+  u_mshr_lookup/U05/Y (AOI22X1_RVT)                            0.107       0.535 f
+  u_mshr_lookup/U16/Y (OAI21X1_RVT)                            0.119       0.654 r
+  u_mshr_fill/U04/Y (MUX21X1_RVT)                              0.067       0.721 r
+  u_mshr_fill/U13/Y (AND2X1_RVT)                               0.088       0.809 f
+  u_mshr_ctrl/U07/Y (NOR2X1_RVT)                               0.076       0.885 r
+  u_mshr_ctrl/U14/Y (BUFX4_RVT)                                0.063       0.948 r
+  u_mshr_alloc/state_reg[5]/D (DFFARX1_RVT)                    0.079       1.027 f
+  data arrival time                                                        1.027
 
   clock CLK_CORE (rise edge)                                  2     2
-  clock network delay (propagated)                        0.161      2.161
-  clock uncertainty                                      -0.05   2.111
-  u_mshr_rsp/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.111 r
-  library setup time                                     -0.066   2.045
-  data required time                                                   2.045
+  clock network delay (propagated)                        0.159      2.159
+  clock uncertainty                                      -0.05   2.109
+  u_mshr_alloc/state_reg[5]/CK (DFFARX1_RVT)                   0.000       2.109 r
+  library setup time                                     -0.072   2.037
+  data required time                                                       2.037
   -------------------------------------------------------------------------
-  data required time                                                   2.045
-  data arrival time                                                   -0.906
+  data required time                                                       2.037
+  data arrival time                                                       -2.100
   -------------------------------------------------------------------------
-  slack (MET)   1.139
+  slack (VIOLATED)   -0.063
 
 
 =========================================================================
@@ -57,22 +57,23 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   Block        : MSHR_TOP
   Corner       : tt_0p90v_0p90v_25c
-  Check        : max  (Typical Setup   — Nominal corner)
+  Check        : max  (Typical-case Setup — Nominal corner)
   Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
   Technology   : SAED 32nm RVT
 
   ┌────────────────────────────────────────────────────────────────┐
   │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
   ├────────────────────────────────────────────────────────────────┤
-  │ u_mshr_ent          1.139       0        0      0.071        0     │
-  │ u_mshr_alloc          0.139       0        0      0.098        0     │
-  │ u_mshr_mrg          0.107       0        0      0.127        0     │
-  │ u_mshr_rsp          0.152       0        0      0.108        0     │
+  │ u_mshr_alloc       -0.063      -0.504       8      0.082        0     │
+  │ u_mshr_lookup       0.024       0.000       0      0.071        0     │
+  │ u_mshr_fill        -0.031      -0.124       4      0.059        0     │
+  │ u_mshr_ctrl         0.015       0.000       0      0.047        0     │
   ├────────────────────────────────────────────────────────────────┤
-  │ MSHR_TOP  1.139       0        0      0.071        0     │
+  │ MSHR_TOP   -0.063      -0.628      12      0.082        0     │
   └────────────────────────────────────────────────────────────────┘
 
-  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+  Status : TIMING VIOLATED — Setup violations detected
+  SETUP VIOLATIONS : 12 paths   (WNS = -0.063 ns,  TNS = -0.628 ns)
 
 
 =========================================================================
@@ -81,8 +82,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
   set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
-  set_multicycle_path 2 -setup -from [get_cells u_mshr_ent/*] -to [get_cells u_mshr_rsp/*]
-  set_multicycle_path 1 -hold  -from [get_cells u_mshr_ent/*] -to [get_cells u_mshr_rsp/*]
+  set_multicycle_path 2 -setup -from [get_cells u_mshr_alloc/*] -to [get_cells u_mshr_ctrl/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_mshr_alloc/*] -to [get_cells u_mshr_ctrl/*]
   set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
   set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
 
@@ -94,16 +95,16 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Clock    : CLK_CORE
   Period   : 2 ns
   Waveform : {0.000 1}
-  Skew     : 0.019 ns  (max across MSHR_TOP)
-  Latency  : 0.161 ns  (max)
+  Skew     : 0.017 ns  (max across MSHR_TOP)
+  Latency  : 0.159 ns  (max)
 
 
 =========================================================================
                    CONSTRAINT COVERAGE
 =========================================================================
 
-  Total register endpoints   : 4453
-  Constrained endpoints      : 1829
+  Total register endpoints   : 4418
+  Constrained endpoints      : 4418
   Unconstrained endpoints    :      0
   Coverage                   :  100.0%
 
@@ -119,8 +120,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Netlist      : /proj/cpu_rtl/netlist/MSHR_TOP.v.gz
   SPEF File    : /proj/cpu_rtl/spef/MSHR_TOP.spef.gz
   Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
-  Elapsed Time : 00:08:14
-  Peak Memory  : 2.037 GB
+  Elapsed Time : 00:04:11
+  Peak Memory  : 4.102 GB
 
 =========================================================================
 End of Report

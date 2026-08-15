@@ -1,4 +1,4 @@
-﻿****************************************
+****************************************
 Report : timing
         -path_type full
         -delay_type min
@@ -8,15 +8,15 @@ Design : IQ_INT_TOP
 Version: PrimeTime 2023.06-SP3
 Date   : Sat Aug 15 17:34:53 2026
 Corner : ff_1p16v_1p16v_125c
-Note   : Hot Hold        — Fast corner, high temp
+Note   : Worst-case Hold — Fast corner, high temp
 ****************************************
 
 Operating Conditions : ff_1p16v_1p16v_125c (Library: saed32nm_rvt)
 Wire Load Model Mode : Interconnect (StarRC Extracted)
 
-  Startpoint : u_iq_ent/din_reg[0]
+  Startpoint : u_iq_int_arr/entry_reg[11]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
-  Endpoint   : u_iq_age/dout_reg[0]
+  Endpoint   : u_iq_int_rdy/rdy_reg[11]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
   Path Group : CLK_CORE
   Path Type  : min
@@ -24,31 +24,31 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Point                                                   Incr        Path
   -------------------------------------------------------------------------
   clock CLK_CORE (rise edge)                                  0.000       0.000
-  clock network delay (propagated)                        0.151      0.151
-  u_iq_ent/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.151 r
-  u_iq_ent/din_reg[0]/Q  (DFFARX1_RVT)                        0.143       0.294 r
-  u_iq_ent/U12/Y (INVX2_RVT)                                  0.053       0.347 f
-  u_iq_ent/U34/Y (NAND2X1_RVT)                                0.066       0.413 r
-  u_iq_wkup/U07/Y (AOI22X1_RVT)                                0.072       0.485 f
-  u_iq_wkup/U19/Y (OAI21X1_RVT)                                0.086       0.571 r
-  u_iq_sel/U03/Y (MUX21X1_RVT)                                0.087       0.658 r
-  u_iq_sel/U11/Y (AND2X1_RVT)                                 0.079       0.737 f
-  u_iq_sel/U22/Y (NOR2X1_RVT)                                 0.073       0.81 r
-  u_iq_age/U05/Y (BUFX4_RVT)                                  0.062       0.872 r
-  u_iq_age/dout_reg[0]/D (DFFARX1_RVT)                        0.052      0.924 f
-  data arrival time                                                    0.924
+  clock network delay (propagated)                        0.138      0.138
+  u_iq_int_arr/entry_reg[11]/CK (DFFARX1_RVT)                  0.000       0.138 r
+  u_iq_int_arr/entry_reg[11]/Q  (DFFARX1_RVT)                  0.027       0.165 r
+  u_iq_int_arr/U07/Y (INVX2_RVT)                               0.010       0.175 f
+  u_iq_int_arr/U15/Y (NAND2X1_RVT)                             0.013       0.188 r
+  u_iq_int_sel/U04/Y (AOI22X1_RVT)                             0.016       0.204 f
+  u_iq_int_sel/U12/Y (OAI21X1_RVT)                             0.019       0.223 r
+  u_iq_int_rdy/U03/Y (MUX21X1_RVT)                             0.012       0.235 r
+  u_iq_int_rdy/U09/Y (AND2X1_RVT)                              0.014       0.249 f
+  u_iq_int_rdy/U17/Y (NOR2X1_RVT)                              0.011       0.260 r
+  u_iq_int_ctrl/U05/Y (BUFX4_RVT)                              0.008       0.268 r
+  u_iq_int_rdy/rdy_reg[11]/D (DFFARX1_RVT)                     0.010       0.278 f
+  data arrival time                                                        0.278
 
-  clock CLK_CORE (rise edge)                                  2     2
-  clock network delay (propagated)                        0.151      2.151
-  clock uncertainty                                      -0.05   2.101
-  u_iq_age/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.101 r
-  library setup time                                     -0.079   2.022
-  data required time                                                   2.022
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.138      0.138
+  clock uncertainty                                      +0.050      0.188
+  u_iq_int_rdy/rdy_reg[11]/CK (DFFARX1_RVT)                    0.000       0.188 r
+  library hold time                                      +0.069      0.257
+  data required time                                                       0.319
   -------------------------------------------------------------------------
-  data required time                                                   2.022
-  data arrival time                                                   -0.924
+  data required time                                                       0.319
+  data arrival time                                                       -0.278
   -------------------------------------------------------------------------
-  slack (MET)   1.098
+  slack (VIOLATED)   -0.041
 
 
 =========================================================================
@@ -57,22 +57,23 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   Block        : IQ_INT_TOP
   Corner       : ff_1p16v_1p16v_125c
-  Check        : min  (Hot Hold        — Fast corner, high temp)
+  Check        : min  (Worst-case Hold — Fast corner, high temp)
   Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
   Technology   : SAED 32nm RVT
 
   ┌────────────────────────────────────────────────────────────────┐
   │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
   ├────────────────────────────────────────────────────────────────┤
-  │ u_iq_ent          1.098       0        0      0.099        0     │
-  │ u_iq_wkup          0.077       0        0      0.096        0     │
-  │ u_iq_sel          0.1       0        0      0.113        0     │
-  │ u_iq_age          0.164       0        0      0.075        0     │
+  │ u_iq_int_arr        0.044       0.000       0     -0.041        5     │
+  │ u_iq_int_sel        0.018       0.000       0      0.023        0     │
+  │ u_iq_int_rdy        0.057       0.000       0     -0.017        2     │
+  │ u_iq_int_ctrl       0.029       0.000       0      0.011        0     │
   ├────────────────────────────────────────────────────────────────┤
-  │ IQ_INT_TOP  1.098       0        0      0.099        0     │
+  │ IQ_INT_TOP  0.018       0.000       0     -0.041        7     │
   └────────────────────────────────────────────────────────────────┘
 
-  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+  Status : TIMING VIOLATED — Hold violations detected
+  HOLD VIOLATIONS : 7 paths   (WHS = -0.041 ns)
 
 
 =========================================================================
@@ -81,8 +82,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
   set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
-  set_multicycle_path 2 -setup -from [get_cells u_iq_ent/*] -to [get_cells u_iq_age/*]
-  set_multicycle_path 1 -hold  -from [get_cells u_iq_ent/*] -to [get_cells u_iq_age/*]
+  set_multicycle_path 2 -setup -from [get_cells u_iq_int_arr/*] -to [get_cells u_iq_int_rdy/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_iq_int_arr/*] -to [get_cells u_iq_int_rdy/*]
   set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
   set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
 
@@ -94,16 +95,16 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Clock    : CLK_CORE
   Period   : 2 ns
   Waveform : {0.000 1}
-  Skew     : 0.021 ns  (max across IQ_INT_TOP)
-  Latency  : 0.151 ns  (max)
+  Skew     : 0.020 ns  (max across IQ_INT_TOP)
+  Latency  : 0.138 ns  (max)
 
 
 =========================================================================
                    CONSTRAINT COVERAGE
 =========================================================================
 
-  Total register endpoints   : 5255
-  Constrained endpoints      : 5330
+  Total register endpoints   : 5132
+  Constrained endpoints      : 5132
   Unconstrained endpoints    :      0
   Coverage                   :  100.0%
 
@@ -119,8 +120,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Netlist      : /proj/cpu_rtl/netlist/IQ_INT_TOP.v.gz
   SPEF File    : /proj/cpu_rtl/spef/IQ_INT_TOP.spef.gz
   Liberty      : saed32nm_rvt_ff_1p16v_1p16v_125c.db
-  Elapsed Time : 00:07:46
-  Peak Memory  : 3.535 GB
+  Elapsed Time : 00:05:53
+  Peak Memory  : 4.921 GB
 
 =========================================================================
 End of Report

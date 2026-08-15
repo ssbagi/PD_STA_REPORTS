@@ -1,4 +1,4 @@
-﻿****************************************
+****************************************
 Report : timing
         -path_type full
         -delay_type min
@@ -8,15 +8,15 @@ Design : ROB_TOP
 Version: PrimeTime 2023.06-SP3
 Date   : Sat Aug 15 17:34:53 2026
 Corner : ff_1p16v_1p16v_n40c
-Note   : Worst-case Hold  — Fast corner, cold temp
+Note   : Worst-case Hold — Fast corner, cold temp
 ****************************************
 
 Operating Conditions : ff_1p16v_1p16v_n40c (Library: saed32nm_rvt)
 Wire Load Model Mode : Interconnect (StarRC Extracted)
 
-  Startpoint : u_rob_wr/din_reg[0]
+  Startpoint : u_rob_head/state_reg[3]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
-  Endpoint   : u_rob_tl/dout_reg[0]
+  Endpoint   : u_rob_alloc/ptr_reg[3]
                (rising edge-triggered flip-flop clocked by CLK_CORE)
   Path Group : CLK_CORE
   Path Type  : min
@@ -24,31 +24,31 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Point                                                   Incr        Path
   -------------------------------------------------------------------------
   clock CLK_CORE (rise edge)                                  0.000       0.000
-  clock network delay (propagated)                        0.152      0.152
-  u_rob_wr/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.152 r
-  u_rob_wr/din_reg[0]/Q  (DFFARX1_RVT)                        0.134       0.286 r
-  u_rob_wr/U12/Y (INVX2_RVT)                                  0.043       0.329 f
-  u_rob_wr/U34/Y (NAND2X1_RVT)                                0.076       0.405 r
-  u_rob_rd/U07/Y (AOI22X1_RVT)                                0.084       0.489 f
-  u_rob_rd/U19/Y (OAI21X1_RVT)                                0.084       0.573 r
-  u_rob_hd/U03/Y (MUX21X1_RVT)                                0.078       0.651 r
-  u_rob_hd/U11/Y (AND2X1_RVT)                                 0.074       0.725 f
-  u_rob_hd/U22/Y (NOR2X1_RVT)                                 0.058       0.783 r
-  u_rob_tl/U05/Y (BUFX4_RVT)                                  0.089       0.872 r
-  u_rob_tl/dout_reg[0]/D (DFFARX1_RVT)                        0.067      0.939 f
-  data arrival time                                                    0.939
+  clock network delay (propagated)                        0.141      0.141
+  u_rob_head/state_reg[3]/CK (DFFARX1_RVT)                     0.000       0.141 r
+  u_rob_head/state_reg[3]/Q  (DFFARX1_RVT)                     0.029       0.170 r
+  u_rob_head/U04/Y (INVX2_RVT)                                 0.011       0.181 f
+  u_rob_head/U09/Y (NAND2X1_RVT)                               0.014       0.195 r
+  u_rob_alloc/U03/Y (AOI22X1_RVT)                              0.018       0.213 f
+  u_rob_alloc/U11/Y (OAI21X1_RVT)                              0.021       0.234 r
+  u_rob_alloc/U16/Y (MUX21X1_RVT)                              0.013       0.247 r
+  u_rob_alloc/U22/Y (AND2X1_RVT)                               0.015       0.262 f
+  u_rob_alloc/U28/Y (NOR2X1_RVT)                               0.012       0.274 r
+  u_rob_alloc/U33/Y (BUFX4_RVT)                                0.009       0.283 r
+  u_rob_alloc/ptr_reg[3]/D (DFFARX1_RVT)                       0.011       0.294 f
+  data arrival time                                                        0.294
 
-  clock CLK_CORE (rise edge)                                  2     2
-  clock network delay (propagated)                        0.152      2.152
-  clock uncertainty                                      -0.05   2.102
-  u_rob_tl/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.102 r
-  library setup time                                     -0.079   2.023
-  data required time                                                   2.023
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.141      0.141
+  clock uncertainty                                      +0.050      0.191
+  u_rob_alloc/ptr_reg[3]/CK (DFFARX1_RVT)                      0.000       0.191 r
+  library hold time                                      +0.066      0.257
+  data required time                                                       0.327
   -------------------------------------------------------------------------
-  data required time                                                   2.023
-  data arrival time                                                   -0.939
+  data required time                                                       0.327
+  data arrival time                                                       -0.294
   -------------------------------------------------------------------------
-  slack (MET)   1.084
+  slack (VIOLATED)   -0.033
 
 
 =========================================================================
@@ -57,22 +57,23 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   Block        : ROB_TOP
   Corner       : ff_1p16v_1p16v_n40c
-  Check        : min  (Worst-case Hold  — Fast corner, cold temp)
+  Check        : min  (Worst-case Hold — Fast corner, cold temp)
   Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
   Technology   : SAED 32nm RVT
 
   ┌────────────────────────────────────────────────────────────────┐
   │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
   ├────────────────────────────────────────────────────────────────┤
-  │ u_rob_wr          1.084       0        0      0.118        0     │
-  │ u_rob_rd          0.181       0        0      0.065        0     │
-  │ u_rob_hd          0.104       0        0      0.064        0     │
-  │ u_rob_tl          0.096       0        0      0.087        0     │
+  │ u_rob_head          0.062       0.000       0     -0.033        3     │
+  │ u_rob_tail          0.047       0.000       0      0.018        0     │
+  │ u_rob_alloc         0.031       0.000       0     -0.019        2     │
+  │ u_rob_commit        0.083       0.000       0      0.027        0     │
   ├────────────────────────────────────────────────────────────────┤
-  │ ROB_TOP  1.084       0        0      0.118        0     │
+  │ ROB_TOP     0.031       0.000       0     -0.033        5     │
   └────────────────────────────────────────────────────────────────┘
 
-  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+  Status : TIMING VIOLATED — Hold violations detected
+  HOLD VIOLATIONS : 5 paths   (WHS = -0.033 ns)
 
 
 =========================================================================
@@ -81,8 +82,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
 
   set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
   set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
-  set_multicycle_path 2 -setup -from [get_cells u_rob_wr/*] -to [get_cells u_rob_tl/*]
-  set_multicycle_path 1 -hold  -from [get_cells u_rob_wr/*] -to [get_cells u_rob_tl/*]
+  set_multicycle_path 2 -setup -from [get_cells u_rob_head/*] -to [get_cells u_rob_alloc/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_rob_head/*] -to [get_cells u_rob_alloc/*]
   set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
   set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
 
@@ -94,16 +95,16 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Clock    : CLK_CORE
   Period   : 2 ns
   Waveform : {0.000 1}
-  Skew     : 0.015 ns  (max across ROB_TOP)
-  Latency  : 0.152 ns  (max)
+  Skew     : 0.024 ns  (max across ROB_TOP)
+  Latency  : 0.141 ns  (max)
 
 
 =========================================================================
                    CONSTRAINT COVERAGE
 =========================================================================
 
-  Total register endpoints   : 1853
-  Constrained endpoints      : 3994
+  Total register endpoints   : 6784
+  Constrained endpoints      : 6784
   Unconstrained endpoints    :      0
   Coverage                   :  100.0%
 
@@ -119,8 +120,8 @@ Wire Load Model Mode : Interconnect (StarRC Extracted)
   Netlist      : /proj/cpu_rtl/netlist/ROB_TOP.v.gz
   SPEF File    : /proj/cpu_rtl/spef/ROB_TOP.spef.gz
   Liberty      : saed32nm_rvt_ff_1p16v_1p16v_n40c.db
-  Elapsed Time : 00:03:46
-  Peak Memory  : 2.57 GB
+  Elapsed Time : 00:07:02
+  Peak Memory  : 6.531 GB
 
 =========================================================================
 End of Report
