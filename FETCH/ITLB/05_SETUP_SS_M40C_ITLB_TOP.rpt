@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : ITLB_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ss_0p72v_0p72v_n40c
+Note   : Cold Setup      — Slow corner, cold temp
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_itlb_tag/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_itlb_lru/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.154      0.154
+  u_itlb_tag/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.154 r
+  u_itlb_tag/din_reg[0]/Q  (DFFARX1_RVT)                        0.116       0.27 r
+  u_itlb_tag/U12/Y (INVX2_RVT)                                  0.047       0.317 f
+  u_itlb_tag/U34/Y (NAND2X1_RVT)                                0.065       0.382 r
+  u_itlb_data/U07/Y (AOI22X1_RVT)                                0.084       0.466 f
+  u_itlb_data/U19/Y (OAI21X1_RVT)                                0.08       0.546 r
+  u_itlb_ctrl/U03/Y (MUX21X1_RVT)                                0.061       0.607 r
+  u_itlb_ctrl/U11/Y (AND2X1_RVT)                                 0.052       0.659 f
+  u_itlb_ctrl/U22/Y (NOR2X1_RVT)                                 0.047       0.706 r
+  u_itlb_lru/U05/Y (BUFX4_RVT)                                  0.072       0.778 r
+  u_itlb_lru/dout_reg[0]/D (DFFARX1_RVT)                        0.057      0.835 f
+  data arrival time                                                    0.835
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.154      2.154
+  clock uncertainty                                      -0.05   2.104
+  u_itlb_lru/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.104 r
+  library setup time                                     -0.073   2.031
+  data required time                                                   2.031
+  -------------------------------------------------------------------------
+  data required time                                                   2.031
+  data arrival time                                                   -0.835
+  -------------------------------------------------------------------------
+  slack (MET)   1.196
+
+
+=========================================================================
+                   ITLB_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : ITLB_TOP
+  Corner       : ss_0p72v_0p72v_n40c
+  Check        : max  (Cold Setup      — Slow corner, cold temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_itlb_tag          1.196       0        0      0.106        0     │
+  │ u_itlb_data          0.175       0        0      0.064        0     │
+  │ u_itlb_ctrl          0.186       0        0      0.073        0     │
+  │ u_itlb_lru          0.123       0        0      0.089        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ ITLB_TOP  1.196       0        0      0.106        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_itlb_tag/*] -to [get_cells u_itlb_lru/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_itlb_tag/*] -to [get_cells u_itlb_lru/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.026 ns  (max across ITLB_TOP)
+  Latency  : 0.154 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 2089
+  Constrained endpoints      : 4958
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/FETCH/ITLB/run_ss_0p72v_0p72v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/ITLB_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/ITLB_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/ITLB_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_n40c.db
+  Elapsed Time : 00:03:19
+  Peak Memory  : 2.752 GB
+
+=========================================================================
+End of Report
+=========================================================================

@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -sort_by slack
+Design : PC_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ff_1p16v_1p16v_125c
+Note   : Hot Hold        — Fast corner, high temp
+****************************************
+
+Operating Conditions : ff_1p16v_1p16v_125c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_pc_mux/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_pc_buf/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : min
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.153      0.153
+  u_pc_mux/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.153 r
+  u_pc_mux/din_reg[0]/Q  (DFFARX1_RVT)                        0.125       0.278 r
+  u_pc_mux/U12/Y (INVX2_RVT)                                  0.052       0.33 f
+  u_pc_mux/U34/Y (NAND2X1_RVT)                                0.091       0.421 r
+  u_pc_adder/U07/Y (AOI22X1_RVT)                                0.099       0.52 f
+  u_pc_adder/U19/Y (OAI21X1_RVT)                                0.103       0.623 r
+  u_pc_reg/U03/Y (MUX21X1_RVT)                                0.095       0.718 r
+  u_pc_reg/U11/Y (AND2X1_RVT)                                 0.05       0.768 f
+  u_pc_reg/U22/Y (NOR2X1_RVT)                                 0.052       0.82 r
+  u_pc_buf/U05/Y (BUFX4_RVT)                                  0.09       0.91 r
+  u_pc_buf/dout_reg[0]/D (DFFARX1_RVT)                        0.079      0.989 f
+  data arrival time                                                    0.989
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.153      2.153
+  clock uncertainty                                      -0.05   2.103
+  u_pc_buf/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.103 r
+  library setup time                                     -0.065   2.038
+  data required time                                                   2.038
+  -------------------------------------------------------------------------
+  data required time                                                   2.038
+  data arrival time                                                   -0.989
+  -------------------------------------------------------------------------
+  slack (MET)   1.049
+
+
+=========================================================================
+                   PC_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : PC_TOP
+  Corner       : ff_1p16v_1p16v_125c
+  Check        : min  (Hot Hold        — Fast corner, high temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_pc_mux          1.049       0        0      0.098        0     │
+  │ u_pc_adder          0.062       0        0      0.075        0     │
+  │ u_pc_reg          0.133       0        0      0.075        0     │
+  │ u_pc_buf          0.126       0        0      0.106        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ PC_TOP  1.049       0        0      0.098        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_pc_mux/*] -to [get_cells u_pc_buf/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_pc_mux/*] -to [get_cells u_pc_buf/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across PC_TOP)
+  Latency  : 0.153 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 3812
+  Constrained endpoints      : 3272
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/FETCH/PC/run_ff_1p16v_1p16v_125c
+  SDC File     : /proj/cpu_rtl/constraints/PC_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/PC_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/PC_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ff_1p16v_1p16v_125c.db
+  Elapsed Time : 00:03:50
+  Peak Memory  : 3.91 GB
+
+=========================================================================
+End of Report
+=========================================================================

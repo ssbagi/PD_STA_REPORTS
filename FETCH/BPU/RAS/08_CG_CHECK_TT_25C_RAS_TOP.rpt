@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : RAS_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : tt_0p90v_0p90v_25c
+Note   : Clock Gating Check — Nominal corner
+****************************************
+
+Operating Conditions : tt_0p90v_0p90v_25c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_ras_stk/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_ras_pop/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.16      0.16
+  u_ras_stk/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.16 r
+  u_ras_stk/din_reg[0]/Q  (DFFARX1_RVT)                        0.142       0.302 r
+  u_ras_stk/U12/Y (INVX2_RVT)                                  0.056       0.358 f
+  u_ras_stk/U34/Y (NAND2X1_RVT)                                0.078       0.436 r
+  u_ras_ptr/U07/Y (AOI22X1_RVT)                                0.104       0.54 f
+  u_ras_ptr/U19/Y (OAI21X1_RVT)                                0.094       0.634 r
+  u_ras_push/U03/Y (MUX21X1_RVT)                                0.061       0.695 r
+  u_ras_push/U11/Y (AND2X1_RVT)                                 0.081       0.776 f
+  u_ras_push/U22/Y (NOR2X1_RVT)                                 0.054       0.83 r
+  u_ras_pop/U05/Y (BUFX4_RVT)                                  0.081       0.911 r
+  u_ras_pop/dout_reg[0]/D (DFFARX1_RVT)                        0.065      0.976 f
+  data arrival time                                                    0.976
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.16      2.16
+  clock uncertainty                                      -0.05   2.11
+  u_ras_pop/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.11 r
+  library setup time                                     -0.078   2.032
+  data required time                                                   2.032
+  -------------------------------------------------------------------------
+  data required time                                                   2.032
+  data arrival time                                                   -0.976
+  -------------------------------------------------------------------------
+  slack (MET)   1.056
+
+
+=========================================================================
+                   RAS_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : RAS_TOP
+  Corner       : tt_0p90v_0p90v_25c
+  Check        : max  (Clock Gating Check — Nominal corner)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_ras_stk          1.056       0        0      0.074        0     │
+  │ u_ras_ptr          0.176       0        0      0.125        0     │
+  │ u_ras_push          0.186       0        0      0.094        0     │
+  │ u_ras_pop          0.16       0        0      0.112        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ RAS_TOP  1.056       0        0      0.074        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_ras_stk/*] -to [get_cells u_ras_pop/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_ras_stk/*] -to [get_cells u_ras_pop/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.019 ns  (max across RAS_TOP)
+  Latency  : 0.16 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 2020
+  Constrained endpoints      : 3638
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/FETCH/BPU/RAS/run_tt_0p90v_0p90v_25c
+  SDC File     : /proj/cpu_rtl/constraints/RAS_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/RAS_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/RAS_TOP.spef.gz
+  Liberty      : saed32nm_rvt_tt_0p90v_0p90v_25c.db
+  Elapsed Time : 00:08:38
+  Peak Memory  : 3.914 GB
+
+=========================================================================
+End of Report
+=========================================================================

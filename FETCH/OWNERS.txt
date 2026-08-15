@@ -1,0 +1,38 @@
+################################################################################
+#  FETCH STAGE -- OWNERSHIP
+#  Updated : 2026-08-15
+################################################################################
+
+[MODULE TIMING OWNER (MTO)]
+  Name               : MTO_User1
+  Email              : mto1@company.com
+  Employee ID        : EMP-1001
+
+[RTL TEAM LEAD]
+  Name               : TeamLead1
+  Email              : teamlead1@company.com
+
+[PD ENGINEER]
+  Name               : PDEng1
+  Email              : pdeng1@company.com
+
+[STA ENGINEER]
+  Name               : STAEng1
+  Email              : staeng1@company.com
+
+[BLOCKS IN THIS STAGE]
+  FETCH\PC                                   BTO = User1       <user1@company.com>  EMP-2001
+  FETCH\ICACHE                               BTO = User2       <user2@company.com>  EMP-2002
+  FETCH\ITLB                                 BTO = User3       <user3@company.com>  EMP-2003
+  FETCH\FETCH_QUEUE                          BTO = User4       <user4@company.com>  EMP-2004
+  FETCH\BPU\BTB                              BTO = User5       <user5@company.com>  EMP-2005
+  FETCH\BPU\PHT                              BTO = User6       <user6@company.com>  EMP-2006
+  FETCH\BPU\RAS                              BTO = User7       <user7@company.com>  EMP-2007
+
+[ESCALATION PATH]
+  L1 (Block)  : Block BTO
+  L2 (Stage)  : MTO_User1 (MTO)
+  L3 (Chip)   : STALead1 (STA Lead)
+  L4 (Tapeout): ChipTimingOwner1 (CTO)
+
+################################################################################

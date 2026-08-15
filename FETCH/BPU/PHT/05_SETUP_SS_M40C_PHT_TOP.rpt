@@ -1,0 +1,127 @@
+﻿****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -sort_by slack
+Design : PHT_TOP
+Version: PrimeTime 2023.06-SP3
+Date   : Sat Aug 15 17:34:53 2026
+Corner : ss_0p72v_0p72v_n40c
+Note   : Cold Setup      — Slow corner, cold temp
+****************************************
+
+Operating Conditions : ss_0p72v_0p72v_n40c (Library: saed32nm_rvt)
+Wire Load Model Mode : Interconnect (StarRC Extracted)
+
+  Startpoint : u_pht_ram/din_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Endpoint   : u_pht_rd/dout_reg[0]
+               (rising edge-triggered flip-flop clocked by CLK_CORE)
+  Path Group : CLK_CORE
+  Path Type  : max
+
+  Point                                                   Incr        Path
+  -------------------------------------------------------------------------
+  clock CLK_CORE (rise edge)                                  0.000       0.000
+  clock network delay (propagated)                        0.152      0.152
+  u_pht_ram/din_reg[0]/CK (DFFARX1_RVT)                        0.000       0.152 r
+  u_pht_ram/din_reg[0]/Q  (DFFARX1_RVT)                        0.138       0.29 r
+  u_pht_ram/U12/Y (INVX2_RVT)                                  0.05       0.34 f
+  u_pht_ram/U34/Y (NAND2X1_RVT)                                0.081       0.421 r
+  u_pht_cnt/U07/Y (AOI22X1_RVT)                                0.085       0.506 f
+  u_pht_cnt/U19/Y (OAI21X1_RVT)                                0.089       0.595 r
+  u_pht_upd/U03/Y (MUX21X1_RVT)                                0.061       0.656 r
+  u_pht_upd/U11/Y (AND2X1_RVT)                                 0.059       0.715 f
+  u_pht_upd/U22/Y (NOR2X1_RVT)                                 0.072       0.787 r
+  u_pht_rd/U05/Y (BUFX4_RVT)                                  0.071       0.858 r
+  u_pht_rd/dout_reg[0]/D (DFFARX1_RVT)                        0.08      0.938 f
+  data arrival time                                                    0.938
+
+  clock CLK_CORE (rise edge)                                  2     2
+  clock network delay (propagated)                        0.152      2.152
+  clock uncertainty                                      -0.05   2.102
+  u_pht_rd/dout_reg[0]/CK (DFFARX1_RVT)                       0.000       2.102 r
+  library setup time                                     -0.083   2.019
+  data required time                                                   2.019
+  -------------------------------------------------------------------------
+  data required time                                                   2.019
+  data arrival time                                                   -0.938
+  -------------------------------------------------------------------------
+  slack (MET)   1.081
+
+
+=========================================================================
+                   PHT_TOP — TIMING SUMMARY
+=========================================================================
+
+  Block        : PHT_TOP
+  Corner       : ss_0p72v_0p72v_n40c
+  Check        : max  (Cold Setup      — Slow corner, cold temp)
+  Clock        : CLK_CORE  Period = 2 ns  (500 MHz)
+  Technology   : SAED 32nm RVT
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ Sub-Unit      WNS (ns)  TNS (ns)  #Viol   WHS (ns)  #HViol  │
+  ├────────────────────────────────────────────────────────────────┤
+  │ u_pht_ram          1.081       0        0      0.113        0     │
+  │ u_pht_cnt          0.123       0        0      0.087        0     │
+  │ u_pht_upd          0.14       0        0      0.1        0     │
+  │ u_pht_rd          0.158       0        0      0.097        0     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ PHT_TOP  1.081       0        0      0.113        0     │
+  └────────────────────────────────────────────────────────────────┘
+
+  Status : ALL PATHS CLEAN — No Setup or Hold Violations
+
+
+=========================================================================
+                   TIMING EXCEPTIONS APPLIED
+=========================================================================
+
+  set_false_path -from [get_ports SCAN_EN]      -to [all_registers]
+  set_false_path -from [get_ports TEST_MODE]     -to [all_registers]
+  set_multicycle_path 2 -setup -from [get_cells u_pht_ram/*] -to [get_cells u_pht_rd/*]
+  set_multicycle_path 1 -hold  -from [get_cells u_pht_ram/*] -to [get_cells u_pht_rd/*]
+  set_input_delay  0.400 -clock CLK_CORE -max [all_inputs]
+  set_output_delay 0.350 -clock CLK_CORE -max [all_outputs]
+
+
+=========================================================================
+                   CLOCK DOMAIN SUMMARY
+=========================================================================
+
+  Clock    : CLK_CORE
+  Period   : 2 ns
+  Waveform : {0.000 1}
+  Skew     : 0.022 ns  (max across PHT_TOP)
+  Latency  : 0.152 ns  (max)
+
+
+=========================================================================
+                   CONSTRAINT COVERAGE
+=========================================================================
+
+  Total register endpoints   : 5892
+  Constrained endpoints      : 1390
+  Unconstrained endpoints    :      0
+  Coverage                   :  100.0%
+
+
+=========================================================================
+                   TOOL / RUN INFORMATION
+=========================================================================
+
+  Tool         : Synopsys PrimeTime 2023.06-SP3
+  Run Host     : sta-server-01
+  Run Dir      : /proj/cpu_rtl/sta/FETCH/BPU/PHT/run_ss_0p72v_0p72v_n40c
+  SDC File     : /proj/cpu_rtl/constraints/PHT_TOP.sdc
+  Netlist      : /proj/cpu_rtl/netlist/PHT_TOP.v.gz
+  SPEF File    : /proj/cpu_rtl/spef/PHT_TOP.spef.gz
+  Liberty      : saed32nm_rvt_ss_0p72v_0p72v_n40c.db
+  Elapsed Time : 00:04:45
+  Peak Memory  : 4.519 GB
+
+=========================================================================
+End of Report
+=========================================================================
