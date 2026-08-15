@@ -10,13 +10,21 @@
 ---
 
 > [!NOTE]
-> **This tooling is not a micromanagement or surveillance tool.**
-> Its sole purpose is to surface timing violations automatically so that
-> the right engineer receives actionable data quickly. Emails and reports
-> are triggered by **timing closure criteria**, not by individual
-> performance monitoring. Block and module owners retain full engineering
-> autonomy — the tool gives them the information they need to do their
-> job, nothing more.
+> **Purpose of this automation**
+>
+> This automation is intended to streamline recurring model-validation
+> activities, reduce repetitive manual steps, and provide a consistent
+> record of each run. It is a practical engineering workflow for improving
+> **repeatability**, **traceability**, and **validation quality**.
+>
+> It is **not** intended to make judgments about individuals, teams, or
+> organisations, and it is **not** a micromanagement or surveillance tool.
+> Emails and reports are triggered solely by **timing closure criteria** —
+> never by individual performance monitoring.
+>
+> For any questions, concerns, or clarifications please **contact the
+> respective block or module owners directly** rather than raising issues
+> through this tooling.
 
 ---
 
