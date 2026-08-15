@@ -2,7 +2,7 @@
   "block_dir": "D:\\Certificates\\PD_STA_REPORTS\\DECODE\\INSTRUCTION_DECODER",
   "design": "INSTR_DECODER_TOP",
   "total_reports": 11,
-  "parsed_at": "2026-08-15T22:23:23",
+  "parsed_at": "2026-08-15T22:26:20",
   "worst_wns_ns": -0.089,
   "worst_tns_ns": -0.876,
   "worst_whs_ns": 0.0,
